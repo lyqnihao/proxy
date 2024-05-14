@@ -93,39 +93,39 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - defaultName
+      - Zero Trust
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - defaultName
+      - Zero Trust
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - defaultName
+      - Zero Trust
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - defaultName
+      - Zero Trust
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - defaultName
+      - Zero Trust
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - defaultName
+      - Zero Trust
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -148,7 +148,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - defaultName
+      - Zero Trust
 
 rules:
 # 本地/局域网地址
