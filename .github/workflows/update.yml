@@ -1,0 +1,29 @@
+name: Update Date Daily
+
+on:
+  schedule:
+    - cron: '30 13 * * *' # 每天 UTC 时间 13:30 运行
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get current date
+        id: date
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Update date file
+        run: echo "$CURRENT_DATE" > date.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add date.txt
+          git commit -m "Update date to $CURRENT_DATE"
+          git push
