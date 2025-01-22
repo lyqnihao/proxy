@@ -1,0 +1,25 @@
+name: Update Text Daily
+
+on:
+  schedule:
+    - cron: '30 13 * * *' # 每天 UTC 时间 13:30 运行
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-text:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get current date
+        id: date
+        run: |
+          echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(date +'%m')" >> $GITHUB_ENV
+          echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+
+      - name: Generate text content
+        run: |
+          echo "https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$DATE.yaml" > v2rayse/output.txt
