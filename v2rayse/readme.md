@@ -1,4 +1,4 @@
-### 用于自动更新长风分享代理列表
+### 用于研究自动更新代理列表和warp代理
 https://v2rayse.com/github-file/
 
 #### WireGuard配置转Clash
