@@ -1,4 +1,4 @@
-name: Update Text Daily
+name: Update or Create Text File Daily
 
 on:
   schedule:
@@ -6,17 +6,15 @@ on:
   workflow_dispatch: # 允许手动触发
 
 jobs:
-  update-text:
+  update-or-create-file:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Delete file
-        run: |
-          git rm v2rayse/output.txt
-          git commit -m "Delete output.txt"
+      - name: Create directory if not exists
+        run: mkdir -p nodefree
 
       - name: Get current date
         id: date
@@ -25,14 +23,23 @@ jobs:
           echo "MONTH=$(date +'%m')" >> $GITHUB_ENV
           echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
-      - name: Generate text content
+      - name: Check if file exists
+        id: check-file
         run: |
-          echo "https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$DATE.yaml" > v2rayse/output.txt
+          if [ -f nodefree/output.txt ]; then
+            echo "FILE_EXISTS=true" >> $GITHUB_ENV
+          else
+            echo "FILE_EXISTS=false" >> $GITHUB_ENV
+          fi
+
+      - name: Update or create file
+        run: |
+          echo "https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$DATE.yaml" > nodefree/output.txt
 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add v2rayse/output.txt
+          git add nodefree/output.txt
           git commit -m "Update text content to $YEAR-$MONTH-$DATE"
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
