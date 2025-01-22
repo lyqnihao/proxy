@@ -1,0 +1,49 @@
+name: Update nodefree yaml
+
+on:
+  schedule:
+    - cron: '30 13 * * *' # 每天 UTC 时间 13:30 运行
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-nodefree-yaml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get current date
+        id: date
+        run: |
+          echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(date +'%m')" >> $GITHUB_ENV
+          echo "DAY=$(date +'%d')" >> $GITHUB_ENV
+
+      - name: Generate dynamic URL
+        run: |
+          echo "DYNAMIC_URL=https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml" >> $GITHUB_ENV
+
+      - name: Create nodefree directory if not exists
+        run: mkdir -p nodefree
+
+      - name: Check if file exists and delete
+        run: |
+          if [ -f nodefree/target.yaml ]; then
+            rm nodefree/target.yaml
+            echo "Deleted existing file: nodefree/target.yaml"
+          else
+            echo "File does not exist, skipping deletion"
+          fi
+
+      - name: Fetch content from dynamic URL
+        run: |
+          curl -o nodefree/target.yaml "$DYNAMIC_URL"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add nodefree/target.yaml
+          git commit -m "Update nodefree yaml with content from $DYNAMIC_URL"
+          git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
