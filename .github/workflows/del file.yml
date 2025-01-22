@@ -13,6 +13,6 @@ jobs:
 
       - name: Delete file
         run: |
-          git rm update.yml
-          git commit -m "Delete update.yml"
+          git rm nodefree/update.yml
+          git commit -m "Delete nodefree/update.yml"
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
