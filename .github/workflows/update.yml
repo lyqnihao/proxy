@@ -22,12 +22,12 @@ jobs:
 
       - name: Generate text content
         run: |
-          echo "https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$DATE.yaml" > output.txt
+          echo "https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$DATE.yaml" > v2rayse/output.txt
 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add output.txt
+          git add v2rayse/output.txt
           git commit -m "Update text content to $YEAR-$MONTH-$DATE"
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
