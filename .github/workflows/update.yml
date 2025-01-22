@@ -1,4 +1,4 @@
-name: Update Date Daily
+name: Update Text Daily
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # 允许手动触发
 
 jobs:
-  update-date:
+  update-text:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,15 +15,19 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "CURRENT_DATE=$(date +'%Y/%m/%Y%M%d')" >> $GITHUB_ENV
+        run: |
+          echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(date +'%m')" >> $GITHUB_ENV
+          echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
-      - name: Update date file
-        run: echo "https://nodefree.githubrowcontent.com/"&"$CURRENT_DATE"&".yaml" > date.txt
+      - name: Generate text content
+        run: |
+          echo "https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$DATE.yaml" > output.txt
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add date.txt
-          git commit -m "Update date to $CURRENT_DATE"
+          git config --global user.name "lyqnihao"
+          git config --global user.email "lyqnihao@163.com"
+          git add output.txt
+          git commit -m "Update text content to $YEAR-$MONTH-$DATE"
           git push
