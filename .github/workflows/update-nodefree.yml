@@ -2,7 +2,7 @@ name: Update nodefree yaml
 
 on:
   schedule:
-    - cron: '01 12 * * *' # 每天 UTC 时间 12:01 运行
+    - cron: '02 16 * * *' # 每天 UTC 时间 16:02 运行（北京时间 00:02）
   workflow_dispatch: # 允许手动触发
 
 jobs:
@@ -13,12 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Get current date
+      - name: Get current date (Beijing Time)
         id: date
         run: |
-          echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
-          echo "MONTH=$(date +'%m')" >> $GITHUB_ENV
-          echo "DAY=$(date +'%d')" >> $GITHUB_ENV
+          echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
+          echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
 
       - name: Generate dynamic URL
         run: |
