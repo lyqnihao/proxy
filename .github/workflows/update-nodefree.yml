@@ -7,28 +7,37 @@ on:
 
 jobs:
   update-nodefree-yaml:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 使用最新版本的 Ubuntu 作为运行环境
 
     steps:
+      # 步骤 1：检出仓库代码
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 # 使用 actions/checkout 动作检出仓库代码
 
+      # 步骤 2：获取当前日期（北京时间）
       - name: Get current date (Beijing Time)
         id: date
         run: |
+          # 设置环境变量 YEAR、MONTH、DAY 和 CURRENT_DATE，值为当前北京时间
           echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
           echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
           echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
+          echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')" >> $GITHUB_ENV
 
+      # 步骤 3：生成动态 URL
       - name: Generate dynamic URL
         run: |
+          # 根据 YEAR、MONTH 和 DAY 生成动态 URL，并存储到 DYNAMIC_URL 环境变量中
           echo "DYNAMIC_URL=https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml" >> $GITHUB_ENV
 
+      # 步骤 4：创建 nodefree 目录（如果不存在）
       - name: Create nodefree directory if not exists
-        run: mkdir -p nodefree
+        run: mkdir -p nodefree # 创建 nodefree 目录，-p 参数确保目录不存在时自动创建
 
+      # 步骤 5：检查文件是否存在并删除
       - name: Check if file exists and delete
         run: |
+          # 检查 nodefree/target.yaml 文件是否存在，如果存在则删除
           if [ -f nodefree/target.yaml ]; then
             rm nodefree/target.yaml
             echo "Deleted existing file: nodefree/target.yaml"
@@ -36,14 +45,48 @@ jobs:
             echo "File does not exist, skipping deletion"
           fi
 
+      # 步骤 6：从动态 URL 获取内容
       - name: Fetch content from dynamic URL
+        id: fetch-content
         run: |
-          curl -o nodefree/target.yaml "$DYNAMIC_URL"
+          # 使用 curl 从动态 URL 下载内容并保存到 nodefree/target.yaml
+          if curl -o nodefree/target.yaml "$DYNAMIC_URL"; then
+            echo "Content fetched successfully"
+          else
+            # 如果下载失败，设置 FETCH_ERROR 输出变量为 true，并退出步骤
+            echo "Failed to fetch content from $DYNAMIC_URL"
+            echo "::set-output name=FETCH_ERROR::true"
+            exit 1
+          fi
 
+      # 步骤 7：提交并推送更改
       - name: Commit and push changes
         run: |
+          # 配置 Git 用户名和邮箱
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+          # 添加 nodefree/target.yaml 文件到暂存区
           git add nodefree/target.yaml
+          # 提交更改，提交信息包含动态 URL
           git commit -m "Update nodefree yaml with content from $DYNAMIC_URL"
+          # 推送更改到仓库
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+      # 步骤 8：失败时发送邮件通知
+      - name: Send email on failure
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' }} # 如果工作流失败或 FETCH_ERROR 为 true，则执行此步骤
+        uses: dawidd6/action-send-mail@v3 # 使用 dawidd6/action-send-mail 动作发送邮件
+        with:
+          server_address: smtp.163.com # 163 邮箱的 SMTP 服务器地址
+          server_port: 465 # 163 邮箱的 SMTP 端口
+          username: ${{ secrets.EMAIL_USERNAME }} # 你的 163 邮箱地址
+          password: ${{ secrets.EMAIL_PASSWORD }} # 你的 163 邮箱授权码
+          subject: "nodefree更新错误 ${{ env.CURRENT_DATE }}" # 邮件标题
+          body: | # 邮件正文
+            工作流运行失败，请检查日志：
+            - 动态 URL: ${{ env.DYNAMIC_URL }}
+            - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            - 失败原因: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || '工作流运行失败' }}
+          to: lyqnihao@163.com # 收件人邮箱
+          from: ${{ secrets.EMAIL_USERNAME }} # 发件人邮箱
+          content_type: text/plain # 邮件内容类型为纯文本
