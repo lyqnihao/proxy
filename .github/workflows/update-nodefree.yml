@@ -2,7 +2,7 @@ name: Update nodefree yaml
 
 on:
   schedule:
-    - cron: '30 13 * * *' # 每天 UTC 时间 13:30 运行
+    - cron: '05 0 * * *' # 每天 UTC 时间 00:05 运行
   workflow_dispatch: # 允许手动触发
 
 jobs:
