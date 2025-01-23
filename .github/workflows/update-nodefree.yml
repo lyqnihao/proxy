@@ -51,16 +51,35 @@ jobs:
         run: |
           # 使用 curl 从动态 URL 下载内容并保存到 nodefree/target.yaml
           if curl -o nodefree/target.yaml "$DYNAMIC_URL"; then
-            echo "Content fetched successfully"
+            if [ -s nodefree/target.yaml ]; then
+              echo "Content fetched successfully and file is not empty"
+            else
+              echo "File is empty, possible download error"
+              echo "::set-output name=FETCH_ERROR::true"
+              exit 1
+            fi
           else
-            # 如果下载失败，设置 FETCH_ERROR 输出变量为 true，并退出步骤
             echo "Failed to fetch content from $DYNAMIC_URL"
             echo "::set-output name=FETCH_ERROR::true"
             exit 1
           fi
 
-      # 步骤 7：提交并推送更改
+      # 步骤 7：检查文件内容是否有变化
+      - name: Check if file has changes
+        id: check-changes
+        run: |
+          # 检查 nodefree/target.yaml 文件是否有变化
+          if git diff --quiet nodefree/target.yaml; then
+            echo "No changes detected in nodefree/target.yaml"
+            echo "::set-output name=HAS_CHANGES::false"
+          else
+            echo "Changes detected in nodefree/target.yaml"
+            echo "::set-output name=HAS_CHANGES::true"
+          fi
+
+      # 步骤 8：提交并推送更改（仅在内容有变化时执行）
       - name: Commit and push changes
+        if: steps.check-changes.outputs.HAS_CHANGES == 'true'
         run: |
           # 配置 Git 用户名和邮箱
           git config --global user.name "GitHub Actions"
@@ -72,21 +91,21 @@ jobs:
           # 推送更改到仓库
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-      # 步骤 8：失败时发送邮件通知
-      - name: Send email on failure
-        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' }} # 如果工作流失败或 FETCH_ERROR 为 true，则执行此步骤
+      # 步骤 9：发送邮件通知（内容无变化或工作流失败时）
+      - name: Send email on no changes or failure
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
         uses: dawidd6/action-send-mail@v3 # 使用 dawidd6/action-send-mail 动作发送邮件
         with:
           server_address: smtp.163.com # 163 邮箱的 SMTP 服务器地址
           server_port: 465 # 163 邮箱的 SMTP 端口
           username: ${{ secrets.EMAIL_USERNAME }} # 你的 163 邮箱地址
           password: ${{ secrets.EMAIL_PASSWORD }} # 你的 163 邮箱授权码
-          subject: "nodefree更新错误 ${{ env.CURRENT_DATE }}" # 邮件标题
-          body: | # 邮件正文
-            工作流运行失败，请检查日志：
+          subject: "nodefree更新通知 ${{ env.CURRENT_DATE }}" # 邮件标题
+          body: |
+            工作流运行状态：
             - 动态 URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 失败原因: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || '工作流运行失败' }}
+            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化' || '工作流运行失败' }}
           to: lyqnihao@163.com # 收件人邮箱
           from: ${{ secrets.EMAIL_USERNAME }} # 发件人邮箱
           content_type: text/plain # 邮件内容类型为纯文本
