@@ -1,3 +1,5 @@
+# 版本：1.1
+# 修订原因：在内容无变化时不提交更新，但将其视为错误状态并发送邮件报告内容无更新。
 # 版本：1.0
 # 修订原因：初始版本，实现抓取网页内容、提取目标网址、更新文件功能。
 
@@ -5,7 +7,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import re
-import sys  # 用于退出时返回状态码
+import sys
 
 # 抓取网页内容并提取目标网址
 def fetch_subscription_url():
@@ -31,7 +33,7 @@ def fetch_url_content(url):
 
 # 更新 output.yaml 文件
 def update_output_file(content):
-    output_file = "output.yaml"  # 输出文件路径
+    output_file = "v2cross/output.yaml"  # 输出文件路径
     
     # 检查文件是否存在
     if os.path.exists(output_file):
