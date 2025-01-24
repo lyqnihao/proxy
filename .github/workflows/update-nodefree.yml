@@ -22,7 +22,7 @@ jobs:
           echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
           echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
           echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
-          echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')" >> $GITHUB_ENV
+          echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       # 步骤 3：生成动态 URL
       - name: Generate dynamic URL
