@@ -1,0 +1,51 @@
+name: Update xConfig
+
+on:
+  schedule:
+    - cron: "5 16 * * *"  # 每天 UTC 时间 16:05（北京时间 0:05）
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium gitpython pyperclip
+
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+
+      - name: Run Update Script
+        id: run-script
+        run: |
+          python xConfig/Update.py
+
+      - name: Send Error Email
+        if: ${{ failure() }}  # 仅在失败时运行
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.163.com
+          server_port: 25
+          username: ${{ secrets.EMAIL_USER }}  # 发件人邮箱
+          password: ${{ secrets.EMAIL_PASSWORD }}  # 发件人邮箱密码
+          subject: "xConfig更新出错+$(date +'%Y-%m-%d %H:%M:%S')"
+          to: lyqnihao@163.com  # 收件人邮箱
+          from: ${{ secrets.EMAIL_USER }}  # 发件人邮箱
+          body: |
+            错误信息简报：
+            ${{ steps.run-script.outcome }}
+
+            日志：
+            $(cat xConfig/update.log)
