@@ -100,7 +100,7 @@ jobs:
           server_port: 465 # 163 邮箱的 SMTP 端口
           username: ${{ secrets.EMAIL_USERNAME }} # 你的 163 邮箱地址
           password: ${{ secrets.EMAIL_PASSWORD }} # 你的 163 邮箱授权码
-          subject: "nodefree更新通知 ${{ env.CURRENT_DATE }}" # 邮件标题
+          subject: "nodefree更新错误 ${{ env.CURRENT_DATE }}" # 邮件标题
           body: |
             工作流运行状态：
             - 动态 URL: ${{ env.DYNAMIC_URL }}
