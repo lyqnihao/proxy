@@ -2,7 +2,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import re
-import yaml
 
 # 抓取网页内容并提取目标网址
 def fetch_subscription_url():
@@ -28,7 +27,13 @@ def fetch_url_content(url):
 
 # 更新 output.yaml 文件
 def update_output_file(content):
-    output_file = "output.yaml"  # 因为脚本在 v2cross 目录下，直接使用相对路径
+    output_dir = "v2cross"
+    output_file = os.path.join(output_dir, "output.yaml")
+    
+    # 检查目录是否存在，若不存在则创建
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        print(f"创建目录：{output_dir}")
     
     # 检查文件是否存在
     if os.path.exists(output_file):
@@ -43,6 +48,7 @@ def update_output_file(content):
     with open(output_file, "w", encoding="utf-8") as file:
         file.write(content)
     print("output.yaml 文件已更新。")
+    print(f"文件路径：{os.path.abspath(output_file)}")  # 打印文件绝对路径
 
 # 主函数
 def main():
