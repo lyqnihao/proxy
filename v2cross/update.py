@@ -1,3 +1,6 @@
+# 版本：1.0
+# 修订原因：初始版本，实现抓取网页内容、提取目标网址、更新文件功能。
+
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -6,8 +9,8 @@ import sys  # 用于退出时返回状态码
 
 # 抓取网页内容并提取目标网址
 def fetch_subscription_url():
-    url = "https://v2cross.com/1884.html"
-    response = requests.get(url)
+    url = "https://v2cross.com/1884.html"  # 目标网页地址
+    response = requests.get(url)  # 发送 HTTP 请求
     if response.status_code == 200:  # 检查请求是否成功
         soup = BeautifulSoup(response.text, 'html.parser')  # 解析网页内容
         # 查找包含“本次节点订阅地址：”的文本
@@ -21,7 +24,7 @@ def fetch_subscription_url():
 
 # 读取目标网址的内容
 def fetch_url_content(url):
-    response = requests.get(url)
+    response = requests.get(url)  # 发送 HTTP 请求
     if response.status_code == 200:  # 检查请求是否成功
         return response.text  # 返回网页内容
     return None  # 如果请求失败，返回 None
