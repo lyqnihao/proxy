@@ -27,7 +27,19 @@ jobs:
       run: |
         python v2cross/update.py
 
+    - name: 检查 output.yaml 文件是否存在
+      id: check_file
+      run: |
+        if [ -f v2cross/output.yaml ]; then
+          echo "文件存在。"
+          echo "::set-output name=file_exists::true"
+        else
+          echo "文件不存在，跳过提交。"
+          echo "::set-output name=file_exists::false"
+        fi
+
     - name: 提交更改（如果有更新）
+      if: steps.check_file.outputs.file_exists == 'true'
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
@@ -40,18 +52,20 @@ jobs:
         fi
 
     - name: 发送错误邮件
-      if: failure()
+      if: failure()  # 仅在任务失败时运行
       uses: dawidd6/action-send-mail@v3
       with:
         server_address: smtp.163.com
         server_port: 465
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "v2cross更新出错+$(date -u +'%Y-%m-%d %H:%M:%S')"
+        subject: "v2cross更新出错+${{ format('{0:%Y-%m-%d %H:%M:%S}', github.event.timestamp) }}"  # 使用 GitHub Actions 的时间戳
         body: |
-          任务运行出错，请检查日志。
+          任务名称：update v2cross
+          错误时间：${{ format('{0:%Y-%m-%d %H:%M:%S}', github.event.timestamp) }}
           错误信息：${{ steps.refresh.outputs.error }}
           日志链接：https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          请检查日志以获取更多详细信息。
         to: lyqnihao@163.com
         from: ${{ secrets.EMAIL_USERNAME }}
         content_type: text/plain
