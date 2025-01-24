@@ -1,3 +1,5 @@
+# 版本 1.2
+# 修订原因：在报错邮件内容中添加当前脚本的版本信息。
 # 版本 1.1
 # 修订原因：将报错信息改为中文，方便中文用户理解。
 # 版本 1.0
@@ -134,6 +136,7 @@ jobs:
           # 邮件正文
           body: |
             工作流运行状态：
+            - 脚本版本: 1.2
             - 动态 URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
