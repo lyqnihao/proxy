@@ -1,100 +1,89 @@
+# 版本：1.1
+# 修订原因：在内容无变化时不提交更新，但将其视为错误状态并发送邮件报告内容无更新。
 # 版本：1.0
 # 修订原因：初始版本，实现定时任务、Python 脚本运行、文件更新提交及错误邮件通知功能。
 
-name: Update v2cross  # 工作流名称（首字母大写）
+name: Update v2cross
 
 on:
-  # 定时任务，每6小时运行一次（UTC时间）
   schedule:
     - cron: '5 16,22,4,10 * * *'  # UTC时间对应北京时间00:05, 06:05, 12:05, 18:05
-  # 允许手动触发工作流
   workflow_dispatch:
 
 jobs:
   refresh:
-    # 运行环境：最新版本的Ubuntu
     runs-on: ubuntu-latest
 
     steps:
       # 步骤1：检出仓库代码
       - name: 检出仓库代码
-        uses: actions/checkout@v2  # 使用 actions/checkout 操作检出代码
+        uses: actions/checkout@v2
 
       # 步骤2：设置 Python 环境
       - name: 设置 Python 环境
-        uses: actions/setup-python@v2  # 使用 actions/setup-python 操作设置 Python 环境
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # 指定 Python 版本为 3.8
+          python-version: '3.8'
 
       # 步骤3：安装依赖
       - name: 安装依赖
         run: |
-          # 升级 pip
           python -m pip install --upgrade pip
-          # 安装所需 Python 库
           pip install requests beautifulsoup4 pyyaml
 
       # 步骤4：获取当前日期和时间（北京时间）
       - name: 获取当前日期和时间（北京时间）
         id: date
         run: |
-          # 设置环境变量 CURRENT_DATE，值为当前北京时间（包含日期和时间）
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       # 步骤5：运行 Python 脚本
       - name: 运行 Python 脚本
-        id: run_script  # 为步骤设置一个 ID，便于后续引用
+        id: run_script
         run: |
-          # 运行脚本，如果返回状态码非零（表示失败），设置输出变量 script_status 为 failure
           python v2cross/update.py || echo "::set-output name=script_status::failure"
 
       # 步骤6：检查脚本状态
       - name: 检查脚本状态
-        id: check_script  # 为步骤设置一个 ID，便于后续引用
+        id: check_script
         run: |
-          # 检查上一步设置的 script_status 是否为 failure
           if [ "${{ steps.run_script.outputs.script_status }}" == "failure" ]; then
             echo "脚本运行失败或内容未更新。"
-            echo "::set-output name=send_email::true"  # 设置输出变量 send_email 为 true
+            echo "::set-output name=send_email::true"
           else
             echo "脚本运行成功且内容已更新。"
-            echo "::set-output name=send_email::false"  # 设置输出变量 send_email 为 false
+            echo "::set-output name=send_email::false"
           fi
 
       # 步骤7：提交更改（如果有更新）
       - name: 提交更改（如果有更新）
-        if: steps.check_script.outputs.send_email == 'false'  # 仅在内容更新时提交
+        if: steps.check_script.outputs.send_email == 'false'
         run: |
-          # 配置 Git 用户名和邮箱
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          # 添加 v2cross/output.yaml 文件到暂存区
           git add v2cross/output.yaml
-          # 检查是否有更改
           if git diff --quiet && git diff --staged --quiet; then
             echo "没有更改，跳过提交。"
           else
-            # 提交更改
             git commit -m "Auto-update output.yaml"
-            # 推送更改到主分支
             git push origin main
           fi
 
       # 步骤8：发送邮件通知（内容无变化或工作流失败时）
       - name: 发送邮件通知（内容无变化或工作流失败时）
-        if: steps.check_script.outputs.send_email == 'true'  # 仅在脚本失败或内容未更新时发送邮件
-        uses: dawidd6/action-send-mail@v3  # 使用 action-send-mail 操作发送邮件
+        if: steps.check_script.outputs.send_email == 'true'
+        uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.163.com  # 使用 163 邮箱的 SMTP 服务器
-          server_port: 465  # SMTP 服务器端口
-          username: ${{ secrets.EMAIL_USERNAME }}  # 邮箱用户名（存储在 GitHub Secrets 中）
-          password: ${{ secrets.EMAIL_PASSWORD }}  # 邮箱密码或授权码（存储在 GitHub Secrets 中）
-          subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"  # 邮件标题（包含日期和时间）
-          body: |  # 邮件正文
+          server_address: smtp.163.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"
+          body: |
             工作流运行状态：
-            - 脚本版本: 1.0
+            - 脚本版本: 1.1  # 邮件内容中的版本号同步更新
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.run_script.outputs.script_status == 'failure' && '内容未更新或脚本运行失败' }}
-          to: lyqnihao@163.com  # 收件人邮箱
-          from: ${{ secrets.EMAIL_USERNAME }}  # 发件人邮箱
-          content_type: text/plain  # 邮件内容格式为纯文本
+          to: lyqnihao@163.com
+          from: ${{ secrets.EMAIL_USERNAME }}
+          content_type: text/plain
