@@ -1,3 +1,5 @@
+# 版本：2.2
+# 修订原因：将“没有更改，跳过提交”的情况视为内容无变更的错误状态，并发送邮件报错。
 # 版本：2.1
 # 修订原因：在内容无更改时视为错误状态，并发送邮件报错。
 # 版本：2.0
@@ -112,6 +114,8 @@ jobs:
           git add v2cross/output.yaml
           if git diff --quiet && git diff --staged --quiet; then
             echo "没有更改，跳过提交。"
+            echo "::set-output name=send_email::true"
+            echo "::set-output name=error_type::内容未更新"  # 设置错误类型
           else
             # 拉取远程更改并合并
             git pull origin main --rebase
@@ -123,7 +127,7 @@ jobs:
 
       # 步骤10：发送邮件通知（内容无变化或工作流失败时）
       - name: 发送邮件通知（内容无变化或工作流失败时）
-        if: steps.check_script.outputs.send_email == 'true' || steps.check_content.outputs.send_email == 'true'
+        if: steps.check_script.outputs.send_email == 'true' || steps.check_content.outputs.send_email == 'true' || steps.commit_changes.outputs.send_email == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.163.com
@@ -133,9 +137,9 @@ jobs:
           subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"
           body: |
             工作流运行状态：
-            - 脚本版本: 2.1  # 邮件内容中的版本号同步更新
+            - 脚本版本: 2.2  # 邮件内容中的版本号同步更新
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 错误类型: ${{ steps.check_script.outputs.error_type || steps.check_content.outputs.error_type }}  # 具体描述错误类型
+            - 错误类型: ${{ steps.check_script.outputs.error_type || steps.check_content.outputs.error_type || steps.commit_changes.outputs.error_type }}  # 具体描述错误类型
             - 错误信息: ${{ steps.run_script.outputs.error_message }}  # 捕获的错误信息
           to: lyqnihao@163.com
           from: ${{ secrets.EMAIL_USERNAME }}
