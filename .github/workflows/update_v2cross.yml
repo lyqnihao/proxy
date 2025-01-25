@@ -1,3 +1,5 @@
+# 版本：2.3
+# 修订原因：修复 `set-output` 弃用问题，使用 Environment Files 设置输出变量。
 # 版本：2.2
 # 修订原因：将“没有更改，跳过提交”的情况视为内容无变更的错误状态，并发送邮件报错。
 # 版本：2.1
@@ -52,11 +54,11 @@ jobs:
           exit_code=$?
           echo "$output"  # 打印脚本输出
           if [ $exit_code -ne 0 ]; then
-            echo "::set-output name=script_status::failure"
-            echo "::set-output name=error_message::$output"  # 捕获错误信息
+            echo "script_status=failure" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
+            echo "error_message=$output" >> $GITHUB_OUTPUT  # 捕获错误信息
           else
-            echo "::set-output name=script_status::success"
-            echo "::set-output name=url_content::$output"  # 捕获目标网址内容
+            echo "script_status=success" >> $GITHUB_OUTPUT
+            echo "url_content=$output" >> $GITHUB_OUTPUT  # 捕获目标网址内容
           fi
 
       # 步骤6：检查脚本状态
@@ -65,11 +67,11 @@ jobs:
         run: |
           if [ "${{ steps.run_script.outputs.script_status }}" == "failure" ]; then
             echo "脚本运行失败。"
-            echo "::set-output name=send_email::true"
-            echo "::set-output name=error_type::脚本运行失败"  # 设置错误类型
+            echo "send_email=true" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
+            echo "error_type=脚本运行失败" >> $GITHUB_OUTPUT  # 设置错误类型
           else
             echo "脚本运行成功。"
-            echo "::set-output name=send_email::false"
+            echo "send_email=false" >> $GITHUB_OUTPUT
           fi
 
       # 步骤7：检查文件是否存在
@@ -78,12 +80,12 @@ jobs:
         run: |
           if [ -f v2cross/output.yaml ]; then
             echo "文件存在。"
-            echo "::set-output name=file_exists::true"
+            echo "file_exists=true" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
           else
             echo "文件不存在，创建文件。"
             mkdir -p v2cross
             touch v2cross/output.yaml
-            echo "::set-output name=file_exists::false"
+            echo "file_exists=false" >> $GITHUB_OUTPUT
           fi
 
       # 步骤8：检查内容是否有更新
@@ -97,16 +99,17 @@ jobs:
             new_content="${{ steps.run_script.outputs.url_content }}"
             if [ "$existing_content" == "$new_content" ]; then
               echo "内容无变化。"
-              echo "::set-output name=send_email::true"
-              echo "::set-output name=error_type::内容未更新"  # 设置错误类型
+              echo "send_email=true" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
+              echo "error_type=内容未更新" >> $GITHUB_OUTPUT  # 设置错误类型
             else
               echo "内容有变化，准备更新文件。"
-              echo "::set-output name=send_email::false"
+              echo "send_email=false" >> $GITHUB_OUTPUT
             fi
           fi
 
       # 步骤9：提交更改（如果有更新）
       - name: 提交更改（如果有更新）
+        id: commit_changes  # 为步骤设置一个 ID，便于后续引用
         if: steps.check_content.outputs.send_email == 'false'
         run: |
           git config --global user.name "GitHub Actions"
@@ -114,8 +117,8 @@ jobs:
           git add v2cross/output.yaml
           if git diff --quiet && git diff --staged --quiet; then
             echo "没有更改，跳过提交。"
-            echo "::set-output name=send_email::true"
-            echo "::set-output name=error_type::内容未更新"  # 设置错误类型
+            echo "send_email=true" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
+            echo "error_type=内容未更新" >> $GITHUB_OUTPUT  # 设置错误类型
           else
             # 拉取远程更改并合并
             git pull origin main --rebase
@@ -137,7 +140,7 @@ jobs:
           subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"
           body: |
             工作流运行状态：
-            - 脚本版本: 2.2  # 邮件内容中的版本号同步更新
+            - 脚本版本: 2.3  # 邮件内容中的版本号同步更新
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.check_script.outputs.error_type || steps.check_content.outputs.error_type || steps.commit_changes.outputs.error_type }}  # 具体描述错误类型
             - 错误信息: ${{ steps.run_script.outputs.error_message }}  # 捕获的错误信息
