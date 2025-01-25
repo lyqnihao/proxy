@@ -5,7 +5,6 @@
 # 版本: 1.0
 # 修订原因: 初始版本，实现每天0:05和12:05自动抓取网页内容并更新xConfig/output.yaml文件，支持错误状态处理和邮件通知。
 
-
 name: Update xConfig # 工作流的名称
 
 # 触发条件
@@ -160,8 +159,7 @@ jobs:
           # 提交更改
           git commit -m "Auto-update output.yaml"
           # 推送更改到仓库
-          git push  origin main
-        fi
+          git push origin ${{ github.ref }}
 
       # 第七步：发送邮件通知（内容无变化或工作流失败时）
       - name: Send email on no changes or failure
@@ -183,7 +181,7 @@ jobs:
           # 邮件正文
           body: |
             工作流运行状态：
-            - 脚本版本: 1.3
+            - 脚本版本: 1.2
             - 动态 URL: ${{ steps.fetch-content.outputs.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.fetch-content.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
