@@ -1,51 +1,186 @@
+# 版本: 1.0
+# 修订原因: 初始版本，实现每天0:05和12:05自动抓取网页内容并更新xConfig/output.yaml文件，支持错误状态处理和邮件通知。
+
+# 工作流的名称
 name: Update xConfig
 
+# 触发条件
 on:
+  # 使用 cron 定时任务
   schedule:
-    - cron: "5 16 * * *"  # 每天 UTC 时间 16:05（北京时间 0:05）
-  workflow_dispatch:  # 支持手动触发
+    # 北京时间每天 0:05（UTC时间 16:05，因为 GitHub Actions 使用 UTC 时间）
+    - cron: '5 16 * * *'
+    # 北京时间每天 12:05（UTC时间 4:05）
+    - cron: '5 4 * * *'
 
+# 定义任务
 jobs:
   update:
+    # 运行环境为最新的 Ubuntu 系统
     runs-on: ubuntu-latest
+
+    # 任务步骤
     steps:
+      # 第一步：检出仓库代码
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
+      # 第二步：设置 Python 环境
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          # 使用 Python 3.9
+          python-version: '3.9'
 
+      # 第三步：安装依赖
       - name: Install dependencies
         run: |
+          # 升级 pip
           python -m pip install --upgrade pip
-          pip install selenium gitpython pyperclip
+          # 安装所需的 Python 库
+          pip install requests beautifulsoup4 pyyaml
 
-      - name: Install Chrome
+      # 第四步：获取当前日期（北京时间）
+      - name: Get current date (Beijing Time)
+        id: date
         run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
+          # 设置环境变量 CURRENT_DATE，值为当前北京时间
+          echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      - name: Run Update Script
-        id: run-script
+      # 第五步：抓取网页数据并更新 output.yaml
+      - name: Fetch data and update output.yaml
+        id: fetch-content
         run: |
-          python xConfig/Update.py
+          # 导入所需的 Python 库
+          import requests
+          from bs4 import BeautifulSoup
+          import yaml
+          import os
+          import sys
 
-      - name: Send Error Email
-        if: ${{ failure() }}  # 仅在失败时运行
+          # 目标网页 URL
+          url = "https://xconfig.pages.dev/index2"
+          try:
+              # 发送 HTTP 请求获取网页内容
+              response = requests.get(url)
+              response.raise_for_status()  # 检查请求是否成功
+          except requests.exceptions.RequestException as e:
+              # 如果请求失败，记录错误信息并设置 FETCH_ERROR 为 true
+              print(f"请求网页失败: {e}")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  print('FETCH_ERROR=true', file=fh)
+              sys.exit(1)
+
+          # 使用 BeautifulSoup 解析网页内容
+          soup = BeautifulSoup(response.text, 'html.parser')
+
+          # 查找 id 为 "copyButton3-13" 的按钮
+          button = soup.find('button', id='copyButton3-13')
+          if not button:
+              # 如果按钮未找到，记录错误信息并设置 FETCH_ERROR 为 true
+              print("未找到指定的按钮")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  print('FETCH_ERROR=true', file=fh)
+              sys.exit(1)
+
+          # 获取按钮的 data-link 属性值
+          data_link = button.get('data-link')
+          if not data_link:
+              # 如果 data-link 不存在，记录错误信息并设置 FETCH_ERROR 为 true
+              print("按钮未包含 data-link 属性")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  print('FETCH_ERROR=true', file=fh)
+              sys.exit(1)
+
+          try:
+              # 发送 HTTP 请求获取 data-link 的内容
+              data_response = requests.get(data_link)
+              data_response.raise_for_status()  # 检查请求是否成功
+          except requests.exceptions.RequestException as e:
+              # 如果请求失败，记录错误信息并设置 FETCH_ERROR 为 true
+              print(f"请求 data-link 失败: {e}")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  print('FETCH_ERROR=true', file=fh)
+              sys.exit(1)
+
+          # 获取 data-link 的内容
+          data_content = data_response.text
+
+          # 定义输出目录和文件路径
+          output_dir = "xConfig"
+          output_file = os.path.join(output_dir, "output.yaml")
+
+          # 如果目录不存在，则创建目录
+          if not os.path.exists(output_dir):
+              os.makedirs(output_dir)
+
+          # 检查文件是否存在
+          file_exists = os.path.exists(output_file)
+          old_content = ""
+          if file_exists:
+              # 如果文件存在，读取旧内容
+              with open(output_file, 'r') as file:
+                  old_content = file.read()
+
+          # 如果新内容与旧内容相同，视为无修改
+          if data_content == old_content:
+              print("内容无修改，无需更新")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  print('HAS_CHANGES=false', file=fh)
+              sys.exit(0)
+
+          # 将 data-link 的内容写入 output.yaml 文件
+          with open(output_file, 'w') as file:
+              yaml.dump({'data': data_content}, file)
+
+          # 打印日志，确认文件已更新
+          print(f"Updated {output_file} with data from {data_link}")
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+              print('HAS_CHANGES=true', file=fh)
+
+      # 第六步：发送邮件通知（内容无变化或工作流失败时）
+      - name: Send email on no changes or failure
+        # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.fetch-content.outputs.HAS_CHANGES == 'false' }}
+        # 使用 dawidd6/action-send-mail@v3 动作发送邮件
         uses: dawidd6/action-send-mail@v3
         with:
+          # 163 邮箱的 SMTP 服务器地址
           server_address: smtp.163.com
-          server_port: 25
-          username: ${{ secrets.EMAIL_USER }}  # 发件人邮箱
-          password: ${{ secrets.EMAIL_PASSWORD }}  # 发件人邮箱密码
-          subject: "xConfig更新出错+$(date +'%Y-%m-%d %H:%M:%S')"
-          to: lyqnihao@163.com  # 收件人邮箱
-          from: ${{ secrets.EMAIL_USER }}  # 发件人邮箱
+          # 163 邮箱的 SMTP 端口
+          server_port: 465
+          # 你的 163 邮箱地址
+          username: ${{ secrets.EMAIL_USERNAME }}
+          # 你的 163 邮箱授权码
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          # 邮件标题
+          subject: "xConfig更新出错 ${{ env.CURRENT_DATE }}"
+          # 邮件正文
           body: |
-            错误信息简报：
-            ${{ steps.run-script.outcome }}
+            工作流运行状态：
+            - 脚本版本: 1.0
+            - 动态 URL: ${{ steps.fetch-content.outputs.DYNAMIC_URL }}
+            - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.fetch-content.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
+          # 收件人邮箱
+          to: lyqnihao@163.com
+          # 发件人邮箱
+          from: ${{ secrets.EMAIL_USERNAME }}
+          # 邮件内容类型为纯文本
+          content_type: text/plain
 
-            日志：
-            $(cat xConfig/update.log)
+      # 第七步：提交更改并推送到仓库
+      - name: Commit and push changes
+        # 如果 fetch-content 步骤成功且内容有变化，则执行此步骤
+        if: steps.fetch-content.outputs.HAS_CHANGES == 'true'
+        run: |
+          # 设置 Git 用户名
+          git config --global user.name "github-actions[bot]"
+          # 设置 Git 邮箱
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 将 output.yaml 文件添加到 Git 暂存区
+          git add xConfig/output.yaml
+          # 提交更改
+          git commit -m "Automatically update output.yaml"
+          # 推送更改到仓库
+          git push
