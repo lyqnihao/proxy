@@ -2,7 +2,9 @@ name: Update xConfig
 
 on:
   schedule:
+    # 北京时间每天 0:05（UTC时间 16:05）
     - cron: '5 16 * * *'
+    # 北京时间每天 12:05（UTC时间 4:05）
     - cron: '5 4 * * *'
   workflow_dispatch:
 
@@ -11,53 +13,113 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 第一步：检出仓库代码
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 pyyaml
-
+      # 第二步：获取当前日期（北京时间）
       - name: Get current date (Beijing Time)
         id: date
         run: |
+          # 设置环境变量 CURRENT_DATE，值为当前北京时间
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      - name: Fetch data and update output.yaml
+      # 第三步：创建 xConfig 目录（如果不存在）
+      - name: Create xConfig directory if not exists
+        run: |
+          # 创建 xConfig 目录，-p 参数确保目录不存在时自动创建
+          mkdir -p xConfig
+
+      # 第四步：检查文件是否存在并删除
+      - name: Check if file exists and delete
+        run: |
+          # 检查 xConfig/output.yaml 文件是否存在，如果存在则删除
+          if [ -f xConfig/output.yaml ]; then
+            rm xConfig/output.yaml.yaml
+            echo "已删除现有文件：xConfig/output.yaml"
+          else
+            echo "文件不存在，跳过删除"
+          fi
+
+      # 第五步：从 订阅URL 获取内容
+      - name: Fetch content from dynamic URL
         id: fetch-content
         run: |
-          python xConfig/update.py
+          # 使用 curl 从 订阅URL 下载内容并保存到 xConfig/output.yaml
+          if curl -o xConfig/output.yaml "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"; then
+            # 检查文件是否为空
+            if [ -s xConfig/output.yaml ]; then
+              echo "内容下载成功，文件不为空"
+            else
+              # 如果文件为空，设置 FETCH_ERROR 输出变量为 true，并退出步骤
+              echo "文件为空，可能是下载错误"
+              echo "::set-output name=FETCH_ERROR::true"
+              exit 1
+            fi
+          else
+            # 如果下载失败，设置 FETCH_ERROR 输出变量为 true，并退出步骤
+            echo "无法从 订阅URL 下载内容"
+            echo "::set-output name=FETCH_ERROR::true"
+            exit 1
+          fi
+          
+      # 第六步：检查文件内容是否有变化
+      - name: Check if file has changes
+        id: check-changes
+        run: |
+          # 使用 git diff 检查 xConfig/output.yaml 文件是否有变化
+          if git diff --quiet xConfig/output.yaml; then
+            # 如果没有变化，设置 HAS_CHANGES 输出变量为 false
+            echo "文件内容未发生变化"
+            echo "::set-output name=HAS_CHANGES::false"
+          else
+            # 如果有变化，设置 HAS_CHANGES 输出变量为 true
+            echo "文件内容已发生变化"
+            echo "::set-output name=HAS_CHANGES::true"
+          fi
+          
+      # 第七步：提交并推送更改（仅在内容有变化时执行）
+      - name: Commit and push changes
+        # 如果 HAS_CHANGES 为 true，则执行此步骤
+        if: steps.check-changes.outputs.HAS_CHANGES == 'true'
+        run: |
+          # 配置 Git 用户名和邮箱
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          # 添加 xConfig/output.yaml 文件到暂存区
+          git add xConfig/output.yaml
+          # 提交更改，提交信息包含  订阅URL
+          git commit -m "Update xConfig/output.yaml with content from https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"
+          # 推送更改到仓库
+          git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
+      # 第八步：发送邮件通知（内容无变化或工作流失败时）
       - name: Send email on no changes or failure
-        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.fetch-content.outputs.HAS_CHANGES == 'false' }}
+        # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
+        # 使用 dawidd6/action-send-mail@v3 动作发送邮件
         uses: dawidd6/action-send-mail@v3
         with:
+          # 163 邮箱的 SMTP 服务器地址
           server_address: smtp.163.com
+          # 163 邮箱的 SMTP 端口
           server_port: 465
+          # 你的 163 邮箱地址
           username: ${{ secrets.EMAIL_USERNAME }}
+          # 你的 163 邮箱授权码
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "xConfig更新出错 ${{ env.CURRENT_DATE }}"
+          # 邮件标题
+          subject: "nodefree更新出错 ${{ env.CURRENT_DATE }}"
+          # 邮件正文
           body: |
             工作流运行状态：
-            - 脚本版本: 1.1
-            - 动态 URL: ${{ steps.fetch-content.outputs.DYNAMIC_URL }}
+            - 脚本版本: 1.0
+            - 订阅 URL: "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.fetch-content.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
+            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '订阅 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
+          # 收件人邮箱
           to: lyqnihao@163.com
+          # 发件人邮箱
           from: ${{ secrets.EMAIL_USERNAME }}
+          # 邮件内容类型为纯文本
           content_type: text/plain
-
-      - name: Commit and push changes
-        if: steps.fetch-content.outputs.HAS_CHANGES == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add xConfig/output.yaml
-          git commit -m "Automatically update output.yaml"
-          git push
