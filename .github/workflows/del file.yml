@@ -13,7 +13,7 @@ jobs:
 
       - name: Delete file
         run: |
-          git rm v2rayse/output2.txt
+          git rm xConfig/Update.py
 
       - name: Set Git user identity
         run: |
@@ -22,5 +22,5 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git commit -m "Delete v2rayse/output2.txt"
+          git commit -m "Delete xConfig/Update.py"
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
