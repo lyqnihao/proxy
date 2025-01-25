@@ -1,3 +1,7 @@
+# 版本 1.0
+# 这是一个用于每天自动更新 xConfig 订阅文件的 GitHub Actions 工作流。
+# 功能包括：从 订阅URL 读取内容、内容检查、提交更改和邮件通知。
+
 name: Update xConfig
 
 on:
@@ -109,7 +113,7 @@ jobs:
           # 你的 163 邮箱授权码
           password: ${{ secrets.EMAIL_PASSWORD }}
           # 邮件标题
-          subject: "nodefree更新出错 ${{ env.CURRENT_DATE }}"
+          subject: "xConfig更新出错 ${{ env.CURRENT_DATE }}"
           # 邮件正文
           body: |
             工作流运行状态：
