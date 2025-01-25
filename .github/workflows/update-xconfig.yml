@@ -1,11 +1,10 @@
-# 版本: 1.2
-# 修订原因: 修复执行流程，确保代码能够正确运行。
 # 版本: 1.1
 # 修订原因: 添加手动触发功能，支持通过 GitHub 界面手动执行工作流。
 # 版本: 1.0
 # 修订原因: 初始版本，实现每天0:05和12:05自动抓取网页内容并更新xConfig/output.yaml文件，支持错误状态处理和邮件通知。
 
-name: Update xConfig # 工作流的名称
+# 工作流的名称
+name: Update xConfig
 
 # 触发条件
 on:
@@ -56,7 +55,7 @@ jobs:
       # 第五步：抓取网页数据并更新 output.yaml
       - name: Fetch data and update output.yaml
         id: fetch-content
-        run: python - <<EOF
+        run: |
           # 导入所需的 Python 库
           import requests
           from bs4 import BeautifulSoup
@@ -143,25 +142,8 @@ jobs:
           print(f"Updated {output_file} with data from {data_link}")
           with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
               print('HAS_CHANGES=true', file=fh)
-        EOF
 
-      # 第六步：提交更改并推送到仓库
-      - name: Commit and push changes
-        # 如果 fetch-content 步骤成功且内容有变化，则执行此步骤
-        if: steps.fetch-content.outputs.HAS_CHANGES == 'true'
-        run: |
-          # 设置 Git 用户名
-          git config --global user.name "GitHub Actions"
-          # 设置 Git 邮箱
-          git config --global user.email "actions@github.com"
-          # 将 output.yaml 文件添加到 Git 暂存区
-          git add xConfig/output.yaml
-          # 提交更改
-          git commit -m "Auto-update output.yaml"
-          # 推送更改到仓库
-          git push origin ${{ github.ref }}
-
-      # 第七步：发送邮件通知（内容无变化或工作流失败时）
+      # 第六步：发送邮件通知（内容无变化或工作流失败时）
       - name: Send email on no changes or failure
         # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
         if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.fetch-content.outputs.HAS_CHANGES == 'false' }}
@@ -181,7 +163,7 @@ jobs:
           # 邮件正文
           body: |
             工作流运行状态：
-            - 脚本版本: 1.2
+            - 脚本版本: 1.1
             - 动态 URL: ${{ steps.fetch-content.outputs.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.fetch-content.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
@@ -191,3 +173,19 @@ jobs:
           from: ${{ secrets.EMAIL_USERNAME }}
           # 邮件内容类型为纯文本
           content_type: text/plain
+
+      # 第七步：提交更改并推送到仓库
+      - name: Commit and push changes
+        # 如果 fetch-content 步骤成功且内容有变化，则执行此步骤
+        if: steps.fetch-content.outputs.HAS_CHANGES == 'true'
+        run: |
+          # 设置 Git 用户名
+          git config --global user.name "github-actions[bot]"
+          # 设置 Git 邮箱
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 将 output.yaml 文件添加到 Git 暂存区
+          git add xConfig/output.yaml
+          # 提交更改
+          git commit -m "Automatically update output.yaml"
+          # 推送更改到仓库
+          git push
