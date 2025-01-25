@@ -1,9 +1,11 @@
+# 版本：2.1
+# 修订原因：在内容无更改时视为错误状态，并发送邮件报错。
 # 版本：2.0
 # 修订原因：工作流负责文件操作、错误捕获和邮件通知，邮件内容中具体描述错误类型。
 # 版本：1.1
-# 修订原因：工作流负责文件操作、错误捕获和邮件通知，邮件内容中具体描述错误类型。
+# 修订原因：Python 脚本仅用于获取目标网址和网址内容，不处理文件操作。
 # 版本：1.0
-# 修订原因：初始版本，实现定时任务、Python 脚本运行、文件更新提交及错误邮件通知功能。
+# 修订原因：初始版本，实现抓取网页内容、提取目标网址功能。
 
 name: Update v2cross
 
@@ -131,7 +133,7 @@ jobs:
           subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"
           body: |
             工作流运行状态：
-            - 脚本版本: 2.0  # 邮件内容中的版本号同步更新
+            - 脚本版本: 2.1  # 邮件内容中的版本号同步更新
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.check_script.outputs.error_type || steps.check_content.outputs.error_type }}  # 具体描述错误类型
             - 错误信息: ${{ steps.run_script.outputs.error_message }}  # 捕获的错误信息
