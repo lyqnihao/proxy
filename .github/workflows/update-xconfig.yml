@@ -93,7 +93,7 @@ jobs:
           # 添加 xConfig/output.yaml 文件到暂存区
           git add xConfig/output.yaml
           # 提交更改，提交信息包含  订阅URL
-          git commit -m "Update xConfig/output.yaml with content from https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"
+          git commit -m "Update xConfig/output.yaml with content from the URL"
           # 推送更改到仓库
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
