@@ -4,31 +4,29 @@
 # 这是一个用于每天自动更新 v2cross 订阅文件的 GitHub Actions 工作流。
 # 功能包括：从 订阅URL 读取内容、Python 脚本仅用于获取目标网址和网址内容、内容检查、提交更改和邮件通知。
 
+# GitHub Actions 工作流完整修正版
 name: Update v2cross
 
 on:
   schedule:
-      - cron: '5 20 * * *'  # 定时任务配置（UTC时间20:05对应北京时间次日04:05）
-  workflow_dispatch:  # 仅保留手动触发选项
+      - cron: '5 20 * * *'  # UTC时间20:05（北京次日04:05）
+  workflow_dispatch:
 
 jobs:
-  # 主任务：更新配置文件
   refresh:
-    # 指定运行环境为最新版Ubuntu
     runs-on: ubuntu-latest
 
     steps:
       # --------------------------
-      # 步骤1：检出仓库代码
+      # 步骤1：检出代码（保持原样）
       # --------------------------
       - name: 检出仓库代码
         uses: actions/checkout@v3
         with:
-          # 获取完整提交历史（避免浅克隆导致文件比对异常）
-          fetch-depth: 0  
+          fetch-depth: 0
 
       # --------------------------
-      # 步骤2：设置 Python 环境
+      # 步骤2：Python环境设置（保持原样）
       # --------------------------      
       - name: 设置 Python 环境
         uses: actions/setup-python@v2
@@ -36,7 +34,7 @@ jobs:
           python-version: '3.8'
 
       # --------------------------
-      # 步骤3：安装依赖
+      # 步骤3：安装依赖（保持原样）
       # --------------------------      
       - name: 安装依赖
         run: |
@@ -44,84 +42,83 @@ jobs:
           pip install requests beautifulsoup4 pyyaml
 
       # --------------------------
-      # 步骤4：获取北京时间（用于时间戳）
+      # 步骤4：北京时间戳（保持原样）
       # --------------------------
       - name: 获取北京时间（用于时间戳）
         id: date
         run: |
-          # 设置环境变量（格式示例：2024-03-15 12:30:45）
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       # --------------------------
-      # 步骤5：运行 Python 脚本
+      # 步骤5：运行Python脚本（关键修改点）
       # --------------------------      
       - name: 运行 Python 脚本
         id: run_script
         run: |
-          # 运行脚本，捕获输出内容
-          output=$(python v2cross/update.py 2>&1)
+          # 捕获输出并去除换行符
+          output=$(python v2cross/update.py 2>&1 | tr -d '\n')
           exit_code=$?
-          echo "$output"  # 打印脚本输出
+          
+          # 调试输出
+          echo "脚本原始输出：[${output}]"
+          echo "退出码：$exit_code"
+          
+          # 设置多环境变量
           if [ $exit_code -ne 0 ]; then
-            echo "script_status=failure" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
-            echo "error_message=$output" >> $GITHUB_OUTPUT  # 捕获错误信息
+            echo "script_status=failure" >> $GITHUB_OUTPUT
+            echo "error_message=$output" >> $GITHUB_OUTPUT
           else
+            echo "DYNAMIC_URL=${output}" | tee -a $GITHUB_ENV  # 同时写入环境变量
             echo "script_status=success" >> $GITHUB_OUTPUT
-            echo "DYNAMIC_URL=$output" >> $GITHUB_OUTPUT  # 捕获订阅地址
+            echo "DYNAMIC_URL=${output}" >> $GITHUB_OUTPUT
           fi
 
       # --------------------------
-      # 步骤6：检查脚本状态
+      # 步骤6：脚本状态检查（保持原样）
       # --------------------------      
       - name: 检查脚本状态
         id: check_script
         run: |
           if [ "${{ steps.run_script.outputs.script_status }}" == "failure" ]; then
-            echo "脚本运行失败。"
-            echo "send_email=true" >> $GITHUB_OUTPUT  # 使用 Environment Files 设置输出变量
-            echo "error_type=脚本运行失败" >> $GITHUB_OUTPUT  # 设置错误类型
+            echo "send_email=true" >> $GITHUB_OUTPUT
+            echo "error_type=脚本运行失败" >> $GITHUB_OUTPUT
           else
-            echo "脚本运行成功。"
             echo "send_email=false" >> $GITHUB_OUTPUT
           fi
 
       # --------------------------
-      # 步骤7：创建存储目录（保证目录存在）
+      # 步骤7：创建存储目录（保持原样）
       # --------------------------
       - name: Create v2cross directory
-        run: mkdir -p v2cross  # -p参数自动创建多级目录
+        run: mkdir -p v2cross
 
       # --------------------------
-      # 步骤8：下载订阅文件（核心步骤）
+      # 步骤8：下载订阅文件（关键修改点）
       # --------------------------
-      - name: 下载订阅文件并检查是否有更新
+      - name: 下载订阅文件并检查
         id: fetch-content
+        env:
+          DYNAMIC_URL: ${{ steps.run_script.outputs.DYNAMIC_URL }}  # 从步骤输出获取
         run: |
-          # 使用curl下载文件，关键参数说明：
-          # -L 跟随重定向（应对CDN切换）
-          # -H 添加缓存控制头（避免获取缓存内容）
-          if curl -L -H "Cache-Control: no-cache" -o v2cross/output.yaml "$DYNAMIC_URL"; then
-            # 文件完整性检查
-            if [ -s v2cross/output.yaml ]; then
-              echo "内容下载成功"
-              
-              # 将文件添加到git暂存区（为后续变更检测准备）
-              git add v2cross/output.yaml
-              
-              # 调试信息：显示文件哈希值
-              echo "文件哈希: $(sha1sum v2cross/output.yaml)"
-              # 显示git状态确认添加成功
-              git status  
-            else
-              # 设置错误标记（空文件情况）
-              echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
-              exit 1
-            fi
-          else
-            # 下载失败处理
+          echo "正在下载订阅文件：$DYNAMIC_URL"
+          
+          # 带重试机制的下载
+          if ! curl -L -H "Cache-Control: no-cache" -o v2cross/output.yaml "$DYNAMIC_URL"; then
             echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
+            echo "错误：文件下载失败" >&2
             exit 1
           fi
+          
+          # 文件完整性校验
+          if [ ! -s v2cross/output.yaml ]; then
+            echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
+            echo "错误：下载文件为空" >&2
+            exit 1
+          fi
+          
+          # 添加文件到Git
+          git add v2cross/output.yaml
+          echo "文件已暂存"
 
       # --------------------------
       # 步骤9：检测文件变更（关键逻辑）
