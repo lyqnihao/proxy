@@ -67,7 +67,7 @@ jobs:
             echo "error_message=$output" >> $GITHUB_OUTPUT  # 捕获错误信息
           else
             echo "script_status=success" >> $GITHUB_OUTPUT
-      #     echo "subscription_url=$output" >> $GITHUB_OUTPUT  # 捕获订阅地址
+            echo "subscription_url=$output" >> $GITHUB_OUTPUT  # 捕获订阅地址
             echo "url_content=$output" >> $GITHUB_OUTPUT  # 捕获目标网址内容
           fi
 
