@@ -114,7 +114,7 @@ jobs:
           # 添加 nodefree/target.yaml 文件到暂存区
           git add nodefree/target.yaml
           # 提交更改，提交信息包含动态 URL
-          git commit -m "Update target.yaml from $DYNAMIC_URL"
+          git commit -m "Update target.yaml from $DYNAMIC_URL: ${{ env.CURRENT_DATE }}"
           # 推送更改到仓库
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
