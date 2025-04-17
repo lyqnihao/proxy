@@ -1,3 +1,5 @@
+# 版本：1.1
+# 修订原因：一直无法更新，先改手动，后续研究。
 # 版本 1.0
 # 这是一个用于每天自动更新 xConfig 订阅文件的 GitHub Actions 工作流。
 # 功能包括：从 订阅URL 读取内容、内容检查、提交更改和邮件通知。
@@ -5,12 +7,10 @@
 name: Update xConfig
 
 on:
-  schedule:
-    # 北京时间每天 0:05（UTC时间 16:05）
-    - cron: '5 16 * * *'
-    # 北京时间每天 12:05（UTC时间 4:05）
-    - cron: '5 4 * * *'
-  workflow_dispatch:
+#  schedule:
+#    - cron: '5 16 * * *'  # 北京时间每天 0:05（UTC时间 16:05）
+#    - cron: '5 4 * * *'   # 北京时间每天 12:05（UTC时间 4:05）
+  workflow_dispatch:      # 仅保留手动触发选项
 
 jobs:
   update:
@@ -117,7 +117,7 @@ jobs:
           # 邮件正文
           body: |
             工作流运行状态：
-            - 脚本版本: 1.0
+            - 脚本版本: 1.1
             - 订阅 URL: "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '订阅 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
