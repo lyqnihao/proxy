@@ -13,7 +13,7 @@ jobs:
 
       - name: Delete file
         run: |
-          git rm .github/workflows/update-xconfig.yml
+          git rm xConfig/update.py
 
       - name: Set Git user identity
         run: |
@@ -22,5 +22,5 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git commit -m "Delete .github/workflows/update-xconfig.yml"
+          git commit -m "Delete xConfig/update.py"
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
