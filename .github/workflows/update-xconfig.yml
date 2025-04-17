@@ -1,129 +1,138 @@
 # 版本：1.1
-# 修订原因：一直无法更新，先改手动，后续研究。
-# 版本 1.0
+# 修订原因：
+# 版本：1.0
 # 这是一个用于每天自动更新 xConfig 订阅文件的 GitHub Actions 工作流。
 # 功能包括：从 订阅URL 读取内容、内容检查、提交更改和邮件通知。
 
+# 工作流名称
 name: Update xConfig
 
+# 触发条件
 on:
-#  schedule:
-#    - cron: '5 16 * * *'  # 北京时间每天 0:05（UTC时间 16:05）
-#    - cron: '5 4 * * *'   # 北京时间每天 12:05（UTC时间 4:05）
-  workflow_dispatch:      # 仅保留手动触发选项
+  # 定时触发
+  schedule:
+    - cron: '5 20 * * *'  # 北京时间每天 4:05（UTC时间 20:05）
+  # 手动触发
+  workflow_dispatch:
 
+# 任务定义
 jobs:
-  update:
+  # 任务名称：更新汇聚订阅文件
+  update-xConfig-yaml:
+    # 运行环境：最新版 Ubuntu
     runs-on: ubuntu-latest
 
+    # 步骤序列
     steps:
-      # 第一步：检出仓库代码
+      # --------------------------
+      # 步骤 1：检出代码库
+      # --------------------------
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # 使用 checkout v3 版本
 
-      # 第二步：获取当前日期（北京时间）
+      # --------------------------
+      # 步骤 2：获取北京时间
+      # --------------------------
       - name: Get current date (Beijing Time)
         id: date
         run: |
-          # 设置环境变量 CURRENT_DATE，值为当前北京时间
+          # 设置环境变量（用于后续步骤和邮件通知）
+          echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
+          echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      # 第三步：创建 xConfig 目录（如果不存在）
+      # --------------------------
+      # 步骤 3：生成动态 URL
+      # --------------------------
+      - name: Generate dynamic URL
+        run: |
+          # 固定 URL（可根据需要改造为动态生成逻辑）
+          echo "DYNAMIC_URL=https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml" >> $GITHUB_ENV
+
+      # --------------------------
+      # 步骤 4：创建存储目录
+      # --------------------------
       - name: Create xConfig directory if not exists
         run: |
-          # 创建 xConfig 目录，-p 参数确保目录不存在时自动创建
+          # -p 参数确保目录不存在时自动创建
           mkdir -p xConfig
 
-      # 第四步：检查文件是否存在并删除
-      - name: Check if file exists and delete
-        run: |
-          # 检查 xConfig/output.yaml 文件是否存在，如果存在则删除
-          if [ -f xConfig/output.yaml ]; then
-            rm xConfig/output.yaml
-            echo "已删除现有文件：xConfig/output.yaml"
-          else
-            echo "文件不存在，跳过删除"
-          fi
-
-      # 第五步：从 订阅URL 获取内容
+      # --------------------------
+      # 步骤 5：下载订阅文件（核心步骤）
+      # --------------------------
       - name: Fetch content from dynamic URL
         id: fetch-content
         run: |
-          # 使用 curl 从 订阅URL 下载内容并保存到 xConfig/output.yaml
-          if curl -o xConfig/output.yaml "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"; then
+          # 使用 curl 下载文件
+          if curl -o xConfig/output.yaml "$DYNAMIC_URL"; then
             # 检查文件是否为空
             if [ -s xConfig/output.yaml ]; then
-              echo "内容下载成功，文件不为空"
+              echo "内容下载成功"
+              git add xConfig/output.yaml  # 关键操作：将文件加入暂存区
             else
-              # 如果文件为空，设置 FETCH_ERROR 输出变量为 true，并退出步骤
-              echo "文件为空，可能是下载错误"
-              echo "::set-output name=FETCH_ERROR::true"
+              # 设置错误标志（新语法替代弃用的 ::set-output）
+              echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
               exit 1
             fi
           else
-            # 如果下载失败，设置 FETCH_ERROR 输出变量为 true，并退出步骤
-            echo "无法从 订阅URL 下载内容"
-            echo "::set-output name=FETCH_ERROR::true"
+            echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
             exit 1
           fi
-          
-      # 第六步：检查文件内容是否有变化
+
+      # --------------------------
+      # 步骤 6：检测文件变更（改进点）
+      # --------------------------
       - name: Check if file has changes
         id: check-changes
         run: |
-          # 使用 git diff 检查 xConfig/output.yaml 文件是否有变化
-          if git diff --quiet xConfig/output.yaml; then
-            # 如果没有变化，设置 HAS_CHANGES 输出变量为 false
+          # 检查暂存区与仓库的差异（原工作区对比不准确）
+          if git diff --staged --quiet; then
+            echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
             echo "文件内容未发生变化"
-            echo "::set-output name=HAS_CHANGES::false"
           else
-            # 如果有变化，设置 HAS_CHANGES 输出变量为 true
+            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
             echo "文件内容已发生变化"
-            echo "::set-output name=HAS_CHANGES::true"
           fi
-          
-      # 第七步：提交并推送更改（仅在内容有变化时执行）
+
+      # --------------------------
+      # 步骤 7：提交变更（条件执行）
+      # --------------------------
       - name: Commit and push changes
-        # 如果 HAS_CHANGES 为 true，则执行此步骤
         if: steps.check-changes.outputs.HAS_CHANGES == 'true'
         run: |
-          # 配置 Git 用户名和邮箱
+          # 配置 Git 身份信息
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          # 添加 xConfig/output.yaml 文件到暂存区
-          git add xConfig/output.yaml
-          # 提交更改，提交信息包含  订阅URL
-          git commit -m "Update xConfig/output.yaml with content from the URL"
-          # 推送更改到仓库
-          git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          # 提交暂存区文件（包含动态时间戳）
+          git commit -m "Update xConfig yaml: ${{ env.CURRENT_DATE }}"
+          # 使用 GitHub Token 推送
+          git push
 
-      # 第八步：发送邮件通知（内容无变化或工作流失败时）
+      # --------------------------
+      # 步骤 8：邮件通知（故障处理）
+      # --------------------------
       - name: Send email on no changes or failure
-        # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
+        # 触发条件：失败/下载错误/无变化
         if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
-        # 使用 dawidd6/action-send-mail@v3 动作发送邮件
         uses: dawidd6/action-send-mail@v3
         with:
-          # 163 邮箱的 SMTP 服务器地址
+          # SMTP 服务器配置
           server_address: smtp.163.com
-          # 163 邮箱的 SMTP 端口
           server_port: 465
-          # 你的 163 邮箱地址
+          # 认证信息（需在仓库 Secrets 设置）
           username: ${{ secrets.EMAIL_USERNAME }}
-          # 你的 163 邮箱授权码
           password: ${{ secrets.EMAIL_PASSWORD }}
-          # 邮件标题
+          # 邮件主题（含北京时间）
           subject: "xConfig更新出错 ${{ env.CURRENT_DATE }}"
-          # 邮件正文
+          # 邮件正文模板
           body: |
             工作流运行状态：
-            - 脚本版本: 1.1
-            - 订阅 URL: "https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml"
+            - 脚本版本: 1.0
+            - 订阅地址: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '订阅 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
-          # 收件人邮箱
+            - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变化' || '未知错误' }}
+          # 收件人配置
           to: lyqnihao@163.com
-          # 发件人邮箱
           from: ${{ secrets.EMAIL_USERNAME }}
-          # 邮件内容类型为纯文本
           content_type: text/plain
