@@ -43,19 +43,13 @@ def fetch_url_content(url):
 # 主函数
 def main():
     # 获取目标网址
-    subscription_url = fetch_subscription_url()
-    if not subscription_url:
+    DYNAMIC_URL = fetch_subscription_url()
+    if not DYNAMIC_URL:
         print("错误：无法提取订阅地址。")  # 输出错误信息
         sys.exit(1)  # 返回状态码 1 表示失败
-    
-    # 读取目标网址的内容
-    url_content = fetch_url_content(subscription_url)
-    if not url_content:
-        print("错误：无法读取目标网址内容。")  # 输出错误信息
-        sys.exit(1)  # 返回状态码 1 表示失败
-    
+       
     # 输出目标网址的内容
-    print(url_content)
+    print(DYNAMIC_URL)
 
 if __name__ == "__main__":
     main()
