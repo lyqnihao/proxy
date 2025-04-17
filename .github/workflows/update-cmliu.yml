@@ -43,7 +43,7 @@ jobs:
       - name: Generate dynamic URL
         run: |
           # 根据 YEAR、MONTH 和 DAY 生成动态 URL，并存储到 DYNAMIC_URL 环境变量中
-          echo "DYNAMIC_URL=https://proxymix.lyqnihao.dns-dynamic.net/sub?token=guest&clash" >> $GITHUB_ENV
+          echo "DYNAMIC_URL=https://proxymix.lyqnihao.dns-dynamic.net/sub?token=guest&b64" >> $GITHUB_ENV
 
       # 步骤 4：创建 cmliu 目录（如果不存在）
       - name: Create cmliu directory if not exists
