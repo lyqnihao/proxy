@@ -1,138 +1,163 @@
 # 版本：1.1
-# 修订原因：
+# 修订说明：
+# - 添加缓存控制头确保获取最新订阅文件
+# - 增加调试步骤用于排查文件变更检测问题
+# - 优化提交信息模板和错误处理逻辑
 # 版本：1.0
 # 这是一个用于每天自动更新 xConfig 订阅文件的 GitHub Actions 工作流。
 # 功能包括：从 订阅URL 读取内容、内容检查、提交更改和邮件通知。
 
-# 工作流名称
+
+# 工作流名称：更新xConfig订阅文件
 name: Update xConfig
 
-# 触发条件
+# 触发条件配置
 on:
-  # 定时触发
+  # 定时任务配置（UTC时间20:05对应北京时间次日04:05）
   schedule:
-    - cron: '5 20 * * *'  # 北京时间每天 4:05（UTC时间 20:05）
-  # 手动触发
+    - cron: '5 20 * * *'
+  # 支持手动触发
   workflow_dispatch:
 
 # 任务定义
 jobs:
-  # 任务名称：更新汇聚订阅文件
+  # 主任务：更新配置文件
   update-xConfig-yaml:
-    # 运行环境：最新版 Ubuntu
+    # 指定运行环境为最新版Ubuntu
     runs-on: ubuntu-latest
 
     # 步骤序列
     steps:
       # --------------------------
-      # 步骤 1：检出代码库
+      # 步骤1：检出代码库（关键基础步骤）
       # --------------------------
       - name: Checkout repository
-        uses: actions/checkout@v3  # 使用 checkout v3 版本
+        uses: actions/checkout@v3
+        with:
+          # 获取完整提交历史（避免浅克隆导致文件比对异常）
+          fetch-depth: 0  
 
       # --------------------------
-      # 步骤 2：获取北京时间
+      # 步骤2：获取北京时间（用于时间戳）
       # --------------------------
       - name: Get current date (Beijing Time)
         id: date
         run: |
-          # 设置环境变量（用于后续步骤和邮件通知）
-          echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
-          echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
-          echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
+          # 设置环境变量（格式示例：2024-03-15 12:30:45）
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       # --------------------------
-      # 步骤 3：生成动态 URL
+      # 步骤3：生成订阅URL（可扩展为动态生成）
       # --------------------------
       - name: Generate dynamic URL
         run: |
-          # 固定 URL（可根据需要改造为动态生成逻辑）
+          # 目前使用固定URL，后续可改造为动态生成逻辑
           echo "DYNAMIC_URL=https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml" >> $GITHUB_ENV
 
       # --------------------------
-      # 步骤 4：创建存储目录
+      # 步骤4：创建存储目录（保证目录存在）
       # --------------------------
-      - name: Create xConfig directory if not exists
-        run: |
-          # -p 参数确保目录不存在时自动创建
-          mkdir -p xConfig
+      - name: Create xConfig directory
+        run: mkdir -p xConfig  # -p参数自动创建多级目录
 
       # --------------------------
-      # 步骤 5：下载订阅文件（核心步骤）
+      # 步骤5：下载订阅文件（核心步骤）
       # --------------------------
       - name: Fetch content from dynamic URL
         id: fetch-content
         run: |
-          # 使用 curl 下载文件
-          if curl -o xConfig/output.yaml "$DYNAMIC_URL"; then
-            # 检查文件是否为空
+          # 使用curl下载文件，关键参数说明：
+          # -L 跟随重定向（应对CDN切换）
+          # -H 添加缓存控制头（避免获取缓存内容）
+          if curl -L -H "Cache-Control: no-cache" -o xConfig/output.yaml "$DYNAMIC_URL"; then
+            # 文件完整性检查
             if [ -s xConfig/output.yaml ]; then
               echo "内容下载成功"
-              git add xConfig/output.yaml  # 关键操作：将文件加入暂存区
+              
+              # 将文件添加到git暂存区（为后续变更检测准备）
+              git add xConfig/output.yaml
+              
+              # 调试信息：显示文件哈希值
+              echo "文件哈希: $(sha1sum xConfig/output.yaml)"
+              # 显示git状态确认添加成功
+              git status  
             else
-              # 设置错误标志（新语法替代弃用的 ::set-output）
+              # 设置错误标记（空文件情况）
               echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
               exit 1
             fi
           else
+            # 下载失败处理
             echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
             exit 1
           fi
 
       # --------------------------
-      # 步骤 6：检测文件变更（改进点）
+      # 步骤6：检测文件变更（关键逻辑）
       # --------------------------
-      - name: Check if file has changes
+      - name: Check changes
         id: check-changes
         run: |
-          # 检查暂存区与仓库的差异（原工作区对比不准确）
+          # 显示详细变更状态（调试用）
+          git status --porcelain
+          
+          # 核心检测逻辑：比对暂存区与仓库差异
           if git diff --staged --quiet; then
+            # 无变化时设置标记
             echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
-            echo "文件内容未发生变化"
+            echo "文件未变化"
           else
+            # 检测到变化时设置标记
             echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
-            echo "文件内容已发生变化"
+            echo "检测到变更"
           fi
 
       # --------------------------
-      # 步骤 7：提交变更（条件执行）
+      # 步骤7：提交变更（条件执行）
       # --------------------------
-      - name: Commit and push changes
+      - name: Commit and push
+        # 仅当检测到变化时执行
         if: steps.check-changes.outputs.HAS_CHANGES == 'true'
         run: |
-          # 配置 Git 身份信息
+          # 配置git用户信息（必需字段）
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          # 提交暂存区文件（包含动态时间戳）
-          git commit -m "Update xConfig yaml: ${{ env.CURRENT_DATE }}"
-          # 使用 GitHub Token 推送
+          
+          # 提交信息包含北京时间戳
+          git commit -m "Update xConfig: ${{ env.CURRENT_DATE }}"
+          
+          # 推送到远程仓库（使用GITHUB_TOKEN自动鉴权）
           git push
 
       # --------------------------
-      # 步骤 8：邮件通知（故障处理）
+      # 步骤8：异常通知（综合判断）
       # --------------------------
-      - name: Send email on no changes or failure
-        # 触发条件：失败/下载错误/无变化
+      - name: Notify on failure
+        # 触发条件：任何失败/下载错误/无内容变化
         if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
         uses: dawidd6/action-send-mail@v3
         with:
-          # SMTP 服务器配置
+          # SMTP服务器配置（163邮箱示例）
           server_address: smtp.163.com
           server_port: 465
-          # 认证信息（需在仓库 Secrets 设置）
+          # 认证信息（需在仓库Secrets中设置）
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          # 邮件主题（含北京时间）
-          subject: "xConfig更新出错 ${{ env.CURRENT_DATE }}"
-          # 邮件正文模板
+          
+          # 邮件主题（含时间戳）
+          subject: "xConfig更新问题 ${{ env.CURRENT_DATE }}"
+          
+          # 邮件正文模板（使用管道符保持格式）
           body: |
-            工作流运行状态：
-            - 脚本版本: 1.0
-            - 订阅地址: ${{ env.DYNAMIC_URL }}
+            详情报告：
+            - 时间: ${{ env.CURRENT_DATE }}
+            - 脚本版本: 1.1
+            - 订阅URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变化' || '未知错误' }}
+            - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
+          
           # 收件人配置
           to: lyqnihao@163.com
           from: ${{ secrets.EMAIL_USERNAME }}
+          # 内容类型设置为纯文本
           content_type: text/plain
