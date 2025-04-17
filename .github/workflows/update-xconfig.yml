@@ -124,7 +124,7 @@ jobs:
           git config --global user.email "actions@github.com"
           
           # 提交信息包含北京时间戳
-          git commit -m "Update xConfig: ${{ env.CURRENT_DATE }}"
+          git commit -m "Update target.yaml from $DYNAMIC_URL: ${{ env.CURRENT_DATE }}"
           
           # 推送到远程仓库（使用GITHUB_TOKEN自动鉴权）
           git push
