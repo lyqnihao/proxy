@@ -67,7 +67,7 @@ jobs:
             echo "error_message=$output" >> $GITHUB_OUTPUT  # 捕获错误信息
           else
             echo "script_status=success" >> $GITHUB_OUTPUT
-            echo "url_content=$output" >> $GITHUB_OUTPUT  # 捕获目标网址内容
+            echo "DYNAMIC_URL=$output" >> $GITHUB_OUTPUT  # 捕获订阅地址
           fi
 
       # --------------------------
@@ -100,7 +100,7 @@ jobs:
           # 使用curl下载文件，关键参数说明：
           # -L 跟随重定向（应对CDN切换）
           # -H 添加缓存控制头（避免获取缓存内容）
-          if curl -L -H "Cache-Control: no-cache" -o v2cross/output.yaml "$url_content"; then
+          if curl -L -H "Cache-Control: no-cache" -o v2cross/output.yaml "$DYNAMIC_URL"; then
             # 文件完整性检查
             if [ -s v2cross/output.yaml ]; then
               echo "内容下载成功"
@@ -183,7 +183,7 @@ jobs:
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
             - 脚本版本: 1.0
-            - 订阅URL: ${{ env.subscription_url }} from https://v2cross.com/1884.html
+            - 订阅URL: ${{ env.DYNAMIC_URL }} from https://v2cross.com/1884.html
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check_content.outputs.send_email == 'false' && '脚本运行失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
 
