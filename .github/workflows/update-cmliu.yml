@@ -1,0 +1,146 @@
+# 版本 1.1
+# 修订原因：
+# 版本 1.0
+# 这是一个用于每天自动更新 Cloudflare自建汇聚订阅 YAML 文件的 GitHub Actions 工作流。
+# 功能包括：动态时间参数生成、文件下载、内容检查、提交更改和邮件通知。
+
+# 工作流名称
+name: Update cmliu
+
+# 触发条件
+on:
+  # 定时触发：每天 UTC 时间 5:05 运行（北京时间 13:05）
+  schedule:
+    - cron: '05 5 * * *'
+  # 手动触发：允许通过 GitHub 界面手动运行工作流
+  workflow_dispatch:
+
+# 任务定义
+jobs:
+  # 任务名称：update-cmliu-yaml
+  update-cmliu-yaml:
+    # 运行环境：使用最新版本的 Ubuntu
+    runs-on: ubuntu-latest
+
+    # 步骤定义
+    steps:
+      # 步骤 1：检出仓库代码
+      - name: Checkout repository
+        # 使用 actions/checkout@v3 动作检出仓库代码
+        uses: actions/checkout@v3
+
+      # 步骤 2：获取当前日期（北京时间）
+      - name: Get current date (Beijing Time)
+        id: date
+        run: |
+          # 设置环境变量 YEAR、MONTH、DAY 和 CURRENT_DATE，值为当前北京时间
+          echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
+          echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
+          echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      # 步骤 3：生成动态 URL
+      - name: Generate dynamic URL
+        run: |
+          # 根据 YEAR、MONTH 和 DAY 生成动态 URL，并存储到 DYNAMIC_URL 环境变量中
+          echo "DYNAMIC_URL=https://proxymix.lyqnihao.dns-dynamic.net/sub?token=guest&clash" >> $GITHUB_ENV
+
+      # 步骤 4：创建 cmliu 目录（如果不存在）
+      - name: Create cmliu directory if not exists
+        run: |
+          # 创建 cmliu 目录，-p 参数确保目录不存在时自动创建
+          mkdir -p cmliu
+
+      # 步骤 5：检查文件是否存在并删除
+      - name: Check if file exists and delete
+        run: |
+          # 检查 cmliu/target.yaml 文件是否存在，如果存在则删除
+          if [ -f cmliu/target.yaml ]; then
+            rm cmliu/target.yaml
+            echo "已删除现有文件：cmliu/target.yaml"
+          else
+            echo "文件不存在，跳过删除"
+          fi
+
+      # 步骤 6：从动态 URL 获取内容
+      - name: Fetch content from dynamic URL
+        id: fetch-content
+        run: |
+          # 使用 curl 从动态 URL 下载内容并保存到 cmliu/target.yaml
+          if curl -o cmliu/target.yaml "$DYNAMIC_URL"; then
+            # 检查文件是否为空
+            if [ -s cmliu/target.yaml ]; then
+              echo "内容下载成功，文件不为空"
+            else
+              # 如果文件为空，设置 FETCH_ERROR 输出变量为 true，并退出步骤
+              echo "文件为空，可能是下载错误"
+              echo "::set-output name=FETCH_ERROR::true"
+              exit 1
+            fi
+          else
+            # 如果下载失败，设置 FETCH_ERROR 输出变量为 true，并退出步骤
+            echo "无法从动态 URL 下载内容"
+            echo "::set-output name=FETCH_ERROR::true"
+            exit 1
+          fi
+
+      # 步骤 7：检查文件内容是否有变化
+      - name: Check if file has changes
+        id: check-changes
+        run: |
+          # 使用 git diff 检查 cmliu/target.yaml 文件是否有变化
+          if git diff --quiet cmliu/target.yaml; then
+            # 如果没有变化，设置 HAS_CHANGES 输出变量为 false
+            echo "文件内容未发生变化"
+            echo "::set-output name=HAS_CHANGES::false"
+          else
+            # 如果有变化，设置 HAS_CHANGES 输出变量为 true
+            echo "文件内容已发生变化"
+            echo "::set-output name=HAS_CHANGES::true"
+          fi
+
+      # 步骤 8：提交并推送更改（仅在内容有变化时执行）
+      - name: Commit and push changes
+        # 如果 HAS_CHANGES 为 true，则执行此步骤
+        if: steps.check-changes.outputs.HAS_CHANGES == 'true'
+        run: |
+          # 配置 Git 用户名和邮箱
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          # 添加 cmliu/target.yaml 文件到暂存区
+          git add cmliu/target.yaml
+          # 提交更改，提交信息包含动态 URL
+          git commit -m "Update cmliu yaml with content from $DYNAMIC_URL"
+          # 推送更改到仓库
+          git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+      # 步骤 9：发送邮件通知（内容无变化或工作流失败时）
+      - name: Send email on no changes or failure
+        # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
+        # 使用 dawidd6/action-send-mail@v3 动作发送邮件
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # 163 邮箱的 SMTP 服务器地址
+          server_address: smtp.163.com
+          # 163 邮箱的 SMTP 端口
+          server_port: 465
+          # 你的 163 邮箱地址
+          username: ${{ secrets.EMAIL_USERNAME }}
+          # 你的 163 邮箱授权码
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          # 邮件标题
+          subject: "cmliu汇聚订阅更新出错 ${{ env.CURRENT_DATE }}"
+          # 邮件正文
+          body: |
+            工作流运行状态：
+            - 脚本版本: 1.0
+            - 汇聚订阅 URL: ${{ env.DYNAMIC_URL }}
+            - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '汇聚订阅 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
+          # 收件人邮箱
+          to: lyqnihao@163.com
+          # 发件人邮箱
+          from: ${{ secrets.EMAIL_USERNAME }}
+          # 邮件内容类型为纯文本
+          content_type: text/plain
