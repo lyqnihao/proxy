@@ -1,3 +1,5 @@
+# 版本：2.5
+# 修订原因：一直更新不到内容，停止自动留手动。
 # 版本：2.4
 # 修订原因：去掉邮件内容中的“错误信息”行及其它注释格式内容，并同步更新 Python 文件的版本号注释。
 # 版本：2.3
@@ -16,9 +18,9 @@
 name: Update v2cross
 
 on:
-  schedule:
-    - cron: '5 16,22,4,10 * * *'  # UTC时间对应北京时间00:05, 06:05, 12:05, 18:05
-  workflow_dispatch:
+#  schedule:
+#    - cron: '5 16,22,4,10 * * *'  # UTC时间对应北京时间00:05, 06:05, 12:05, 18:05
+  workflow_dispatch:  # 仅保留手动触发选项
 
 jobs:
   refresh:
@@ -142,7 +144,7 @@ jobs:
           subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"
           body: |
             工作流运行状态：
-            - 脚本版本: 2.4
+            - 脚本版本: 2.5
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.check_script.outputs.error_type || steps.check_content.outputs.error_type || steps.commit_changes.outputs.error_type }}
           to: lyqnihao@163.com
