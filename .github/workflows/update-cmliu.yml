@@ -13,7 +13,9 @@ name: Update cmliu
 
 # 触发条件
 on:
-  # 仅手动触发（原定时触发已移除）
+  schedule:
+    - cron: '5 20 * * *'  # 北京时间每天 4:05（UTC时间 20:05）
+  # 手动触发
   workflow_dispatch:
 
 # 任务定义
