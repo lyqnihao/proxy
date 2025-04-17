@@ -108,7 +108,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           # 提交暂存区文件（包含动态时间戳）
-          git commit -m "Update cmliu yaml: ${{ env.CURRENT_DATE }}"
+          git commit -m "Update target.yaml from $DYNAMIC_URL: ${{ env.CURRENT_DATE }}"
           # 使用 GitHub Token 推送
           git push
 
