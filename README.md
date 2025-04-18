@@ -9,10 +9,7 @@
 
 ## Action自动更新的代理列表
 
-[汇聚订阅-CF](https://cf-workers-sub-43i.pages.dev/lyqnihao)：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml
-
-[自定义域名地址](https://proxymix.lyqnihao.dns-dynamic.net/lyqnihao)：
-每天4:05自动更新代理列表，代理来源https://cf-workers-sub-43i.pages.dev/sub?token=guest&clash 。 
+[汇聚订阅-CF](https://cf-workers-sub-43i.pages.dev/lyqnihao)[（自定义域名地址）](https://proxymix.lyqnihao.dns-dynamic.net/lyqnihao)：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml，每天4:05自动更新代理列表，代理来源https://cf-workers-sub-43i.pages.dev/sub?token=guest&clash 。 
 
 []()：
 
