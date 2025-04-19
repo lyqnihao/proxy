@@ -52,7 +52,7 @@ jobs:
       - name: Generate dynamic URL
         run: |
           # 目前使用固定URL，后续可改造为动态生成逻辑
-          echo "DYNAMIC_URL=https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META_IRAN-Direct.yml" >> $GITHUB_ENV
+          echo "DYNAMIC_URL=https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.txt" >> $GITHUB_ENV
 
       # --------------------------
       # 步骤4：创建存储目录（保证目录存在）
