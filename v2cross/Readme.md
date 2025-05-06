@@ -1,4 +1,5 @@
-[v2cross（常用别名 Pawdroid）](https://v2cross.com/1884.html/)：<br>
+[v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
 每天1:05开始每6小时自动更新代理列表。<br>
 
