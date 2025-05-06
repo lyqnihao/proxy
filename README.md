@@ -20,7 +20,7 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.ya
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 每天13:05自动更新代理列表，原为手动更新日期地址。<br>
 
-[v2cross](https://v2cross.com/1884.html/)：<br>
+[v2cross（常用别名 Pawdroid）](https://v2cross.com/1884.html/)：<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
 每天1:05开始每6小时自动更新代理列表。<br>
 
