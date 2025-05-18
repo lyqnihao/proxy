@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 距离下次重置剩余：4 天, server: sg01.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 距离下次重置剩余：3 天, server: sg01.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
   - {name: 建议：感到卡顿请切换到专线节点, server: sg01.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
   - {name: 🇸🇬 【亚洲】新加坡01丨直连, server: sg01.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
   - {name: 🇸🇬 【亚洲】新加坡02丨直连, server: sg02.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
@@ -30,12 +30,12 @@ proxies:
   - {name: 🇦🇺 【大洋洲】澳大利亚丨直连, server: aodaliya.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: aodaliya.poke-mon.xyz, skip-cert-verify: true}
   - {name: 🇩🇪 【欧洲】德国丨直连, server: deguo.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
   - {name: 🇻🇳 【东南亚】越南丨直连, server: yuenan.poke-mon.xyz, port: 20000, type: hysteria2, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, auth: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: www.bing.com, skip-cert-verify: true}
-  - {name: 🇸🇬 【亚洲】新加坡01丨专线【3x】, server: sssg01.136470.xyz, port: 55011, type: ss, cipher: 2022-blake3-aes-128-gcm, password: YmE5ZWFhOGM5YTU3OTc2MQ==:OTI5ZWRiZjQtYjBmYy00Mw==}
-  - {name: 🇸🇬 【亚洲】新加坡02丨专线【3x】, server: sssg02.136470.xyz, port: 45012, type: ss, cipher: 2022-blake3-aes-128-gcm, password: YmE5ZWFhOGM5YTU3OTc2MQ==:OTI5ZWRiZjQtYjBmYy00Mw==}
-  - {name: 🇸🇬 【亚洲】新加坡03丨专线【3x】, server: sssg03.136470.xyz, port: 55013, type: ss, cipher: 2022-blake3-aes-128-gcm, password: YmE5ZWFhOGM5YTU3OTc2MQ==:OTI5ZWRiZjQtYjBmYy00Mw==}
-  - {name: 🇸🇬 【亚洲】新加坡04丨超速ᴠ⁶【3x】, server: sssg04.136470.xyz, port: 55015, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: sssg04.136470.xyz, skip-cert-verify: true}
-  - {name: 🇸🇬 【亚洲】新加坡05丨超速ᴠ⁶【3x】, server: sssg04.136470.xyz, port: 55015, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: sssg04.136470.xyz, skip-cert-verify: true}
-  - {name: 🇸🇬 【亚洲】新加坡06丨超速ᴠ⁶【3x】, server: sssg04.136470.xyz, port: 55015, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: 172.104.55.253, skip-cert-verify: true}
+  - {name: 🇸🇬 【亚洲】新加坡01丨专线【3x】, server: sssg01.521pokemon.com, port: 55011, type: ss, cipher: 2022-blake3-aes-128-gcm, password: YmE5ZWFhOGM5YTU3OTc2MQ==:OTI5ZWRiZjQtYjBmYy00Mw==}
+  - {name: 🇸🇬 【亚洲】新加坡02丨专线【3x】, server: sssg02.521pokemon.com, port: 45012, type: ss, cipher: 2022-blake3-aes-128-gcm, password: YmE5ZWFhOGM5YTU3OTc2MQ==:OTI5ZWRiZjQtYjBmYy00Mw==}
+  - {name: 🇸🇬 【亚洲】新加坡03丨专线【3x】, server: sssg03.521pokemon.com, port: 55013, type: ss, cipher: 2022-blake3-aes-128-gcm, password: YmE5ZWFhOGM5YTU3OTc2MQ==:OTI5ZWRiZjQtYjBmYy00Mw==}
+  - {name: 🇸🇬 【亚洲】新加坡04丨超速ᴠ⁶【3x】, server: sssg01.521pokemon.com, port: 55015, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: sssg04.136470.xyz, skip-cert-verify: true}
+  - {name: 🇸🇬 【亚洲】新加坡05丨超速ᴠ⁶【3x】, server: sssg02.521pokemon.com, port: 55015, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: sssg04.136470.xyz, skip-cert-verify: true}
+  - {name: 🇸🇬 【亚洲】新加坡06丨超速ᴠ⁶【3x】, server: sssg03.521pokemon.com, port: 55015, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: 172.104.55.253, skip-cert-verify: true}
   - {name: 🇯🇵 【亚洲】日本01丨专线【3x】, server: ssjp01.136470.xyz, port: 54025, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NGM1NzQyOGFkNWEyMTZjNA==:OTI5ZWRiZjQtYjBmYy00Mw==}
   - {name: 🇯🇵 【亚洲】日本02丨专线【3x】, server: ssjp02.136470.xyz, port: 54026, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NGM1NzQyOGFkNWEyMTZjNA==:OTI5ZWRiZjQtYjBmYy00Mw==}
   - {name: 🇯🇵 【亚洲】日本03丨专线【3x】, server: bgp.fengchiyx.xyz, port: 54027, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NGM1NzQyOGFkNWEyMTZjNA==:OTI5ZWRiZjQtYjBmYy00Mw==}
@@ -54,32 +54,31 @@ proxies:
   - {name: 🇺🇸 【北美洲】美国04丨超速【3x】, server: ssus04.136470.xyz, port: 58215, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: itunes.apple.com, skip-cert-verify: true}
   - {name: 🇺🇸 【北美洲】美国05丨超速【3x】, server: ssus04.136470.xyz, port: 58215, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: itunes.apple.com, skip-cert-verify: true}
   - {name: 🇺🇸 【北美洲】美国06丨超速【3x】, server: ssus04.136470.xyz, port: 58215, type: trojan, password: 929edbf4-b0fc-43cc-912e-16cb378221bb, sni: itunes.apple.com, skip-cert-verify: true}
-  - {name: "[vmess]距离下次重置剩余：1 天", server: 195.85.59.95, port: 2095, type: vmess, uuid: 01c018d8-9bbf-4353-967e-cf1982aa717f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cdn-node-oss-01.paofu.de}}}
   - {name: "[vmess]防失联:https://ssrsub.com", server: 195.85.59.95, port: 2095, type: vmess, uuid: 01c018d8-9bbf-4353-967e-cf1982aa717f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cdn-node-oss-01.paofu.de}}}
   - {name: "🇩🇪 [vmess]付费推荐：https://dafei.de", server: www.csgo.com, port: 2095, type: vmess, uuid: 01c018d8-9bbf-4353-967e-cf1982aa717f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cdn-node-oss-01.paofu.de}}}
   - {name: "🇺🇸 [vmess]🇺🇸 美国 公益 V01", server: 195.85.59.161, port: 2095, type: vmess, uuid: 01c018d8-9bbf-4353-967e-cf1982aa717f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cdn-node-oss-01.paofu.de}}}
   - {name: "🇺🇸 [vmess]🇺🇸 美国 公益 V02", server: 195.85.59.95, port: 2095, type: vmess, uuid: 01c018d8-9bbf-4353-967e-cf1982aa717f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cdn-node-oss-02.paofu.de}}}
-  - {name: "🇺🇸 [Hy2]🇺🇸 美国 公益 H01", server: 107.173.127.166, port: 29289, type: hysteria2, password: 01c018d8-9bbf-4353-967e-cf1982aa717f, auth: 01c018d8-9bbf-4353-967e-cf1982aa717f, sni: www.apple.com, skip-cert-verify: true}
-  - {name: "🇺🇸 [Hy2]🇺🇸 美国 公益 H02", server: 198.23.130.211, port: 28331, type: hysteria2, password: 01c018d8-9bbf-4353-967e-cf1982aa717f, auth: 01c018d8-9bbf-4353-967e-cf1982aa717f, sni: api.push.apple.com, skip-cert-verify: true}
-  - {name: 距离下次重置剩余：20 天, server: mg7.gy6688.xyz, port: 443, type: trojan, password: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg7.gy6688.xyz, skip-cert-verify: true}
+  - {name: "🇺🇸 [Hy2]🇺🇸 美国 公益 H01", server: 107.173.127.166, port: 26986, type: hysteria2, password: 01c018d8-9bbf-4353-967e-cf1982aa717f, auth: 01c018d8-9bbf-4353-967e-cf1982aa717f, sni: www.apple.com, skip-cert-verify: true}
+  - {name: "🇺🇸 [Hy2]🇺🇸 美国 公益 H02", server: 198.23.130.211, port: 27625, type: hysteria2, password: 01c018d8-9bbf-4353-967e-cf1982aa717f, auth: 01c018d8-9bbf-4353-967e-cf1982aa717f, sni: api.push.apple.com, skip-cert-verify: true}
+  - {name: 距离下次重置剩余：19 天, server: mg7.gy6688.xyz, port: 443, type: trojan, password: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg7.gy6688.xyz, skip-cert-verify: true}
   - {name: 🇺🇸 美国, server: mg7.gy6688.xyz, port: 443, type: trojan, password: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg7.gy6688.xyz, skip-cert-verify: true}
-  - {name: 🇺🇸 美国1, server: mg1.gywanglug.xyz, port: 23432, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg1.gywanglug.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇺🇸 美国1-v, server: mg11.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: 1jupCbzD9RB34YhWct4C6_I1bx_O5Ct7ZnT5dfCiV18}, servername: www.apple.com.cn, client-fingerprint: ios, network: tcp}
-  - {name: 🇺🇸 美国2, server: mg2.gywanglug.xyz, port: 23484, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg2.gywanglug.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇺🇸 美国2-v, server: mg22.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: GcOtIhZbkznrBYohK7rvjV0oVoQvC4y38VIExs6KUwA}, servername: businessmadesimple.com, client-fingerprint: chrome, network: tcp}
-  - {name: 🇺🇸 美国3, server: mg3.gywanglug.xyz, port: 21191, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg3.gywanglug.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇺🇸 美国3-v, server: mg33.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8}, servername: www.thewilliamvale.com, client-fingerprint: firefox, network: tcp}
-  - {name: 🇺🇸 美国4-v, server: mg44.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8}, servername: www.apple.com.cn, client-fingerprint: safari, network: tcp}
-  - {name: 🇺🇸 美国5-v, server: mg55.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: kHtBu5SWzLuz79nw0LkDkH4luWft_A-M6MNq4LA-RB4}, servername: www.apple.com.cn, client-fingerprint: firefox, network: tcp}
-  - {name: 🇺🇸 美国6-v, server: mg66.gywanglug.xyz, port: 45445, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8}, servername: www.webilop.com, client-fingerprint: chrome, network: tcp}
-  - {name: 🇸🇬 新加坡1, server: xjp1.gy6688.xyz, port: 25051, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: xjp1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇦🇺 澳大利亚, server: au1.gy6688.xyz, port: 24862, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: au1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: cP2sbTFOTkuTq1sW}
-  - {name: 🇬🇧 英国1, server: yg1.gy6688.xyz, port: 24252, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: yg1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇳🇱 荷兰1, server: hl1.gy6688.xyz, port: 25519, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: hl1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇩🇪 德国1, server: dg1.gy6688.xyz, port: 21373, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: dg1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇨🇦 加拿大1, server: jnd1.gy6688.xyz, port: 25992, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: jnd1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 🇮🇳 印度1, server: yd1.gy6688.xyz, port: 21445, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: yd1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
-  - {name: 距离下次重置剩余：13 天, server: free-relay.themars.top, port: 39907, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
+  - {name: 🇺🇸 美国1, server: mg1.gywanglug.xyz, port: 24212, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg1.gywanglug.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇺🇸 美国1-v, server: mg11.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: 1jupCbzD9RB34YhWct4C6_I1bx_O5Ct7ZnT5dfCiV18}, servername: www.apple.com.cn, client-fingerprint: qq, network: tcp}
+  - {name: 🇺🇸 美国2, server: mg2.gywanglug.xyz, port: 24906, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg2.gywanglug.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇺🇸 美国2-v, server: mg22.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: GcOtIhZbkznrBYohK7rvjV0oVoQvC4y38VIExs6KUwA}, servername: businessmadesimple.com, client-fingerprint: qq, network: tcp}
+  - {name: 🇺🇸 美国3, server: mg3.gywanglug.xyz, port: 22526, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: mg3.gywanglug.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇺🇸 美国3-v, server: mg33.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8}, servername: www.thewilliamvale.com, client-fingerprint: qq, network: tcp}
+  - {name: 🇺🇸 美国4-v, server: mg44.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8}, servername: www.apple.com.cn, client-fingerprint: ios, network: tcp}
+  - {name: 🇺🇸 美国5-v, server: mg55.gywanglug.xyz, port: 8443, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: kHtBu5SWzLuz79nw0LkDkH4luWft_A-M6MNq4LA-RB4}, servername: www.apple.com.cn, client-fingerprint: safari, network: tcp}
+  - {name: 🇺🇸 美国6-v, server: mg66.gywanglug.xyz, port: 45445, type: vless, uuid: 248eae00-96b0-426e-b49d-5f76bde46268, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8}, servername: www.webilop.com, client-fingerprint: safari, network: tcp}
+  - {name: 🇸🇬 新加坡1, server: xjp1.gy6688.xyz, port: 21862, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: xjp1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇦🇺 澳大利亚, server: au1.gy6688.xyz, port: 23877, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: au1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: cP2sbTFOTkuTq1sW}
+  - {name: 🇬🇧 英国1, server: yg1.gy6688.xyz, port: 24122, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: yg1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇳🇱 荷兰1, server: hl1.gy6688.xyz, port: 21061, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: hl1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇩🇪 德国1, server: dg1.gy6688.xyz, port: 21706, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: dg1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇨🇦 加拿大1, server: jnd1.gy6688.xyz, port: 25250, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: jnd1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 🇮🇳 印度1, server: yd1.gy6688.xyz, port: 21468, type: hysteria2, password: 248eae00-96b0-426e-b49d-5f76bde46268, auth: 248eae00-96b0-426e-b49d-5f76bde46268, sni: yd1.gy6688.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: LNAnPYDfFyesRAVn}
+  - {name: 距离下次重置剩余：12 天, server: free-relay.themars.top, port: 39907, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
   - {name: 🇯🇵 免费JP节点01, server: free-relay.themars.top, port: 39907, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
   - {name: 🇸🇬 免费SG节点02, server: free-relay.themars.top, port: 49102, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
   - {name: 🇸🇬 免费SG节点03, server: free-relay.themars.top, port: 39903, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
@@ -88,7 +87,7 @@ proxies:
   - {name: TG群:@helium_network_group, server: free-relay.themars.top, port: 39907, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
   - {name: 加群关注电报频道获取延期码, server: free-relay.themars.top, port: 39907, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
   - {name: 无墙地址 http://pcdn.giize.com:8011/, server: free-relay.themars.top, port: 39907, type: vmess, uuid: b21d0e78-2c35-4929-983c-4ccc9e57d252, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv1.m3u8, headers: {Host: www.cctv.com}}}
-  - {name: 距离下次重置剩余：20 天 2, server: jianada.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: jianada.959555.xyz, skip-cert-verify: true}
+  - {name: 距离下次重置剩余：19 天 2, server: jianada.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: jianada.959555.xyz, skip-cert-verify: true}
   - {name: 🇨🇦 加拿大高速直连, server: jianada.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: jianada.959555.xyz, skip-cert-verify: true}
   - {name: 🇸🇬 新加坡-高速直连, server: sgxi.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: sgxi.959555.xyz, skip-cert-verify: true}
   - {name: 🇺🇸 美国高速直连, server: us.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: us.959555.xyz, skip-cert-verify: true}
@@ -111,16 +110,17 @@ proxies:
   - {name: 🇸🇪 瑞典-直连, server: ruidian.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: ruidian.959555.xyz, skip-cert-verify: true}
   - {name: 🇧🇷 巴西圣保罗直连, server: bxsbl.959555.xyz, port: 10000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: bxsbl.959555.xyz, skip-cert-verify: true}
   - {name: 🇧🇷 巴西维涅杜直连, server: bxwnd.959555.xyz, port: 11000, type: hysteria2, password: 2df147f3-5540-400e-badf-df211f74dbbc, auth: 2df147f3-5540-400e-badf-df211f74dbbc, sni: bxwnd.959555.xyz, skip-cert-verify: true}
-  - {name: 🇸🇬 ---连不上的时候请更新订阅---, server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112173327.online.video.downloader.0123456789us4.niubi.site}}}
-  - {name: "--群组: https://t.me/niua_org", server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112173327.online.video.downloader.0123456789us4.niubi.site}}}
-  - {name: 升级套餐60+节点, server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112173327.online.video.downloader.0123456789us4.niubi.site}}}
+  - {name: 距离下次重置剩余：30 天, server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789us4.niubi.site}}}
+  - {name: 🇸🇬 ---连不上的时候请更新订阅---, server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789us4.niubi.site}}}
+  - {name: "--群组: https://t.me/niua_org", server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789us4.niubi.site}}}
+  - {name: 升级套餐60+节点, server: yx.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789us4.niubi.site}}}
   - {name: "🇺🇸 [Hy2]美国-02|1.0x", server: 107.175.185.55, port: 11000, type: hysteria2, password: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, auth: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, sni: www.bing.com, skip-cert-verify: true}
   - {name: "🇧🇷 [Hy2]巴西-01|1.0x", server: 167.234.240.15, port: 11000, type: hysteria2, password: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, auth: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, sni: www.bing.com, skip-cert-verify: true}
   - {name: "🇭🇰 [Hy2]香港-00|测试", server: 146.235.225.95, port: 11111, type: hysteria2, password: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, auth: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, sni: www.bing.com, skip-cert-verify: true}
   - {name: "🇬🇧 [Hy2]英国-01|1.0x", server: 185.168.194.111, port: 11000, type: hysteria2, password: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, auth: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, sni: www.bing.com, skip-cert-verify: true}
-  - {name: "🇺🇸 [vmess]美国-04|1.0x", server: yx2.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112173327.online.video.downloader.0123456789us4.niubi.site}}}
-  - {name: "🇬🇧 [vmess]英国-01|1.0x", server: yx1.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112173327.online.video.downloader.0123456789uk.niubi.site}}}
-  - {name: "🇧🇷 [vmess]巴西-02|1.0x", server: yx2.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112173327.online.video.downloader.0123456789br4.niubi.site}}}
+  - {name: "🇺🇸 [vmess]美国-04|1.0x", server: yx2.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789us4.niubi.site}}}
+  - {name: "🇬🇧 [vmess]英国-01|1.0x", server: yx1.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789uk.niubi.site}}}
+  - {name: "🇧🇷 [vmess]巴西-02|1.0x", server: yx2.niubi.site, port: 2052, type: vmess, uuid: 937fb02e-3b0d-49b5-8b6b-8011fc04fccc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 2112149778.online.video.downloader.0123456789br4.niubi.site}}}
   - {name: "[Hy2]纽约 公益站：https://siris.eu.org", server: nyc2.shigure.eu.org, port: 2083, type: hysteria2, password: acfd89d6-036f-41c8-af03-f6ad780fa75b, auth: acfd89d6-036f-41c8-af03-f6ad780fa75b, sni: nyc2.shigure.eu.org, skip-cert-verify: true}
   - {name: "🇭🇰 [vmess]香港a-CDN", server: cloudflare.182682.xyz, port: 2053, type: vmess, uuid: acfd89d6-036f-41c8-af03-f6ad780fa75b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hka1.pavo.eu.org, network: ws, ws-opts: {path: /hka1vmess, headers: {Host: hka1.pavo.eu.org}}}
   - {name: "🇭🇰 [Hy2]香港b-IPv6", server: hkb.pavo.eu.org, port: 8892, type: hysteria2, password: acfd89d6-036f-41c8-af03-f6ad780fa75b, auth: acfd89d6-036f-41c8-af03-f6ad780fa75b, sni: hkb.pavo.eu.org, skip-cert-verify: true}
@@ -128,11 +128,11 @@ proxies:
   - {name: "🇭🇰 [Hy2]香港d-IPv6", server: hkd.pavo.eu.org, port: 8892, type: hysteria2, password: acfd89d6-036f-41c8-af03-f6ad780fa75b, auth: acfd89d6-036f-41c8-af03-f6ad780fa75b, sni: hkd.pavo.eu.org, skip-cert-verify: true}
   - {name: "🇩🇪 [vmess]法兰克福1-CDN", server: cloudflare.182682.xyz, port: 2053, type: vmess, uuid: acfd89d6-036f-41c8-af03-f6ad780fa75b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: de1.shigure.eu.org, network: ws, ws-opts: {path: /de1vmess, headers: {Host: de1.shigure.eu.org}}}
   - {name: "🇩🇪 [Hy2]法兰克福2", server: de2.shigure.eu.org, port: 51353, type: hysteria2, password: acfd89d6-036f-41c8-af03-f6ad780fa75b, auth: acfd89d6-036f-41c8-af03-f6ad780fa75b, sni: de2.shigure.eu.org, skip-cert-verify: true}
-  - {name: 距离下次重置剩余：13 天 2, server: 45.147.201.231, port: 22050, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
+  - {name: 距离下次重置剩余：12 天 2, server: 45.147.201.231, port: 22050, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
   - {name: 🇺🇸 美国-纽约-001, server: 45.147.201.231, port: 22050, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
   - {name: 🇺🇸 美国-纽约-HY-001, server: 45.147.201.231, port: 31005, type: hysteria2, password: 563c0c22-82ba-4406-af4d-845360febda3, auth: 563c0c22-82ba-4406-af4d-845360febda3, skip-cert-verify: true, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ%3D%3D}
-  - {name: 🇺🇸 美国-拉斯维加斯-001, server: 45.147.201.231, port: 20031, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国-拉斯维加斯-002, server: 45.147.201.231, port: 23083, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国-拉斯维加斯-001, server: 45.147.201.231, port: 20032, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国-拉斯维加斯-002, server: 45.147.201.231, port: 23085, type: vmess, uuid: 563c0c22-82ba-4406-af4d-845360febda3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
   - {name: 🇺🇸 美国-拉斯维加斯-HY-001, server: 45.147.201.231, port: 30073, type: hysteria2, password: 563c0c22-82ba-4406-af4d-845360febda3, auth: 563c0c22-82ba-4406-af4d-845360febda3, skip-cert-verify: true, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ%3D%3D}
   - {name: 🇺🇸 美国-拉斯维加斯-HY-002, server: 45.147.201.231, port: 33073, type: hysteria2, password: 563c0c22-82ba-4406-af4d-845360febda3, auth: 563c0c22-82ba-4406-af4d-845360febda3, skip-cert-verify: true, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ%3D%3D}
   - {name: 🇨🇦 >🇨🇦 CA|Hs|0404|TG@FProxies|, server: 104.25.44.232, port: 80, type: vmess, uuid: 1bfff242-21c2-4d6d-85d0-ded870c10d55, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
@@ -580,18 +580,18 @@ proxies:
   - {name: 🇺🇸 >🇺🇸 US|Ns|0404|TG@FProxies|_2, server: xdd.dashuai.cyou, port: 45067, type: vmess, uuid: a0ff6743-b4a6-4745-a829-c524cab0e4ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 >🇺🇸 US|Ns|0404|TG%40FProxies|_2, server: 103.36.90.195, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
   - {name: ">🇻🇳 VN|Ms|0404|TG@FProxies|", server: nc.cm.xiaomi-api.xyz, port: 19574, type: trojan, password: e47af2c3-5500-4dea-a4ae-6f0ea48c2e73, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本1-Ver.6, server: 6r76x-g04.jp01-0986-vm0.entry.fr0307a.art, port: 21584, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本2-Ver.7, server: vfodl-g04.jp02-9a99-vm0.entry.fr0307a.art, port: 11776, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本3-Ver.6, server: qke6g-g04.jp03-7d22-vm0.entry.fr0307a.art, port: 21584, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本4-Ver.7, server: evvtv-g04.jp04-3771-vm0.entry.fr0307a.art, port: 447, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本5-Ver.8, server: xavyy-g04.jp05-6786-vm0.entry.fr0307a.art, port: 46485, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本6-Ver.7, server: 0m0bn-g04.jp06-7c5a-vm0.entry.fr0307a.art, port: 28786, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 免费-日本7-Ver.1, server: ox6u3-g04.jp07-1f28-vm0.entry.fr0307a.art, port: 28786, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 美国|【付费用户】油管秒开4K/8K|更多地区接入|GPT+流媒体|共享, server: s4.db-link01.top, port: 8880, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.25.214.228, headers: {Host: 100-189-215-28.s4.db-link01.top}}, udp: true}
-  - {name: 🇸🇬 美国|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享, server: s5.cn-db.top, port: 8880, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.19.215.93, headers: {Host: 100-153-105-77.s5.cn-db.top}}, udp: true}
-  - {name: 🏳️‍🌈 美国|【注册免费领1TB流量】前往-注册|共享, server: s5.db-link01.top, port: 2082, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in172.64.22.238, headers: {Host: 100-202-241-148.s5.db-link01.top}}, udp: true}
-  - {name: "🇺🇸 美国|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享", server: s2.db-link01.top, port: 8080, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.24.84.66, headers: {Host: 100-154-172-172.s2.db-link01.top}}, udp: true}
-  - {name: 🇺🇸 美国|最低35%-aff招募进行中|共享, server: s5.cn-db.top, port: 2086, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.25.16.205, headers: {Host: 100-244-76-9.s5.cn-db.top}}, udp: true}
+  - {name: 🇯🇵 免费-日本1-Ver.6, server: phts6-g04.jp01-0986-vm0.entry.fr0307a.art, port: 21584, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 免费-日本2-Ver.7, server: j0oaa-g04.jp02-9a99-vm0.entry.fr0307a.art, port: 11776, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 免费-日本3-Ver.6, server: ublz7-g04.jp03-7d22-vm0.entry.fr0307a.art, port: 21584, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 免费-日本4-Ver.7, server: nx5aa-g04.jp04-3771-vm0.entry.fr0307a.art, port: 447, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 免费-日本5-Ver.8, server: pn781-g04.jp05-6786-vm0.entry.fr0307a.art, port: 46485, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 免费-日本6-Ver.7, server: pyygw-g04.jp06-7c5a-vm0.entry.fr0307a.art, port: 28786, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 免费-日本7-Ver.1, server: 3qd6p-g04.jp07-1f28-vm0.entry.fr0307a.art, port: 28786, type: vmess, uuid: 74163317-f059-3121-8ffd-7c627962a9fd, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国|【付费用户】油管秒开4K/8K|更多地区接入|GPT+流媒体|共享, server: s2.db-link02.top, port: 2095, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in172.67.124.139, headers: {Host: 100-83-247-11.s2.db-link02.top}}, udp: true}
+  - {name: 🇸🇬 美国|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享, server: s3.cn-db.top, port: 8080, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in172.67.81.191, headers: {Host: 100-75-11-254.s3.cn-db.top}}, udp: true}
+  - {name: 🏳️‍🌈 美国|【注册免费领1TB流量】前往-注册|共享, server: s4.cn-db.top, port: 2082, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in172.64.62.17, headers: {Host: 100-163-219-84.s4.cn-db.top}}, udp: true}
+  - {name: "🇺🇸 美国|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享", server: s4.cn-db.top, port: 8880, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.20.143.113, headers: {Host: 100-76-202-49.s4.cn-db.top}}, udp: true}
+  - {name: 🇺🇸 美国|最低35%-aff招募进行中|共享, server: s3.db-link01.top, port: 8880, type: vmess, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.19.188.145, headers: {Host: 100-239-8-92.s3.db-link01.top}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -604,7 +604,7 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -653,14 +653,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -678,7 +677,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -687,7 +686,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -710,6 +709,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -727,7 +727,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -1197,7 +1197,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -1246,14 +1246,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -1271,7 +1270,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -1280,7 +1279,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -1303,6 +1302,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -1320,7 +1320,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -1804,7 +1804,7 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -1853,14 +1853,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -1878,7 +1877,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -1887,7 +1886,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -1910,6 +1909,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -1927,7 +1927,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -2396,7 +2396,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -2445,14 +2445,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -2470,7 +2469,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -2479,7 +2478,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -2502,6 +2501,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -2519,7 +2519,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -2996,7 +2996,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -3045,14 +3045,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -3070,7 +3069,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -3079,7 +3078,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -3102,6 +3101,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -3119,7 +3119,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -3588,7 +3588,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -3637,14 +3637,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -3662,7 +3661,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -3671,7 +3670,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -3694,6 +3693,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -3711,7 +3711,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -4181,7 +4181,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -4230,14 +4230,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -4255,7 +4254,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -4264,7 +4263,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -4287,6 +4286,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -4304,7 +4304,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
@@ -4790,7 +4790,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 距离下次重置剩余：4 天
+      - 距离下次重置剩余：3 天
       - 建议：感到卡顿请切换到专线节点
       - 🇸🇬 【亚洲】新加坡01丨直连
       - 🇸🇬 【亚洲】新加坡02丨直连
@@ -4839,14 +4839,13 @@ proxy-groups:
       - 🇺🇸 【北美洲】美国04丨超速【3x】
       - 🇺🇸 【北美洲】美国05丨超速【3x】
       - 🇺🇸 【北美洲】美国06丨超速【3x】
-      - "[vmess]距离下次重置剩余：1 天"
       - "[vmess]防失联:https://ssrsub.com"
       - 🇩🇪 [vmess]付费推荐：https://dafei.de
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V01
       - 🇺🇸 [vmess]🇺🇸 美国 公益 V02
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H01
       - 🇺🇸 [Hy2]🇺🇸 美国 公益 H02
-      - 距离下次重置剩余：20 天
+      - 距离下次重置剩余：19 天
       - 🇺🇸 美国
       - 🇺🇸 美国1
       - 🇺🇸 美国1-v
@@ -4864,7 +4863,7 @@ proxy-groups:
       - 🇩🇪 德国1
       - 🇨🇦 加拿大1
       - 🇮🇳 印度1
-      - 距离下次重置剩余：13 天
+      - 距离下次重置剩余：12 天
       - 🇯🇵 免费JP节点01
       - 🇸🇬 免费SG节点02
       - 🇸🇬 免费SG节点03
@@ -4873,7 +4872,7 @@ proxy-groups:
       - TG群:@helium_network_group
       - 加群关注电报频道获取延期码
       - 无墙地址 http://pcdn.giize.com:8011/
-      - 距离下次重置剩余：20 天 2
+      - 距离下次重置剩余：19 天 2
       - 🇨🇦 加拿大高速直连
       - 🇸🇬 新加坡-高速直连
       - 🇺🇸 美国高速直连
@@ -4896,6 +4895,7 @@ proxy-groups:
       - 🇸🇪 瑞典-直连
       - 🇧🇷 巴西圣保罗直连
       - 🇧🇷 巴西维涅杜直连
+      - 距离下次重置剩余：30 天
       - 🇸🇬 ---连不上的时候请更新订阅---
       - "--群组: https://t.me/niua_org"
       - 升级套餐60+节点
@@ -4913,7 +4913,7 @@ proxy-groups:
       - 🇭🇰 [Hy2]香港d-IPv6
       - 🇩🇪 [vmess]法兰克福1-CDN
       - 🇩🇪 [Hy2]法兰克福2
-      - 距离下次重置剩余：13 天 2
+      - 距离下次重置剩余：12 天 2
       - 🇺🇸 美国-纽约-001
       - 🇺🇸 美国-纽约-HY-001
       - 🇺🇸 美国-拉斯维加斯-001
