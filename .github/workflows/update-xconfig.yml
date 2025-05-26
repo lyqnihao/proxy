@@ -1,3 +1,6 @@
+# 版本：1.2
+# 修订说明：
+# - 原地址旧未更新，更换地址
 # 版本：1.1
 # 修订说明：
 # - 添加缓存控制头确保获取最新订阅文件
@@ -52,7 +55,7 @@ jobs:
       - name: Generate dynamic URL
         run: |
           # 目前使用固定URL，后续可改造为动态生成逻辑
-          echo "DYNAMIC_URL=https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.txt" >> $GITHUB_ENV
+          echo "DYNAMIC_URL=https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet.txt" >> $GITHUB_ENV
 
       # --------------------------
       # 步骤4：创建存储目录（保证目录存在）
@@ -151,7 +154,7 @@ jobs:
           body: |
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.1
+            - 脚本版本: 1.2
             - 订阅URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
