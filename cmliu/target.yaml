@@ -5,55 +5,23 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇭🇰 Hong Kong 02, server: hktuic01.yydzx.xyz, port: 12259, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: hktuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
-  - {name: 🇸🇬 Singapore 02, server: sgtuic01.yydzx.xyz, port: 13474, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: sgtuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
-  - {name: 🇯🇵 Japan 02, server: jptuic01.yydzx.xyz, port: 14526, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: jptuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇭🇰 Hong Kong 02, server: hktuic01.yydzx.xyz, port: 12983, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: hktuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇸🇬 Singapore 02, server: sgtuic01.yydzx.xyz, port: 13235, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: sgtuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇯🇵 Japan 02, server: jptuic01.yydzx.xyz, port: 14270, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: jptuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
   - {name: 🇦🇺 Australia 02, server: autuic01.yydzx.xyz, port: 16060, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: autuic01.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
-  - {name: 🇺🇸 United States 2086, server: usvless.yydzx.xyz, port: 17616, type: vless, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, servername: usvless.yydzx.xyz, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇺🇸 United States 2083, server: us2083.yydzx.xyz, port: 13832, type: hysteria2, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, auth: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: us2083.yydzx.xyz, skip-cert-verify: true}
-  - {name: 🇩🇪 Germany 2085, server: detuic.yydzx.xyz, port: 15129, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: detuic.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
-  - {name: 🇩🇪 DE, server: 54.93.101.215, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US, server: 18.118.166.245, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇩🇪 DE 2, server: 63.178.2.18, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 2, server: 18.220.216.187, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 3, server: 18.188.17.133, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇨🇦 CA, server: 99.79.161.29, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇩🇪 DE 3, server: 54.93.62.85, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 4, server: 3.22.249.200, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇩🇪 DE 4, server: 54.93.120.162, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇨🇦 CA 2, server: 99.79.161.235, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot, server: 195.58.49.100, port: 8011, type: ss, cipher: aes-256-gcm, password: 9f3d1a6d31468599, udp: true}
-  - {name: 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot, server: 45.140.169.26, port: 9012, type: ss, cipher: aes-256-gcm, password: 7ae4e68cf77f6089, udp: true}
-  - {name: 🇲🇾 MY①𝕋𝔾@mm8686_bot, server: 38.47.189.254, port: 21290, type: hysteria2, password: ce3a4c40-3b43-446a-b52c-703b355a2c0d, auth: ce3a4c40-3b43-446a-b52c-703b355a2c0d, sni: free-my.yuetoto.net, up: 1000, down: 1000, skip-cert-verify: true, ports: 21001-21999, udp: true}
-  - {name: 🇺🇸 US①𝕋𝔾@mm8686_bot, server: 185.28.119.12, port: 21144, type: hysteria2, password: ce3a4c40-3b43-446a-b52c-703b355a2c0d, auth: ce3a4c40-3b43-446a-b52c-703b355a2c0d, sni: free-us1.yuetoto.net, up: 1000, down: 1000, skip-cert-verify: true, ports: 21001-21999, udp: true}
-  - {name: 🇺🇸 US②𝕋𝔾@mm8686_bot, server: 91.236.230.174, port: 21205, type: hysteria2, password: ce3a4c40-3b43-446a-b52c-703b355a2c0d, auth: ce3a4c40-3b43-446a-b52c-703b355a2c0d, sni: free-us2.yuetoto.net, up: 1000, down: 1000, skip-cert-verify: true, ports: 21001-21999, udp: true}
-  - {name: 🇩🇪 DE①𝕋𝔾@mm8686_bot, server: 162.19.135.176, port: 21038, type: hysteria2, password: ce3a4c40-3b43-446a-b52c-703b355a2c0d, auth: ce3a4c40-3b43-446a-b52c-703b355a2c0d, sni: free-de.yuetoto.net, up: 1000, down: 1000, skip-cert-verify: true, ports: 21001-21999, udp: true}
-  - {name: 🇳🇱 NL①𝕋𝔾@mm8686_bot, server: 2.59.216.101, port: 21829, type: hysteria2, password: ce3a4c40-3b43-446a-b52c-703b355a2c0d, auth: ce3a4c40-3b43-446a-b52c-703b355a2c0d, sni: free-nl.yuetoto.net, up: 1000, down: 1000, skip-cert-verify: true, ports: 21001-21999, udp: true}
-  - {name: IL①𝕋𝔾@mm8686_bot, server: 45.150.108.154, port: 21509, type: hysteria2, password: ce3a4c40-3b43-446a-b52c-703b355a2c0d, auth: ce3a4c40-3b43-446a-b52c-703b355a2c0d, sni: free-il.yuetoto.net, up: 1000, down: 1000, skip-cert-verify: true, ports: 21001-21999, udp: true}
-  - {name: 🇺🇸 美国sf①𝕋𝔾@mm8686_bot, server: c01db724-t3dk00-t3ss2y-4mce.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: c01db724-t3dk00-t3ss2y-4mce.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf②𝕋𝔾@mm8686_bot, server: f1d942ca-t3bpc0-t3ss2y-4mce.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: f1d942ca-t3bpc0-t3ss2y-4mce.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf③𝕋𝔾@mm8686_bot, server: c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf④𝕋𝔾@mm8686_bot, server: eb8d3417-t4teo0-tdtx5w-au6.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: eb8d3417-t4teo0-tdtx5w-au6.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot, server: 6e206c57-t3b340-tcj7b6-d70y.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 6e206c57-t3b340-tcj7b6-d70y.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot, server: dcc40639-t3cxs0-tcj7b6-d70y.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: dcc40639-t3cxs0-tcj7b6-d70y.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot, server: 5bedbab5-t3bpc0-t49cd4-4550.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 5bedbab5-t3bpc0-t49cd4-4550.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot, server: 3ca87d3a-t3bpc0-tcm6ys-deip.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 3ca87d3a-t3bpc0-tcm6ys-deip.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot, server: 67e01b04-t3dk00-tcm6ys-deip.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 67e01b04-t3dk00-tcm6ys-deip.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot, server: 6370a033-t22n40-t3bwxq-d6ar.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 6370a033-t22n40-t3bwxq-d6ar.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot, server: 6a9773b0-t3bpc0-t3cj5q-d6ar.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 6a9773b0-t3bpc0-t3cj5q-d6ar.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot, server: 898cc05f-t3dk00-t3cj5q-d6ar.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 898cc05f-t3dk00-t3cj5q-d6ar.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot, server: b9c3912b-t07z40-t1l1nh-d6ar.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: b9c3912b-t07z40-t1l1nh-d6ar.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot, server: ad87b9c7-t3b340-t3hjqp-b4pt.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: ad87b9c7-t3b340-t3hjqp-b4pt.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot, server: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot, server: 70555517-t3bpc0-t9lxaa-1glq.la.shifen.uk, port: 1743, type: hysteria2, password: 06c625ea-5902-11ee-9e87-f23c9313b177, auth: 06c625ea-5902-11ee-9e87-f23c9313b177, sni: 70555517-t3bpc0-t9lxaa-1glq.la.shifen.uk, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: 🇺🇸 美国i7①𝕋𝔾@mm8686_bot, server: tkzg03.239000.xyz, port: 47583, type: vless, uuid: 013a0f8b-61d5-49e5-93f1-15bf12efb3de, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: o-st4ZqtmA68eYACoa6hWPrD2kmiUSo-gbA8KAFTGks, short-id: "19abc22f9213b0" }, servername: www.bing.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇭🇰 HK①𝕋𝔾@mm8686_bot, server: 47.239.150.118, port: 443, type: vless, uuid: 3e7f67de-648e-4871-b51a-a225214d41ee, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw}, servername: prod.adobeccstatic.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇯🇵 JP①𝕋𝔾@mm8686_bot, server: 172.238.22.96, port: 25599, type: vless, uuid: ff06f97b-09f6-4b8b-8a12-7d2f51b28a75, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: SsbeZ_JdMe3r2IqTESBWRSUMrcm3PdpFzlab5xrKUlU}, servername: www.cloudflare.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇰🇷 KR①𝕋𝔾@mm8686_bot, server: 158.179.175.153, port: 47018, type: vless, uuid: 57580310-fb4f-4b6f-b1de-7137fb06b913, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: EgvsNiV4Ugwlj7GDq0XHXE63is_DJ5vhSiHgft-jRDs, short-id: "23c1eba6" }, servername: www.yahoo.com, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇸🇬 SG①𝕋𝔾@mm8686_bot, server: sg1.tangnin.top, port: 18443, type: hysteria2, password: TNBLjoVDARHH9fU3scgPChy, auth: TNBLjoVDARHH9fU3scgPChy, sni: sg1.tangnin.top, up: 1000, down: 1000, skip-cert-verify: true}
-  - {name: TH①𝕋𝔾@mm8686_bot, server: 8.213.196.81, port: 443, type: vless, uuid: 3e7f67de-648e-4871-b51a-a225214d41ee, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw, short-id: "7266e6" }, servername: cdn77.api.userway.org, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇮🇳 IN①𝕋𝔾@mm8686_bot, server: 65.20.74.132, port: 443, type: vless, uuid: 3e7f67de-648e-4871-b51a-a225214d41ee, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw}, servername: bh.contextweb.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: AT①𝕋𝔾@mm8686_bot, server: kolhozkey1.com, port: 6033, type: vless, uuid: 94b249c1-5fa5-4c38-bd27-13df65a61318, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: mDXYds1gITU7tWHpZPZ8-ufrqTV1TU7-c-hXtpLNaDo, short-id: "59c1a41ef8721307" }, servername: amazon.it, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇺🇸 United States 2086, server: usvless.yydzx.xyz, port: 17261, type: vless, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, servername: usvless.yydzx.xyz, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇺🇸 United States 2083, server: us2083.yydzx.xyz, port: 13988, type: hysteria2, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, auth: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: us2083.yydzx.xyz, skip-cert-verify: true}
+  - {name: 🇩🇪 Germany 2085, server: detuic.yydzx.xyz, port: 15206, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: detuic.yydzx.xyz, skip-cert-verify: true, disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇺🇸 US, server: 18.224.33.22, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 2, server: 3.137.215.129, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇨🇦 CA, server: 99.79.38.63, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇨🇦 CA 2, server: 99.79.161.29, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇩🇪 DE, server: 63.178.2.18, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇩🇪 DE 2, server: 63.180.178.8, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇨🇦 CA 3, server: 99.79.161.235, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 3, server: 3.141.46.88, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 4, server: 3.16.217.33, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇩🇪 DE 3, server: 63.177.227.124, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 防范境外势力渗透, server: 127.0.0.53, port: 80, type: vmess, uuid: 88888888-8888-8888-8888-888888888888, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: "防范境外势力渗透 #1", server: 127.0.0.53, port: 81, type: vmess, uuid: 88888888-8888-8888-8888-888888888888, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: "防范境外势力渗透 #2", server: 127.0.0.53, port: 82, type: vmess, uuid: 88888888-8888-8888-8888-888888888888, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
@@ -64,9 +32,9 @@ proxies:
   - {name: "防范境外势力渗透 #7", server: 127.0.0.53, port: 87, type: vmess, uuid: 88888888-8888-8888-8888-888888888888, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: "防范境外势力渗透 #8", server: 127.0.0.53, port: 88, type: vmess, uuid: 88888888-8888-8888-8888-888888888888, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: "防范境外势力渗透 #9", server: 127.0.0.53, port: 89, type: vmess, uuid: 88888888-8888-8888-8888-888888888888, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇫🇷 France_Paris_hysteria_81, server: 62.210.127.217, port: 50011, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
-  - {name: 🇳🇱 The Netherlands_Amsterdam_hy_3, server: 109.104.153.91, port: 37519, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 1000, down: 1000, ports: 10000-20000, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #6", server: 206.71.158.37, port: 35000, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
+  - {name: 🇫🇷 France_None_hysteria_71, server: 62.210.10.186, port: 50011, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
+  - {name: 🇳🇱 The Netherlands_Amsterdam_hy_3, server: 109.104.154.97, port: 48429, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 1000, down: 1000, ports: 10000-20000, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
+  - {name: "🇳🇱 - NL - @freeOnlineVPN #5", server: 206.71.158.37, port: 35000, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
   - {name: "@NoForcedheaven", server: 46.62.152.236, port: 443, type: hysteria2, password: a2678c97b8d79059, auth: a2678c97b8d79059, skip-cert-verify: true, obfs: salamander, obfs-password: 9242a8bf}
   - {name: "Channel id: @ShadowProxy66🇺🇸", server: 97cc76e9-t53wg0-tiqsce-t6fv.us.hyhuawei.com, port: 443, type: hysteria2, password: af7ddbb2-3567-11ec-bd7c-f23c913c8d2b, auth: af7ddbb2-3567-11ec-bd7c-f23c913c8d2b, sni: 97cc76e9-t53wg0-tiqsce-t6fv.us.hyhuawei.com, skip-cert-verify: true}
   - {name: "@FreakConfig #1", server: 108.165.213.197, port: 23891, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, auth: c232f411-96b5-4b07-b2f7-66a434725ffb, sni: fus01.mistea.top, skip-cert-verify: true}
@@ -82,7 +50,6 @@ proxies:
   - {name: "@sunflowerplato🌻", server: 129.153.59.26, port: 30300, type: hysteria2, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, auth: 2429bee3-e0c1-47dd-b420-75e6512b184b, sni: www.bing.com, skip-cert-verify: true}
   - {name: All-@V2rayAlpha--15, server: 40.233.82.111, port: 30300, type: hysteria2, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, auth: 2429bee3-e0c1-47dd-b420-75e6512b184b, sni: www.bing.com, skip-cert-verify: true}
   - {name: MCI-@V2rayAlpha--2, server: 5.231.70.79, port: 443, type: hysteria2, password: 2b67ONZROv+fRVMxB94BSw==, auth: 2b67ONZROv+fRVMxB94BSw==, sni: bing.com, skip-cert-verify: true}
-  - {name: "@meli_proxyy #1", server: 85.237.206.207, port: 29854, type: hysteria2, password: 308d37dc-cfe1-4d81-a095-d576f90cf581, auth: 308d37dc-cfe1-4d81-a095-d576f90cf581, sni: www.bing.com, skip-cert-verify: true}
   - {name: https://t.me/Selinc, server: 31.57.241.25, port: 7009, type: hysteria2, password: 30c075af-9555-4671-b70e-43e3cfb2e707, auth: 30c075af-9555-4671-b70e-43e3cfb2e707, sni: d.eans.top, skip-cert-verify: true}
   - {name: v2raybluecrystal2, server: 185.219.81.33, port: 18865, type: hysteria2, password: 4VDmo53kWX, auth: 4VDmo53kWX, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
   - {name: v2raybluecrystal, server: 185.219.81.33, port: 20675, type: hysteria2, password: 4VDmo53kWX, auth: 4VDmo53kWX, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
@@ -90,7 +57,6 @@ proxies:
   - {name: All-@V2rayAlpha--3, server: hk.xn--9kqw1xbnu.shop, port: 443, type: hysteria2, password: 4a25ab9e-66e3-435a-97a4-276b5c3a1947, auth: 4a25ab9e-66e3-435a-97a4-276b5c3a1947, skip-cert-verify: true}
   - {name: All-@V2rayAlpha--6, server: 195.133.79.116, port: 22157, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, auth: 571ec94e-613c-430a-93de-397d3d237475, sni: 🔒, skip-cert-verify: true}
   - {name: All--@V2rayAlpha--9, server: 213.108.198.123, port: 22155, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, auth: 571ec94e-613c-430a-93de-397d3d237475, sni: hsdg.huasuan666.top, skip-cert-verify: true}
-  - {name: "@meli_proxyy #2", server: 213.108.198.123, port: 22155, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, auth: 571ec94e-613c-430a-93de-397d3d237475, sni: 🔒, skip-cert-verify: true}
   - {name: All--@V2rayAlpha--7, server: hsdg.huasuan666.top, port: 22155, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, auth: 571ec94e-613c-430a-93de-397d3d237475, sni: hsdg.huasuan666.top, skip-cert-verify: true}
   - {name: MCI-@V2rayAlpha--5, server: hshl.huasuan666.top, port: 22157, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, auth: 571ec94e-613c-430a-93de-397d3d237475, sni: hshl.huasuan666.top, skip-cert-verify: true}
   - {name: "All-@V2rayAlpha--6 #1", server: us11.588878.xyz, port: 443, type: hysteria2, password: 59f5893e-b85a-44f7-911f-bd0b3f92069b, auth: 59f5893e-b85a-44f7-911f-bd0b3f92069b, sni: us11.588878.xyz, skip-cert-verify: true, obfs: salamander, obfs-password: jjQQP9Av2l6BRdP5}
@@ -106,14 +72,12 @@ proxies:
   - {name: 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..., server: fra-nb-01.linlujs.pw, port: 24568, type: hysteria2, password: 70197404-7b40-45e4-bb9c-8bc8995012ae, auth: 70197404-7b40-45e4-bb9c-8bc8995012ae, skip-cert-verify: true}
   - {name: 🇺🇸 usa-telegram-@ISVvpn, server: us-nb-01.linlujs.pw, port: 25684, type: hysteria2, password: 70197404-7b40-45e4-bb9c-8bc8995012ae, auth: 70197404-7b40-45e4-bb9c-8bc8995012ae, skip-cert-verify: true}
   - {name: "@V2rayNG3 #9", server: s15.serv00.com, port: 7777, type: hysteria2, password: 75577117-ABCD-DCBA-AAAA-CC777775577B, auth: 75577117-ABCD-DCBA-AAAA-CC777775577B, sni: www.bing.com, skip-cert-verify: true}
-  - {name: "@meli_proxyy #4", server: lsj3.mangshe.xyz, port: 2056, type: hysteria2, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, sni: lsj3.mangshe.xyz, skip-cert-verify: true}
-  - {name: "@meli_proxyy #5", server: xg1.mangshe.xyz, port: 2056, type: hysteria2, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: true}
   - {name: "@sunflowerplato🌻 #1", server: xg1.mangshe.xyz, port: 2056, type: hysteria2, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, sni: xg1.mangshe.xyz, skip-cert-verify: true}
   - {name: کانفیگ های بیشتر در چنل تلگرا..., server: 77.223.214.193, port: 31468, type: hysteria2, password: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, auth: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, sni: www.bing.com, skip-cert-verify: true}
   - {name: "- SE - @freeOnlineVPN #2", server: 70.34.215.221, port: 20335, type: hysteria2, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, sni: drhystuichdfy.samanidempire.org, skip-cert-verify: true, obfs: salamander, obfs-password: U1wBrYQyFm}
   - {name: "- SE - @freeOnlineVPN #4", server: drhystuichdfy.samanidempire.org, port: 20335, type: hysteria2, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, sni: drhystuichdfy.samanidempire.org, skip-cert-verify: true, obfs: salamander, obfs-password: U1wBrYQyFm}
   - {name: "🇳🇱 - NL - @freeOnlineVPN #2", server: 185.92.220.240, port: 30205, type: hysteria2, password: 8864aa9f-7517-4fd5-aef1-32050eb3095d, auth: 8864aa9f-7517-4fd5-aef1-32050eb3095d, sni: net2025.afsharidempire.uk, skip-cert-verify: true, obfs: salamander, obfs-password: GdQ4bgvT8RFwuWi2}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #4", server: net2025.afsharidempire.uk, port: 30205, type: hysteria2, password: 8864aa9f-7517-4fd5-aef1-32050eb3095d, auth: 8864aa9f-7517-4fd5-aef1-32050eb3095d, sni: net2025.afsharidempire.uk, skip-cert-verify: true, obfs: salamander, obfs-password: GdQ4bgvT8RFwuWi2}
+  - {name: All--@V2rayAlpha--8, server: net2025.afsharidempire.uk, port: 30205, type: hysteria2, password: 8864aa9f-7517-4fd5-aef1-32050eb3095d, auth: 8864aa9f-7517-4fd5-aef1-32050eb3095d, sni: net2025.afsharidempire.uk, skip-cert-verify: true, obfs: salamander, obfs-password: GdQ4bgvT8RFwuWi2}
   - {name: "All-@V2rayAlpha--5 #1", server: 141.147.52.24, port: 44001, type: hysteria2, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, auth: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: true}
   - {name: "@Selinc #2", server: 85.208.9.189, port: 44001, type: hysteria2, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, auth: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, sni: www.bing.com, skip-cert-verify: true}
   - {name: All--@V2ray_Alpha-1, server: de2.oomz.ru, port: 30000, type: hysteria2, password: 937f8940-ad8a-409f-93c3-4d6249af628f, auth: 937f8940-ad8a-409f-93c3-4d6249af628f, sni: bing.com, skip-cert-verify: true}
@@ -137,18 +101,18 @@ proxies:
   - {name: v2raybluecrystal3-hou, server: 146.19.56.21, port: 24803, type: hysteria2, password: UnYCJJ9AQy, auth: UnYCJJ9AQy, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal3}
   - {name: v2raybluecrystal-hou, server: 146.19.56.21, port: 28165, type: hysteria2, password: UnYCJJ9AQy, auth: UnYCJJ9AQy, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
   - {name: v2raybluecrystal2-hou, server: 146.19.56.21, port: 57418, type: hysteria2, password: UnYCJJ9AQy, auth: UnYCJJ9AQy, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal2}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #9", server: yapc-1.adamhayward.co.uk, port: 35000, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #12", server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #14", server: yapc-1.adamhayward.co.uk, port: 36400, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #18", server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
+  - {name: "@FreakConfig #3", server: yapc-1.adamhayward.co.uk, port: 35000, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
+  - {name: "@FreakConfig #4", server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
+  - {name: "@IRAN_V2RAY1 #5", server: yapc-1.adamhayward.co.uk, port: 36400, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
+  - {name: "@Daily_Configs", server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: true, obfs: salamander, obfs-password: Yet-Another-Public-Config-1}
   - {name: "v2raybluecrystal2 #1", server: 78.138.118.228, port: 22527, type: hysteria2, password: Ys1Z1iA996, auth: Ys1Z1iA996, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
   - {name: "v2raybluecrystal3 #1", server: 78.138.118.228, port: 33113, type: hysteria2, password: Ys1Z1iA996, auth: Ys1Z1iA996, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
   - {name: "v2raybluecrystal #1", server: 78.138.118.228, port: 37804, type: hysteria2, password: Ys1Z1iA996, auth: Ys1Z1iA996, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
   - {name: "🇬🇧 - GB - @freeOnlineVPN #1", server: 81.168.83.89, port: 2083, type: hysteria2, password: YwuvGJk36B, auth: YwuvGJk36B, sni: kotlet.arshiacomplus.dpdns.org, skip-cert-verify: true, obfs: salamander, obfs-password: khameniiko@smad@ret}
   - {name: "@Selinc #5", server: nl2.oomz.ru, port: 30000, type: hysteria2, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, auth: ab858115-e0ab-4cb7-8e65-0804c35e52d5, sni: bing.com, skip-cert-verify: true}
   - {name: "@Selinc #6", server: us4.oomz.ru, port: 30000, type: hysteria2, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, auth: ab858115-e0ab-4cb7-8e65-0804c35e52d5, sni: bing.com, skip-cert-verify: true}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #20", server: 206.71.158.41, port: 35000, type: hysteria2, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, auth: b4bd0613-ff7c-4f2f-954d-185915e6ddad, sni: jnir.pichondan.com, skip-cert-verify: true, obfs: salamander, obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"}
-  - {name: "🇳🇱 - NL - @freeOnlineVPN #22", server: dir.cybsecguru.com, port: 35000, type: hysteria2, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, auth: b4bd0613-ff7c-4f2f-954d-185915e6ddad, sni: jnir.pichondan.com, skip-cert-verify: true, obfs: salamander, obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"}
+  - {name: "🇳🇱 - NL - @freeOnlineVPN #11", server: 206.71.158.41, port: 35000, type: hysteria2, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, auth: b4bd0613-ff7c-4f2f-954d-185915e6ddad, sni: jnir.pichondan.com, skip-cert-verify: true, obfs: salamander, obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"}
+  - {name: "@FreakConfig #5", server: dir.cybsecguru.com, port: 35000, type: hysteria2, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, auth: b4bd0613-ff7c-4f2f-954d-185915e6ddad, sni: jnir.pichondan.com, skip-cert-verify: true, obfs: salamander, obfs-password: "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"}
   - {name: ✅ @vistav2ray  👈👈کانال ما, server: 193.142.59.41, port: 23899, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, auth: c232f411-96b5-4b07-b2f7-66a434725ffb, sni: hl01.mistea.top, skip-cert-verify: true}
   - {name: All-@V2rayAlpha--1, server: 38.45.89.97, port: 23892, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, auth: c232f411-96b5-4b07-b2f7-66a434725ffb, sni: fus02.mistea.top, skip-cert-verify: true}
   - {name: WiFi-@V2rayAlpha--7, server: qing-es.mxtn.net, port: 443, type: hysteria2, password: c3054d61-c708-4594-9797-f50acd24de2a, auth: c3054d61-c708-4594-9797-f50acd24de2a, skip-cert-verify: true}
@@ -166,8 +130,8 @@ proxies:
   - {name: "@sunflowerplato🌻 #4", server: de3.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
   - {name: All--@V2rayAlpha--3, server: nl1.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
   - {name: "@FreakConfig #2", server: us1.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
-  - {name: "@FreakConfig #3", server: us2.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
-  - {name: "@FreakConfig #4", server: us3.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
+  - {name: "@FreakConfig #3 2", server: us2.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
+  - {name: "@FreakConfig #4 2", server: us3.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, sni: bing.com, skip-cert-verify: true}
   - {name: 🇮🇳 v2raybluecrystal-ind, server: 160.191.183.244, port: 11282, type: hysteria2, password: fzgdaH0cJ7, auth: fzgdaH0cJ7, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal}
   - {name: 🇮🇳 v2raybluecrystal2-ind, server: 160.191.183.244, port: 14849, type: hysteria2, password: fzgdaH0cJ7, auth: fzgdaH0cJ7, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal2}
   - {name: 🇮🇳 v2raybluecrystal3-ind, server: 160.191.183.244, port: 48004, type: hysteria2, password: fzgdaH0cJ7, auth: fzgdaH0cJ7, skip-cert-verify: true, obfs: salamander, obfs-password: v2raybluecrystal3}
@@ -177,31 +141,28 @@ proxies:
   - {name: 🇭🇰 香港|@ripaojiedian, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
   - {name: 🇭🇰 香港2|@ripaojiedian, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}}
   - {name: 🇭🇰 香港3|@ripaojiedian, server: 58.152.53.42, port: 443, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇭🇰 香港4|@ripaojiedian, server: 36.151.192.242, port: 4556, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🇭🇰 香港5|@ripaojiedian, server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: true}
+  - {name: 🇭🇰 香港4|@ripaojiedian, server: 36.150.215.231, port: 1655, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇭🇰 香港5|@ripaojiedian, server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
   - {name: 🇭🇰 香港6|@ripaojiedian, server: 36.133.73.36, port: 11819, type: vmess, uuid: de32752c-0661-467e-82d3-35bc740a787f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 日本|@ripaojiedian, server: 36.150.215.239, port: 1924, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🇯🇵 日本2|@ripaojiedian, server: 160.16.151.196, port: 316, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇯🇵 日本3|@ripaojiedian, server: 117.172.176.24, port: 4452, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇯🇵 日本|@ripaojiedian, server: 36.150.215.137, port: 5156, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇯🇵 日本2|@ripaojiedian, server: 117.172.176.23, port: 316, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇯🇵 日本3|@ripaojiedian, server: 117.172.176.23, port: 1332, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
   - {name: 🇰🇷 韩国|@ripaojiedian, server: 45.94.68.117, port: 53115, type: vmess, uuid: 7eebdcd7-9d77-4663-bde4-b67a51d13975, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡2|@ripaojiedian, server: 117.172.176.24, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡3|@ripaojiedian, server: 36.150.215.239, port: 24392, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🇺🇸 美国|@ripaojiedian, server: 117.172.176.24, port: 4553, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇺🇸 美国2|@ripaojiedian, server: 117.172.176.24, port: 3777, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇺🇸 美国3|@ripaojiedian, server: 36.150.215.239, port: 53743, type: trojan, password: BxceQaOe, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡2|@ripaojiedian, server: 117.172.176.23, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡3|@ripaojiedian, server: 36.150.215.137, port: 9713, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇺🇸 美国|@ripaojiedian, server: 117.172.176.23, port: 4553, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇺🇸 美国2|@ripaojiedian, server: 160.16.231.103, port: 3777, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇺🇸 美国3|@ripaojiedian, server: 36.150.215.245, port: 9269, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
   - {name: 🇭🇰 香港6|@ripaojiedian 2, server: 36.133.73.36, port: 11819, type: vmess, uuid: de32752c-0661-467e-82d3-35bc740a787f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: 🇰🇷 韩国|@ripaojiedian 2, server: 45.94.68.117, port: 53115, type: vmess, uuid: 7eebdcd7-9d77-4663-bde4-b67a51d13975, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: CN_speednode_0001, server: linkgulang.evoay.com, port: 53214, type: vless, uuid: 6c0472bc-82df-449e-90bd-2f91c6a46402, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, servername: www.lamer.com.hk, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: HK_speednode_0011, server: hk4.cv1168.com, port: 36666, type: vless, uuid: aae56c24-7511-4526-9708-3fcbd804253c, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: cqCSxloJscJ3ZrNUlkSKkUFZ7SZ6vzQNszGolW_o7HY, short-id: "6da03029" }, servername: www.python.org, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: HK_speednode_0012, server: hk3.cv1168.com, port: 36666, type: vless, uuid: aae56c24-7511-4526-9708-3fcbd804253c, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: cqCSxloJscJ3ZrNUlkSKkUFZ7SZ6vzQNszGolW_o7HY, short-id: "6da03029" }, servername: www.python.org, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: HK_speednode_0013, server: hk2.cv1168.com, port: 36666, type: vless, uuid: aae56c24-7511-4526-9708-3fcbd804253c, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: cqCSxloJscJ3ZrNUlkSKkUFZ7SZ6vzQNszGolW_o7HY, short-id: "6da03029" }, servername: www.python.org, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: KR_speednode_0024, server: testkr3.ssv.vc, port: 30446, type: http, username: test, password: test.+, tls: true, skip-cert-verify: true}
-  - {name: LB_speednode_0026, server: 77.110.119.225, port: 443, type: vless, uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo, short-id: "07e904766d29b958" }, servername: st.ozone.ru, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: US_speednode_0045, server: 192.238.204.48, port: 55558, type: vless, uuid: 1eb58333-3051-47c2-a2eb-44e5b64233c8, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: LPatmFrK3hRMrtAybjzB7DBfqCaKnKQ6s95kmXrrFxg, short-id: "b2defcc6" }, servername: apple.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: US_speednode_0091, server: 38.102.235.136, port: 15614, type: vless, uuid: b5544203-55e3-426e-92f1-0684c93f9829, tls: true, tfo: false, skip-cert-verify: true, servername: snippet.danfeng.site, client-fingerprint: random, network: ws, ws-opts: {path: /, headers: {Host: snippet.danfeng.site}}, udp: true}
-  - {name: US_speednode_0100, server: 45.159.23.10, port: 993, type: vless, uuid: 40730d97-ffa7-1108-2c53-761516eb5fda, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: wcgZB6t2VBnMQf55huXkibGw4RPL6WqXPfcZxhJ8Qms}, servername: speed.cloudflare.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: US_speednode_0101, server: 193.31.127.10, port: 443, type: vless, uuid: 40730d97-ffa7-1108-2c53-761516eb5fda, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: ehRbIcN9HhqjhReY1pjqIBGqHCbdY26Kq70_w7k4jgY}, servername: speed.cloudflare.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: US_speednode_0102, server: 69.84.182.18, port: 443, type: vless, uuid: a25ff90c-964c-485a-b72a-858864a27dc0, tls: true, tfo: false, skip-cert-verify: true, servername: cdn-node-oss-63.paofu.de, network: ws, ws-opts: {path: /profile/sharenode, headers: {Host: cdn-node-oss-63.paofu.de}}, udp: true}
+  - {name: CN_speednode_0030, server: n001.xunxunmimisbs.sbs, port: 24100, type: trojan, password: d0d86fb6-7597-4382-8bd8-773d0cd26e59, sni: us01.xxxxyyyysbs.sbs, skip-cert-verify: true, udp: true}
+  - {name: CN_speednode_0036, server: 36.150.215.231, port: 1655, type: trojan, password: BxceQaOe, sni: t.me/ripaojiedian, skip-cert-verify: true, udp: true}
+  - {name: FR_speednode_0037, server: fd7388fc-t5bb40-tdvaex-1ixuf.fr.cdnkuaishou.com, port: 8443, type: http, username: dcbaee4d-2204-11ed-b659-f23c91cfbbc9, password: dcbaee4d-2204-11ed-b659-f23c91cfbbc9, tls: true, skip-cert-verify: true}
+  - {name: FR_speednode_0038, server: 7b3fb675-t5bb40-t6tn6w-jjv2.fr.cdnkuaishou.com, port: 8443, type: http, username: 31676725-b0fd-fed2-c857-2da8ce5a6e4f, password: 31676725-b0fd-fed2-c857-2da8ce5a6e4f, tls: true, skip-cert-verify: true}
+  - {name: HK_speednode_0039, server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, sni: t.me/ripaojiedian, skip-cert-verify: true, udp: true}
+  - {name: US_speednode_0045, server: usvless.yydzx.xyz, port: 17597, type: vless, uuid: 4741863d-e3ac-4b9d-8185-466f437b3fa8, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, servername: usvless.yydzx.xyz, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: US_speednode_0048, server: linux.do, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: true, servername: fangbinxingnmsl.pusytroller.cf, network: ws, ws-opts: {path: /, headers: {Host: fangbinxingnmsl.pusytroller.cf}}, udp: true}
+  - {name: US_speednode_0049, server: www.npmjs.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: true, servername: fangbinxingnmsl.pusytroller.cf, network: ws, ws-opts: {path: /, headers: {Host: fangbinxingnmsl.pusytroller.cf}}, udp: true}
   - {name: 🇺🇸 _US_美国, server: www.visa.com.sg, port: 8443, type: trojan, password: trojan, sni: pangpi.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: pangpi.pages.dev}}}
   - {name: _CN_中国, server: 36.150.215.197, port: 2088, type: trojan, password: BxceQaOe, skip-cert-verify: true}
   - {name: 🇺🇸 _US_美国_5, server: ip.sb, port: 8443, type: trojan, password: trojan, sni: fofang.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: fofang.pages.dev}}}
@@ -214,23 +175,23 @@ proxies:
   - {name: 🇭🇰 香港|@ripaojiedian 2, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
   - {name: 🇭🇰 香港2|@ripaojiedian 2, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}}
   - {name: 🇭🇰 香港3|@ripaojiedian 2, server: 58.152.53.42, port: 443, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇭🇰 香港4|@ripaojiedian 2, server: 36.151.192.242, port: 4556, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🇭🇰 香港5|@ripaojiedian 2, server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: true}
+  - {name: 🇭🇰 香港4|@ripaojiedian 2, server: 36.150.215.231, port: 1655, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇭🇰 香港5|@ripaojiedian 2, server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
   - {name: 🇭🇰 香港6|@ripaojiedian 3, server: 36.133.73.36, port: 11819, type: vmess, uuid: de32752c-0661-467e-82d3-35bc740a787f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 日本|@ripaojiedian 2, server: 36.150.215.239, port: 1924, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🇯🇵 日本2|@ripaojiedian 2, server: 160.16.151.196, port: 316, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇯🇵 日本3|@ripaojiedian 2, server: 117.172.176.24, port: 4452, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇯🇵 日本|@ripaojiedian 2, server: 36.150.215.137, port: 5156, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇯🇵 日本2|@ripaojiedian 2, server: 117.172.176.23, port: 316, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇯🇵 日本3|@ripaojiedian 2, server: 117.172.176.23, port: 1332, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
   - {name: 🇰🇷 韩国|@ripaojiedian 3, server: 45.94.68.117, port: 53115, type: vmess, uuid: 7eebdcd7-9d77-4663-bde4-b67a51d13975, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡|@ripaojiedian, server: 117.172.176.24, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡2|@ripaojiedian 2, server: 117.172.176.24, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡3|@ripaojiedian 2, server: 36.150.215.239, port: 24392, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🇺🇸 美国|@ripaojiedian 2, server: 117.172.176.24, port: 4553, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇺🇸 美国2|@ripaojiedian 2, server: 117.172.176.24, port: 3777, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: 🇺🇸 美国3|@ripaojiedian 2, server: 36.150.215.239, port: 53743, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: 🏳️‍🌈 WEB限速1-🇭🇰 香港|【注册免费领1TB流量】前往-注册|共享, server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: f7fde292ae.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db1024f7fde292ae, headers: {Host: f7fde292ae.shopify.com}}, udp: true}
-  - {name: "🇭🇰 WEB限速1-🇭🇰 香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享", server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: 44722f9352.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db102444722f9352, headers: {Host: 44722f9352.shopify.com}}, udp: true}
-  - {name: 🇭🇰 WEB限速1-🇭🇰 香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享, server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: 7e13803106.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db10247e13803106, headers: {Host: 7e13803106.shopify.com}}, udp: true}
-  - {name: 🇭🇰 WEB限速1-🇭🇰 香港|最低35%-aff招募进行中|共享, server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: 6018839d4b.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db10246018839d4b, headers: {Host: 6018839d4b.shopify.com}}, udp: true}
+  - {name: 🇸🇬 新加坡|@ripaojiedian, server: 117.172.176.23, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡2|@ripaojiedian 2, server: 117.172.176.23, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡3|@ripaojiedian 2, server: 36.150.215.137, port: 9713, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇺🇸 美国|@ripaojiedian 2, server: 117.172.176.23, port: 4553, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇺🇸 美国2|@ripaojiedian 2, server: 160.16.231.103, port: 3777, type: trojan, password: e4e262d453466988575c397a30562337, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇺🇸 美国3|@ripaojiedian 2, server: 36.150.215.245, port: 9269, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🏳️‍🌈 WEB限速1-🇭🇰 香港|【注册免费领1TB流量】前往-注册|共享, server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: 972af05917.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db1024972af05917, headers: {Host: 972af05917.shopify.com}}, udp: true}
+  - {name: "🇭🇰 WEB限速1-🇭🇰 香港|【节点优先级】按量>[不限量]>[免费]>[公共订阅]|共享", server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: a06bb9fe63.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db1024a06bb9fe63, headers: {Host: a06bb9fe63.shopify.com}}, udp: true}
+  - {name: 🇭🇰 WEB限速1-🇭🇰 香港|【使用前请更新订阅】每日会变更节点密码|GPT+流媒体|共享, server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: 3e838fb6b6.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db10243e838fb6b6, headers: {Host: 3e838fb6b6.shopify.com}}, udp: true}
+  - {name: 🇭🇰 WEB限速1-🇭🇰 香港|最低35%-aff招募进行中|共享, server: s4.db-link.in, port: 443, type: vless, uuid: 0076285f-85e3-36e5-ada0-3384aa40f8a6, tls: true, alpn: [h2, h3, http/1.1], tfo: false, packet-encoding: xudp, skip-cert-verify: true, servername: 5f4a80ac20.shopify.com, client-fingerprint: chrome, network: ws, ws-opts: {path: /db10245f4a80ac20, headers: {Host: 5f4a80ac20.shopify.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -244,48 +205,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -296,9 +225,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -314,7 +243,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -322,7 +250,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -338,14 +265,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -369,18 +294,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -398,8 +323,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -423,17 +348,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -475,48 +397,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -527,9 +417,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -545,7 +435,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -553,7 +442,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -569,14 +457,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -600,18 +486,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -629,8 +515,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -654,17 +540,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -707,48 +590,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -759,9 +610,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -777,7 +628,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -785,7 +635,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -801,14 +650,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -832,18 +679,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -861,8 +708,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -886,17 +733,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -951,48 +795,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -1003,9 +815,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -1021,7 +833,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -1029,7 +840,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -1045,14 +855,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -1076,18 +884,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -1105,8 +913,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -1130,17 +938,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -1204,48 +1009,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -1256,9 +1029,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -1274,7 +1047,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -1282,7 +1054,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -1298,14 +1069,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -1329,18 +1098,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -1358,8 +1127,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -1383,17 +1152,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -1435,48 +1201,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -1487,9 +1221,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -1505,7 +1239,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -1513,7 +1246,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -1529,14 +1261,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -1560,18 +1290,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -1589,8 +1319,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -1614,17 +1344,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -1667,48 +1394,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -1719,9 +1414,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -1737,7 +1432,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -1745,7 +1439,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -1761,14 +1454,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -1792,18 +1483,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -1821,8 +1512,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -1846,17 +1537,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
@@ -1908,48 +1596,16 @@ proxy-groups:
       - 🇺🇸 United States 2086
       - 🇺🇸 United States 2083
       - 🇩🇪 Germany 2085
-      - 🇩🇪 DE
       - 🇺🇸 US
-      - 🇩🇪 DE 2
       - 🇺🇸 US 2
-      - 🇺🇸 US 3
       - 🇨🇦 CA
-      - 🇩🇪 DE 3
-      - 🇺🇸 US 4
-      - 🇩🇪 DE 4
       - 🇨🇦 CA 2
-      - 🇲🇾 MY(007訂閱💯免費)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY(失效聯繫機械人)𝕋𝔾mm8686_bot
-      - 🇲🇾 MY①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US①𝕋𝔾@mm8686_bot
-      - 🇺🇸 US②𝕋𝔾@mm8686_bot
-      - 🇩🇪 DE①𝕋𝔾@mm8686_bot
-      - 🇳🇱 NL①𝕋𝔾@mm8686_bot
-      - IL①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf①𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf②𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf③𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf④𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑤𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑥𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑦𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑧𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑨𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑩𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑪𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑫𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑬𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑭𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑮𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国sf⑯𝕋𝔾@mm8686_bot
-      - 🇺🇸 美国i7①𝕋𝔾@mm8686_bot
-      - 🇭🇰 HK①𝕋𝔾@mm8686_bot
-      - 🇯🇵 JP①𝕋𝔾@mm8686_bot
-      - 🇰🇷 KR①𝕋𝔾@mm8686_bot
-      - 🇸🇬 SG①𝕋𝔾@mm8686_bot
-      - TH①𝕋𝔾@mm8686_bot
-      - 🇮🇳 IN①𝕋𝔾@mm8686_bot
-      - AT①𝕋𝔾@mm8686_bot
+      - 🇩🇪 DE
+      - 🇩🇪 DE 2
+      - 🇨🇦 CA 3
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE 3
       - 防范境外势力渗透
       - "防范境外势力渗透 #1"
       - "防范境外势力渗透 #2"
@@ -1960,9 +1616,9 @@ proxy-groups:
       - "防范境外势力渗透 #7"
       - "防范境外势力渗透 #8"
       - "防范境外势力渗透 #9"
-      - 🇫🇷 France_Paris_hysteria_81
+      - 🇫🇷 France_None_hysteria_71
       - 🇳🇱 The Netherlands_Amsterdam_hy_3
-      - "🇳🇱 - NL - @freeOnlineVPN #6"
+      - "🇳🇱 - NL - @freeOnlineVPN #5"
       - "@NoForcedheaven"
       - "Channel id: @ShadowProxy66🇺🇸"
       - "@FreakConfig #1"
@@ -1978,7 +1634,6 @@ proxy-groups:
       - "@sunflowerplato🌻"
       - All-@V2rayAlpha--15
       - MCI-@V2rayAlpha--2
-      - "@meli_proxyy #1"
       - https://t.me/Selinc
       - v2raybluecrystal2
       - v2raybluecrystal
@@ -1986,7 +1641,6 @@ proxy-groups:
       - All-@V2rayAlpha--3
       - All-@V2rayAlpha--6
       - All--@V2rayAlpha--9
-      - "@meli_proxyy #2"
       - All--@V2rayAlpha--7
       - MCI-@V2rayAlpha--5
       - "All-@V2rayAlpha--6 #1"
@@ -2002,14 +1656,12 @@ proxy-groups:
       - 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:...
       - 🇺🇸 usa-telegram-@ISVvpn
       - "@V2rayNG3 #9"
-      - "@meli_proxyy #4"
-      - "@meli_proxyy #5"
       - "@sunflowerplato🌻 #1"
       - کانفیگ های بیشتر در چنل تلگرا...
       - "- SE - @freeOnlineVPN #2"
       - "- SE - @freeOnlineVPN #4"
       - "🇳🇱 - NL - @freeOnlineVPN #2"
-      - "🇳🇱 - NL - @freeOnlineVPN #4"
+      - All--@V2rayAlpha--8
       - "All-@V2rayAlpha--5 #1"
       - "@Selinc #2"
       - All--@V2ray_Alpha-1
@@ -2033,18 +1685,18 @@ proxy-groups:
       - v2raybluecrystal3-hou
       - v2raybluecrystal-hou
       - v2raybluecrystal2-hou
-      - "🇳🇱 - NL - @freeOnlineVPN #9"
-      - "🇳🇱 - NL - @freeOnlineVPN #12"
-      - "🇳🇱 - NL - @freeOnlineVPN #14"
-      - "🇳🇱 - NL - @freeOnlineVPN #18"
+      - "@FreakConfig #3"
+      - "@FreakConfig #4"
+      - "@IRAN_V2RAY1 #5"
+      - "@Daily_Configs"
       - "v2raybluecrystal2 #1"
       - "v2raybluecrystal3 #1"
       - "v2raybluecrystal #1"
       - "🇬🇧 - GB - @freeOnlineVPN #1"
       - "@Selinc #5"
       - "@Selinc #6"
-      - "🇳🇱 - NL - @freeOnlineVPN #20"
-      - "🇳🇱 - NL - @freeOnlineVPN #22"
+      - "🇳🇱 - NL - @freeOnlineVPN #11"
+      - "@FreakConfig #5"
       - ✅ @vistav2ray  👈👈کانال ما
       - All-@V2rayAlpha--1
       - WiFi-@V2rayAlpha--7
@@ -2062,8 +1714,8 @@ proxy-groups:
       - "@sunflowerplato🌻 #4"
       - All--@V2rayAlpha--3
       - "@FreakConfig #2"
-      - "@FreakConfig #3"
-      - "@FreakConfig #4"
+      - "@FreakConfig #3 2"
+      - "@FreakConfig #4 2"
       - 🇮🇳 v2raybluecrystal-ind
       - 🇮🇳 v2raybluecrystal2-ind
       - 🇮🇳 v2raybluecrystal3-ind
@@ -2087,17 +1739,14 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇭🇰 香港6|@ripaojiedian 2
       - 🇰🇷 韩国|@ripaojiedian 2
-      - CN_speednode_0001
-      - HK_speednode_0011
-      - HK_speednode_0012
-      - HK_speednode_0013
-      - KR_speednode_0024
-      - LB_speednode_0026
+      - CN_speednode_0030
+      - CN_speednode_0036
+      - FR_speednode_0037
+      - FR_speednode_0038
+      - HK_speednode_0039
       - US_speednode_0045
-      - US_speednode_0091
-      - US_speednode_0100
-      - US_speednode_0101
-      - US_speednode_0102
+      - US_speednode_0048
+      - US_speednode_0049
       - 🇺🇸 _US_美国
       - _CN_中国
       - 🇺🇸 _US_美国_5
