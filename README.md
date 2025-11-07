@@ -18,7 +18,7 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.ya
 
 [nodefree](https://nodefree.org/)：<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
-每天13:05自动更新代理列表，原为手动更新日期地址。<br>
+更新不频繁，改为每6天的4:05自动更新代理列表，原为手动更新日期地址。<br>
 
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
@@ -27,7 +27,7 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.
 
 [xconfig](https://xconfig.pages.dev/index2)：<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
-每天4:05自动更新代理列表。 <br>
+原址久未更新，改为每周一4:05自动更新代理列表。 <br>
 
 
 如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
