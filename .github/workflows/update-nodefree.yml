@@ -1,5 +1,6 @@
 # 版本 1.4
 # 修订原因：更新不频繁，改为每6天更新一次。
+# 修改提交注释，更便于查看来源
 # 版本 1.3
 # 修订原因：将邮件标题中的“更新通知”改为“更新出错”，以更准确地反映邮件内容。
 # 版本 1.2
@@ -116,7 +117,7 @@ jobs:
           # 添加 nodefree/target.yaml 文件到暂存区
           git add nodefree/target.yaml
           # 提交更改，提交信息包含动态 URL
-          git commit -m "${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://nodefree.org/)"
+          git commit -m "nodefree_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://nodefree.org/)"
           # 推送更改到仓库
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
