@@ -32,6 +32,10 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.
 
 如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
 
+# 一些在线工具
+- 在线[生成 UUID ](https://www.v2fly.org/awesome/tools.html)的工具。
+
+
 # [GitHub 文件加速](https://yishijie.gitlab.io/ziyuan/)：可检测节点连通性
 | mirror-result	| time	| status-success |
 | :--: | :--: | :--: |
