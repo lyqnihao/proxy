@@ -73,39 +73,39 @@ https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
 
 #### 3、腾讯元宝：混元模型无法联网检索，DeepSeek模型完成。速度快，获取最多。<br>
-#	有效地址
-1	 https://raw.githubusercontent.com/chinnsenn/static-files/main/u3base.json 46
-2	 https://raw.githubusercontent.com/chinnsenn/static-files/main/proxy.json 46
-3	 https://raw.githubusercontent.com/chinnsenn/static-files/main/ai.json 46
-4	 https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/nodes.txt 
-5	 https://raw.githubusercontent.com/anaer/Sub/main/config.json 
-6	 https://raw.githubusercontent.com/peasoft/NoWalls/main/routes.json 
-7	 https://raw.githubusercontent.com/peasoft/NoWalls/main/rules.json 
-8	 https://raw.githubusercontent.com/peasoft/NoWalls/main/rulelist 
-9	 https://raw.githubusercontent.com/peasoft/NoWalls/main/rule_surge.list 
-10	 https://raw.githubusercontent.com/peasoft/NoWalls/main/rule_clash.list 
-11	 https://raw.githubusercontent.com/peasoft/NoWalls/main/list 
-12	 https://raw.githubusercontent.com/peasoft/NoWalls/main/directlist 
-13	 https://raw.githubusercontent.com/peasoft/NoWalls/main/rejectlist 
-14	 https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/sr_top500_banlist.conf 
-15	 https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/proxy.txt 
-16	 https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/sr_top500_whitelist.conf 
-17	 https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/classical.txt 
-18	 https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/weixin.txt 
-19	 https://raw.githubusercontent.com/chenggwww/surge/main/ai.list 
-20	 https://raw.githubusercontent.com/chenggwww/surge/main/stream.list 
-21	 https://raw.githubusercontent.com/chenggwww/surge/main/global.list 
-22	 https://raw.githubusercontent.com/zhangke0516/myrule/main/Clash.yaml 
-23	 https://raw.githubusercontent.com/zhangke0516/myrule/main/Surge.yaml 
-24	 https://raw.githubusercontent.com/zhangke0516/myrule/main/Shadow.yaml 
-25	 https://raw.githubusercontent.com/zhangke0516/myrule/main/QuanX.conf 
-26	 https://raw.githubusercontent.com/zhangke0516/myrule/main/Loon.conf 
-27	 https://raw.githubusercontent.com/zhangke0516/myrule/main/Stash.yaml 
-28	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Shadowrocket/provider.yaml 
-29	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Clash/provider.yaml 
-30	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Surge/provider.yaml 
-31	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Stash/provider.yaml 
-32	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Loon/provider.yaml 
-33	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/QuanX/provider.yaml 
-34	 https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Sing-Box/provider.yaml 
+有效地址34条<br>
+https://raw.githubusercontent.com/chinnsenn/static-files/main/u3base.json
+https://raw.githubusercontent.com/chinnsenn/static-files/main/proxy.json
+https://raw.githubusercontent.com/chinnsenn/static-files/main/ai.json
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/nodes.txt
+https://raw.githubusercontent.com/anaer/Sub/main/config.json
+https://raw.githubusercontent.com/peasoft/NoWalls/main/routes.json
+https://raw.githubusercontent.com/peasoft/NoWalls/main/rules.json
+https://raw.githubusercontent.com/peasoft/NoWalls/main/rulelist
+https://raw.githubusercontent.com/peasoft/NoWalls/main/rule_surge.list
+https://raw.githubusercontent.com/peasoft/NoWalls/main/rule_clash.list
+https://raw.githubusercontent.com/peasoft/NoWalls/main/list
+https://raw.githubusercontent.com/peasoft/NoWalls/main/directlist
+https://raw.githubusercontent.com/peasoft/NoWalls/main/rejectlist
+https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/sr_top500_banlist.conf
+https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/proxy.txt
+https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/sr_top500_whitelist.conf
+https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/classical.txt
+https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/main/weixin.txt
+https://raw.githubusercontent.com/chenggwww/surge/main/ai.list
+https://raw.githubusercontent.com/chenggwww/surge/main/stream.list
+https://raw.githubusercontent.com/chenggwww/surge/main/global.list
+https://raw.githubusercontent.com/zhangke0516/myrule/main/Clash.yaml
+https://raw.githubusercontent.com/zhangke0516/myrule/main/Surge.yaml
+https://raw.githubusercontent.com/zhangke0516/myrule/main/Shadow.yaml
+https://raw.githubusercontent.com/zhangke0516/myrule/main/QuanX.conf
+https://raw.githubusercontent.com/zhangke0516/myrule/main/Loon.conf
+https://raw.githubusercontent.com/zhangke0516/myrule/main/Stash.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Shadowrocket/provider.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Clash/provider.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Surge/provider.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Stash/provider.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Loon/provider.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/QuanX/provider.yaml
+https://raw.githubusercontent.com/d3ck/my-rules/main/rule-set-provider/rule-providers/Sing-Box/provider.yaml
 
