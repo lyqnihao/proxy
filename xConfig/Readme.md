@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.json
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
 
 #### 2、Grok<br>
-用 15 秒超时 + 200 字节内容 + 必须含节点关键字 的严格标准，得32条存活。能识别到是订阅节点，以节点内容为标准检测。<br>
+用 15 秒超时 + 200 字节内容 + 必须含节点关键字 的严格标准，得32条存活。能识别到是订阅节点，以节点内容为标准检测。虽然Grok一再保证它验证了以下所有订阅都有效，可复制出来很地址明显被“u3base”这个特殊字段污染，所剩有效地址不多。<br>
 
 https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/u3base.txt
 https://raw.githubusercontent.com/ermaozi/adblock/main/u3base.txt
