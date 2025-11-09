@@ -13,20 +13,20 @@
 
 [汇聚订阅-CF](https://cf-workers-sub-43i.pages.dev/lyqnihao)
 [（自定义域名地址）](https://proxymix.lyqnihao.dns-dynamic.net/lyqnihao)：<br>
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
+[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml?token=GHSAT0AAAAAADLQZNYJHTQWR37IN5AA7S5Q2IRD5ZA)<br>
 每天4:05自动更新代理列表。 <br>
 
 [nodefree](https://nodefree.org/)：<br>
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
+[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yam](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml?token=GHSAT0AAAAAADLQZNYIW7IU2VG63SGHL73W2IRD4EA)<br>
 更新不频繁，改为每6天的4:05自动更新代理列表，原为手动更新日期地址。<br>
 
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
+[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml?token=GHSAT0AAAAAADLQZNYIJFPC6I44NVUVKAPA2IRDZLA)<br>
 每2小时第5分钟自动更新代理列表。<br>
 
 [xconfig](https://xconfig.pages.dev/index2)：<br>
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
+[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml?token=GHSAT0AAAAAADLQZNYIVIQAQQZ6WCQ6KJLC2IREACA)<br>
 该网页有很多订阅，换一个，改为每天4:05自动更新代理列表。 <br>
 
 
