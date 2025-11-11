@@ -73,3 +73,38 @@ https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
 
 #### 3、腾讯元宝：混元模型无法联网检索，DeepSeek模型完成。速度快，获取最多，但有效性检测能力极差。<br>
+
+
+#### 4、Kimi的 OK computer 也很不错，结果效果第二好，就是有点慢。比MiniMax多了3个，但这3个确实不是梯子但有内容，所以可能是我问题不明确造成差异。<br>
+📊 提取结果概览<br>
+总链接数：55个<br>
+有效链接：22个（40%成功率）<br>
+无效链接：33个（多为404错误）<br>
+✅ 验证标准<br>
+采用三重验证机制：<br>
+1. 状态码200验证<br>
+2. 内容非空检测<br>
+3. 响应时间<5秒<br>
+
+https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt
+https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vmess_iran.txt
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vless_iran.txt
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Splitted-By-Protocol/vless.txt
+https://raw.githubusercontent.com/Mohammadgb0078/IRV2ray/main/vless.txt
+https://raw.githubusercontent.com/Mohammadgb0078/IRV2ray/main/vmess.txt
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Splitted-By-Protocol/vmess.txt
+https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt
+https://raw.githubusercontent.com/vxiaov/free_proxies/main/links.txt
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt
+https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/sub_merge.txt
+https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_iOS.txt
+https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt
+https://raw.githubusercontent.com/ALIILAPRO/Proxy/main/http.txt
+https://raw.githubusercontent.com/ALIILAPRO/Proxy/main/socks4.txt
+https://raw.githubusercontent.com/ALIILAPRO/Proxy/main/socks5.txt
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
+https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.json
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/ss_iran.txt
