@@ -75,7 +75,7 @@ https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.t
 #### 3、腾讯元宝：混元模型无法联网检索，DeepSeek模型完成。速度快，获取最多，但有效性检测能力极差。<br>
 
 
-#### 4、Kimi的 OK computer 也很不错，结果效果第二好，就是有点慢。比MiniMax多了3个，但这3个确实不是梯子但有内容，所以可能是我问题不明确造成差异。<br>
+#### 4、Kimi的 OK computer 也很不错，结果效果第二好，就是有点慢。<br>
 📊 提取结果概览<br>
 总链接数：55个<br>
 有效链接：22个（40%成功率）<br>
