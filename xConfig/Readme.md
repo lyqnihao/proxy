@@ -6,7 +6,8 @@
 
 ### 尝试让AI对页面分析提取订阅，并检测有效性，大多AI不能完成，以下是几个完成的，结果也不一样。
 
-#### 1、用MiniMax M2，速度较慢，获得最少<br>
+#### 1、用MiniMax M2<br>
+速度较慢，获得最少<br>
 检测结果：<br>
 提取总数: 55个URL<br>
 有效URL: 19个<br>
@@ -36,7 +37,7 @@ https://raw.githubusercontent.com/Mohammadgb0078/IRV2ray/main/vmess.txt
 https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.json
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
 
-#### 2、Grok<br>
+#### 2、Grok：
 用 15 秒超时 + 200 字节内容 + 必须含节点关键字 的严格标准，得32条存活。能识别到是订阅节点，以节点内容为标准检测。虽然Grok一再保证它验证了以下所有订阅都有效，可复制出来很地址明显被“u3base”这个特殊字段污染，所剩有效地址不多。<br>
 
 https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/u3base.txt
@@ -72,10 +73,12 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/su
 https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
 
-#### 3、腾讯元宝：混元模型无法联网检索，DeepSeek模型完成。速度快，获取最多，但有效性检测能力极差。<br>
+#### 3、腾讯元宝：
+混元模型无法联网检索，DeepSeek模型完成。速度快，获取最多，但有效性检测能力极差。<br>
 
 
-#### 4、Kimi的 OK computer 也很不错，结果效果第二好，就是有点慢。<br>
+#### 4、Kimi的 OK computer：
+也很不错，结果效果第二好，就是有点慢。<br>
 📊 提取结果概览<br>
 总链接数：55个<br>
 有效链接：22个（40%成功率）<br>
