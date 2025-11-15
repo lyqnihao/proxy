@@ -1,5 +1,5 @@
 [xconfig](https://xconfig.pages.dev/index2)：<br>
-[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml?token=GHSAT0AAAAAADLQZNYIVIQAQQZ6WCQ6KJLC2IREACA)<br>
+[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml)<br>
 该网页有很多订阅，换一个，改为每天4:05自动更新代理列表。<br>
 
 如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
@@ -38,30 +38,10 @@ https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.json
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
 
 #### 2、Grok：
-用 15 秒超时 + 200 字节内容 + 必须含节点关键字 的严格标准，得32条存活。能识别到是订阅节点，以节点内容为标准检测。虽然Grok一再保证它验证了以下所有订阅都有效，可复制出来很地址明显被“u3base”这个特殊字段污染，所剩有效地址不多。<br>
+用 15 秒超时 + 200 字节内容 + 必须含节点关键字 的严格标准，得32条存活（其实很多不能用）。能识别到是订阅节点，以节点内容为标准检测。虽然Grok一再保证它验证了以下所有订阅都有效，可复制出来很地址明显被“u3base”这个特殊字段污染，所剩有效地址不多。<br>
 
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/u3base.txt
-https://raw.githubusercontent.com/ermaozi/adblock/main/u3base.txt
-https://raw.githubusercontent.com/peasoft/NoLanzhu/main/u3base.txt
-https://raw.githubusercontent.com/427ru-r/PRO/main/u3base.txt
-https://raw.githubusercontent.com/chfchf0306/clash/main/u3base.yml
-https://raw.githubusercontent.com/mfuu/u3/base.yml
-https://raw.githubusercontent.com/shoujiyanxishe/atu/main/u3base.yaml
-https://raw.githubusercontent.com/frainsAi/Flik/u3base.yaml
-https://raw.githubusercontent.com/fi25/Clash/main/u3base.yaml
-https://raw.githubusercontent.com/Hackl0us/SS-Rule-Snippet/master/LAZY_RULES/u3base.yaml
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/u3base.yaml
-https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/u3base.yaml
-https://raw.githubusercontent.com/Toperlock/clash/main/u3base.yaml
-https://raw.githubusercontent.com/wanglin-1/u3/master/u3base.yaml
-https://raw.githubusercontent.com/sun9426/sun9426.github.io/main/Clash/u3base.yaml
-https://raw.githubusercontent.com/ts-sf/Clash/main/Base/u3base.yaml
-https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/sub/u3base.txt
 https://raw.githubusercontent.com/adiwzx/freenode/main/adispeed.yml
 https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.txt
-https://raw.githubusercontent.com/ripaojiedian/freenode/main/u3base.txt
-https://raw.githubusercontent.com/Pawdroid/Free-servers/main/u3base.txt
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub/u3base.txt
 https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vless_iran.txt
 https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Splitted-By-Protocol/vmess.txt
