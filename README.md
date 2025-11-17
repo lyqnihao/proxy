@@ -23,7 +23,7 @@
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml)<br>
-每2小时第5分钟自动更新代理列表。<br>
+每6小时第5分钟自动更新代理列表。<br>
 
 [xconfig](https://xconfig.pages.dev/index2)：<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml)<br>
