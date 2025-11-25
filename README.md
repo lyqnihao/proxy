@@ -18,7 +18,7 @@
 
 [nodefree](https://nodefree.org/)：<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml)<br>
-更新不频繁，改为每6天的4:05自动更新代理列表，原为手动更新日期地址。<br>
+更新不频繁，改为每2天的4:05自动更新代理列表，原为手动更新日期地址。<br>
 
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
