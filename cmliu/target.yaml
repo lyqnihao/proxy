@@ -5,10 +5,58 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 00yin6.keeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 00yin6.keeoomboom.de}}}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 37.18.14.33, port: 443, type: trojan, password: Qzy7tgpRhu, sni: m.vk.com, skip-cert-verify: true}
-  - {name: 亚太地区 V2CROSS.COM, server: wangcai.singdns.com, port: 21712, type: ss, cipher: aes-128-gcm, password: 79ad2852-eb76-4c3e-ba4d-3668ee5ece74}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: okl5i3.zeeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /video/pmi58yp5.m3u8, headers: {Host: okl5i3.zeeoomboom.de}}}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 5k2dc9.keeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 5k2dc9.keeoomboom.de}}}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: xyst5w.teeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /video/g5petez.m3u8, headers: {Host: xyst5w.teeoomboom.de}}}
+  - {name: "@v2ray_configs_pool🔷", server: 40.160.4.211, port: 8080, type: vless, uuid: 9dc11620-987c-4344-9088-f46fdfae4054, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed"}}
+  - {name: "@v2ray_configs_pool🔷 2", server: 20.239.233.43, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: true, servername: www.x-aniu--hk.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu--hk.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 3", server: 5k2dc9.keeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /video/m05dv7.m3u8, headers: {Host: 5k2dc9.keeoomboom.de}}}
+  - {name: "@v2ray_configs_pool🔷 4", server: 74.119.193.40, port: 443, type: vless, uuid: 6d8d8b48-6c77-45a7-bc9a-afaed748e781, tls: true, tfo: false, skip-cert-verify: true, servername: zula.ir, client-fingerprint: chrome, network: ws, ws-opts: {path: /ws, headers: {Host: zula.ir}}}
+  - {name: "@v2ray_configs_pool🔷 5", server: 64.110.109.243, port: 7443, type: vless, uuid: 6923b959-c65f-764c-b072-94711382d716, tls: true, alpn: [h3], tfo: false, skip-cert-verify: true, servername: s2.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: s2.sni565.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 6", server: 104.16.179.62, port: 8880, type: vless, uuid: 26e60d8a-98ee-45b3-9173-6b1b1d315782, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: morning-darkness-2df2.m197210665.workers.dev}}}
+  - {name: "@v2ray_configs_pool🔷 7", server: m85a.vip784.com, port: 33801, type: vless, uuid: 05c0a076-9ebc-42e5-8d9b-22074d5036a6, tls: false, tfo: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [varzesh3.ir]}}}
+  - {name: "@v2ray_configs_pool🔷 8", server: n1761184283.74qxv.top, port: 443, type: vless, uuid: 2ebf5fe9-8cb1-4095-bd91-9b06991fb52f, tls: true, tfo: false, skip-cert-verify: true, servername: n1761184283.74qxv.top, network: ws, ws-opts: {path: /2ebf5fe9-8cb1-4095-bd91-9b06991fb52f, headers: {Host: n1761184283.74qxv.top}}}
+  - {name: "@v2ray_configs_pool🔷 9", server: 183.97.196.49, port: 50000, type: vless, uuid: 6923b959-c65f-764c-b072-94711382d716, tls: true, alpn: [h3], tfo: false, skip-cert-verify: true, servername: s2.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: s2.sni565.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 10", server: n5vaz1.zeeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: n5vaz1.zeeoomboom.de, network: ws, ws-opts: {path: /video/i3o7f0yh.m3u8, headers: {Host: n5vaz1.zeeoomboom.de}}}
+  - {name: "@v2ray_configs_pool🔷 11", server: t6759w.teeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: t6759w.teeoomboom.de, network: ws, ws-opts: {path: /video/metmb.m3u8, headers: {Host: t6759w.teeoomboom.de}}}
+  - {name: "@v2ray_configs_pool🔷 12", server: 59.2.75.64, port: 50001, type: vless, uuid: 6923b959-c65f-764c-b072-94711382d716, tls: true, alpn: [h3], tfo: false, skip-cert-verify: true, servername: s2.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: s2.sni565.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 13", server: 45.66.129.7, port: 21262, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: true, servername: www.x-aniu--sg.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu--sg.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 14", server: docs.cloudflare.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: true, servername: docs.cloudflare.com, network: ws, ws-opts: {path: /, headers: {Host: docs.cloudflare.com}}}
+  - {name: "@v2ray_configs_pool🔷 15", server: 104.26.0.221, port: 443, type: vless, uuid: 3f9c8463-8610-3ed8-86c8-a26713067825, tls: true, tfo: false, skip-cert-verify: true, servername: dabaius2.sylu.net, network: ws, ws-opts: {path: /db10240eb751d6ab, headers: {Host: dabaius2.sylu.net}}}
+  - {name: "@v2ray_configs_pool🔷 16", server: 014.electrocellco-cf-014.workers.dev, port: 443, type: vless, uuid: 203e82ed-a6b7-416a-b04e-ba8a20d8a0c4, tls: true, tfo: false, skip-cert-verify: true, servername: 014.ELectRoceLlCO-Cf-014.worKeRS.dev, network: ws, ws-opts: {path: /eyJqdW5rIjoiQkdrUldRNHQzR2MzVHkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119, headers: {Host: 014.ELectRoceLlCO-Cf-014.worKeRS.dev}}}
+  - {name: "@v2ray_configs_pool🔷 17", server: 194.182.79.240, port: 22734, type: vless, uuid: 36cc13fe-1bc0-462d-a8f6-9830c943966a, tls: false, tfo: false, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: "@v2ray_configs_pool🔷 18", server: 83.229.123.87, port: 443, type: vless, uuid: 6923b959-c65f-764c-b072-94711382d716, tls: true, alpn: [h3], tfo: false, skip-cert-verify: true, servername: s2.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: s2.sni565.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 19", server: ssssssss.zabc.net, port: 8443, type: vless, uuid: 692ece70-c136-4f77-8921-1e99091b9987, tls: true, alpn: [h3], tfo: false, skip-cert-verify: true, servername: ssssssss.zabc.net, network: ws, ws-opts: {path: /, headers: {Host: ssssssss.zabc.net}}}
+  - {name: "@v2ray_configs_pool🔷 20", server: 8bswhv.teeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 8bswhv.teeoomboom.de, network: ws, ws-opts: {path: /video/4r6q8byy.m3u8, headers: {Host: 8bswhv.teeoomboom.de}}}
+  - {name: "@v2ray_configs_pool🔷 21", server: 51.89.224.186, port: 8443, type: vless, uuid: 6923b959-c65f-764c-b072-94711382d716, tls: true, alpn: [h3], tfo: false, skip-cert-verify: true, servername: s2.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: s2.sni565.netlib.re}}}
+  - {name: "@v2ray_configs_pool🔷 22", server: wangcai74.000444.cn, port: 8880, type: vless, uuid: 7890ce31-9a25-4fd4-90e7-80e5823ff510, tls: false, tfo: false, skip-cert-verify: true, servername: Telegram-channel-WangCai2, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: Telegram-channel-WangCai2}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram, server: 185.146.173.58, port: 8080, type: vless, uuid: 41a17d90-61ad-4d1d-9d09-a83729795c4e, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: /servernett, headers: {Host: lc59.lebasnoo.ir.}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram`, server: speedtest.net, port: 443, type: vless, uuid: 06fa2c71-38a0-4a4c-8493-8dc716ab1adf, tls: true, alpn: ["h3,h2,http/1.1"], tfo: false, skip-cert-verify: true, servername: speedtest.net, client-fingerprint: chrome, network: ws, ws-opts: {path: "/Telegram,VPNCUSTOMIZE?ed=443", headers: {Host: speedtest.net}}}
+  - {name: 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`, server: byte-alpha-quantum-storm-matrix.dlcnamatike7.com, port: 19771, type: vless, uuid: fdb4805b-9125-43d0-a0a9-2b6a4a8521dd, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: byte-alpha-quantum-storm-matrix.dlcnamatike7.com}}}
+  - {name: 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`, server: 152.70.59.90, port: 8443, type: trojan, password: b501417e-e717-45a4-aaf7-170f05da3ff6, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/152.70.59.90=8443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`, server: 194.35.119.135, port: 2053, type: trojan, password: a01f0792-6f0d-4abf-89d5-4521c50d09c9, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/194.35.119.135=2053, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 2, server: speedtest.net, port: 443, type: vless, uuid: b0d0c0f1-f969-450c-b3ed-84a61bb6c4c7, tls: true, tfo: false, skip-cert-verify: true, servername: speedtest.net, client-fingerprint: firefox, network: ws, ws-opts: {path: "/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880", headers: {Host: speedtest.net}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 3, server: 92.61.180.83, port: 80, type: vless, uuid: 089f2b07-81bd-4b9a-b88f-b9830ff706bf, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=222", headers: {Host: www.masoud.ir}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 4, server: 210.75.24.222, port: 443, type: vmess, uuid: 1bbf1ef7-3056-4160-9cab-491e024de705, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /123, headers: {Host: sgamd.ptuu.ga}}}
+  - {name: "[openproxylist.com] trojan-CH```", server: 91.245.225.69, port: 443, type: trojan, password: b87a1832-96c8-4291-b273-30a4d68f2629, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/91.245.225.69=443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: I 1223  (@Outline_Vpn) free, server: 45.82.251.249, port: 80, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: false, tfo: false, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}}
+  - {name: I 1224  (@Outline_Vpn) free, server: speedtest.org, port: 443, type: vless, uuid: c7158ca6-7c6c-4701-bf7d-df0f98a9ca33, tls: true, tfo: false, skip-cert-verify: true, servername: iwukb.ava-shabane.com, network: ws, ws-opts: {path: /harman, headers: {Host: iwukb.ava-shabane.com}}}
+  - {name: I 1226  (@Outline_Vpn) free, server: sea-daisy.unity4world.ir, port: 8880, type: vless, uuid: cfe554a3-4cd5-4fe1-9951-e6b65fc52a74, tls: false, tfo: false, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}}
+  - {name: "[openproxylist.com] trojan-OM```", server: 176.97.66.175, port: 443, type: trojan, password: 8cdd7764-0143-4b64-bb50-c56599be438e, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/176.97.66.175=443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 5, server: 218.102.12.37, port: 9999, type: vless, uuid: a13df940-020c-465f-bc89-ee5279b5cd6a, tls: true, tfo: false, skip-cert-verify: true, servername: yv.ylks.us.kg, network: ws, ws-opts: {path: "/?ed", headers: {Host: yv.ylks.us.kg}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 6, server: 79.127.70.82, port: 8443, type: vless, uuid: c5049393-6f27-4265-9691-8c9d963fa32b, tls: false, tfo: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [www.speedtest.net]}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 7, server: 104.17.234.114, port: 8443, type: vless, uuid: 06fa2c71-38a0-4a4c-8493-8dc716ab1adf, tls: true, alpn: ["h3,h2,http/1.1"], tfo: false, skip-cert-verify: true, servername: Join.VPNCUSTOMIZE.speedtest.net.Naziitness.com, client-fingerprint: chrome, network: ws, ws-opts: {path: "/Telegram,VPNCUSTOMIZE?ed=8080", headers: {Host: Join.VPNCUSTOMIZE.speedtest.net.Naziitness.com}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 8, server: 23spt.pages.dev, port: 443, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, alpn: [http/1.1], tfo: false, skip-cert-verify: true, servername: 23sPT.pAGEs.dEV, client-fingerprint: randomized, network: ws, ws-opts: {path: /xqc11iXB2DOVwbv9, headers: {Host: 23sPT.pAGEs.dEV}}}
+  - {name: 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`, server: 94.177.199.119, port: 8443, type: trojan, password: 0757f35a-e8ee-4f88-b43c-cef94e223b9e, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/94.177.199.119=8443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`, server: norman.ns.cloudflare.com, port: 443, type: vless, uuid: 2bd6f1bd-378e-40ad-8981-229800f1340e, tls: true, tfo: false, skip-cert-verify: true, servername: 638990351320529492.prius-amshz.info, network: ws, ws-opts: {path: /ljrnxaws, headers: {Host: 638990351320529492.prius-amshz.info}}}
+  - {name: 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`, server: 172.66.40.99, port: 443, type: vless, uuid: 5c194be0-4c8e-4b83-aa34-383782e721bc, tls: true, alpn: ["h2,http/1.1"], tfo: false, skip-cert-verify: true, servername: www.dollardoon.com, client-fingerprint: chrome, network: ws, ws-opts: {path: "/%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7%40V2RAYFAST_7?ed=2048", headers: {Host: www.dollardoon.com}}}
+  - {name: 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms, server: 89.207.12.80, port: 8443, type: vmess, uuid: f282b878-8711-45a1-8c69-5564172123c1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: vm.gpj1.web.id, network: ws, ws-opts: {path: /Geo-Project/89.207.12.80-8443, headers: {Host: vm.gpj1.web.id}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 9, server: 104.20.18.168, port: 2086, type: vmess, uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip1.1789034.xyz}}}
+  - {name: 🇺🇸 @Hope_Net-join-us-on-Telegram 10, server: 206.238.237.88, port: 443, type: vless, uuid: a13df940-020c-465f-bc89-ee5279b5cd6a, tls: true, tfo: false, skip-cert-verify: true, servername: yx.ylka.us.kg, network: ws, ws-opts: {path: "/?ed", headers: {Host: yx.ylka.us.kg}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: cf.fovi.tk, port: 443, type: vmess, uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /eisasqa, headers: {Host: foxpol.fovi.tk}}}
+  - {name: 亚太地区 V2CROSS.COM, server: wangcai.singdns.com, port: 23344, type: ss, cipher: aes-128-gcm, password: 79ad2852-eb76-4c3e-ba4d-3668ee5ece74}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: cf.fovi.tk, port: 443, type: vmess, uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /eisasqa, headers: {Host: foxlux.fovi.tk}}}
+  - {name: 🇬🇧 英国 V2CROSS.COM 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: 🇷🇺 github.com/freefq - 俄罗斯  1, server: 185.242.86.156, port: 54170, type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
   - {name: 🇮🇳 github.com/freefq - 印度  2, server: 202.78.162.5, port: 443, type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
   - {name: 🇮🇳 github.com/freefq - 印度  3, server: 202.78.162.5, port: 443, type: vmess, uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sahand.serveminecraft.net}}}
@@ -23,6 +71,47 @@ proxies:
   - {name: 🇨🇳 github.com/freefq - 广东省江门市移动 12, server: service.ouluyun9803.com, port: 20005, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2}
   - {name: 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13, server: gov.uk, port: 443, type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
   - {name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 14, server: server32.beheshtbaneh.com, port: 8880, type: vmess, uuid: 044ba8ed-7285-472a-bc14-fb91dc6be4c9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: server32.beheshtbaneh.com}}}
+  - {name: CF_V1_www.visa.com_80, server: www.visa.com, port: 80, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V2_cis.visa.com_8080, server: cis.visa.com, port: 8080, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V3_africa.visa.com_8880, server: africa.visa.com, port: 8880, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V4_www.visa.com.sg_2052, server: www.visa.com.sg, port: 2052, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V5_www.visaeurope.at_2082, server: www.visaeurope.at, port: 2082, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V6_www.visa.com.mt_2086, server: www.visa.com.mt, port: 2086, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V7_qa.visamiddleeast.com_2095, server: qa.visamiddleeast.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V8_usa.visa.com_443, server: usa.visa.com, port: 443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V9_myanmar.visa.com_8443, server: myanmar.visa.com, port: 8443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V10_www.visa.com.tw_2053, server: www.visa.com.tw, port: 2053, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V11_www.visaeurope.ch_2083, server: www.visaeurope.ch, port: 2083, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V12_www.visa.com.br_2087, server: www.visa.com.br, port: 2087, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V13_www.visasoutheasteurope.com_2096, server: www.visasoutheasteurope.com, port: 2096, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: IE, server: 108.129.213.148, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US, server: 13.218.220.197, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: IE 2, server: 3.252.140.105, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 2, server: 3.84.114.214, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: IE 3, server: 108.129.94.186, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇫🇷 FR, server: 15.188.143.219, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇫🇷 FR 2, server: 35.180.226.192, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 3, server: 54.234.107.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 4, server: 54.210.74.165, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇩🇪 DE, server: 54.93.101.215, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: 00yin6.keeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 00yin6.keeoomboom.de}}}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 37.18.14.33, port: 443, type: trojan, password: Qzy7tgpRhu, sni: m.vk.com, skip-cert-verify: true}
+  - {name: 亚太地区 V2CROSS.COM 2, server: wangcai.singdns.com, port: 21712, type: ss, cipher: aes-128-gcm, password: 79ad2852-eb76-4c3e-ba4d-3668ee5ece74}
+  - {name: 🇺🇸 美国 CloudFlare节点 2 2, server: okl5i3.zeeoomboom.de, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /video/pmi58yp5.m3u8, headers: {Host: okl5i3.zeeoomboom.de}}}
+  - {name: 🇷🇺 github.com/freefq - 俄罗斯  1 2, server: 185.242.86.156, port: 54170, type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
+  - {name: 🇮🇳 github.com/freefq - 印度  2 2, server: 202.78.162.5, port: 443, type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
+  - {name: 🇮🇳 github.com/freefq - 印度  3 2, server: 202.78.162.5, port: 443, type: vmess, uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sahand.serveminecraft.net}}}
+  - {name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2, server: www.darkroom.lol, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.darkroom.lol}}}
+  - {name: 🇵🇱 github.com/freefq - 波兰  5 2, server: 193.243.147.128, port: 40368, type: ss, cipher: aes-256-gcm, password: 7BcLdsO1WweoGD0X}
+  - {name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2, server: server31.beheshtbaneh.com, port: 8880, type: vmess, uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: server31.beheshtbaneh.com}}}
+  - {name: 🇨🇳 github.com/freefq - 广东省移动 7 2, server: data-us-v1.shwjfkw.cn, port: 20401, type: vmess, uuid: b1478e24-4916-3abe-8f17-15931012ecbe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /debian, headers: {Host: data-us-v1.shwjfkw.cn}}}
+  - {name: 🇨🇳 github.com/freefq - 广东省江门市移动 8 2, server: service.ouluyun9803.com, port: 20003, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2}
+  - {name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2, server: 104.21.82.183, port: 8880, type: vmess, uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: server26.beheshtbaneh.com}}}
+  - {name: 🇮🇳 github.com/freefq - 印度  10 2, server: 202.78.162.5, port: 443, type: vmess, uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: pendar.onthewifi.com}}}
+  - {name: 🇨🇳 github.com/freefq - 广东省江门市移动 11 2, server: service.ouluyun9803.com, port: 26667, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2}
+  - {name: 🇨🇳 github.com/freefq - 广东省江门市移动 12 2, server: service.ouluyun9803.com, port: 20005, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2}
+  - {name: 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2, server: gov.uk, port: 443, type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
+  - {name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2, server: server32.beheshtbaneh.com, port: 8880, type: vmess, uuid: 044ba8ed-7285-472a-bc14-fb91dc6be4c9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: server32.beheshtbaneh.com}}}
   - {name: 🇭🇰 Hong Kong 02, server: hktuic01.yydzx.xyz, port: 12837, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: hktuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
   - {name: 🇭🇰 Hong Kong 03, server: hkanytls01.yytls.top, port: 27002, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
   - {name: 🇺🇸 United States 02, server: ustuic01.yydzx.xyz, port: 11890, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: ustuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
@@ -57,29 +146,29 @@ proxies:
   - {name: 🇳🇱 Netherlands 03, server: nlanytls01.yytls.top, port: 27017, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
   - {name: 🇺🇸 United States 2086, server: usvless.yydzx.xyz, port: 17551, type: vless, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, servername: usvless.yydzx.xyz, client-fingerprint: chrome, network: tcp, udp: true}
   - {name: 🇩🇪 Germany 2085, server: detuic.yydzx.xyz, port: 15504, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: detuic.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
-  - {name: CF_V1_www.visa.com_80, server: www.visa.com, port: 80, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V2_cis.visa.com_8080, server: cis.visa.com, port: 8080, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V3_africa.visa.com_8880, server: africa.visa.com, port: 8880, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V4_www.visa.com.sg_2052, server: www.visa.com.sg, port: 2052, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V5_www.visaeurope.at_2082, server: www.visaeurope.at, port: 2082, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V6_www.visa.com.mt_2086, server: www.visa.com.mt, port: 2086, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V7_qa.visamiddleeast.com_2095, server: qa.visamiddleeast.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V8_usa.visa.com_443, server: usa.visa.com, port: 443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V9_myanmar.visa.com_8443, server: myanmar.visa.com, port: 8443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V10_www.visa.com.tw_2053, server: www.visa.com.tw, port: 2053, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V11_www.visaeurope.ch_2083, server: www.visaeurope.ch, port: 2083, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V12_www.visa.com.br_2087, server: www.visa.com.br, port: 2087, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: CF_V13_www.visasoutheasteurope.com_2096, server: www.visasoutheasteurope.com, port: 2096, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
-  - {name: IE, server: 34.244.145.69, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: IE 2, server: 34.244.36.2, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: IE 3, server: 3.252.140.105, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: IE 4, server: 108.129.255.180, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: CF_V1_www.visa.com_80 2, server: www.visa.com, port: 80, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V2_cis.visa.com_8080 2, server: cis.visa.com, port: 8080, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V3_africa.visa.com_8880 2, server: africa.visa.com, port: 8880, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V4_www.visa.com.sg_2052 2, server: www.visa.com.sg, port: 2052, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V5_www.visaeurope.at_2082 2, server: www.visaeurope.at, port: 2082, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V6_www.visa.com.mt_2086 2, server: www.visa.com.mt, port: 2086, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V7_qa.visamiddleeast.com_2095 2, server: qa.visamiddleeast.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: false, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V8_usa.visa.com_443 2, server: usa.visa.com, port: 443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V9_myanmar.visa.com_8443 2, server: myanmar.visa.com, port: 8443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V10_www.visa.com.tw_2053 2, server: www.visa.com.tw, port: 2053, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V11_www.visaeurope.ch_2083 2, server: www.visaeurope.ch, port: 2083, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V12_www.visa.com.br_2087 2, server: www.visa.com.br, port: 2087, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: CF_V13_www.visasoutheasteurope.com_2096 2, server: www.visasoutheasteurope.com, port: 2096, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e48, tls: true, tfo: false, skip-cert-verify: true, servername: cloudflare-vless-trojan.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: cloudflare-vless-trojan.lyqnihao.workers.dev}}}
+  - {name: IE 4, server: 34.244.145.69, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: IE 2 2, server: 34.244.36.2, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: IE 3 2, server: 3.252.140.105, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: IE 4 2, server: 108.129.255.180, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: IE 5, server: 34.254.228.92, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US, server: 54.234.107.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 2, server: 54.210.74.165, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 3, server: 13.218.220.197, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇫🇷 FR, server: 13.38.60.254, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 4, server: 98.91.23.146, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 5, server: 54.234.107.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 2 2, server: 54.210.74.165, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 3 2, server: 13.218.220.197, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇫🇷 FR 3, server: 13.38.60.254, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 4 2, server: 98.91.23.146, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: tg频道:@ripaojiedian, server: 3.9.17.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: 🇭🇰 香港|@ripaojiedian, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
   - {name: 🇭🇰 香港2|@ripaojiedian, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}}
@@ -97,6 +186,79 @@ proxies:
   - {name: 🇺🇸 美国3|@ripaojiedian, server: 13.114.168.160, port: 4569, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
   - {name: 🇺🇸 美国4|@ripaojiedian, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
   - {name: 🇻🇳 越南|@ripaojiedian, server: 103.186.155.110, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory, server: 32c57d76-t66sg0-t7n4ch-1rfon.hk3.p5pv.com, port: 80, type: vmess, uuid: aed1cc24-351d-11ef-ba52-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, servername: 32c57d76-t66sg0-t7n4ch-1rfon.hk3.p5pv.com, network: ws, ws-opts: {path: /, headers: {Host: 32c57d76-t66sg0-t7n4ch-1rfon.hk3.p5pv.com}}}
+  - {name: HK_66, server: dfed4efb-t4n8g0-t636g9-luwe.hk3.p5pv.com, port: 80, type: vmess, uuid: a2b0fd2b-716f-0df8-d4e2-03a1c00e5f1a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, servername: broadcastlv.chat.bilibili.com, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}}
+  - {name: 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory, server: v5.heduian.link, port: 30805, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, servername: v5.heduian.link}
+  - {name: 🇺🇸 _US_美国, server: 94.131.123.74, port: 443, type: trojan, password: 94a81dc7-e8e6-46e5-838d-84ca142b88b2, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/94.131.123.74=443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇫🇷 _FR_法国, server: 178.33.161.196, port: 2053, type: trojan, password: be94cd60-8e91-4cd6-9c53-26ee1314edfd, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/178.33.161.196=2053, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X, server: hkt.gotochinatown.net, port: 80, type: vmess, uuid: aed1cc24-351d-11ef-ba52-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, servername: hkt.gotochinatown.net, network: ws, ws-opts: {path: /, headers: {Host: hkt.gotochinatown.net}}}
+  - {name: 🇷🇺 _RU_俄罗斯, server: 193.233.114.58, port: 8443, type: trojan, password: d78d48df-b788-4a95-9e9f-77c9b2f69822, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/193.233.114.58=8443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: _CN_中国, server: psg2-ag.t.sgateway.link, port: 5223, type: trojan, password: Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS, sni: pod-kr-g1.psusercontent.com, skip-cert-verify: true}
+  - {name: 🇨🇳 _CN_中国_1, server: wangcai.singdns.com, port: 21712, type: ss, cipher: aes-128-gcm, password: 79ad2852-eb76-4c3e-ba4d-3668ee5ece74}
+  - {name: 🇨🇳 _CN_中国_2, server: hk3.t.sgateway.link, port: 5223, type: trojan, password: Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS, sni: pod-hk-z1.psusercontent.com, skip-cert-verify: true}
+  - {name: 🇷🇺 _RU_俄罗斯_1, server: 45.14.245.2, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP}
+  - {name: 🇨🇳 _CN_中国_3, server: 58.152.18.98, port: 443, type: trojan, password: dd2f25b4c70689de8bc0f7fa9d6591cb, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇨🇳 _CN_中国_4, server: 58.152.18.95, port: 443, type: trojan, password: BxceQaOe, sni: t.me/ripaojiedian, skip-cert-verify: true}
+  - {name: ️_unKnow_未知, server: 213.176.16.71, port: 4966, type: ss, cipher: chacha20-ietf-poly1305, password: lXOVjEMsx00jeOQzHsQrkL}
+  - {name: 🇺🇸 _US_美国_4, server: 158.178.206.197, port: 8443, type: trojan, password: c2de1269-17cb-41f6-ab97-f8c11a6f0f4f, sni: joss.gpj1.web.id, skip-cert-verify: true, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/158.178.206.197=8443, headers: {Host: joss.gpj1.web.id}}}
+  - {name: 🇫🇷 _FR_法国_1, server: 146.19.49.251, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ODfxioK0VkKxTdpVQJ4rv8HglAu0vzv6}
+  - {name: 🇺🇸 _US_美国_5, server: 3.76.168.69, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇩🇪 _DE_德国, server: 3.127.91.148, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: 3.127.91.148, skip-cert-verify: true}
+  - {name: 🇺🇸 _US_美国_6, server: 23.95.75.146, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: NDRySIABARbErNIVsCNVkyYAHiBzhveT}
+  - {name: 🇩🇪 _DE_德国_1, server: 3.127.91.148, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇭🇰 Hong Kong 02 2, server: hktuic01.yydzx.xyz, port: 12536, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: hktuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇭🇰 Hong Kong 03 2, server: hkanytls01.yytls.top, port: 27002, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇺🇸 United States 02 2, server: ustuic01.yydzx.xyz, port: 11995, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: ustuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇺🇸 United States 03 2, server: usanytls01.yytls.top, port: 27001, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇸🇬 Singapore 02 2, server: sgtuic01.yydzx.xyz, port: 13934, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: sgtuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇸🇬 Singapore 03 2, server: sganytls01.yytls.top, port: 27003, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇯🇵 Japan 02 2, server: jptuic01.yydzx.xyz, port: 14416, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: jptuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇯🇵 Japan 03 2, server: jpanytls01.yytls.top, port: 27004, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇨🇳 Taiwan 02 2, server: twtuic01.yydzx.xyz, port: 15171, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: twtuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇨🇳 Taiwan 03 2, server: twanytls01.yytls.top, port: 27005, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇦🇺 Australia 02 2, server: autuic01.yydzx.xyz, port: 16060, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: autuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇦🇺 Australia 03 2, server: auanytls01.yytls.top, port: 27006, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇹🇭 Thailand 03 2, server: thanytls01.yytls.top, port: 27007, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇰🇷 South Korea 03 2, server: kranytls01.yytls.top, port: 27008, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇨🇦 Canada 02 2, server: catuic01.yydzx.xyz, port: 17094, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: catuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇨🇦 Canada 03 2, server: caanytls01.yytls.top, port: 27009, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇩🇪 Germany 02 2, server: detuic01.yydzx.xyz, port: 17390, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: detuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇩🇪 Germany 03 2, server: deanytls01.yytls.top, port: 27010, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇫🇷 France 02 2, server: frtuic01.yydzx.xyz, port: 17547, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: frtuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇫🇷 France 03 2, server: franytls01.yytls.top, port: 27011, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇬🇧 United Kingdom 02 2, server: uktuic01.yydzx.xyz, port: 17742, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: uktuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇬🇧 United Kingdom 03 2, server: ukanytls01.yytls.top, port: 27012, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇲🇽 Mexico 02 2, server: mxtuic01.yydzx.xyz, port: 17912, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: mxtuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇲🇽 Mexico 03 2, server: mxanytls01.yytls.top, port: 27013, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇲🇾 Malaysia 02 2, server: mytuic01.yydzx.xyz, port: 18127, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: mytuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇲🇾 Malaysia 03 2, server: myanytls01.yytls.top, port: 27014, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇻🇳 Vietnam 02 2, server: vntuic01.yydzx.xyz, port: 18390, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: vntuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇻🇳 Vietnam 03 2, server: vnanytls01.yytls.top, port: 27015, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇮🇩 Indonesia 02 2, server: idtuic01.yydzx.xyz, port: 18499, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: idtuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇮🇩 Indonesia 03 2, server: idanytls01.yytls.top, port: 27016, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇳🇱 Netherlands 02 2, server: nltuic01.yydzx.xyz, port: 18628, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: nltuic01.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: 🇳🇱 Netherlands 03 2, server: nlanytls01.yytls.top, port: 27017, type: anytls, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
+  - {name: 🇺🇸 United States 2086 2, server: usvless.yydzx.xyz, port: 17381, type: vless, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: true, servername: usvless.yydzx.xyz, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇩🇪 Germany 2085 2, server: detuic.yydzx.xyz, port: 15645, type: tuic, password: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, uuid: 47e5d23a-ce8d-4ea2-a632-2395a2bab445, sni: detuic.yydzx.xyz, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: false, request-timeout: 0, congestion-controller: bbr}
+  - {name: tg频道:@ripaojiedian 2, server: 3.9.17.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: 🇭🇰 香港|@ripaojiedian 2, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
+  - {name: 🇭🇰 香港2|@ripaojiedian 2, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}}
+  - {name: 🇭🇰 香港3|@ripaojiedian 2, server: 58.152.110.120, port: 443, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇭🇰 香港4|@ripaojiedian 2, server: 58.152.53.8, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇭🇰 香港5|@ripaojiedian 2, server: 112.120.31.179, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇭🇰 香港6|@ripaojiedian, server: v10.hdacd.com, port: 30807, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: 🇭🇰 香港7|@ripaojiedian, server: ss.020.node-for-bigairport.win, port: 11688, type: ss, cipher: aes-256-gcm, password: b0c9d775-32f7-459a-b24d-ecda7c9f3720}
+  - {name: 🇨🇳 台湾|@ripaojiedian, server: glimmerdsds.sdl-sz.com, port: 39007, type: ssr, cipher: aes-256-cfb, password: "dajkd*/?", protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 9347:AhttlGdymF, obfs-param: 1f4c39347.microsoft.com}
+  - {name: 🇯🇵 日本|@ripaojiedian 2, server: 160.16.242.183, port: 2145, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇯🇵 日本2|@ripaojiedian 2, server: 153.121.45.139, port: 3093, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇯🇵 日本3|@ripaojiedian 2, server: 153.121.44.99, port: 3093, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡|@ripaojiedian 2, server: 160.16.116.227, port: 127, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡2|@ripaojiedian 2, server: 160.16.240.91, port: 2760, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡3|@ripaojiedian 2, server: 43.198.91.31, port: 3579, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇺🇸 美国|@ripaojiedian 2, server: 160.16.240.91, port: 4054, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇺🇸 美国2|@ripaojiedian 2, server: 160.16.116.227, port: 4054, type: trojan, password: 2cf6d686799e6fa95316394064f26c0a, sni: www.nintendogames.net, skip-cert-verify: true}
+  - {name: 🇺🇸 美国3|@ripaojiedian 2, server: 18.162.187.235, port: 4569, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
+  - {name: 🇺🇸 美国4|@ripaojiedian 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -104,9 +266,57 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -121,6 +331,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -155,29 +406,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -195,15 +446,136 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -218,6 +590,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -252,29 +665,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -292,6 +705,79 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -299,9 +785,57 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -316,6 +850,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -350,29 +925,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -390,6 +965,79 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -409,9 +1057,57 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -426,6 +1122,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -460,29 +1197,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -500,16 +1237,98 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - CF_V10_www.visa.com.tw_2053
+      - CF_V10_www.visa.com.tw_2053 2
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
       - 🇭🇰 香港3|@ripaojiedian
       - 🇭🇰 香港4|@ripaojiedian
       - 🇭🇰 香港5|@ripaojiedian
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
@@ -517,9 +1336,57 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -534,6 +1401,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -568,29 +1476,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -608,15 +1516,136 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -631,6 +1660,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -665,29 +1735,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -705,6 +1775,79 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -712,9 +1855,57 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -729,6 +1920,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -763,29 +1995,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -803,6 +2035,79 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -819,9 +2124,57 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 2
+      - "@v2ray_configs_pool🔷"
+      - "@v2ray_configs_pool🔷 2"
+      - "@v2ray_configs_pool🔷 3"
+      - "@v2ray_configs_pool🔷 4"
+      - "@v2ray_configs_pool🔷 5"
+      - "@v2ray_configs_pool🔷 6"
+      - "@v2ray_configs_pool🔷 7"
+      - "@v2ray_configs_pool🔷 8"
+      - "@v2ray_configs_pool🔷 9"
+      - "@v2ray_configs_pool🔷 10"
+      - "@v2ray_configs_pool🔷 11"
+      - "@v2ray_configs_pool🔷 12"
+      - "@v2ray_configs_pool🔷 13"
+      - "@v2ray_configs_pool🔷 14"
+      - "@v2ray_configs_pool🔷 15"
+      - "@v2ray_configs_pool🔷 16"
+      - "@v2ray_configs_pool🔷 17"
+      - "@v2ray_configs_pool🔷 18"
+      - "@v2ray_configs_pool🔷 19"
+      - "@v2ray_configs_pool🔷 20"
+      - "@v2ray_configs_pool🔷 21"
+      - "@v2ray_configs_pool🔷 22"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram`
+      - 🇲🇰 @v2ray_configs_pool📡🇲🇰®️North Macedonia©️Арачиново🅿️ping:51.63ms`
+      - 🇳🇱 @v2ray_configs_pool📡🇳🇱®️The Netherlands©️Amsterdam🅿️ping:27.75ms`
+      - 🇩🇪 @v2ray_configs_pool📡🇩🇪®️Germany©️Frankfurt am Main🅿️ping:109.84ms`
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 2
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 3
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 4
+      - "[openproxylist.com] trojan-CH```"
+      - I 1223  (@Outline_Vpn) free
+      - I 1224  (@Outline_Vpn) free
+      - I 1226  (@Outline_Vpn) free
+      - "[openproxylist.com] trojan-OM```"
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 5
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 6
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 7
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 8
+      - 🇮🇹 @v2ray_configs_pool📡🇮🇹®️Italy©️Arezzo🅿️ping:41.5ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:22.2ms`
+      - 🇨🇦 @v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:21.84ms`
+      - 🇹🇷 @v2ray_configs_pool📡🇹🇷®️Turkey©️Şişli🅿️ping:55.7ms
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 9
+      - 🇺🇸 @Hope_Net-join-us-on-Telegram 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇬🇧 英国 V2CROSS.COM 2
       - 🇷🇺 github.com/freefq - 俄罗斯  1
       - 🇮🇳 github.com/freefq - 印度  2
       - 🇮🇳 github.com/freefq - 印度  3
@@ -836,6 +2189,47 @@ proxy-groups:
       - 🇨🇳 github.com/freefq - 广东省江门市移动 12
       - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14
+      - CF_V1_www.visa.com_80
+      - CF_V2_cis.visa.com_8080
+      - CF_V3_africa.visa.com_8880
+      - CF_V4_www.visa.com.sg_2052
+      - CF_V5_www.visaeurope.at_2082
+      - CF_V6_www.visa.com.mt_2086
+      - CF_V7_qa.visamiddleeast.com_2095
+      - CF_V8_usa.visa.com_443
+      - CF_V9_myanmar.visa.com_8443
+      - CF_V10_www.visa.com.tw_2053
+      - CF_V11_www.visaeurope.ch_2083
+      - CF_V12_www.visa.com.br_2087
+      - CF_V13_www.visasoutheasteurope.com_2096
+      - IE
+      - 🇺🇸 US
+      - IE 2
+      - 🇺🇸 US 2
+      - IE 3
+      - 🇫🇷 FR
+      - 🇫🇷 FR 2
+      - 🇺🇸 US 3
+      - 🇺🇸 US 4
+      - 🇩🇪 DE
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 2 2
+      - 🇷🇺 github.com/freefq - 俄罗斯  1 2
+      - 🇮🇳 github.com/freefq - 印度  2 2
+      - 🇮🇳 github.com/freefq - 印度  3 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4 2
+      - 🇵🇱 github.com/freefq - 波兰  5 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6 2
+      - 🇨🇳 github.com/freefq - 广东省移动 7 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 8 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 9 2
+      - 🇮🇳 github.com/freefq - 印度  10 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 11 2
+      - 🇨🇳 github.com/freefq - 广东省江门市移动 12 2
+      - 🇺🇸 github.com/freefq - 美国Fastly全球Anycast节点 13 2
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 14 2
       - 🇭🇰 Hong Kong 02
       - 🇭🇰 Hong Kong 03
       - 🇺🇸 United States 02
@@ -870,29 +2264,29 @@ proxy-groups:
       - 🇳🇱 Netherlands 03
       - 🇺🇸 United States 2086
       - 🇩🇪 Germany 2085
-      - CF_V1_www.visa.com_80
-      - CF_V2_cis.visa.com_8080
-      - CF_V3_africa.visa.com_8880
-      - CF_V4_www.visa.com.sg_2052
-      - CF_V5_www.visaeurope.at_2082
-      - CF_V6_www.visa.com.mt_2086
-      - CF_V7_qa.visamiddleeast.com_2095
-      - CF_V8_usa.visa.com_443
-      - CF_V9_myanmar.visa.com_8443
-      - CF_V10_www.visa.com.tw_2053
-      - CF_V11_www.visaeurope.ch_2083
-      - CF_V12_www.visa.com.br_2087
-      - CF_V13_www.visasoutheasteurope.com_2096
-      - IE
-      - IE 2
-      - IE 3
+      - CF_V1_www.visa.com_80 2
+      - CF_V2_cis.visa.com_8080 2
+      - CF_V3_africa.visa.com_8880 2
+      - CF_V4_www.visa.com.sg_2052 2
+      - CF_V5_www.visaeurope.at_2082 2
+      - CF_V6_www.visa.com.mt_2086 2
+      - CF_V7_qa.visamiddleeast.com_2095 2
+      - CF_V8_usa.visa.com_443 2
+      - CF_V9_myanmar.visa.com_8443 2
+      - CF_V10_www.visa.com.tw_2053 2
+      - CF_V11_www.visaeurope.ch_2083 2
+      - CF_V12_www.visa.com.br_2087 2
+      - CF_V13_www.visasoutheasteurope.com_2096 2
       - IE 4
+      - IE 2 2
+      - IE 3 2
+      - IE 4 2
       - IE 5
-      - 🇺🇸 US
-      - 🇺🇸 US 2
-      - 🇺🇸 US 3
-      - 🇫🇷 FR
-      - 🇺🇸 US 4
+      - 🇺🇸 US 5
+      - 🇺🇸 US 2 2
+      - 🇺🇸 US 3 2
+      - 🇫🇷 FR 3
+      - 🇺🇸 US 4 2
       - tg频道:@ripaojiedian
       - 🇭🇰 香港|@ripaojiedian
       - 🇭🇰 香港2|@ripaojiedian
@@ -910,6 +2304,79 @@ proxy-groups:
       - 🇺🇸 美国3|@ripaojiedian
       - 🇺🇸 美国4|@ripaojiedian
       - 🇻🇳 越南|@ripaojiedian
+      - 🇭🇰 HK²_5|0.6MB/s|2%|YT|NF|D+|X|KeepHistory
+      - HK_66
+      - 🇳🇱 IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+      - 🇺🇸 _US_美国
+      - 🇫🇷 _FR_法国
+      - 🇭🇰 HK²_6|4.4MB/s|2%|GPT|YT|NF|D+|X
+      - 🇷🇺 _RU_俄罗斯
+      - _CN_中国
+      - 🇨🇳 _CN_中国_1
+      - 🇨🇳 _CN_中国_2
+      - 🇷🇺 _RU_俄罗斯_1
+      - 🇨🇳 _CN_中国_3
+      - 🇨🇳 _CN_中国_4
+      - ️_unKnow_未知
+      - 🇺🇸 _US_美国_4
+      - 🇫🇷 _FR_法国_1
+      - 🇺🇸 _US_美国_5
+      - 🇩🇪 _DE_德国
+      - 🇺🇸 _US_美国_6
+      - 🇩🇪 _DE_德国_1
+      - 🇭🇰 Hong Kong 02 2
+      - 🇭🇰 Hong Kong 03 2
+      - 🇺🇸 United States 02 2
+      - 🇺🇸 United States 03 2
+      - 🇸🇬 Singapore 02 2
+      - 🇸🇬 Singapore 03 2
+      - 🇯🇵 Japan 02 2
+      - 🇯🇵 Japan 03 2
+      - 🇨🇳 Taiwan 02 2
+      - 🇨🇳 Taiwan 03 2
+      - 🇦🇺 Australia 02 2
+      - 🇦🇺 Australia 03 2
+      - 🇹🇭 Thailand 03 2
+      - 🇰🇷 South Korea 03 2
+      - 🇨🇦 Canada 02 2
+      - 🇨🇦 Canada 03 2
+      - 🇩🇪 Germany 02 2
+      - 🇩🇪 Germany 03 2
+      - 🇫🇷 France 02 2
+      - 🇫🇷 France 03 2
+      - 🇬🇧 United Kingdom 02 2
+      - 🇬🇧 United Kingdom 03 2
+      - 🇲🇽 Mexico 02 2
+      - 🇲🇽 Mexico 03 2
+      - 🇲🇾 Malaysia 02 2
+      - 🇲🇾 Malaysia 03 2
+      - 🇻🇳 Vietnam 02 2
+      - 🇻🇳 Vietnam 03 2
+      - 🇮🇩 Indonesia 02 2
+      - 🇮🇩 Indonesia 03 2
+      - 🇳🇱 Netherlands 02 2
+      - 🇳🇱 Netherlands 03 2
+      - 🇺🇸 United States 2086 2
+      - 🇩🇪 Germany 2085 2
+      - tg频道:@ripaojiedian 2
+      - 🇭🇰 香港|@ripaojiedian 2
+      - 🇭🇰 香港2|@ripaojiedian 2
+      - 🇭🇰 香港3|@ripaojiedian 2
+      - 🇭🇰 香港4|@ripaojiedian 2
+      - 🇭🇰 香港5|@ripaojiedian 2
+      - 🇭🇰 香港6|@ripaojiedian
+      - 🇭🇰 香港7|@ripaojiedian
+      - 🇨🇳 台湾|@ripaojiedian
+      - 🇯🇵 日本|@ripaojiedian 2
+      - 🇯🇵 日本2|@ripaojiedian 2
+      - 🇯🇵 日本3|@ripaojiedian 2
+      - 🇸🇬 新加坡|@ripaojiedian 2
+      - 🇸🇬 新加坡2|@ripaojiedian 2
+      - 🇸🇬 新加坡3|@ripaojiedian 2
+      - 🇺🇸 美国|@ripaojiedian 2
+      - 🇺🇸 美国2|@ripaojiedian 2
+      - 🇺🇸 美国3|@ripaojiedian 2
+      - 🇺🇸 美国4|@ripaojiedian 2
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
