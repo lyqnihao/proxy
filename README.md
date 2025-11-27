@@ -22,12 +22,12 @@
 
 [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
-类似v2cross，网站每天动态日期更新地址，但GitHub每天1点开始每4小时更新一次。<br>
+类似nodefree，网站每天动态日期更新地址，但GitHub每天1点开始每4小时更新一次。<br>
 
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml)<br>
-网站每天动态日期更新地址，每6小时更新一次。Actions自动更新代理列表。<br>
+网站每天动态地址，每6小时更新一次。Actions自动获取更新代理列表。<br>
 
 [xconfig](https://xconfig.pages.dev/index2)：<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml)<br>
