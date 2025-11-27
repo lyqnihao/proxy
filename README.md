@@ -16,9 +16,13 @@
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml)<br>
 每天4:05自动更新代理列表。 <br>
 
-[nodefree](https://nodefree.org/)：<br>
+[nodefree](https://nodefree.me/)：<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml)<br>
 更新不频繁，改为每2天的4:05自动更新代理列表，原为手动更新日期地址。<br>
+
+[clashfree](https://clashgithub.com/)：<br>
+https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
+类似noddefree，网站每天动态日期更新地址，但GitHub每天1点开始每4小时更新一次。<br>
 
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
