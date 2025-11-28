@@ -1,0 +1,158 @@
+# 版本：1.0
+# 这是一个用于每天自动更新 clashfree 订阅文件的 GitHub Actions 工作流，参考自xConfig的Actions。
+# 功能包括：从 订阅URL 读取内容、内容检查、提交更改和邮件通知。
+
+
+# 工作流名称：更新clashfree订阅文件
+name: Update clashfree
+
+# 触发条件配置
+on:
+  # 定时任务配置（UTC时间每日17:35对应北京时间次日01:35开始每4小时更新一次）
+  schedule:
+    - cron: '35 17/4 * * *'
+  # 支持手动触发
+  workflow_dispatch:
+
+# 任务定义
+jobs:
+  # 主任务：更新配置文件
+  update-clashfree-yaml:
+    # 指定运行环境为最新版Ubuntu
+    runs-on: ubuntu-latest
+
+    # 步骤序列
+    steps:
+      # --------------------------
+      # 步骤1：检出代码库（关键基础步骤）
+      # --------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # 获取完整提交历史（避免浅克隆导致文件比对异常）
+          fetch-depth: 0  
+
+      # --------------------------
+      # 步骤2：获取北京时间（用于时间戳）
+      # --------------------------
+      - name: Get current date (Beijing Time)
+        id: date
+        run: |
+          # 设置环境变量（格式示例：2024-03-15 12:30:45）
+          echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      # --------------------------
+      # 步骤3：生成订阅URL（可扩展为动态生成）
+      # --------------------------
+      - name: Generate dynamic URL
+        run: |
+          # 目前使用固定URL，后续可改造为动态生成逻辑
+          echo "DYNAMIC_URL=https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml" >> $GITHUB_ENV
+
+      # --------------------------
+      # 步骤4：创建存储目录（保证目录存在）
+      # --------------------------
+      - name: Create clashfree directory
+        run: mkdir -p clashfree  # -p参数自动创建多级目录
+
+      # --------------------------
+      # 步骤5：下载订阅文件（核心步骤）
+      # --------------------------
+      - name: Fetch content from dynamic URL
+        id: fetch-content
+        run: |
+          # 使用curl下载文件，关键参数说明：
+          # -L 跟随重定向（应对CDN切换）
+          # -H 添加缓存控制头（避免获取缓存内容）
+          if curl -L -H "Cache-Control: no-cache" -o clashfree/output.yaml "$DYNAMIC_URL"; then
+            # 文件完整性检查
+            if [ -s clashfree/output.yaml ]; then
+              echo "内容下载成功"
+              
+              # 将文件添加到git暂存区（为后续变更检测准备）
+              git add clashfree/output.yaml
+              
+              # 调试信息：显示文件哈希值
+              echo "文件哈希: $(sha1sum clashfree/output.yaml)"
+              # 显示git状态确认添加成功
+              git status  
+            else
+              # 设置错误标记（空文件情况）
+              echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
+              exit 1
+            fi
+          else
+            # 下载失败处理
+            echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      # --------------------------
+      # 步骤6：检测文件变更（关键逻辑）
+      # --------------------------
+      - name: Check changes
+        id: check-changes
+        run: |
+          # 显示详细变更状态（调试用）
+          git status --porcelain
+          
+          # 核心检测逻辑：比对暂存区与仓库差异
+          if git diff --staged --quiet; then
+            # 无变化时设置标记
+            echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
+            echo "文件未变化"
+          else
+            # 检测到变化时设置标记
+            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
+            echo "检测到变更"
+          fi
+
+      # --------------------------
+      # 步骤7：提交变更（条件执行）
+      # --------------------------
+      - name: Commit and push
+        # 仅当检测到变化时执行
+        if: steps.check-changes.outputs.HAS_CHANGES == 'true'
+        run: |
+          # 配置git用户信息（必需字段）
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # 提交信息包含北京时间戳
+          git commit -m "clashfree_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://github.com/free-nodes/clashfree)"
+          
+          # 推送到远程仓库（使用GITHUB_TOKEN自动鉴权）
+          git push
+
+      # --------------------------
+      # 步骤8：异常通知（综合判断）
+      # --------------------------
+      - name: Notify on failure
+        # 触发条件：任何失败/下载错误/无内容变化
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # SMTP服务器配置（163邮箱示例）
+          server_address: smtp.163.com
+          server_port: 465
+          # 认证信息（需在仓库Secrets中设置）
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          
+          # 邮件主题（含时间戳）
+          subject: "clashfree更新出错 ${{ env.CURRENT_DATE }}"
+          
+          # 邮件正文模板（使用管道符保持格式）
+          body: |
+            详情报告：
+            - 时间: ${{ env.CURRENT_DATE }}
+            - 脚本版本: 1.0
+            - 订阅URL: ${{ env.DYNAMIC_URL }}
+            - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
+          
+          # 收件人配置
+          to: lyqnihao@163.com
+          from: ${{ secrets.EMAIL_USERNAME }}
+          # 内容类型设置为纯文本
+          content_type: text/plain
