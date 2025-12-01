@@ -23,7 +23,7 @@
 [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
-类似nodefree，网站每8小时更新，动态日期更新地址。GitHub每天1点35分开始每4小时跟踪更新一次。<br>
+类似nodefree，网站每4小时更新，动态日期更新地址。GitHub每天1点35分开始每8小时跟踪更新一次。<br>
 
 [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
