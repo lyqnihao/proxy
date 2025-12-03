@@ -44,7 +44,7 @@ jobs:
           echo "日期：$YEAR$MONTH$DAY"
 
       # 步骤3b：检查 v2clash.blog 是否有当天新帖（仅影响 proxyqueen/readme 中的 v2clash 链接）
-      - name: Check v2clash for today's post
+      - name: 检查 v2clash.blog 是否有当天新帖
         id: check-v2clash
         run: |
           TODAY=$(TZ='Asia/Shanghai' date +'%Y%m%d')
@@ -63,71 +63,7 @@ jobs:
       - name: 更新 README.md 中的动态日期
         id: update-readme
         run: |
-          python << 'EOF'
-          import re
-          import os
-
-          # 读取 README.md 文件
-          readme_path = 'README.md'
-          with open(readme_path, 'r', encoding='utf-8') as f:
-              content = f.read()
-
-          # 获取当前日期
-          year = os.environ.get('YEAR')
-          month = os.environ.get('MONTH')
-          day = os.environ.get('DAY')
-          date_str = f"{year}{month}{day}"
-          year_month = f"{year}/{month}"
-
-          print(f"准备更新日期为：{date_str}")
-          print(f"准备更新路径为：{year_month}")
-
-          original_content = content
-          
-          # 支持的替换模式列表
-          replacements = [
-              # 模式1：$YEAR$MONTH$DAY 格式（直接8位数字）
-              (r'\$YEAR\$MONTH\$DAY', date_str),
-
-              # 模式2：$YEAR/$MONTH/$YEAR$MONTH$DAY 格式（带路径的格式）
-              (r'\$YEAR/\$MONTH/\$YEAR\$MONTH\$DAY', f"{year_month}/{date_str}"),
-
-              # 模式2b：$YEAR/$MONTH/<已有8位日期>（例如 nodefree 的情况）
-              (r'\$YEAR/\$MONTH/\d{8}', f"{year_month}/{date_str}"),
-
-              # 模式3：已有具体日期的替换（匹配 /YYYY/MM/YYYYMMDD 格式）
-              (r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}"),
-              
-              # 模式5：clashgithub.com 格式的日期
-              (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
-          ]
-          
-            # 如果 v2clash 无新帖，则跳过仅针对 v2clash 的替换
-            has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
-            if has_v2:
-              v2_pattern = (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)', rf'\g<1>{date_str}\2')
-              replacements.insert(4, v2_pattern)  # 在适当位置插入
-              print('包含 v2clash 替换')
-            else:
-              print('跳过 v2clash 替换（未检测到新帖）')
-
-            # 执行所有替换
-            for pattern, replacement in replacements:
-              content = re.sub(pattern, replacement, content)
-          
-          # 检查是否有变化
-          if content != original_content:
-              print("✓ 检测到需要更新的内容")
-              with open(readme_path, 'w', encoding='utf-8') as f:
-                  f.write(content)
-              print(f"✓ 已更新 README.md")
-              print(f"✓ 日期值：{date_str}")
-              print(f"✓ 路径值：{year_month}")
-              print(f"✓ 已处理所有5种动态日期格式")
-          else:
-              print("✗ 未找到需要更新的动态日期标记")
-
-          EOF
+          python .github/scripts/update_readme.py
 
       # 步骤5：检测文件变更
       - name: 检测文件变更
@@ -160,7 +96,7 @@ jobs:
           echo "✓ 时间：${{ env.CURRENT_DATE }}"
 
       # 步骤8：失败通知（邮件）
-      - name: 失败通知
+      - name: 失败通知（邮件）
         if: failure() || steps.check-changes.outputs.HAS_CHANGES == 'false'
         uses: dawidd6/action-send-mail@v3
         with:
