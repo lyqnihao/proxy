@@ -37,7 +37,7 @@ jobs:
           echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      # 步骤 3b：检查 v2clash.blog 是否有当天新帖（有则继续，无则跳过）
+      # 步骤 3a：检查 v2clash.blog 是否有当天新帖（有则继续，无则跳过）
       - name: Check v2clash for today's post
         id: check-site
         run: |
@@ -55,7 +55,7 @@ jobs:
             echo "未检测到今日文章，跳过 proxyqueen 更新"
           fi
 
-      # 步骤 3：生成动态 URL（仅当检测到有新帖时执行）
+      # 步骤 3b：生成动态 URL（仅当检测到有新帖时执行）
       - name: Generate dynamic URL
         if: steps.check-site.outputs.has_new == 'true'
         run: |
