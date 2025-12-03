@@ -14,59 +14,42 @@
 
 ## [汇聚订阅-CF](https://cf-workers-sub-43i.pages.dev/lyqnihao)：
 - [（自定义域名地址）](https://proxymix.lyqnihao.dns-dynamic.net/lyqnihao)<br>
-- 跟踪更新Clash固定地址
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
+- 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
 
   每天4:05自动更新代理列表。 <br>
 
 ## [nodefree](https://nodefree.me/)：<br>
-- v2ray订阅链接<br>
-https://nodefree.githubrowcontent.com/2025/12/20251203.txt<br>
-- Clash订阅链接<br>
-https://nodefree.githubrowcontent.com/2025/12/20251203.yaml<br>
-- Mihomo订阅链接<br>
-https://nodefree.githubrowcontent.com/2025/12/20251203.yaml<br>
-
-- 跟踪更新Clash固定地址
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
+- v2ray订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251203.txt<br>
+- Clash订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251203.yaml<br>
+- Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251203.yaml<br>
+- 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
   更新不频繁，改为每2天的4:05自动更新代理列表，原为手动更新日期地址。<br>
 
 ## [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
-- v2ray订阅链接:<br>
-https://clashgithub.com/wp-content/uploads/rss/20251203.txt<br>
-- clash订阅链接:<br>
-https://clashgithub.com/wp-content/uploads/rss/20251203.yml<br>
-- GitHub Clash固定地址
-https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
-- 跟踪更新Clash固定地址
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251203.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251203.yml<br>
+- GitHub Clash固定地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
+- 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
   类似nodefree，网站每4小时更新，动态日期更新地址。GitHub每天1点35分开始每4小时跟踪更新一次。<br>
 
 ## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
-- v2ray订阅链接:<br>
-https://v2clash.blog/Link/20251202-v2ray.txt<br>
-- clash订阅链接：<br>
-https://v2clash.blog/Link/20251202-clash.yaml<br>
-- 跟踪更新Clash固定地址
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20251202-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20251202-clash.yaml<br>
+- 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
   类似nodefree，动态日期更新地址。参考nodefree每天1点35分自动更新。<br>
 
 ## [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
-- 订阅地址：
-https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
-- 跟踪更新：
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
+- 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+- 跟踪更新：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
 
   网站每天动态地址，每6小时更新一次。Actions自动获取更新代理列表。<br>
 
 ## [xconfig](https://xconfig.pages.dev/index2)：<br>
-- 真实链接地址见此页面：
-https://xconfig.pages.dev/u3base-conf.js
-- 跟踪更新地址：
-https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
+- 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js
+- 跟踪更新地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
   该网页有很多订阅，换一个，改为每天4:05自动更新代理列表。 <br>
 
