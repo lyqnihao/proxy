@@ -37,8 +37,27 @@ jobs:
           echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      # 步骤 3：生成动态 URL
+      # 步骤 3b：检查 v2clash.blog 是否有当天新帖（有则继续，无则跳过）
+      - name: Check v2clash for today's post
+        id: check-site
+        run: |
+          TODAY=$(TZ='Asia/Shanghai' date +'%Y%m%d')
+          TODAY_ALT=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
+          TODAY_CN=$(TZ='Asia/Shanghai' date +'%Y年%m月%d日')
+          echo "检查博客主页是否包含日期： $TODAY 或 $TODAY_ALT 或 $TODAY_CN"
+          if curl -sL https://v2clash.blog/ | grep -qE "$TODAY|$TODAY_ALT|$TODAY_CN"; then
+            echo "HAS_NEW_POST=true" >> $GITHUB_ENV
+            echo "::set-output name=has_new::true"
+            echo "博客存在今日文章，继续更新"
+          else
+            echo "HAS_NEW_POST=false" >> $GITHUB_ENV
+            echo "::set-output name=has_new::false"
+            echo "未检测到今日文章，跳过 proxyqueen 更新"
+          fi
+
+      # 步骤 3：生成动态 URL（仅当检测到有新帖时执行）
       - name: Generate dynamic URL
+        if: steps.check-site.outputs.has_new == 'true'
         run: |
           # 根据 YEAR、MONTH 和 DAY 生成动态 URL，并存储到 DYNAMIC_URL 环境变量中
           echo "DYNAMIC_URL=https://v2clash.blog/Link/$YEAR$MONTH$DAY-clash.yaml" >> $GITHUB_ENV
@@ -64,21 +83,26 @@ jobs:
       - name: Fetch content from dynamic URL
         id: fetch-content
         run: |
+          # 如果站点无当天新帖则跳过下载（由 check-site 输出判断）
+          if [ "${{ steps.check-site.outputs.has_new }}" != "true" ]; then
+            echo "SKIPPED=true" >> $GITHUB_OUTPUT
+            echo "跳过下载：未检测到今日新帖"
+            exit 0
+          fi
+
           # 使用 curl 从动态 URL 下载内容并保存到 proxyqueen/output.yaml
-          if curl -o proxyqueen/output.yaml "$DYNAMIC_URL"; then
+          if curl -f -o proxyqueen/output.yaml "$DYNAMIC_URL"; then
             # 检查文件是否为空
             if [ -s proxyqueen/output.yaml ]; then
               echo "内容下载成功，文件不为空"
             else
-              # 如果文件为空，设置 FETCH_ERROR 输出变量为 true，并退出步骤
               echo "文件为空，可能是下载错误"
-              echo "::set-output name=FETCH_ERROR::true"
+              echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
               exit 1
             fi
           else
-            # 如果下载失败，设置 FETCH_ERROR 输出变量为 true，并退出步骤
             echo "无法从动态 URL 下载内容"
-            echo "::set-output name=FETCH_ERROR::true"
+            echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
             exit 1
           fi
 
@@ -86,13 +110,18 @@ jobs:
       - name: Check if file has changes
         id: check-changes
         run: |
+          # 如果上一步标记为跳过（无新帖），则直接标记无变化
+          if [ "${{ steps.fetch-content.outputs.SKIPPED }}" == "true" ]; then
+            echo "未检测到新帖，跳过更新"
+            echo "::set-output name=HAS_CHANGES::false"
+            exit 0
+          fi
+
           # 使用 git diff 检查 proxyqueen/output.yaml 文件是否有变化
           if git diff --quiet proxyqueen/output.yaml; then
-            # 如果没有变化，设置 HAS_CHANGES 输出变量为 false
             echo "文件内容未发生变化"
             echo "::set-output name=HAS_CHANGES::false"
           else
-            # 如果有变化，设置 HAS_CHANGES 输出变量为 true
             echo "文件内容已发生变化"
             echo "::set-output name=HAS_CHANGES::true"
           fi
@@ -113,9 +142,9 @@ jobs:
           git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
       # 步骤 9：发送邮件通知（内容无变化或工作流失败时）
-      - name: Send email on no changes or failure
-        # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
-        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
+      - name: Send email on failure
+        # 仅在工作流失败或下载出错时发送邮件（无新帖/无变化不发送）
+        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' }}
         # 使用 dawidd6/action-send-mail@v3 动作发送邮件
         uses: dawidd6/action-send-mail@v3
         with:
@@ -135,7 +164,7 @@ jobs:
             - 脚本版本: 1.0
             - 动态 URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}
+            - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || '工作流运行失败' }}
           # 收件人邮箱
           to: lyqnihao@163.com
           # 发件人邮箱

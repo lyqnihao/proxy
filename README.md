@@ -1,13 +1,13 @@
 # 一、用搜索方式查找订阅
 
-- [Github公益项目](https://github.com/search?q=saved%3Av2rayfree+&type=repositories&saved_searches=%5B%7B%22name%22%3A%22v2rayfree%22%2C%22query%22%3A%22v2ray+free%22%7D%5D&expanded_query=v2ray+free+&s=updated&o=desc)：<br>
+## [Github公益项目](https://github.com/search?q=saved%3Av2rayfree+&type=repositories&saved_searches=%5B%7B%22name%22%3A%22v2rayfree%22%2C%22query%22%3A%22v2ray+free%22%7D%5D&expanded_query=v2ray+free+&s=updated&o=desc)：<br>
 用free+V2Ray搜项目，看星标多的一般都是，看代码raw
 
-- [FOFA网络空间测绘系统](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
-搜索Clash订阅链接：body="port: 7890" && body="socks-port: 7891" && body="allow-lan: true"
+## [FOFA网络空间搜索Clash订阅1](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
+搜索语句：body="port: 7890" && body="socks-port: 7891" && body="allow-lan: true"
 
-- [FOFA网络空间测绘系统](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
-搜索Clash订阅链接：body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"
+## [FOFA网络空间搜索Clash订阅2](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
+搜索语句：body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"
 
 # 二、Action自动更新的代理列表
 如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
@@ -45,9 +45,9 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/outpu
 
 ## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 - v2ray订阅链接:<br>
-https://v2clash.blog/Link/20251203-v2ray.txt<br>
+https://v2clash.blog/Link/20251202-v2ray.txt<br>
 - clash订阅链接：<br>
-https://v2clash.blog/Link/20251203-clash.yaml<br>
+https://v2clash.blog/Link/20251202-clash.yaml<br>
 - 跟踪更新Clash固定地址
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 

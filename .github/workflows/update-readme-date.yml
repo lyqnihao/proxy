@@ -43,6 +43,22 @@ jobs:
           echo "时间戳：$CURRENT_DATE"
           echo "日期：$YEAR$MONTH$DAY"
 
+      # 步骤3b：检查 v2clash.blog 是否有当天新帖（仅影响 proxyqueen/readme 中的 v2clash 链接）
+      - name: Check v2clash for today's post
+        id: check-v2clash
+        run: |
+          TODAY=$(TZ='Asia/Shanghai' date +'%Y%m%d')
+          TODAY_ALT=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
+          TODAY_CN=$(TZ='Asia/Shanghai' date +'%Y年%m月%d日')
+          echo "检查 v2clash 博客主页是否包含日期： $TODAY 或 $TODAY_ALT 或 $TODAY_CN"
+          if curl -sL https://v2clash.blog/ | grep -qE "$TODAY|$TODAY_ALT|$TODAY_CN"; then
+            echo "HAS_V2CLASH_NEW=true" >> $GITHUB_ENV
+            echo "检测到 v2clash 有今日文章，proxyqueen 订阅将更新"
+          else
+            echo "HAS_V2CLASH_NEW=false" >> $GITHUB_ENV
+            echo "未检测到 v2clash 今日文章，proxyqueen 订阅将在本次跳过更新，但其它订阅仍会更新"
+          fi
+
       # 步骤4：运行 Python 脚本更新日期
       - name: 更新 README.md 中的动态日期
         id: update-readme
@@ -82,15 +98,21 @@ jobs:
               # 模式3：已有具体日期的替换（匹配 /YYYY/MM/YYYYMMDD 格式）
               (r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}"),
               
-              # 模式4：v2clash.blog/Link/ 格式的日期
-              (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)', rf'\g<1>{date_str}\2'),
-              
               # 模式5：clashgithub.com 格式的日期
               (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
           ]
           
-          # 执行所有替换
-          for pattern, replacement in replacements:
+            # 如果 v2clash 无新帖，则跳过仅针对 v2clash 的替换
+            has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
+            if has_v2:
+              v2_pattern = (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)', rf'\g<1>{date_str}\2')
+              replacements.insert(4, v2_pattern)  # 在适当位置插入
+              print('包含 v2clash 替换')
+            else:
+              print('跳过 v2clash 替换（未检测到新帖）')
+
+            # 执行所有替换
+            for pattern, replacement in replacements:
               content = re.sub(pattern, replacement, content)
           
           # 检查是否有变化
