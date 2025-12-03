@@ -21,11 +21,11 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.ya
 
 ## [nodefree](https://nodefree.me/)：<br>
 - v2ray订阅链接<br>
-https://nodefree.githubrowcontent.com/$YEAR/$MONTH/20251203.txt<br>
+https://nodefree.githubrowcontent.com/2025/12/20251203.txt<br>
 - Clash订阅链接<br>
-https://nodefree.githubrowcontent.com/$YEAR/$MONTH/20251203.yaml<br>
+https://nodefree.githubrowcontent.com/2025/12/20251203.yaml<br>
 - Mihomo订阅链接<br>
-https://nodefree.githubrowcontent.com/$YEAR/$MONTH/20251203.yaml<br>
+https://nodefree.githubrowcontent.com/2025/12/20251203.yaml<br>
 
 - 跟踪更新Clash固定地址
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
