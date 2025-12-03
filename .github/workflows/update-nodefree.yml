@@ -17,10 +17,7 @@ name: Update nodefree
 
 # 触发条件
 on:
-  # 定时触发：每2天 UTC 时间 20:05 运行（北京时间 4:05）
-  schedule:
-    - cron: '5 20 */2 * *'
-  # 手动触发：允许通过 GitHub 界面手动运行工作流
+  # 已改为手动模式，由统一工作流 update-all.yml 调度
   workflow_dispatch:
 
 # 任务定义

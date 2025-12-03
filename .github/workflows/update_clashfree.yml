@@ -8,10 +8,7 @@ name: Update clashfree
 
 # 触发条件配置
 on:
-  # 定时任务配置（UTC时间每日17:35对应北京时间次日01:35开始每8小时更新一次）
-  schedule:
-    - cron: '35 17/8 * * *'
-  # 支持手动触发
+  # 已改为手动模式，由统一工作流 update-all.yml 调度
   workflow_dispatch:
 
 # 任务定义

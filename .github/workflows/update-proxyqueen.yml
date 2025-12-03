@@ -7,10 +7,7 @@ name: Update proxyqueen
 
 # 触发条件
 on:
-  # 定时触发：每天 UTC 时间 17:35 运行（北京时间 1:35）
-  schedule:
-    - cron: '35 17 * * *'
-  # 手动触发：允许通过 GitHub 界面手动运行工作流
+  # 已改为手动模式，由统一工作流 update-all.yml 调度
   workflow_dispatch:
 
 # 任务定义

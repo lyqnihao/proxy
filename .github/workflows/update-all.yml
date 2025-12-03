@@ -1,0 +1,101 @@
+name: 更新所有订阅源
+
+on:
+  schedule:
+    # 北京时间每12小时更新：1:35 AM (UTC 17:35前一天) 和 1:35 PM (UTC 5:35)
+    # 使用 cron '35 17,5 * * *' UTC，会在17:35和5:35 UTC执行（北京时间次日1:35和当日13:35）
+    - cron: '35 17,5 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-all:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 检出代码库
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      
+      - name: 获取北京时间信息
+        id: time
+        run: |
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          YEAR=$(TZ='Asia/Shanghai' date +'%Y')
+          MONTH=$(TZ='Asia/Shanghai' date +'%m')
+          DAY=$(TZ='Asia/Shanghai' date +'%d')
+          echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
+          echo "YEAR=$YEAR" >> $GITHUB_ENV
+          echo "MONTH=$MONTH" >> $GITHUB_ENV
+          echo "DAY=$DAY" >> $GITHUB_ENV
+          echo "time=$CURRENT_DATE" >> $GITHUB_OUTPUT
+      
+      # 更新 README 中的动态日期
+      - name: 更新 README 动态日期
+        id: readme
+        run: |
+          HAS_V2CLASH_NEW=false
+          if curl -sL https://v2clash.blog/ | grep -qE "${{ env.YEAR }}${{ env.MONTH }}${{ env.DAY }}|${{ env.YEAR }}-${{ env.MONTH }}-${{ env.DAY }}"; then
+            HAS_V2CLASH_NEW=true
+          fi
+          export HAS_V2CLASH_NEW YEAR=${{ env.YEAR }} MONTH=${{ env.MONTH }} DAY=${{ env.DAY }}
+          python .github/scripts/update_readme.py
+          echo "completed=true" >> $GITHUB_OUTPUT
+        continue-on-error: true
+      
+      # 使用通用脚本更新所有订阅
+      - name: 更新所有订阅
+        id: update
+        run: |
+          python .github/scripts/update_subscriptions.py
+        env:
+          YEAR: ${{ env.YEAR }}
+          MONTH: ${{ env.MONTH }}
+          DAY: ${{ env.DAY }}
+        continue-on-error: true
+      
+      # 提交变更到 Git 仓库
+      - name: 提交变更
+        id: commit
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # 检查是否有暂存的变更
+          if git diff --staged --quiet; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+          else
+            git commit -m "chore: 自动更新订阅 ${{ env.CURRENT_DATE }}"
+            git push
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+      
+      # 仅在出现真实错误时发送邮件通知（无内容变更时不发送）
+      - name: 发送错误通知邮件
+        if: |
+          failure() || 
+          steps.readme.outcome == 'failure' || 
+          steps.update.outcome == 'failure' || 
+          steps.commit.outcome == 'failure'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "订阅更新失败 ${{ env.CURRENT_DATE }}"
+          body: |
+            自动更新订阅出错
+            - 时间: ${{ env.CURRENT_DATE }}
+            - README: ${{ steps.readme.outcome }}
+            - 订阅更新: ${{ steps.update.outcome }}
+            - git commit: ${{ steps.commit.outcome }}
+            - 日志: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          to: lyqnihao@163.com
+          from: ${{ secrets.EMAIL_USERNAME }}

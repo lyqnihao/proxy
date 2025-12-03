@@ -1,0 +1,51 @@
+[
+  {
+    "name": "cmliu",
+    "dir": "cmliu",
+    "output_file": "target.yaml",
+    "url_type": "static",
+    "url": "https://raw.githubusercontent.com/cmliu/CF-Workers-SUB/main/_list.txt",
+    "description": "汇聚订阅 - CloudFlare 工作者自建"
+  },
+  {
+    "name": "nodefree",
+    "dir": "nodefree",
+    "output_file": "target.yaml",
+    "url_type": "dynamic_date",
+    "url_template": "https://nodefree.githubrowcontent.com/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
+    "description": "免费节点 - 每日更新"
+  },
+  {
+    "name": "clashfree",
+    "dir": "clashfree",
+    "output_file": "output.yaml",
+    "url_type": "static",
+    "url": "https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml",
+    "description": "免费节点 Clash 订阅"
+  },
+  {
+    "name": "proxyqueen",
+    "dir": "proxyqueen",
+    "output_file": "output.yaml",
+    "url_type": "dynamic_date",
+    "url_template": "https://v2clash.blog/Link/{YEAR}{MONTH}{DAY}-clash.yaml",
+    "requires_check": "v2clash_blog",
+    "description": "代理女王 - 来自 v2clash 博客"
+  },
+  {
+    "name": "v2cross",
+    "dir": "v2cross",
+    "output_file": "output.yaml",
+    "url_type": "dynamic_script",
+    "url_script": "python v2cross/update.py",
+    "description": "V2Cross - 通过脚本生成"
+  },
+  {
+    "name": "xconfig",
+    "dir": "xConfig",
+    "output_file": "output.yaml",
+    "url_type": "static",
+    "url": "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt",
+    "description": "XConfig - Xray 代理抓取器"
+  }
+]
