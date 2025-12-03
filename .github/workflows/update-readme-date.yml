@@ -72,10 +72,13 @@ jobs:
           replacements = [
               # 模式1：$YEAR$MONTH$DAY 格式（直接8位数字）
               (r'\$YEAR\$MONTH\$DAY', date_str),
-              
+
               # 模式2：$YEAR/$MONTH/$YEAR$MONTH$DAY 格式（带路径的格式）
               (r'\$YEAR/\$MONTH/\$YEAR\$MONTH\$DAY', f"{year_month}/{date_str}"),
-              
+
+              # 模式2b：$YEAR/$MONTH/<已有8位日期>（例如 nodefree 的情况）
+              (r'\$YEAR/\$MONTH/\d{8}', f"{year_month}/{date_str}"),
+
               # 模式3：已有具体日期的替换（匹配 /YYYY/MM/YYYYMMDD 格式）
               (r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}"),
               
