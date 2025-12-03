@@ -21,11 +21,11 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.ya
 
 ## [nodefree](https://nodefree.me/)：<br>
 - v2ray订阅链接<br>
-https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.txt<br>
+https://nodefree.githubrowcontent.com/$YEAR/$MONTH/20251203.txt<br>
 - Clash订阅链接<br>
-https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml<br>
+https://nodefree.githubrowcontent.com/$YEAR/$MONTH/20251203.yaml<br>
 - Mihomo订阅链接<br>
-https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml<br>
+https://nodefree.githubrowcontent.com/$YEAR/$MONTH/20251203.yaml<br>
 
 - 跟踪更新Clash固定地址
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
@@ -34,9 +34,9 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target
 
 ## [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 - v2ray订阅链接:<br>
-https://clashgithub.com/wp-content/uploads/rss/$YEAR$MONTH$DAY.txt<br>
+https://clashgithub.com/wp-content/uploads/rss/20251203.txt<br>
 - clash订阅链接:<br>
-https://clashgithub.com/wp-content/uploads/rss/$YEAR$MONTH$DAY.yml<br>
+https://clashgithub.com/wp-content/uploads/rss/20251203.yml<br>
 - 跟踪更新Clash固定地址
 https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
@@ -45,9 +45,9 @@ https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/outpu
 
 ## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 - v2ray订阅链接:<br>
-https://v2clash.blog/Link/$YEAR$MONTH$DAY-v2ray.txt<br>
+https://v2clash.blog/Link/20251203-v2ray.txt<br>
 - clash订阅链接：<br>
-https://v2clash.blog/Link/$YEAR$MONTH$DAY-clash.yaml<br>
+https://v2clash.blog/Link/20251203-clash.yaml<br>
 - 跟踪更新Clash固定地址
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
