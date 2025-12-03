@@ -1,47 +1,101 @@
-# 用搜索方式查找订阅
+# 一、用搜索方式查找订阅
 
-[Github公益节点](https://github.com/search?q=saved%3Av2rayfree+&type=repositories&saved_searches=%5B%7B%22name%22%3A%22v2rayfree%22%2C%22query%22%3A%22v2ray+free%22%7D%5D&expanded_query=v2ray+free+&s=updated&o=desc)：<br>
+- [Github公益项目](https://github.com/search?q=saved%3Av2rayfree+&type=repositories&saved_searches=%5B%7B%22name%22%3A%22v2rayfree%22%2C%22query%22%3A%22v2ray+free%22%7D%5D&expanded_query=v2ray+free+&s=updated&o=desc)：<br>
 用free+V2Ray搜项目，看星标多的一般都是，看代码raw
 
-[FOFA网络空间测绘系统](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
-搜索Clash订阅链接，body="port: 7890" && body="socks-port: 7891" && body="allow-lan: true"
+- [FOFA网络空间测绘系统](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
+搜索Clash订阅链接：body="port: 7890" && body="socks-port: 7891" && body="allow-lan: true"
 
-[FOFA网络空间测绘系统](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
-搜索Clash订阅链接，body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"
+- [FOFA网络空间测绘系统](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
+搜索Clash订阅链接：body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"
 
-# Action自动更新的代理列表
+# 二、Action自动更新的代理列表
+如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
 
-[汇聚订阅-CF](https://cf-workers-sub-43i.pages.dev/lyqnihao)
-[（自定义域名地址）](https://proxymix.lyqnihao.dns-dynamic.net/lyqnihao)：<br>
-[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml)<br>
+## [汇聚订阅-CF](https://cf-workers-sub-43i.pages.dev/lyqnihao)：
+- [（自定义域名地址）](https://proxymix.lyqnihao.dns-dynamic.net/lyqnihao)<br>
+- 跟踪更新Clash固定地址
+https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
+
 每天4:05自动更新代理列表。 <br>
 
-[nodefree](https://nodefree.me/)：<br>
-[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml)<br>
+## [nodefree](https://nodefree.me/)：<br>
+- v2ray订阅链接<br>
+https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.txt<br>
+- Clash订阅链接<br>
+https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml<br>
+- Mihomo订阅链接<br>
+https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml<br>
+
+- 跟踪更新Clash固定地址
+https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
+
 更新不频繁，改为每2天的4:05自动更新代理列表，原为手动更新日期地址。<br>
 
-[clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
+## [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
+- v2ray订阅链接:<br>
+https://clashgithub.com/wp-content/uploads/rss/$YEAR$MONTH$DAY.txt<br>
+- clash订阅链接:<br>
+https://clashgithub.com/wp-content/uploads/rss/$YEAR$MONTH$DAY.yml<br>
+- 跟踪更新Clash固定地址
 https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
 https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
+<<<<<<< Updated upstream
 类似nodefree，网站每4小时更新，动态日期更新地址。GitHub每天1点35分开始每8小时跟踪更新一次。<br>
+=======
 
-[v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+类似nodefree，网站每4小时更新，动态日期更新地址。GitHub每天1点35分开始每4小时跟踪更新一次。<br>
+>>>>>>> Stashed changes
+
+## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
+- v2ray订阅链接:<br>
+https://v2clash.blog/Link/$YEAR$MONTH$DAY-v2ray.txt<br>
+- clash订阅链接：<br>
+https://v2clash.blog/Link/$YEAR$MONTH$DAY-clash.yaml<br>
+- 跟踪更新Clash固定地址
+https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
+
+类似nodefree，动态日期更新地址。参考nodefree每天1点35分自动更新。<br>
+
+## [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+- 订阅地址：
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
-[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml)<br>
+- 跟踪更新：
+https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
+
 网站每天动态地址，每6小时更新一次。Actions自动获取更新代理列表。<br>
 
-[xconfig](https://xconfig.pages.dev/index2)：<br>
-[https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml)<br>
+## [xconfig](https://xconfig.pages.dev/index2)：<br>
+- 真实链接地址见此页面：
+https://xconfig.pages.dev/u3base-conf.js
+- 跟踪更新地址：
+https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
+
 该网页有很多订阅，换一个，改为每天4:05自动更新代理列表。 <br>
 
 
-如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
+# 三、一些自建项目
 
-# 一些在线工具
+## 1、[edgetunnel 2.0](https://github.com/cmliu/edgetunnel)
+[旧版留档](https://github.com/zizifn/edgetunnel)<br>
+Cloudflared上免费部署，无限流量，可后台设置协议。旧版好用，新版还未部署成功。<br>
+
+## 2、[CFnew - 终端](https://github.com/byJoey/cfnew)
+图形化配置管理，订阅转换控制，API动态管理，手动指定地区，优选节点命名。待部署测试<br>
+
+## 3、[汇聚订阅](https://github.com/cmliu/CF-Workers-SUB)
+已部署，基本可用，多个订阅合并。<br>
+
+## 4、[数码解码](https://smjm.ct.ws/免费搭建独立永久属于自己的vps节点/)/[YouTube频道](https://www.youtube.com/@DECODING-w7d)
+免费服务、免费VPS、免费域名等，通过VPS部署节点。<br>
+
+
+# 四、一些在线工具
 - 在线[生成 UUID ](https://www.v2fly.org/awesome/tools.html)的工具。
+- [另一个UUID](https://www.lddgo.net/string/uuid)的在线工具。
 
-
-# [GitHub 文件加速](https://yishijie.gitlab.io/ziyuan/)：可检测节点连通性
+## [GitHub 文件加速](https://yishijie.gitlab.io/ziyuan/)：
+可检测节点连通性
 | mirror-result	| time	| status-success |
 | :--: | :--: | :--: |
 |https://gh.tryxd.cn/	|152ms	|成功|
