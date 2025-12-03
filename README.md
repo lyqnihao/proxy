@@ -38,7 +38,7 @@
 - clash订阅链接：https://v2clash.blog/Link/20251202-clash.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
-  类似nodefree，动态日期更新地址。参考nodefree每天1点35分自动更新。<br>
+  类似nodefree，动态日期更新地址。参考nodefree每天1点35分自动检测，但不是每天都有更新。<br>
 
 ## [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 - 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
