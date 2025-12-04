@@ -75,9 +75,12 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                         file_size = os.path.getsize(output_file)
                     except Exception:
                         file_size = None
-                    if file_size is None or file_size == 0:
-                        # 空文件视作失败，删除并重试（如果还有剩余重试次数）
-                        last_err = f"下载成功但文件为空（{output_file}，大小={file_size}）: 尝试 {attempt}/{retries}"
+                    
+                    # 检查文件大小，只有大于1KB的文件才认为是有效内容
+                    if file_size is None or file_size < 1024:
+                        # 文件太小或无法获取大小，视作失败，删除并重试（如果还有剩余重试次数）
+                        size_desc = "无法获取大小" if file_size is None else f"大小={file_size}字节"
+                        last_err = f"下载成功但文件太小（{output_file}，{size_desc}）: 尝试 {attempt}/{retries}"
                         try:
                             os.remove(output_file)
                         except Exception:
@@ -87,7 +90,7 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                             continue
                         else:
                             return False, last_err
-                # 文件非空，视为成功
+                # 文件足够大，视为成功
                 return True, None
 
             # curl 返回非 0：收集 stderr/stdout 帮助排查
@@ -129,7 +132,7 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
 
 def git_has_changes(file_path: str) -> bool:
     """
-    检查文件是否有暂存的变更
+    检查文件在工作区或暂存区是否有任何变更
     
     参数：
     - file_path: 要检查的文件路径
@@ -138,13 +141,15 @@ def git_has_changes(file_path: str) -> bool:
     - True: 文件有变更
     - False: 文件无变更
     """
-    # 使用 git diff 检查暂存区中的变更
+    # 使用 git status --porcelain 检查文件状态
+    # 如果有输出，则表示文件有变更
     result = subprocess.run(
-        ["git", "diff", "--staged", "--quiet", file_path],
-        capture_output=True
+        ["git", "status", "--porcelain", file_path],
+        capture_output=True,
+        text=True
     )
-    # 返回码为 0 表示无变更，非 0 表示有变更
-    return result.returncode != 0
+    # strip() 去除空白字符，如果有任何内容则表示有变更
+    return len(result.stdout.strip()) > 0
 
 def git_add_and_check(file_path: str) -> bool:
     """
@@ -157,8 +162,12 @@ def git_add_and_check(file_path: str) -> bool:
     - True: 文件有变更
     - False: 文件无变更
     """
-    # 将文件加入 Git 暂存区
-    subprocess.run(["git", "add", file_path], capture_output=True)
+    # 执行 git add
+    add_result = subprocess.run(["git", "add", file_path], capture_output=True, text=True)
+    if add_result.returncode != 0:
+        # 如果 git add 失败，可以记录错误或抛出异常
+        print(f"Error adding {file_path}: {add_result.stderr}", file=sys.stderr)
+        return False
     # 检查是否有变更
     return git_has_changes(file_path)
 

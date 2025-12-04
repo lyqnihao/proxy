@@ -51,6 +51,14 @@ def main():
         if not success:
             print(f"[proxyqueen] 错误: {error}")
             return 1  # 返回 1（出错）
+            
+        # 检查文件大小
+        if os.path.exists(output_file):
+            file_size = os.path.getsize(output_file)
+            if file_size < 100:  # 文件小于100字节可能是无效内容
+                print(f"[proxyqueen] 错误: 下载的文件大小异常 ({file_size} 字节)，可能不是有效的订阅文件")
+                os.remove(output_file)  # 删除异常文件
+                return 1
         
         # 检查文件是否有变更，并将其加入 Git 暂存区
         if git_add_and_check(output_file):

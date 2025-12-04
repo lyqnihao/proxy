@@ -126,7 +126,7 @@ def update_specific_area_only():
     
     for line in lines:
         # 只更新包含特定关键词的行
-        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub']):
+        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig']):
             # 应用日期替换
             original_line = line
             # 替换 $YEAR$MONTH$DAY 格式
@@ -160,6 +160,12 @@ def update_specific_area_only():
             line = re.sub(
                 r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', 
                 rf'\g<1>{date_str}\2.txt', 
+                line
+            )
+            # 添加 nodefree 的日期格式替换
+            line = re.sub(
+                r'(nodefree\.githubrowcontent\.com/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
+                rf'\g<1>{year}/{month}/{date_str}\2', 
                 line
             )
             

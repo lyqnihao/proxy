@@ -54,6 +54,14 @@ def main():
             print(f"[nodefree] 错误: {error}")
             return 1  # 返回 1（出错）
         
+        # 检查文件大小
+        if os.path.exists(output_file):
+            file_size = os.path.getsize(output_file)
+            if file_size < 100:  # 文件大小小于100字节认为是无效的
+                print(f"[nodefree] 错误: 文件大小异常 ({file_size} 字节)，可能订阅内容无效")
+                os.remove(output_file)  # 删除异常的小文件
+                return 1
+        
         # 检查文件是否有变更，并将其加入 Git 暂存区
         if git_add_and_check(output_file):
             print(f"[nodefree] 已更新: {url}")

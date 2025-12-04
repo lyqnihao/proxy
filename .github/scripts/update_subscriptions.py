@@ -84,9 +84,12 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                         file_size = os.path.getsize(output_file)
                     except Exception:
                         file_size = None
-                    if file_size is None or file_size == 0:
-                        # 空文件视作失败，删除并重试（如果还有剩余重试次数）
-                        last_err = f"下载成功但文件为空（{output_file}，大小={file_size}）: 尝试 {attempt}/{retries}"
+                    
+                    # 检查文件大小，只有大于1KB的文件才认为是有效内容
+                    if file_size is None or file_size < 1024:
+                        # 文件太小或无法获取大小，视作失败，删除并重试（如果还有剩余重试次数）
+                        size_desc = "无法获取大小" if file_size is None else f"大小={file_size}字节"
+                        last_err = f"下载成功但文件太小（{output_file}，{size_desc}）: 尝试 {attempt}/{retries}"
                         try:
                             os.remove(output_file)
                         except Exception:
@@ -96,7 +99,7 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                             continue
                         else:
                             return False, last_err
-                # 文件非空，视为成功
+                # 文件足够大，视为成功
                 return True, None
 
             # curl 返回非 0：收集 stderr/stdout 帮助排查
@@ -396,7 +399,12 @@ def update_subscription(config: dict) -> Tuple[int, str]:
         return 1, f"[{name}] 错误: {error}"
     
     # 检查文件是否有变更（与上次提交比较）
-    if git_add_file(output_file_path):
+    has_changes, err = git_add_file(output_file_path)
+    if err:
+        # Git操作出错
+        return 1, f"[{name}] Git错误: {err}"
+    
+    if has_changes:
         # 有变更 -> 提交成功
         return 0, f"[{name}] 已更新: {url}"
     else:

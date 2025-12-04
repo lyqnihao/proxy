@@ -18,6 +18,7 @@ except ImportError as e:
 
 import re  # 导入 re 库，用于正则表达式匹配
 import sys  # 导入 sys 库，用于退出程序时返回状态码
+import os   # 导入 os 库，用于文件操作
 
 def fetch_subscription_url():
     """从目标网页提取订阅地址（已修复DeprecationWarning）"""
@@ -58,6 +59,17 @@ def main():
         if not DYNAMIC_URL:
             print("错误：无法提取订阅地址。", file=sys.stderr)  # 输出错误信息
             sys.exit(1)  # 返回状态码 1 表示失败
+            
+        # 获取内容并检查大小
+        content = fetch_url_content(DYNAMIC_URL)
+        if content is None:
+            print("错误：无法获取订阅内容。", file=sys.stderr)
+            sys.exit(1)
+            
+        # 检查内容大小，确保大于1KB
+        if len(content.encode('utf-8')) < 1024:
+            print("错误：订阅内容太小（小于1KB），可能是无效内容。", file=sys.stderr)
+            sys.exit(1)
             
         # 输出目标网址的内容：去除换行符确保输出纯净URL
         print(DYNAMIC_URL, end='')
