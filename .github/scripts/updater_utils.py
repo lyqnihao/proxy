@@ -52,25 +52,80 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
     - (True, None): 下载成功
     - (False, 错误信息): 下载失败，返回错误说明
     """
-    try:
-        # 使用 curl 下载文件
-        result = subprocess.run(
-            ["curl", "-f", "-L", "-o", output_file, url],
-            capture_output=True,
-            text=True,
-            timeout=30  # 30 秒超时
-        )
-        # 检查 curl 是否执行成功
-        if result.returncode != 0:
-            return False, f"curl 失败: {result.stderr}"
-        
-        # 检查下载的文件大小
-        if not os.path.getsize(output_file) > 0:
-            return False, "下载的文件为空"
-        
-        return True, None
-    except Exception as e:
-        return False, str(e)
+    # 增强版的下载函数：添加重试、更多的错误上下文以及对空文件的处理
+    retries = 2
+    last_err = ""
+    for attempt in range(1, retries + 1):
+        try:
+            # 使用 curl 下载文件
+            cmd = [
+                "curl",
+                "-f",  # 失败时返回非 0
+                "-L",  # 跟随重定向
+                "-H", "Cache-Control: no-cache",
+                "-o", output_file,
+                url
+            ]
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+
+            # 如果 curl 返回码为 0，进一步检查文件是否存在且非空
+            if result.returncode == 0:
+                if os.path.exists(output_file):
+                    try:
+                        file_size = os.path.getsize(output_file)
+                    except Exception:
+                        file_size = None
+                    if file_size is None or file_size == 0:
+                        # 空文件视作失败，删除并重试（如果还有剩余重试次数）
+                        last_err = f"下载成功但文件为空（{output_file}，大小={file_size}）: 尝试 {attempt}/{retries}"
+                        try:
+                            os.remove(output_file)
+                        except Exception:
+                            pass
+                        # 如果不是最后一次尝试，继续重试
+                        if attempt < retries:
+                            continue
+                        else:
+                            return False, last_err
+                # 文件非空，视为成功
+                return True, None
+
+            # curl 返回非 0：收集 stderr/stdout 帮助排查
+            stderr = (result.stderr or "").strip()
+            stdout = (result.stdout or "").strip()
+            last_err = f"curl 返回码 {result.returncode}; stderr: {stderr[:300]}; stdout: {stdout[:300]}; 尝试 {attempt}/{retries}"
+            # 清理可能部分写入的文件以免下次误判
+            if os.path.exists(output_file):
+                try:
+                    os.remove(output_file)
+                except Exception:
+                    pass
+            # 若非最后一次尝试，则继续重试
+            if attempt < retries:
+                continue
+            else:
+                # 最后一次尝试仍失败，返回详细错误信息
+                # 如果文件存在，附加文件大小信息
+                size_info = None
+                try:
+                    if os.path.exists(output_file):
+                        size_info = os.path.getsize(output_file)
+                except Exception:
+                    size_info = None
+                size_suffix = f"; 文件大小={size_info}" if size_info is not None else ""
+                return False, f"下载失败: {last_err}{size_suffix}"
+
+        except Exception as e:
+            # 捕获 subprocess 以外的异常（例如超时、权限问题等）
+            last_err = f"异常: {str(e)[:300]}; 尝试 {attempt}/{retries}"
+            if os.path.exists(output_file):
+                try:
+                    os.remove(output_file)
+                except Exception:
+                    pass
+            if attempt < retries:
+                continue
+            return False, f"下载异常: {last_err}"
 
 def git_has_changes(file_path: str) -> bool:
     """

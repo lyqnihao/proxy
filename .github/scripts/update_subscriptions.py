@@ -211,6 +211,8 @@ def check_v2clash_new_post() -> bool:
     # 生成几种日期格式来匹配网页内容
     today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
     today_alt = time_info['DATE']  # YYYY-MM-DD 格式
+    # 中文日期格式（如果网页使用中文）
+    today_cn = f"{time_info['YEAR']}年{time_info['MONTH']}月{time_info['DAY']}日"
     
     try:
         # 使用 bash 命令组合 curl 和 grep
@@ -219,7 +221,7 @@ def check_v2clash_new_post() -> bool:
                 "bash", "-c",  # 执行 bash 命令
                 # 下面是 bash 命令的组合：
                 # curl 获取网页，|（管道）传给 grep，grep 搜索日期字符串
-                f"curl -sL https://v2clash.blog/ 2>/dev/null | grep -qE '{today}|{today_alt}'"
+                f"curl -sL https://v2clash.blog/ 2>/dev/null | grep -qE '{today}|{today_alt}|{today_cn}'"
             ],
             capture_output=True,
             timeout=15  # 15 秒超时（网络操作）
@@ -260,6 +262,10 @@ def run_url_script(script: str) -> Tuple[bool, Optional[str]]:
         if not url:
             return False, f"脚本成功但未输出 URL：命令 {script}，stdout 为空"
         return True, url
+    except subprocess.TimeoutExpired:
+        return False, f"执行脚本超时: {script}"
+    except FileNotFoundError:
+        return False, f"找不到脚本或解释器: {script}"
     except Exception as e:
         return False, f"执行脚本异常: {str(e)[:300]}"
 
@@ -432,6 +438,7 @@ def main():
     
     # 标志：是否有任何订阅更新失败
     has_error = False
+    failed_subscriptions = []  # 记录失败的订阅
     
     # 逐个处理每个订阅
     for sub_config in subscriptions:
@@ -439,9 +446,22 @@ def main():
         exit_code, message = update_subscription(sub_config)
         # 打印消息（会显示在 GitHub Actions 日志中）
         print(message)
-        # 如果返回码为 1（错误），标记有错误
+        # 如果返回码为 1（错误），标记有错误并记录失败的订阅
         if exit_code != 0:
             has_error = True
+            # 提取订阅名称并添加到失败列表
+            sub_name = sub_config.get('name', 'Unknown')
+            failed_subscriptions.append(f"{sub_name}")
+    
+    # 如果有错误，输出失败的订阅信息到环境变量，供后续步骤使用
+    if failed_subscriptions:
+        failed_list = ", ".join(failed_subscriptions)
+        # 将失败的订阅列表写入环境文件，供后续步骤使用
+        env_file = os.getenv('GITHUB_ENV')
+        if env_file:
+            with open(env_file, 'a') as f:
+                f.write(f"FAILED_SUBSCRIPTIONS={failed_list}\n")
+        print(f"::set-output name=failed_subscriptions::{failed_list}")
     
     # 返回总体结果
     # 有错误返回 1，全部成功返回 0

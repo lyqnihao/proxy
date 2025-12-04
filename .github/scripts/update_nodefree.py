@@ -27,39 +27,43 @@ from updater_utils import get_beijing_time, fetch_url, git_add_and_check
 
 def main():
     """主函数 - NodeFree 订阅更新"""
-    # 获取北京时间信息
-    time_info = get_beijing_time()
-    year, month, day = time_info['YEAR'], time_info['MONTH'], time_info['DAY']
-    date_str = year + month + day  # 拼接成 YYYYMMDD 格式
-    year_month = f"{year}/{month}"  # YYYY/MM 格式
-    
-    # 根据日期生成 NodeFree 订阅 URL
-    # nodefree 每天都会发布一个新的订阅文件
-    # 文件名格式为：YYYYMMDD.yaml
-    # 文件路径格式为：/YYYY/MM/YYYYMMDD.yaml
-    url = f"https://nodefree.githubrowcontent.com/{year_month}/{date_str}.yaml"
-    # 指定输出文件位置
-    output_file = "nodefree/target.yaml"
-    
-    # 确保输出目录存在
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    # 删除旧文件（为了检测变更）
-    if os.path.exists(output_file):
-        os.remove(output_file)
-    
-    # 下载订阅文件
-    success, error = fetch_url(url, output_file)
-    if not success:
-        print(f"[nodefree] 错误: {error}")
-        return 1  # 返回 1（出错）
-    
-    # 检查文件是否有变更，并将其加入 Git 暂存区
-    if git_add_and_check(output_file):
-        print(f"[nodefree] 已更新: {url}")
-        return 0
-    else:
-        print(f"[nodefree] 检测到无变更")
-        return 0
+    try:
+        # 获取北京时间信息
+        time_info = get_beijing_time()
+        year, month, day = time_info['YEAR'], time_info['MONTH'], time_info['DAY']
+        date_str = year + month + day  # 拼接成 YYYYMMDD 格式
+        year_month = f"{year}/{month}"  # YYYY/MM 格式
+        
+        # 根据日期生成 NodeFree 订阅 URL
+        # nodefree 每天都会发布一个新的订阅文件
+        # 文件名格式为：YYYYMMDD.yaml
+        # 文件路径格式为：/YYYY/MM/YYYYMMDD.yaml
+        url = f"https://nodefree.githubrowcontent.com/{year_month}/{date_str}.yaml"
+        # 指定输出文件位置
+        output_file = "nodefree/target.yaml"
+        
+        # 确保输出目录存在
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        # 删除旧文件（为了检测变更）
+        if os.path.exists(output_file):
+            os.remove(output_file)
+        
+        # 下载订阅文件
+        success, error = fetch_url(url, output_file)
+        if not success:
+            print(f"[nodefree] 错误: {error}")
+            return 1  # 返回 1（出错）
+        
+        # 检查文件是否有变更，并将其加入 Git 暂存区
+        if git_add_and_check(output_file):
+            print(f"[nodefree] 已更新: {url}")
+            return 0
+        else:
+            print(f"[nodefree] 检测到无变更")
+            return 0
+    except Exception as e:
+        print(f"[nodefree] 未预期的错误: {str(e)}")
+        return 1
 
 # 程序入口
 if __name__ == '__main__':
