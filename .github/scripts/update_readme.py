@@ -59,26 +59,18 @@ def main():
         
         # 模式 5: clashgithub.com 的日期（可能有 .txt 或 .yml 扩展名）
         (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
+        
+        # 模式 6: v2clash.blog 的日期格式（修正后）
+        (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
+        (r'(v2clash\.blog/clash/)\d{8}\.yaml', rf'\g<1>{date_str}.yaml'),
+        (r'(v2clash\.blog/v2ray/)\d{8}\.txt', rf'\g<1>{date_str}.txt'),
+        (r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', rf'\g<1>{date_str}\2.txt'),
     ]
 
     # 检查是否需要包含 v2clash 的替换
     # HAS_V2CLASH_NEW 是一个环境变量，如果 v2clash.blog 有新文章就设为 true
     has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
     if has_v2:
-        # v2clash 有新文章，添加 v2clash URL 的多种替换规则
-        v2_patterns = [
-            # 模式: v2clash.blog/Link/XXXXXXXX -> v2clash.blog/Link/YYYYMMDD
-            (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)', rf'\g<1>{date_str}\2'),
-            # 模式: v2clash.blog/clash/XXXXXXXX.yaml -> v2clash.blog/clash/YYYYMMDD.yaml
-            (r'(v2clash\.blog/clash/)\d{8}\.yaml', rf'\g<1>{date_str}.yaml'),
-            # 模式: v2clash.blog/v2ray/XXXXXXXX.txt -> v2clash.blog/v2ray/YYYYMMDD.txt
-            (r'(v2clash\.blog/v2ray/)\d{8}\.txt', rf'\g<1>{date_str}.txt'),
-            # 模式: v2clash.blog/rss/XXXXXXXX(-v2ray)?.txt -> v2clash.blog/rss/YYYYMMDD(-v2ray)?.txt
-            (r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', rf'\g<1>{date_str}\2.txt'),
-        ]
-        # 在第 4 个位置插入所有 v2clash 模式
-        for i, pattern in enumerate(v2_patterns):
-            replacements.insert(4 + i, pattern)
         print('包含 v2clash 多种格式替换')
     else:
         # v2clash 无新文章，不更新 v2clash 相关的 URL
