@@ -18,6 +18,9 @@ name: Update v2cross
 on:
   # 已改为手动模式，由统一工作流 update-all.yml 调度
   workflow_dispatch:
+  schedule:
+    # 北京时间每天1:35运行(UTC时间17:35)，然后每隔12小时运行一次
+    - cron: '35 17/12 * * *'
 
 jobs:
   refresh:
