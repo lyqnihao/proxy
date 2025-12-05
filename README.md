@@ -10,12 +10,12 @@
 搜索语句：body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"
 
 # 二、Action自动更新的代理列表
-  如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
+  每天1点半13点半自动检测更新，如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。
 
 ## 汇聚订阅-CF：
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
 
-  每天4:05自动更新代理列表。 <br>
+  <br>
 
 ## [nodefree](https://nodefree.me/)：<br>
 - v2ray订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251205.txt<br>
@@ -23,7 +23,7 @@
 - Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/m20251205.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
-  更新不频繁，改为每2天的4:05自动更新代理列表，原为手动更新日期地址。<br>
+  原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
 
 ## [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 - v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251205.txt<br>
@@ -31,28 +31,27 @@
 - GitHub Clash固定地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
-  类似nodefree，网站每4小时更新，动态日期更新地址。GitHub每天1点35分开始每4小时跟踪更新一次。<br>
+  类似nodefree，网站每4小时更新，动态日期更新地址。<br>
 
 ## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 - v2ray订阅链接：https://v2clash.blog/Link/20251205-v2ray.txt<br>
 - clash订阅链接：https://v2clash.blog/Link/20251205-clash.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
-  类似nodefree，动态日期更新地址。参考nodefree每天1点35分自动检测，但不是每天都有更新。<br>
+  类似nodefree，动态日期更新地址。<br>
 
 ## [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 - 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 - 跟踪更新：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
 
-  网站每天动态地址，每6小时更新一次。Actions自动获取更新代理列表。<br>
+  网站每天动态地址，每6小时更新一次。<br>
 
 ## [xconfig](https://xconfig.pages.dev/index2)：<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js
 - 当前跟踪更新的地址：https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt<br>
 - 跟踪更新地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
-  该网页有很多订阅，换一个，改为每天4:05自动更新代理列表。 <br>
-
+  该网页整合很多免费订阅项目，来源复杂，更新周期不定，而且部分已经消失。 <br>
 
 # 三、一些自建项目
 
