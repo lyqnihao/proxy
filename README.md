@@ -20,7 +20,7 @@
 ## [nodefree](https://nodefree.me/)：<br>
 - v2ray订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251205.txt<br>
 - Clash订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251205.yaml<br>
-- Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251205.yaml<br>
+- Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/m20251205.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
   更新不频繁，改为每2天的4:05自动更新代理列表，原为手动更新日期地址。<br>
