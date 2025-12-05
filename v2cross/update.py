@@ -3,6 +3,9 @@
 # 版本：1.0
 # 功能包括：初始版本，实现抓取网页内容、Python 脚本仅用于获取订阅地址。
 
+import sys  # 导入 sys 库，用于退出程序时返回状态码
+import os   # 导入 os 库，用于文件操作
+
 # 尝试导入依赖库，如果失败则给出明确的错误提示
 try:
     import requests  # 导入 requests 库，用于发送 HTTP 请求
@@ -17,8 +20,6 @@ except ImportError as e:
     sys.exit(1)
 
 import re  # 导入 re 库，用于正则表达式匹配
-import sys  # 导入 sys 库，用于退出程序时返回状态码
-import os   # 导入 os 库，用于文件操作
 
 def fetch_subscription_url():
     """从目标网页提取订阅地址（已修复DeprecationWarning）"""
