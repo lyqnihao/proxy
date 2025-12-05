@@ -34,8 +34,8 @@
   类似nodefree，网站每4小时更新，动态日期更新地址。GitHub每天1点35分开始每4小时跟踪更新一次。<br>
 
 ## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
-- v2ray订阅链接：https://v2clash.blog/Link/20251202-v2ray.txt<br>
-- clash订阅链接：https://v2clash.blog/Link/20251202-clash.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20251205-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20251205-clash.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
   类似nodefree，动态日期更新地址。参考nodefree每天1点35分自动检测，但不是每天都有更新。<br>
