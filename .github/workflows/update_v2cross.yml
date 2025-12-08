@@ -1,3 +1,6 @@
+# 版本：1.4
+# 修订原因：
+# - 同步改进的文件大小验证方法，使用500字节作为阈值
 # 版本：1.3
 # 修订原因：
 # - 原地址更新积极，改为每6小时更新
@@ -103,32 +106,51 @@ jobs:
         run: mkdir -p v2cross
 
       # --------------------------
-      # 步骤8：下载订阅文件（关键修改点）
-      # --------------------------
-      - name: 下载订阅文件并检查
-        id: fetch-content
-        env:
-          DYNAMIC_URL: ${{ steps.run_script.outputs.DYNAMIC_URL }}  # 从步骤输出获取
+      # 步骤8：下载并检查内容（关键修改点）
+      # --------------------------      
+      - name: 下载并检查内容
+        id: download_content
         run: |
-          echo "正在下载订阅文件：$DYNAMIC_URL"
-          
-          # 带重试机制的下载
-          if ! curl -L -H "Cache-Control: no-cache" -o v2cross/output.yaml "$DYNAMIC_URL"; then
-            echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
-            echo "错误：文件下载失败" >&2
-            exit 1
+          if [ "${{ steps.run_script.outputs.script_status }}" == "success" ]; then
+            echo "开始下载内容..."
+            
+            # 使用动态URL下载内容到临时文件
+            if curl -L -H "Cache-Control: no-cache" -o temp_content.txt "${{ env.DYNAMIC_URL }}"; then
+              # 检查临时文件是否存在且非空
+              if [ -s temp_content.txt ]; then
+                # 检查文件大小是否符合要求（大于500字节）
+                FILE_SIZE=$(stat -c %s temp_content.txt)
+                if [ "$FILE_SIZE" -ge 500 ]; then
+                  echo "内容下载成功，文件大小为 $FILE_SIZE 字节"
+                  
+                  # 将内容写入最终文件
+                  cat temp_content.txt > v2cross/output.yaml
+                  
+                  # 清理临时文件
+                  rm temp_content.txt
+                  
+                  echo "download_status=success" >> $GITHUB_OUTPUT
+                else
+                  echo "文件太小（$FILE_SIZE 字节），可能不是有效内容"
+                  echo "download_status=failure" >> $GITHUB_OUTPUT
+                  rm temp_content.txt
+                  exit 1
+                fi
+              else
+                echo "下载的文件为空"
+                echo "download_status=failure" >> $GITHUB_OUTPUT
+                rm temp_content.txt
+                exit 1
+              fi
+            else
+              echo "curl命令执行失败"
+              echo "download_status=failure" >> $GITHUB_OUTPUT
+              exit 1
+            fi
+          else
+            echo "跳过下载，因为脚本执行失败"
+            echo "download_status=skipped" >> $GITHUB_OUTPUT
           fi
-          
-          # 文件完整性校验
-          if [ ! -s v2cross/output.yaml ]; then
-            echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
-            echo "错误：下载文件为空" >&2
-            exit 1
-          fi
-          
-          # 添加文件到Git
-          git add v2cross/output.yaml
-          echo "文件已暂存"
 
       # --------------------------
       # 步骤9：检测文件变更（关键逻辑）
@@ -189,7 +211,7 @@ jobs:
           body: |
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.3
+            - 脚本版本: 1.4
             - 订阅URL: ${{ env.DYNAMIC_URL }} from https://v2cross.com/1884.html
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check_content.outputs.send_email == 'false' && '脚本运行失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}

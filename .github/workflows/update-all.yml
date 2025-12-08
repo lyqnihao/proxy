@@ -1,3 +1,14 @@
+# 版本：1.2
+# 修订说明：
+# - 为每个订阅源添加独立的提交信息，参考独立工作流的提交格式
+# - 更新提交信息格式，包含来源网站信息
+# 版本：1.1
+# 修订说明：
+# - 为每个订阅源添加独立的提交信息，参考独立工作流的提交格式
+# 版本：1.0
+# 这是一个用于统一调度所有订阅更新的 GitHub Actions 工作流。
+# 功能包括：调度所有独立订阅更新工作流、更新 README 中的动态链接、统一错误通知。
+
 name: 更新所有订阅源
 
 on:
@@ -73,21 +84,98 @@ jobs:
           DAY: ${{ env.DAY }}
         continue-on-error: true
       
-      # 提交变更到 Git 仓库
-      - name: 提交变更
-        id: commit
+      # 分别提交各个订阅的变更
+      - name: 提交nodefree变更
+        id: commit_nodefree
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          
-          # 检查是否有暂存的变更
-          if git diff --staged --quiet; then
-            echo "no_changes=true" >> $GITHUB_OUTPUT
+          if git diff --staged --quiet nodefree/target.yaml; then
+            echo "no_changes_nodefree=true" >> $GITHUB_OUTPUT
           else
-            git commit -m "chore: 自动更新订阅 ${{ env.CURRENT_DATE }}"
-            git push
-            echo "no_changes=false" >> $GITHUB_OUTPUT
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "nodefree_${{ env.CURRENT_DATE }} - Update from dynamic URL (at https://nodefree.org/)" nodefree/target.yaml
+            echo "no_changes_nodefree=false" >> $GITHUB_OUTPUT
           fi
+        continue-on-error: true
+
+      - name: 提交clashfree变更
+        id: commit_clashfree
+        run: |
+          if git diff --staged --quiet clashfree/output.yaml; then
+            echo "no_changes_clashfree=true" >> $GITHUB_OUTPUT
+          else
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "clashfree_${{ env.CURRENT_DATE }} - Update from dynamic URL (at https://github.com/free-nodes/clashfree)" clashfree/output.yaml
+            echo "no_changes_clashfree=false" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+
+      - name: 提交v2cross变更
+        id: commit_v2cross
+        run: |
+          if git diff --staged --quiet v2cross/output.yaml; then
+            echo "no_changes_v2cross=true" >> $GITHUB_OUTPUT
+          else
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "v2cross_${{ env.CURRENT_DATE }} - Update from dynamic URL (at https://v2cross.com/1884.html)" v2cross/output.yaml
+            echo "no_changes_v2cross=false" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+
+      - name: 提交xConfig变更
+        id: commit_xconfig
+        run: |
+          if git diff --staged --quiet xConfig/output.yaml; then
+            echo "no_changes_xconfig=true" >> $GITHUB_OUTPUT
+          else
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "xConfig_${{ env.CURRENT_DATE }} - Update from dynamic URL (at https://xconfig.pages.dev/index2)" xConfig/output.yaml
+            echo "no_changes_xconfig=false" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+
+      - name: 提交cmliu变更
+        id: commit_cmliu
+        run: |
+          if git diff --staged --quiet cmliu/target.yaml; then
+            echo "no_changes_cmliu=true" >> $GITHUB_OUTPUT
+          else
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "cmliu_${{ env.CURRENT_DATE }} - Update from dynamic URL" cmliu/target.yaml
+            echo "no_changes_cmliu=false" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+
+      - name: 提交proxyqueen变更
+        id: commit_proxyqueen
+        run: |
+          if git diff --staged --quiet proxyqueen/output.yaml; then
+            echo "no_changes_proxyqueen=true" >> $GITHUB_OUTPUT
+          else
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "proxyqueen_${{ env.CURRENT_DATE }} - Update from dynamic URL (at https://v2clash.blog/)" proxyqueen/output.yaml
+            echo "no_changes_proxyqueen=false" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+
+      # 推送所有变更
+      - name: 推送变更到远程仓库
+        if: |
+          !cancelled() && (
+          steps.commit_nodefree.outputs.no_changes_nodefree == 'false' ||
+          steps.commit_clashfree.outputs.no_changes_clashfree == 'false' ||
+          steps.commit_v2cross.outputs.no_changes_v2cross == 'false' ||
+          steps.commit_xconfig.outputs.no_changes_xconfig == 'false' ||
+          steps.commit_cmliu.outputs.no_changes_cmliu == 'false' ||
+          steps.commit_proxyqueen.outputs.no_changes_proxyqueen == 'false'
+          )
+        run: |
+          git push
         continue-on-error: true
       
       # 仅在出现真实错误时发送邮件通知（无内容变更时不发送）
@@ -95,8 +183,7 @@ jobs:
         if: |
           failure() || 
           steps.readme.outcome == 'failure' || 
-          steps.update.outcome == 'failure' || 
-          steps.commit.outcome == 'failure'
+          steps.update.outcome == 'failure'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.163.com
@@ -107,9 +194,9 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
+            - 脚本版本: 1.2
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
-            - git commit: ${{ steps.commit.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
             
             请查看运行日志以获取有关失败订阅的详细信息。

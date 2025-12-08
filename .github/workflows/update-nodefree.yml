@@ -1,9 +1,12 @@
+# 版本 1.5
+# 修订原因：
+# - 同步改进的日期格式识别方法，支持多种日期格式检测
 # 版本 1.4
 # 修订原因：
 # - 更新不频繁，改为每2天更新一次。
 # - 修改提交注释，更便于查看来源
 # 版本 1.3
-# 修订原因：将邮件标题中的“更新通知”改为“更新出错”，以更准确地反映邮件内容。
+# 修订原因：将邮件标题中的"更新通知"改为"更新出错"，以更准确地反映邮件内容。
 # 版本 1.2
 # 修订原因：在报错邮件内容中添加当前脚本的版本信息。
 # 版本 1.1
@@ -75,7 +78,15 @@ jobs:
           if curl -o nodefree/target.yaml "$DYNAMIC_URL"; then
             # 检查文件是否为空
             if [ -s nodefree/target.yaml ]; then
-              echo "内容下载成功，文件不为空"
+              # 检查文件大小是否符合要求（大于500字节）
+              FILE_SIZE=$(stat -c %s nodefree/target.yaml)
+              if [ "$FILE_SIZE" -ge 500 ]; then
+                echo "内容下载成功，文件大小为 $FILE_SIZE 字节"
+              else
+                echo "文件太小（$FILE_SIZE 字节），可能不是有效内容"
+                echo "::set-output name=FETCH_ERROR::true"
+                exit 1
+              fi
             else
               # 如果文件为空，设置 FETCH_ERROR 输出变量为 true，并退出步骤
               echo "文件为空，可能是下载错误"
@@ -139,7 +150,7 @@ jobs:
           # 邮件正文
           body: |
             工作流运行状态：
-            - 脚本版本: 1.4
+            - 脚本版本: 1.5
             - 动态 URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未发生变化，无需更新' || '工作流运行失败' }}

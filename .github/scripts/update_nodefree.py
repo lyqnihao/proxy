@@ -57,7 +57,7 @@ def main():
         # 检查文件大小
         if os.path.exists(output_file):
             file_size = os.path.getsize(output_file)
-            if file_size < 100:  # 文件大小小于100字节认为是无效的
+            if file_size < 500:  # 文件大小小于500字节认为是无效的
                 print(f"[nodefree] 错误: 文件大小异常 ({file_size} 字节)，可能订阅内容无效")
                 os.remove(output_file)  # 删除异常的小文件
                 return 1

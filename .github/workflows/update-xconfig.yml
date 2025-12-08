@@ -1,8 +1,11 @@
+# 版本：1.4
+# 修订说明：
+# - 同步改进的文件大小验证方法，使用500字节作为阈值
 # 版本：1.3
 # 修订说明：
 # - 更换地址，调整为每天更新试试
 # - 修改提交注释，更便于查看来源
-# - 将邮件标题中的“更新通知”改为“更新出错”，以更准确地反映邮件内容。
+# - 将邮件标题中的"更新通知"改为"更新出错"，以更准确地反映邮件内容。
 # 版本：1.2
 # 修订说明：
 # - 原地址久未更新，更换地址
@@ -77,15 +80,23 @@ jobs:
           if curl -L -H "Cache-Control: no-cache" -o xConfig/output.yaml "$DYNAMIC_URL"; then
             # 文件完整性检查
             if [ -s xConfig/output.yaml ]; then
-              echo "内容下载成功"
-              
-              # 将文件添加到git暂存区（为后续变更检测准备）
-              git add xConfig/output.yaml
-              
-              # 调试信息：显示文件哈希值
-              echo "文件哈希: $(sha1sum xConfig/output.yaml)"
-              # 显示git状态确认添加成功
-              git status  
+              # 检查文件大小是否符合要求（大于500字节）
+              FILE_SIZE=$(stat -c %s xConfig/output.yaml)
+              if [ "$FILE_SIZE" -ge 500 ]; then
+                echo "内容下载成功，文件大小为 $FILE_SIZE 字节"
+                
+                # 将文件添加到git暂存区（为后续变更检测准备）
+                git add xConfig/output.yaml
+                
+                # 调试信息：显示文件哈希值
+                echo "文件哈希: $(sha1sum xConfig/output.yaml)"
+                # 显示git状态确认添加成功
+                git status
+              else
+                echo "文件太小（$FILE_SIZE 字节），可能不是有效内容"
+                echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
+                exit 1
+              fi
             else
               # 设置错误标记（空文件情况）
               echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
@@ -156,7 +167,7 @@ jobs:
           body: |
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.3
+            - 脚本版本: 1.4
             - 订阅URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}

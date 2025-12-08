@@ -1,3 +1,6 @@
+# 版本：1.1
+# 修订说明：
+# - 同步改进的文件大小验证方法，使用500字节作为阈值
 # 版本：1.0
 # 这是一个用于每天自动更新 clashfree 订阅文件的 GitHub Actions 工作流，参考自xConfig的Actions。
 # 功能包括：从 订阅URL 读取内容、内容检查、提交更改和邮件通知。
@@ -64,15 +67,23 @@ jobs:
           if curl -L -H "Cache-Control: no-cache" -o clashfree/output.yaml "$DYNAMIC_URL"; then
             # 文件完整性检查
             if [ -s clashfree/output.yaml ]; then
-              echo "内容下载成功"
-              
-              # 将文件添加到git暂存区（为后续变更检测准备）
-              git add clashfree/output.yaml
-              
-              # 调试信息：显示文件哈希值
-              echo "文件哈希: $(sha1sum clashfree/output.yaml)"
-              # 显示git状态确认添加成功
-              git status  
+              # 检查文件大小是否符合要求（大于500字节）
+              FILE_SIZE=$(stat -c %s clashfree/output.yaml)
+              if [ "$FILE_SIZE" -ge 500 ]; then
+                echo "内容下载成功，文件大小为 $FILE_SIZE 字节"
+                
+                # 将文件添加到git暂存区（为后续变更检测准备）
+                git add clashfree/output.yaml
+                
+                # 调试信息：显示文件哈希值
+                echo "文件哈希: $(sha1sum clashfree/output.yaml)"
+                # 显示git状态确认添加成功
+                git status
+              else
+                echo "文件太小（$FILE_SIZE 字节），可能不是有效内容"
+                echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
+                exit 1
+              fi
             else
               # 设置错误标记（空文件情况）
               echo "FETCH_ERROR=true" >> $GITHUB_OUTPUT
@@ -143,7 +154,7 @@ jobs:
           body: |
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.0
+            - 脚本版本: 1.1
             - 订阅URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}

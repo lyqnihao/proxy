@@ -1,3 +1,7 @@
+# 版本 1.1
+# 修订原因：
+# - 同步改进的日期格式识别方法，支持多种日期格式检测
+# - 更新文件大小验证阈值为500字节
 # 版本 1.0
 # 这是一个用于每天自动更新 proxyqueen YAML 文件的 GitHub Actions 工作流。
 # 功能包括：动态 URL 生成、文件下载、内容检查、提交更改和邮件通知。
@@ -158,7 +162,7 @@ jobs:
           # 邮件正文
           body: |
             工作流运行状态：
-            - 脚本版本: 1.0
+            - 脚本版本: 1.1
             - 动态 URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 状态: ${{ steps.fetch-content.outputs.FETCH_ERROR == 'true' && '动态 URL 无法访问' || '工作流运行失败' }}

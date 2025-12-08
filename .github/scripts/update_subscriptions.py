@@ -85,8 +85,8 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                     except Exception:
                         file_size = None
                     
-                    # 检查文件大小，只有大于1KB的文件才认为是有效内容
-                    if file_size is None or file_size < 1024:
+                    # 检查文件大小，只有大于500字节的文件才认为是有效内容
+                    if file_size is None or file_size < 500:
                         # 文件太小或无法获取大小，视作失败，删除并重试（如果还有剩余重试次数）
                         size_desc = "无法获取大小" if file_size is None else f"大小={file_size}字节"
                         last_err = f"下载成功但文件太小（{output_file}，{size_desc}）: 尝试 {attempt}/{retries}"
