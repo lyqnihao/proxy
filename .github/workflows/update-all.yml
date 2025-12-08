@@ -78,6 +78,29 @@ jobs:
           echo "completed=true" >> $GITHUB_OUTPUT
         continue-on-error: true
       
+      # 检查 README 是否有变更
+      - name: 检查 README 变更
+        id: check_readme_changes
+        run: |
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
+            echo "✗ README.md 文件未变化"
+          else
+            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
+            echo "✓ 检测到 README.md 变更"
+          fi
+
+      # 提交 README 变更
+      - name: 提交 README 变更
+        if: steps.check_readme_changes.outputs.HAS_CHANGES == 'true'
+        id: commit_readme
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git commit -m "自动更新日期至 ${{ env.YEAR }}${{ env.MONTH }}${{ env.DAY }} at ${{ env.CURRENT_DATE }}"
+        continue-on-error: true
+
       # 使用通用脚本更新所有订阅
       - name: 更新所有订阅
         id: update
@@ -275,7 +298,8 @@ with open('.github/config/subscriptions.json', 'r') as f:
           steps.commit_v2cross.outputs.no_changes_v2cross == 'false' ||
           steps.commit_xconfig.outputs.no_changes_xconfig == 'false' ||
           steps.commit_cmliu.outputs.no_changes_cmliu == 'false' ||
-          steps.commit_proxyqueen.outputs.no_changes_proxyqueen == 'false'
+          steps.commit_proxyqueen.outputs.no_changes_proxyqueen == 'false' ||
+          steps.commit_readme.outcome == 'success'
           )
         run: |
           git push
