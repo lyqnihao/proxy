@@ -48,13 +48,14 @@ def get_beijing_time() -> dict:
         'TIME': parts[4]       # HH:MM:SS 格式
     }
 
-def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
+def fetch_url(url: str, output_file: str, subscription_name: str = "") -> Tuple[bool, Optional[str]]:
     """
     从 URL 下载文件
     
     参数：
     - url: 要下载的 URL 地址
     - output_file: 下载文件的保存路径
+    - subscription_name: 订阅名称，用于特殊处理
     
     返回值：
     - (True, None): 下载成功
@@ -64,6 +65,10 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
     # 设计目标：当下载失败时，返回尽可能多的有助于排查的问题信息
     retries = 2
     last_err = ""
+    
+    # 针对不同订阅源设置不同的超时时间
+    timeout = 60 if subscription_name == "cmliu" else 30
+    
     for attempt in range(1, retries + 1):
         try:
             # 使用 curl 命令下载文件
@@ -75,7 +80,7 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                 "-o", output_file,
                 url
             ]
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
 
             # 如果 curl 返回码为 0，进一步检查文件是否存在且非空
             if result.returncode == 0:
@@ -85,8 +90,24 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
                     except Exception:
                         file_size = None
                     
-                    # 检查文件大小，只有大于500字节的文件才认为是有效内容
-                    if file_size is None or file_size < 500:
+                    # 检查文件大小，对于v2cross只做非空检查，其他订阅按常规500字节限制
+                    if file_size is None or file_size == 0:
+                        # 文件为空或无法获取大小，视作失败，删除并重试（如果还有剩余重试次数）
+                        size_desc = "无法获取大小" if file_size is None else f"大小={file_size}字节"
+                        last_err = f"下载成功但文件为空（{output_file}，{size_desc}）: 尝试 {attempt}/{retries}"
+                        try:
+                            os.remove(output_file)
+                        except Exception:
+                            pass
+                        # 如果不是最后一次尝试，继续重试
+                        if attempt < retries:
+                            continue
+                        else:
+                            return False, last_err
+                    elif subscription_name == "v2cross" and file_size > 0:
+                        # v2cross只需要非空检查
+                        return True, None
+                    elif file_size < 500:
                         # 文件太小或无法获取大小，视作失败，删除并重试（如果还有剩余重试次数）
                         size_desc = "无法获取大小" if file_size is None else f"大小={file_size}字节"
                         last_err = f"下载成功但文件太小（{output_file}，{size_desc}）: 尝试 {attempt}/{retries}"
@@ -392,8 +413,8 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     if os.path.exists(output_file_path):
         os.remove(output_file_path)
     
-    # 下载文件
-    success, error = fetch_url(url, output_file_path)
+    # 下载文件，传递订阅名称以便特殊处理
+    success, error = fetch_url(url, output_file_path, name)
     if not success:
         # 下载失败
         return 1, f"[{name}] 错误: {error}"

@@ -67,9 +67,9 @@ def main():
             print("错误：无法获取订阅内容。", file=sys.stderr)
             sys.exit(1)
             
-        # 检查内容大小，确保大于1KB
-        if len(content.encode('utf-8')) < 1024:
-            print("错误：订阅内容太小（小于1KB），可能是无效内容。", file=sys.stderr)
+        # 检查内容是否为空，确保有内容即可
+        if len(content.strip()) == 0:
+            print("错误：订阅内容为空，可能是无效内容。", file=sys.stderr)
             sys.exit(1)
             
         # 输出目标网址的内容：去除换行符确保输出纯净URL
