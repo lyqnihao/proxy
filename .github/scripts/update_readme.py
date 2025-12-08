@@ -45,26 +45,22 @@ def main():
     # 定义需要替换的日期模式列表
     # 每个元组是 (正则表达式模式, 替换文本)
     replacements = [
-        # 模式 1: $YEAR$MONTH$DAY -> YYYYMMDD
-        (r'\$YEAR\$MONTH\$DAY', date_str),
+        # 基础占位符替换
+        (r'\$YEAR\$MONTH\$DAY', date_str),              # $YEAR$MONTH$DAY -> YYYYMMDD
+        (r'\$YEAR/\$MONTH', year_month),                # $YEAR/$MONTH -> YYYY/MM
         
-        # 模式 2: $YEAR/$MONTH/$YEAR$MONTH$DAY -> YYYY/MM/YYYYMMDD
-        (r'\$YEAR/\$MONTH/\$YEAR\$MONTH\$DAY', f"{year_month}/{date_str}"),
-        
-        # 模式 3: $YEAR/$MONTH/XXXXXXXX -> YYYY/MM/YYYYMMDD
-        (r'\$YEAR/\$MONTH/\d{8}', f"{year_month}/{date_str}"),
-        
-        # 模式 4: /YYYY/MM/XXXXXXXX -> /YYYY/MM/YYYYMMDD
-        (r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}"),
-        
-        # 模式 5: clashgithub.com 的日期（可能有 .txt 或 .yml 扩展名）
+        # 各种网站的具体替换规则
+        # clashgithub.com 的日期格式
         (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
         
-        # 模式 6: v2clash.blog 的日期格式（修正后）
+        # v2clash.blog 的日期格式
         (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
         (r'(v2clash\.blog/clash/)\d{8}\.yaml', rf'\g<1>{date_str}.yaml'),
         (r'(v2clash\.blog/v2ray/)\d{8}\.txt', rf'\g<1>{date_str}.txt'),
         (r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', rf'\g<1>{date_str}\2.txt'),
+        
+        # nodefree 的日期格式（通用方法，支持各种前缀）
+        (r'(nodefree\.githubrowcontent\.com/)\d{4}/\d{2}/([a-zA-Z]*)\d{8}(\.txt|\.yaml)', rf'\g<1>{year_month}/\g<2>{date_str}\g<3>'),
     ]
 
     # 检查是否需要包含 v2clash 的替换
@@ -154,10 +150,10 @@ def update_specific_area_only():
                 rf'\g<1>{date_str}\2.txt', 
                 line
             )
-            # 添加 nodefree 的日期格式替换
+            # 添加 nodefree 的日期格式替换，包括 Mihomo 订阅链接
             line = re.sub(
-                r'(nodefree\.githubrowcontent\.com/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
-                rf'\g<1>{year}/{month}/{date_str}\2', 
+                r'(nodefree\.githubrowcontent\.com/)\d{4}/\d{2}/(m?)\d{8}(\.txt|\.yaml)', 
+                rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
                 line
             )
             

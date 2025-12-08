@@ -18,9 +18,9 @@
   <br>
 
 ## [nodefree](https://nodefree.me/)：<br>
-- v2ray订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251208.txt<br>
-- Clash订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251208.yaml<br>
-- Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/m20251205.yaml<br>
+- v2ray订阅链接：https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.txt<br>
+- Clash订阅链接：https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml<br>
+- Mihomo订阅链接：https://nodefree.githubrowcontent.com/$YEAR/$MONTH/m$YEAR$MONTH$DAY.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
   原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
