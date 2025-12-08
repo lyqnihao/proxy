@@ -486,11 +486,10 @@ def main():
     if failed_subscriptions:
         failed_list = ", ".join(failed_subscriptions)
         # 将失败的订阅列表写入环境文件，供后续步骤使用
-        env_file = os.getenv('GITHUB_ENV')
-        if env_file:
-            with open(env_file, 'a') as f:
-                f.write(f"FAILED_SUBSCRIPTIONS={failed_list}\n")
-        print(f"::set-output name=failed_subscriptions::{failed_list}")
+        output_file = os.getenv('GITHUB_OUTPUT')
+        if output_file:
+            with open(output_file, 'a') as f:
+                f.write(f"failed_subscriptions={failed_list}\n")
     
     # 返回总体结果
     # 有错误返回 1，全部成功返回 0

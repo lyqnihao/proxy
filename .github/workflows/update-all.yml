@@ -1,6 +1,15 @@
 # 工作流名称
 name: 合并更新
 
+# 版本：1.5
+# 修订说明：
+# - 将所有可以中文化的地方改为中文
+# - 为脚本步骤添加中文注释，便于新手理解
+# 版本：1.4
+# 修订说明：
+# - 修复使用Environment Files替代已废弃的set-output命令
+# - 优化提交逻辑以区分真正的错误和无更新的情况
+# - 修复proxyqueen提交信息中的URL获取问题
 # 版本：1.3
 # 修订说明：
 # - 为每个订阅源添加独立的提交信息，参考独立工作流的提交格式
@@ -32,32 +41,44 @@ jobs:
 
     # 步骤定义
     steps:
+      # 检出代码库
       - name: 检出代码库
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
       
+      # 设置 Python 环境
       - name: 设置 Python 环境
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
       
+      # 安装 Python 依赖
       - name: 安装 Python 依赖
         run: |
+          # 升级 pip 工具
           python -m pip install --upgrade pip
+          # 如果存在 requirements.txt 文件，则安装其中列出的依赖包
           if [ -f .github/requirements.txt ]; then pip install -r .github/requirements.txt; fi
       
+      # 获取北京时间信息
       - name: 获取北京时间信息
         id: time
         run: |
+          # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 获取年份
           YEAR=$(TZ='Asia/Shanghai' date +'%Y')
+          # 获取月份
           MONTH=$(TZ='Asia/Shanghai' date +'%m')
+          # 获取日期
           DAY=$(TZ='Asia/Shanghai' date +'%d')
+          # 将时间信息写入环境变量，供后续步骤使用
           echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
           echo "YEAR=$YEAR" >> $GITHUB_ENV
           echo "MONTH=$MONTH" >> $GITHUB_ENV
           echo "DAY=$DAY" >> $GITHUB_ENV
+          # 为向后兼容保留旧的输出方式
           echo "time=$CURRENT_DATE" >> $GITHUB_OUTPUT
       
       # 更新 README 中的动态日期
@@ -70,15 +91,19 @@ jobs:
           TODAY_ALT="${{ env.YEAR }}-${{ env.MONTH }}-${{ env.DAY }}"
           TODAY_CN="${{ env.YEAR }}年${{ env.MONTH }}月${{ env.DAY }}日"
           echo "检查 v2clash.blog 是否包含日期: $TODAY 或 $TODAY_ALT 或 $TODAY_CN"
+          # 检查 v2clash.blog 网站是否有今日更新
           if curl -sL https://v2clash.blog/ | grep -qE "$TODAY|$TODAY_ALT|$TODAY_CN"; then
             HAS_V2CLASH_NEW=true
             echo "检测到 v2clash.blog 有今日更新"
           else
             echo "未检测到 v2clash.blog 今日更新"
           fi
+          # 将检测结果写入环境变量
           echo "HAS_V2CLASH_NEW=$HAS_V2CLASH_NEW" >> $GITHUB_ENV
           export HAS_V2CLASH_NEW YEAR=${{ env.YEAR }} MONTH=${{ env.MONTH }} DAY=${{ env.DAY }} SPECIAL_UPDATE_MODE=specific_area
+          # 运行更新 README 的脚本
           python .github/scripts/update_readme.py
+          # 标记步骤完成
           echo "completed=true" >> $GITHUB_OUTPUT
         continue-on-error: true
       
@@ -86,11 +111,15 @@ jobs:
       - name: 检查 README 变更
         id: check_readme_changes
         run: |
+          # 将 README.md 添加到暂存区
           git add README.md
+          # 检查暂存区是否有变更
           if git diff --staged --quiet; then
+            # 没有变更
             echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
             echo "✗ README.md 文件未变化"
           else
+            # 有变更
             echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
             echo "✓ 检测到 README.md 变更"
           fi
@@ -100,8 +129,10 @@ jobs:
         if: steps.check_readme_changes.outputs.HAS_CHANGES == 'true'
         id: commit_readme
         run: |
+          # 配置 Git 用户信息
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+          # 提交变更
           git commit -m "自动更新日期至 ${{ env.YEAR }}${{ env.MONTH }}${{ env.DAY }} at ${{ env.CURRENT_DATE }}"
         continue-on-error: true
 
@@ -109,6 +140,7 @@ jobs:
       - name: 更新所有订阅
         id: update
         run: |
+          # 运行更新订阅的脚本
           python .github/scripts/update_subscriptions.py
         env:
           YEAR: ${{ env.YEAR }}
@@ -117,93 +149,123 @@ jobs:
         continue-on-error: true
       
       # 分别提交各个订阅的变更
+      # 提交nodefree变更
       - name: 提交nodefree变更
         id: commit_nodefree
         run: |
           # 从配置文件中获取URL模板并生成实际URL
           DYNAMIC_URL=$(python -c "import json; import os; from datetime import datetime; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'nodefree']")
+          # 检查是否有变更
           if git diff --staged --quiet nodefree/target.yaml; then
-            echo "no_changes_nodefree=true" >> $GITHUB_OUTPUT
+            # 没有变更，记录环境变量
+            echo "no_changes_nodefree=true" >> $GITHUB_ENV
           else
+            # 有变更，配置 Git 用户信息并提交
             git config --global user.name "GitHub Actions"
             git config --global user.email "actions@github.com"
             git commit -m "nodefree_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://nodefree.org/)"
-            echo "no_changes_nodefree=false" >> $GITHUB_OUTPUT
+            # 记录环境变量
+            echo "no_changes_nodefree=false" >> $GITHUB_ENV
           fi
         continue-on-error: true
 
+      # 提交clashfree变更
       - name: 提交clashfree变更
         id: commit_clashfree
         run: |
           # 获取clashfree的静态URL
           DYNAMIC_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'clashfree']")
+          # 检查是否有变更
           if git diff --staged --quiet clashfree/output.yaml; then
-            echo "no_changes_clashfree=true" >> $GITHUB_OUTPUT
+            # 没有变更，记录环境变量
+            echo "no_changes_clashfree=true" >> $GITHUB_ENV
           else
+            # 有变更，配置 Git 用户信息并提交
             git config --global user.name "GitHub Actions"
             git config --global user.email "actions@github.com"
             git commit -m "clashfree_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://github.com/free-nodes/clashfree)"
-            echo "no_changes_clashfree=false" >> $GITHUB_OUTPUT
+            # 记录环境变量
+            echo "no_changes_clashfree=false" >> $GITHUB_ENV
           fi
         continue-on-error: true
 
+      # 提交v2cross变更
       - name: 提交v2cross变更
         id: commit_v2cross
         run: |
           # 获取v2cross的动态URL（通过执行脚本）
           DYNAMIC_URL=$(python -c "import subprocess; import json; result = subprocess.run(['python', 'v2cross/update.py'], capture_output=True, text=True); print(result.stdout.strip() if result.returncode == 0 else [sub['url_script'] for sub in json.load(open('.github/config/subscriptions.json')) if sub['name'] == 'v2cross'][0])")
+          # 检查是否有变更
           if git diff --staged --quiet v2cross/output.yaml; then
-            echo "no_changes_v2cross=true" >> $GITHUB_OUTPUT
+            # 没有变更，记录环境变量
+            echo "no_changes_v2cross=true" >> $GITHUB_ENV
           else
+            # 有变更，配置 Git 用户信息并提交
             git config --global user.name "GitHub Actions"
             git config --global user.email "actions@github.com"
             git commit -m "v2cross_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://v2cross.com/1884.html)"
-            echo "no_changes_v2cross=false" >> $GITHUB_OUTPUT
+            # 记录环境变量
+            echo "no_changes_v2cross=false" >> $GITHUB_ENV
           fi
         continue-on-error: true
 
+      # 提交xConfig变更
       - name: 提交xConfig变更
         id: commit_xconfig
         run: |
           # 获取xConfig的静态URL
           DYNAMIC_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xconfig']")
+          # 检查是否有变更
           if git diff --staged --quiet xConfig/output.yaml; then
-            echo "no_changes_xconfig=true" >> $GITHUB_OUTPUT
+            # 没有变更，记录环境变量
+            echo "no_changes_xconfig=true" >> $GITHUB_ENV
           else
+            # 有变更，配置 Git 用户信息并提交
             git config --global user.name "GitHub Actions"
             git config --global user.email "actions@github.com"
             git commit -m "xConfig_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://xconfig.pages.dev/index2)"
-            echo "no_changes_xconfig=false" >> $GITHUB_OUTPUT
+            # 记录环境变量
+            echo "no_changes_xconfig=false" >> $GITHUB_ENV
           fi
         continue-on-error: true
 
+      # 提交cmliu变更
       - name: 提交cmliu变更
         id: commit_cmliu
         run: |
           # 获取cmliu的静态URL
           DYNAMIC_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'cmliu']")
+          # 检查是否有变更
           if git diff --staged --quiet cmliu/target.yaml; then
-            echo "no_changes_cmliu=true" >> $GITHUB_OUTPUT
+            # 没有变更，记录环境变量
+            echo "no_changes_cmliu=true" >> $GITHUB_ENV
           else
+            # 有变更，配置 Git 用户信息并提交
             git config --global user.name "GitHub Actions"
             git config --global user.email "actions@github.com"
             git commit -m "cmliu_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL"
-            echo "no_changes_cmliu=false" >> $GITHUB_OUTPUT
+            # 记录环境变量
+            echo "no_changes_cmliu=false" >> $GITHUB_ENV
           fi
         continue-on-error: true
 
+      # 提交proxyqueen变更
       - name: 提交proxyqueen变更
         id: commit_proxyqueen
         run: |
           # 从配置文件中获取URL模板并生成实际URL
           DYNAMIC_URL=$(python -c "import json; import os; from datetime import datetime; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'proxyqueen']")
+          # 检查是否有变更
           if git diff --staged --quiet proxyqueen/output.yaml; then
-            echo "no_changes_proxyqueen=true" >> $GITHUB_OUTPUT
+            # 没有变更，记录环境变量
+            echo "no_changes_proxyqueen=true" >> $GITHUB_ENV
           else
+            # 有变更，配置 Git 用户信息并提交
             git config --global user.name "GitHub Actions"
             git config --global user.email "actions@github.com"
             git commit -m "proxyqueen_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://v2clash.blog/)"
-            echo "no_changes_proxyqueen=false" >> $GITHUB_OUTPUT
+            # 记录环境变量
+            echo "no_changes_proxyqueen=false" >> $GITHUB_ENV
           fi
         continue-on-error: true
 
@@ -211,15 +273,16 @@ jobs:
       - name: 推送变更到远程仓库
         if: |
           !cancelled() && (
-          steps.commit_nodefree.outputs.no_changes_nodefree == 'false' ||
-          steps.commit_clashfree.outputs.no_changes_clashfree == 'false' ||
-          steps.commit_v2cross.outputs.no_changes_v2cross == 'false' ||
-          steps.commit_xconfig.outputs.no_changes_xconfig == 'false' ||
-          steps.commit_cmliu.outputs.no_changes_cmliu == 'false' ||
-          steps.commit_proxyqueen.outputs.no_changes_proxyqueen == 'false' ||
+          env.no_changes_nodefree == 'false' ||
+          env.no_changes_clashfree == 'false' ||
+          env.no_changes_v2cross == 'false' ||
+          env.no_changes_xconfig == 'false' ||
+          env.no_changes_cmliu == 'false' ||
+          env.no_changes_proxyqueen == 'false' ||
           steps.commit_readme.outcome == 'success'
           )
         run: |
+          # 推送所有变更到远程仓库
           git push
         continue-on-error: true
       
@@ -239,7 +302,7 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.3
+            - 脚本版本: 1.5
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
