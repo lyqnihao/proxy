@@ -121,30 +121,7 @@ jobs:
         id: commit_nodefree
         run: |
           # 从配置文件中获取URL模板并生成实际URL
-          DYNAMIC_URL=$(python -c "
-import json
-import os
-from datetime import datetime
-import subprocess
-
-def get_beijing_time():
-    result = subprocess.run(
-        ['bash', '-c', \"TZ='Asia/Shanghai' date +'%Y %m %d'\"],
-        capture_output=True, text=True
-    )
-    parts = result.stdout.strip().split()
-    return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}
-
-time_info = get_beijing_time()
-with open('.github/config/subscriptions.json', 'r') as f:
-    subs = json.load(f)
-    for sub in subs:
-        if sub['name'] == 'nodefree':
-            url_template = sub['url_template']
-            url = url_template.format(**time_info)
-            print(url)
-            break
-")
+          DYNAMIC_URL=$(python -c "import json; import os; from datetime import datetime; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'nodefree']")
           if git diff --staged --quiet nodefree/target.yaml; then
             echo "no_changes_nodefree=true" >> $GITHUB_OUTPUT
           else
@@ -159,15 +136,7 @@ with open('.github/config/subscriptions.json', 'r') as f:
         id: commit_clashfree
         run: |
           # 获取clashfree的静态URL
-          DYNAMIC_URL=$(python -c "
-import json
-with open('.github/config/subscriptions.json', 'r') as f:
-    subs = json.load(f)
-    for sub in subs:
-        if sub['name'] == 'clashfree':
-            print(sub['url'])
-            break
-")
+          DYNAMIC_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'clashfree']")
           if git diff --staged --quiet clashfree/output.yaml; then
             echo "no_changes_clashfree=true" >> $GITHUB_OUTPUT
           else
@@ -182,23 +151,7 @@ with open('.github/config/subscriptions.json', 'r') as f:
         id: commit_v2cross
         run: |
           # 获取v2cross的动态URL（通过执行脚本）
-          DYNAMIC_URL=$(python -c "
-import subprocess
-import json
-
-# 执行v2cross脚本获取URL
-result = subprocess.run(['python', 'v2cross/update.py'], capture_output=True, text=True)
-if result.returncode == 0:
-    print(result.stdout.strip())
-else:
-    # 如果执行失败，从配置中获取脚本信息
-    with open('.github/config/subscriptions.json', 'r') as f:
-        subs = json.load(f)
-        for sub in subs:
-            if sub['name'] == 'v2cross':
-                print(sub['url_script'])
-                break
-")
+          DYNAMIC_URL=$(python -c "import subprocess; import json; result = subprocess.run(['python', 'v2cross/update.py'], capture_output=True, text=True); print(result.stdout.strip() if result.returncode == 0 else [sub['url_script'] for sub in json.load(open('.github/config/subscriptions.json')) if sub['name'] == 'v2cross'][0])")
           if git diff --staged --quiet v2cross/output.yaml; then
             echo "no_changes_v2cross=true" >> $GITHUB_OUTPUT
           else
@@ -213,15 +166,7 @@ else:
         id: commit_xconfig
         run: |
           # 获取xConfig的静态URL
-          DYNAMIC_URL=$(python -c "
-import json
-with open('.github/config/subscriptions.json', 'r') as f:
-    subs = json.load(f)
-    for sub in subs:
-        if sub['name'] == 'xconfig':
-            print(sub['url'])
-            break
-")
+          DYNAMIC_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xconfig']")
           if git diff --staged --quiet xConfig/output.yaml; then
             echo "no_changes_xconfig=true" >> $GITHUB_OUTPUT
           else
@@ -236,15 +181,7 @@ with open('.github/config/subscriptions.json', 'r') as f:
         id: commit_cmliu
         run: |
           # 获取cmliu的静态URL
-          DYNAMIC_URL=$(python -c "
-import json
-with open('.github/config/subscriptions.json', 'r') as f:
-    subs = json.load(f)
-    for sub in subs:
-        if sub['name'] == 'cmliu':
-            print(sub['url'])
-            break
-")
+          DYNAMIC_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'cmliu']")
           if git diff --staged --quiet cmliu/target.yaml; then
             echo "no_changes_cmliu=true" >> $GITHUB_OUTPUT
           else
@@ -259,30 +196,7 @@ with open('.github/config/subscriptions.json', 'r') as f:
         id: commit_proxyqueen
         run: |
           # 从配置文件中获取URL模板并生成实际URL
-          DYNAMIC_URL=$(python -c "
-import json
-import os
-from datetime import datetime
-import subprocess
-
-def get_beijing_time():
-    result = subprocess.run(
-        ['bash', '-c', \"TZ='Asia/Shanghai' date +'%Y %m %d'\"],
-        capture_output=True, text=True
-    )
-    parts = result.stdout.strip().split()
-    return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}
-
-time_info = get_beijing_time()
-with open('.github/config/subscriptions.json', 'r') as f:
-    subs = json.load(f)
-    for sub in subs:
-        if sub['name'] == 'proxyqueen':
-            url_template = sub['url_template']
-            url = url_template.format(**time_info)
-            print(url)
-            break
-")
+          DYNAMIC_URL=$(python -c "import json; import os; from datetime import datetime; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'proxyqueen']")
           if git diff --staged --quiet proxyqueen/output.yaml; then
             echo "no_changes_proxyqueen=true" >> $GITHUB_OUTPUT
           else
