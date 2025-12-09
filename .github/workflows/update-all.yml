@@ -222,7 +222,7 @@ jobs:
         id: commit_xconfig
         run: |
           # 获取xConfig的静态URL
-          XCONFIG_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xConfig']")
+          XCONFIG_URL=$(python -c "import json; f = open('.github/config/subscriptions.json'); subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xConfig']; f.close()")
           # 检查是否有变更
           if git diff --staged --quiet xConfig/output.yaml; then
             # 没有变更，记录环境变量
