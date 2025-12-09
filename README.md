@@ -46,7 +46,7 @@
 
   网站每天动态地址，每6小时更新一次。<br>
 
-## [xconfig](https://xconfig.pages.dev/index2)：<br>
+## [xConfig](https://xconfig.pages.dev/index2)：<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js
 - 当前跟踪更新的地址：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2<br>
 - 跟踪更新地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
