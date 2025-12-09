@@ -167,7 +167,7 @@ def fetch_url(url: str, output_file: str, subscription_name: str = "") -> Tuple[
 
 def git_has_changes(file_path: str) -> Tuple[bool, Optional[str]]:
     """
-    检查文件是否有暂存的变更
+    检查文件是否有未暂存的变更
     
     参数：
     - file_path: 要检查的文件路径
@@ -184,11 +184,10 @@ def git_has_changes(file_path: str) -> Tuple[bool, Optional[str]]:
         with open(file_path, 'w') as f:
             pass  # 创建空文件
             
-    # 使用 git 命令检查暂存区中的文件变更
+    # 使用 git 命令检查工作区中的文件变更
     result = subprocess.run(
         [
             "git", "diff",      # git 差异对比命令
-            "--staged",         # 只检查暂存区（已用 git add 的文件）
             "--quiet",          # 安静模式（无输出，只返回代码）
             file_path           # 要检查的文件
         ],
@@ -207,10 +206,10 @@ def git_has_changes(file_path: str) -> Tuple[bool, Optional[str]]:
 
 def git_add_file(file_path: str) -> Tuple[bool, Optional[str]]:
     """
-    将文件添加到 Git 暂存区并检查是否有变更
+    检查文件是否有变更（不执行 git add）
     
     参数：
-    - file_path: 要添加的文件路径
+    - file_path: 要检查的文件路径
     
     返回值：
     - True: 文件有变更
@@ -226,17 +225,11 @@ def git_add_file(file_path: str) -> Tuple[bool, Optional[str]]:
         with open(file_path, 'w') as f:
             pass  # 创建空文件
         
-    # 使用 git add 将文件加入暂存区
-    # 先执行 git add
-    result = subprocess.run(["git", "add", file_path], capture_output=True, text=True)
-    if result.returncode != 0:
-        stderr = (result.stderr or "").strip()
-        return False, f"git add 失败: code={result.returncode}; stderr={stderr[:300]}"
-
-    # git add 成功后，检查是否有变更
+    # 先检查是否有变更
     has_changes, err = git_has_changes(file_path)
     if err:
         return False, f"git diff 检查失败: {err}"
+    
     return has_changes, None
 
 def check_v2clash_new_post() -> bool:
