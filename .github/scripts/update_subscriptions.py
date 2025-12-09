@@ -71,6 +71,11 @@ def fetch_url(url: str, output_file: str, subscription_name: str = "") -> Tuple[
     
     for attempt in range(1, retries + 1):
         try:
+            # 确保输出文件的目录存在
+            output_dir = os.path.dirname(output_file)
+            if output_dir:
+                os.makedirs(output_dir, exist_ok=True)
+            
             # 使用 curl 命令下载文件
             cmd = [
                 "curl",
@@ -171,6 +176,14 @@ def git_has_changes(file_path: str) -> Tuple[bool, Optional[str]]:
     - True: 文件有变更（与上次提交不同）
     - False: 文件无变更（与上次提交相同）
     """
+    # 确保文件存在，如果不存在则创建一个空文件
+    if not os.path.exists(file_path):
+        file_dir = os.path.dirname(file_path)
+        if file_dir:
+            os.makedirs(file_dir, exist_ok=True)
+        with open(file_path, 'w') as f:
+            pass  # 创建空文件
+            
     # 使用 git 命令检查暂存区中的文件变更
     result = subprocess.run(
         [
@@ -203,6 +216,16 @@ def git_add_file(file_path: str) -> Tuple[bool, Optional[str]]:
     - True: 文件有变更
     - False: 文件无变更
     """
+    # 确保文件所在的目录存在
+    file_dir = os.path.dirname(file_path)
+    if file_dir:
+        os.makedirs(file_dir, exist_ok=True)
+    
+    # 确保文件存在，如果不存在则创建一个空文件
+    if not os.path.exists(file_path):
+        with open(file_path, 'w') as f:
+            pass  # 创建空文件
+        
     # 使用 git add 将文件加入暂存区
     # 先执行 git add
     result = subprocess.run(["git", "add", file_path], capture_output=True, text=True)
@@ -380,6 +403,11 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     # exist_ok=True 表示目录已存在时不报错
     os.makedirs(directory, exist_ok=True)
     
+    # 确保输出文件存在，如果不存在则创建一个空文件
+    if not os.path.exists(output_file_path):
+        with open(output_file_path, 'w') as f:
+            pass  # 创建空文件
+    
     # 获取当前时间信息（用于动态日期 URL）
     time_info = get_time_info()
     
@@ -410,6 +438,7 @@ def update_subscription(config: dict) -> Tuple[int, str]:
         return 1, f"[{name}] 错误: 无可用 URL"
     
     # 删除旧文件（为了检测变更，需要先删除旧文件）
+    # 确保目录存在后再尝试删除文件
     if os.path.exists(output_file_path):
         os.remove(output_file_path)
     
