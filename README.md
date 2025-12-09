@@ -48,7 +48,7 @@
 
 ## [xconfig](https://xconfig.pages.dev/index2)：<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js
-- 当前跟踪更新的地址：https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt<br>
+- 当前跟踪更新的地址：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2<br>
 - 跟踪更新地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
   该网页整合很多免费订阅项目，来源复杂，更新周期不定，而且部分已经消失。 <br>
