@@ -54,7 +54,7 @@ def main():
         (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
         
         # v2clash.blog 的日期格式
-        (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
+        (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)([^-\w.]*)', rf'\g<1>{date_str}\2\3'),
         (r'(v2clash\.blog/clash/)\d{8}\.yaml', rf'\g<1>{date_str}.yaml'),
         (r'(v2clash\.blog/v2ray/)\d{8}\.txt', rf'\g<1>{date_str}.txt'),
         (r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', rf'\g<1>{date_str}\2.txt'),
@@ -131,8 +131,8 @@ def update_specific_area_only():
             )
             # 添加 v2clash.blog 的多种日期格式替换
             line = re.sub(
-                r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)', 
-                rf'\g<1>{date_str}\2', 
+                r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)([^-\w.]*)', 
+                rf'\g<1>{date_str}\2\3', 
                 line
             )
             line = re.sub(
