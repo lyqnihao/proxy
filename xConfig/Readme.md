@@ -1,4 +1,4 @@
-[xconfig](https://xconfig.pages.dev/index2)：<br>
+[xConfig](https://xconfig.pages.dev/index2)：<br>
 [https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml)<br>
 该网页有很多订阅，换一个，改为每天4:05自动更新代理列表。<br>
 
