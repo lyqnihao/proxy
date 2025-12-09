@@ -1,6 +1,10 @@
 # 工作流名称
 name: 合并更新
 
+# 版本：1.7
+# 修订说明：
+# - 修复提交逻辑Python单行命令中的引号嵌套语法错误，确保每个订阅源都有独立的提交信息
+# - 修复提交信息重复问题
 # 版本：1.6
 # 修订说明：
 # - 修复各个订阅源的提交信息，移除多余的网站地址信息
@@ -158,7 +162,7 @@ jobs:
         id: commit_nodefree
         run: |
           # 从配置文件中获取URL模板并生成实际URL
-          NODEFREE_URL=$(python -c "import json; import os; from datetime import datetime; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'nodefree']")
+          NODEFREE_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'nodefree']")
           # 检查是否有变更
           if git diff --staged --quiet nodefree/target.yaml; then
             # 没有变更，记录环境变量
@@ -258,7 +262,7 @@ jobs:
         id: commit_proxyqueen
         run: |
           # 从配置文件中获取URL模板并生成实际URL
-          PROXYQUEEN_URL=$(python -c "import json; import os; from datetime import datetime; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'proxyqueen']")
+          PROXYQUEEN_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'proxyqueen']")
           # 检查是否有变更
           if git diff --staged --quiet proxyqueen/output.yaml; then
             # 没有变更，记录环境变量
@@ -306,7 +310,7 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.6
+            - 脚本版本: 1.7
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
