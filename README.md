@@ -18,24 +18,24 @@
   <br>
 
 ## [nodefree](https://nodefree.me/)：<br>
-- v2ray订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251215.txt<br>
-- Clash订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251215.yaml<br>
-- Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/m20251215.yaml<br>
+- v2ray订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251216.txt<br>
+- Clash订阅链接：https://nodefree.githubrowcontent.com/2025/12/20251216.yaml<br>
+- Mihomo订阅链接：https://nodefree.githubrowcontent.com/2025/12/m20251216.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
   原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
 
 ## [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
-- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251215.txt<br>
-- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251215.yml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251216.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20251216.yml<br>
 - GitHub Clash固定地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
   类似nodefree，网站每4小时更新，动态日期更新地址。<br>
 
 ## [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
-- v2ray订阅链接：https://v2clash.blog/Link/20251215-v2ray.txt<br>
-- clash订阅链接：https://v2clash.blog/Link/20251215-clash.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20251216-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20251216-clash.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
   类似nodefree，动态日期更新地址。<br>
