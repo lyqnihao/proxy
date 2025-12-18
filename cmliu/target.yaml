@@ -22,16 +22,16 @@ proxies:
   - {name: CF官方优选 14, server: 172.67.71.124, port: 2083, type: vless, uuid: af475b0e-0c07-40fe-b4db-3dea2c0a481d, tls: true, tfo: false, skip-cert-verify: true, servername: edgetunnel-cmliu.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: edgetunnel-cmliu.lyqnihao.workers.dev}}}
   - {name: CF官方优选 15, server: 172.64.147.126, port: 2053, type: vless, uuid: af475b0e-0c07-40fe-b4db-3dea2c0a481d, tls: true, tfo: false, skip-cert-verify: true, servername: edgetunnel-cmliu.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: edgetunnel-cmliu.lyqnihao.workers.dev}}}
   - {name: CF官方优选 16, server: 8.39.125.198, port: 2053, type: vless, uuid: af475b0e-0c07-40fe-b4db-3dea2c0a481d, tls: true, tfo: false, skip-cert-verify: true, servername: edgetunnel-cmliu.lyqnihao.workers.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: edgetunnel-cmliu.lyqnihao.workers.dev}}}
-  - {name: 🇬🇧 GB, server: 52.56.89.167, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇬🇧 GB 2, server: 35.178.132.45, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇬🇧 GB 3, server: 3.8.39.117, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US, server: 18.118.140.120, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇬🇧 GB 4, server: 35.179.184.219, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇬🇧 GB 5, server: 18.171.175.228, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 2, server: 18.224.70.195, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 3, server: 3.15.168.89, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇬🇧 GB 6, server: 3.9.134.8, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 🇺🇸 US 4, server: 3.139.69.190, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇩🇪 DE, server: 3.79.182.30, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇬🇧 GB, server: 35.178.132.45, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US, server: 3.148.243.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇩🇪 DE 2, server: 18.153.210.237, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇬🇧 GB 2, server: 3.8.101.121, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 2, server: 18.118.140.120, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 3, server: 3.139.69.190, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇺🇸 US 4, server: 18.222.111.192, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇬🇧 GB 3, server: 35.179.184.219, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇬🇧 GB 4, server: 35.178.140.120, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -55,16 +55,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -87,16 +87,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -120,16 +120,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -165,16 +165,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -202,16 +202,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -234,16 +234,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -267,16 +267,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -309,16 +309,16 @@ proxy-groups:
       - CF官方优选 14
       - CF官方优选 15
       - CF官方优选 16
+      - 🇩🇪 DE
       - 🇬🇧 GB
-      - 🇬🇧 GB 2
-      - 🇬🇧 GB 3
       - 🇺🇸 US
-      - 🇬🇧 GB 4
-      - 🇬🇧 GB 5
+      - 🇩🇪 DE 2
+      - 🇬🇧 GB 2
       - 🇺🇸 US 2
       - 🇺🇸 US 3
-      - 🇬🇧 GB 6
       - 🇺🇸 US 4
+      - 🇬🇧 GB 3
+      - 🇬🇧 GB 4
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
