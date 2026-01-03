@@ -5,75 +5,103 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: https://github.com/Alvin9999-newpac/fanqiang/wiki, server: 5.178.101.33, port: 23008, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
-  - {name: 🇨🇳 dongtaiwang.com_1, server: 195.154.200.13, port: 17401, type: vless, uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: IXcXrT_Y0ATTZlGOhPnSmKo-cuGr4yMKV9Rz4-nA3yU, short-id: "8ef4455ba637425b" }, servername: itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇨🇳 dongtaiwang.com_2, server: ipv4.758733.xyz, port: 20001, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
-  - {name: 🇨🇳 dongtaiwang.com_3, server: 2001:bc8:32d7:402::3, port: 20001, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
-  - {name: 🇨🇳 dongtaiwang.com_4, server: 2001:bc8:32d7:402::4, port: 20001, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: apple.com, skip-cert-verify: true, alpn: [h3]}
-  - {name: 🇨🇳 dongtaiwang.com_0, server: 45.221.98.14, port: 59901, type: anytls, password: dongtaiwang.com, client-fingerprint: chrome, udp: true, skip-cert-verify: true, alpn: [h2, http/1.1]}
-  - {name: https://github.com/Alvin9999-newpac/fanqiang/wiki 2, server: 195.154.200.13, port: 17401, type: vless, uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: IXcXrT_Y0ATTZlGOhPnSmKo-cuGr4yMKV9Rz4-nA3yU, short-id: "8ef4455ba637425b" }, servername: itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇨🇳 dongtaiwang.com_1 2, server: 2001:bc8:32d7:181::2, port: 17401, type: vless, uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: IXcXrT_Y0ATTZlGOhPnSmKo-cuGr4yMKV9Rz4-nA3yU, short-id: "8ef4455ba637425b" }, servername: itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇨🇳 dongtaiwang.com_2 2, server: 2001:bc8:32d7:181::3, port: 17401, type: vless, uuid: add14a5b-f648-4423-8a1f-8b8f54c0daef, tls: true, tfo: false, skip-cert-verify: true, reality-opts: {public-key: IXcXrT_Y0ATTZlGOhPnSmKo-cuGr4yMKV9Rz4-nA3yU, short-id: "8ef4455ba637425b" }, servername: itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇨🇳 dongtaiwang.com_0 2, server: 157.254.223.48, port: 33990, type: mieru, password: dongtaiwang.com, username: dongtaiwang.com, multiplexing: MULTIPLEXING_LOW, transport: TCP}
-  - {name: https://github.com/Alvin9999-newpac/fanqiang/wiki 3, server: 89.144.35.231, port: 33457, type: tuic, password: dongtaiwang.com, uuid: 66d37a65-7f6f-4e7c-a0f6-163bd917756a, sni: apple.com, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: true, request-timeout: 0, udp-relay-mode: native, congestion-controller: bbr}
-  - {name: 🇨🇳 dongtaiwang.com_1 3, server: 2a14:7583:299d::a, port: 33457, type: tuic, password: dongtaiwang.com, uuid: 66d37a65-7f6f-4e7c-a0f6-163bd917756a, sni: apple.com, skip-cert-verify: true, alpn: [h3], disable-sni: false, reduce-rtt: true, request-timeout: 0, udp-relay-mode: native, congestion-controller: bbr}
-  - {name: 🇨🇳 dongtaiwang.com_0 3, server: 2001:bc8:32d7:14f::4, port: 23880, type: hysteria, auth_str: dongtaiwang.com, auth-str: dongtaiwang.com, up: 11 Mbps, down: 55 Mbps, fast-open: false, protocol: udp, sni: bing.com, skip-cert-verify: true, alpn: [h3]}
+  - {name: 🇭🇰 香港-中环02-2, server: xg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇭🇰 香港-中环02, server: xg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇭🇰 香港-中环01, server: xg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇯🇵 日本·流媒体02, server: rb.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇯🇵 日本·流媒体01, server: rb.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇹🇭 泰国-曼谷01, server: tg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇺🇸 美国-洛杉矶01, server: mg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 距离下次重置剩余：7 天, server: mg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇫🇷 法国-巴黎01, server: fg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇺🇸 美国-洛杉矶02, server: mg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇩🇪 德国-法兰克福01, server: dg.zhujue.us, port: 20501, type: hysteria2, password: f43413f4-886a-44e2-b9f7-fb92a027642b, auth: f43413f4-886a-44e2-b9f7-fb92a027642b, skip-cert-verify: true}
+  - {name: 🇭🇰 香港-中环01-2, server: xg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇯🇵 日本·流媒体01-2, server: rb.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇯🇵 日本·流媒体02-2, server: rb.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇹🇭 泰国-曼谷01-2, server: tg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇺🇸 美国-洛杉矶02-2, server: mg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇺🇸 美国-洛杉矶01-2, server: mg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇫🇷 法国-巴黎01-2, server: fg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 距离下次重置剩余：7 天-2, server: mg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
+  - {name: 🇩🇪 德国-法兰克福01-2, server: dg.zhujue.us, port: 20501, type: hysteria2, password: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, auth: 99e36b8f-eff9-4cd3-b1f1-421e4a988751, skip-cert-verify: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -92,79 +120,111 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇭🇰 香港-中环01-2
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -180,19 +240,26 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki
-      - 🇨🇳 dongtaiwang.com_1
-      - 🇨🇳 dongtaiwang.com_2
-      - 🇨🇳 dongtaiwang.com_3
-      - 🇨🇳 dongtaiwang.com_4
-      - 🇨🇳 dongtaiwang.com_0
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 2
-      - 🇨🇳 dongtaiwang.com_1 2
-      - 🇨🇳 dongtaiwang.com_2 2
-      - 🇨🇳 dongtaiwang.com_0 2
-      - https://github.com/Alvin9999-newpac/fanqiang/wiki 3
-      - 🇨🇳 dongtaiwang.com_1 3
-      - 🇨🇳 dongtaiwang.com_0 3
+      - 🇭🇰 香港-中环02-2
+      - 🇭🇰 香港-中环02
+      - 🇭🇰 香港-中环01
+      - 🇯🇵 日本·流媒体02
+      - 🇯🇵 日本·流媒体01
+      - 🇹🇭 泰国-曼谷01
+      - 🇺🇸 美国-洛杉矶01
+      - 距离下次重置剩余：7 天
+      - 🇫🇷 法国-巴黎01
+      - 🇺🇸 美国-洛杉矶02
+      - 🇩🇪 德国-法兰克福01
+      - 🇭🇰 香港-中环01-2
+      - 🇯🇵 日本·流媒体01-2
+      - 🇯🇵 日本·流媒体02-2
+      - 🇹🇭 泰国-曼谷01-2
+      - 🇺🇸 美国-洛杉矶02-2
+      - 🇺🇸 美国-洛杉矶01-2
+      - 🇫🇷 法国-巴黎01-2
+      - 距离下次重置剩余：7 天-2
+      - 🇩🇪 德国-法兰克福01-2
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
