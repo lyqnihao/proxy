@@ -121,32 +121,6 @@ proxies:
     port: 11201
     cipher: chacha20-ietf-poly1305
     password: 2272de48c53e0a57
-  - name: 中国 - 香港 - PCCW IMS Limited - 45
-    type: vmess
-    server: 5804d996-t70f40-tonrmx-8n27.hkt.gotochinatown.net
-    port: 80
-    uuid: 5dc6fa05-a601-aba6-7761-ecde22d2b0fc
-    alterId: 2
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 5804d996-t70f40-tonrmx-8n27.hkt.gotochinatown.net
-  - name: 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
-    type: vmess
-    server: 010ece56-t6r5s0-thd0h1-1rz5s.hkt.gotochinatown.net
-    port: 80
-    uuid: 40e084d6-0316-11f0-90e2-f23c913c8d2b
-    alterId: 2
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 010ece56-t6r5s0-thd0h1-1rz5s.hkt.gotochinatown.net
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -165,8 +139,6 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
   - name: ♻️ 自动选择
     type: url-test
     proxies:
@@ -182,8 +154,6 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -205,8 +175,6 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
   - name: 📲 电报信息
     type: select
     proxies:
@@ -224,8 +192,6 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -243,8 +209,6 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -262,8 +226,6 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -298,5 +260,3 @@ proxy-groups:
       - 🇭🇺_HU_匈牙利
       - 🇯🇴_JO_约旦
       - 🇨🇳_CN_中国_1
-      - 中国 - 香港 - PCCW IMS Limited - 45
-      - 🇭🇰 HK²_23|2.8MB/s|0%|GPT⁺|YT|X|History|[原生|住宅]
