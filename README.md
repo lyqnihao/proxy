@@ -21,17 +21,17 @@
   <br>
 
 ### [nodefree](https://nodefree.me/)：<br>
-- v2ray订阅链接：https://node.nodefree.me/2026/01/20260128.txt<br>
-- Clash订阅链接：https://node.nodefree.me/2026/01/20260128.yaml<br>
-- Mihomo订阅链接：https://node.nodefree.me/2026/01/m20260128.yaml<br>
+- v2ray订阅链接：https://node.nodefree.me/2026/01/20260129.txt<br>
+- Clash订阅链接：https://node.nodefree.me/2026/01/20260129.yaml<br>
+- Mihomo订阅链接：https://node.nodefree.me/2026/01/m20260129.yaml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
   原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
 
 ### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
-- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260128.txt<br>
-- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260128.yml<br>
-- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260128.yml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260129.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260129.yml<br>
+- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260129.yml<br>
 - 跟踪更新Clash固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
   类似nodefree，网站每4小时更新，动态日期更新地址。<br>
