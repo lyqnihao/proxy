@@ -64,20 +64,27 @@ Cloudflare自建汇聚订阅<br>
   [订阅地址-1](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)<br>
 
 - [白嫖のHome | [Channel:@ZDYZ2](https://d.zrf.me/)]：群里常有群友贡献节点和订阅<br>
+
   [🌥本频道专属永久订阅节点](https://t.me/ZDYZ2/5459)：https://sublink.634676.xyz/sub<br>
   
 - [SCP || 每日免费节点 | [[Channel:@ShareCentrePro](https://t.me/ShareCentrePro)]<br>
+
   [SCP官方订阅](https://t.me/ShareCentrePro/4123)：https://sub.scpnb.top/base64<br>
   
 - [资源分享:软件|网站|开源 | ‍☠️ [Channel:@txwl666](https://d.zrf.me/)]<br>
+
   https://rss.zyfx6.xyz/clash<br>
   
 - [NoMoreWalls|防范境外势力渗透<br>](https://github.com/peasoft/NoMoreWalls?tab=readme-ov-file)
+
   https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml<br>
+  
   https://testingcf.jsdelivr.net/gh/peasoft/NoMoreWalls@master/list.meta.yml<br>
   
 - [[每日更新](https://github.com/ssrsub/ssr) | 机场推荐:dafei.de]<br>
+
   https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml<br>
+  
   https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fssrsub%2Fssr%2Fmaster%2Fclash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online_Full.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true<br>
   
 - [无界探索](www.bsbb.cc)：TG [Channel:@vpnnodes](https://t.me/vpnnodes) | 每天到网站点击，等待10秒获取订阅地址<br>
@@ -192,8 +199,6 @@ Cloudflare自建汇聚订阅<br>
 | 920后端                                 | [https://sub.xjz.im](https://sub.xjz.im/)                    |
 | Sublink后端（歪兔）                     | [https://api.sublink.dev](https://api.sublink.dev/)          |
 | SoCloud 后端                            | [https://api.subcsub.com](https://api.subcsub.com/)          |
-
-[**自建一个属于你的订阅转换系统**](https://blog.zrf.me/p/SubWeb/)<br>
 
 ## 4.2、UUID生成工具
 
