@@ -48,7 +48,7 @@ Cloudflare自建汇聚订阅<br>
 ### [xConfig](https://xconfig.pages.dev/index2)：<br>
 整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js<br>
-- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2<br>
+- 当前跟踪目标：https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
 ## 2.2、未跟踪、或需每日手动点击更新地址的订阅
