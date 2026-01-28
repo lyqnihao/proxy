@@ -52,7 +52,7 @@ def main():
         # 各种网站的具体替换规则
         # clashgithub.com 的日期格式
         (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
-        (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash\d{8}\.yml)', rf'\g<1>{date_str}.yml'),
+        (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash\d{8}\.yml)', rf'\g<1>{date_str}\2'),
         
         # 修复 v2clash.blog 的日期格式，使其能正确匹配第38行的内容
         (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
