@@ -1,3 +1,6 @@
+# 版本：1.2
+# 修订说明：
+# - 订阅地址更新为日期动态变化
 # 版本：1.1
 # 修订说明：
 # - 同步改进的文件大小验证方法，使用500字节作为阈值
@@ -41,7 +44,10 @@ jobs:
       - name: Get current date (Beijing Time)
         id: date
         run: |
-          # 设置环境变量（格式示例：2024-03-15 12:30:45）
+          # 设置环境变量 YEAR、MONTH、DAY 和 CURRENT_DATE，值为当前北京时间
+          echo "YEAR=$(TZ='Asia/Shanghai' date +'%Y')" >> $GITHUB_ENV
+          echo "MONTH=$(TZ='Asia/Shanghai' date +'%m')" >> $GITHUB_ENV
+          echo "DAY=$(TZ='Asia/Shanghai' date +'%d')" >> $GITHUB_ENV
           echo "CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       # --------------------------
@@ -50,7 +56,7 @@ jobs:
       - name: Generate dynamic URL
         run: |
           # 目前使用固定URL，后续可改造为动态生成逻辑
-          echo "DYNAMIC_URL=https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml" >> $GITHUB_ENV
+          echo "DYNAMIC_URL=https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash$YEAR$MONTH$DAY.yml" >> $GITHUB_ENV
 
       # --------------------------
       # 步骤4：创建存储目录（保证目录存在）
@@ -157,7 +163,7 @@ jobs:
           body: |
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.1
+            - 脚本版本: 1.2
             - 订阅URL: ${{ env.DYNAMIC_URL }}
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
             - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
