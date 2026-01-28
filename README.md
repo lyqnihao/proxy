@@ -15,32 +15,38 @@
 
   每天1点半13点半自动检测更新，如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。<br>
 
-### 汇聚订阅-CF：
+### 汇聚订阅-CF：<br>
+Cloudflare自建汇聚订阅<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
 
 
-### [nodefree](https://nodefree.me/)：原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
+### [nodefree](https://nodefree.me/)：<br>
+原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
 - v2ray订阅链接：https://node.nodefree.me/2026/01/20260129.txt<br>
 - Clash订阅链接：https://node.nodefree.me/2026/01/20260129.yaml<br>
 - Mihomo订阅链接：https://node.nodefree.me/2026/01/m20260129.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
-### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：类似nodefree，网站每4小时更新，动态日期更新地址。<br>
+### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
+类似nodefree，网站每4小时更新，动态日期更新地址。<br>
 - v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260129.txt<br>
 - clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260129.yml<br>
 - GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260129.yml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
-### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：类似nodefree，动态日期更新地址。<br>
+### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
+类似nodefree，动态日期更新地址。<br>
 - v2ray订阅链接：https://v2clash.blog/Link/20260128-v2ray.txt<br>
 - clash订阅链接：https://v2clash.blog/Link/20260128-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
-### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：网站每天动态地址，每6小时更新一次。<br>
+### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+网站每天动态地址，每6小时更新一次。<br>
 - 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
 
-### [xConfig](https://xconfig.pages.dev/index2)：整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
+### [xConfig](https://xconfig.pages.dev/index2)：<br>
+整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js<br>
 - 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
@@ -61,7 +67,7 @@
   [🌥本频道专属永久订阅节点](https://t.me/ZDYZ2/5459)：https://sublink.634676.xyz/sub<br>
   
 - [SCP || 每日免费节点 | [[Channel:@ShareCentrePro](https://t.me/ShareCentrePro)]<br>
-  https://sub.scpnb.top/base64<br>
+  [SCP官方订阅](https://t.me/ShareCentrePro/4123)：https://sub.scpnb.top/base64<br>
   
 - [资源分享:软件|网站|开源 | ‍☠️ [Channel:@txwl666](https://d.zrf.me/)]<br>
   https://rss.zyfx6.xyz/clash<br>
