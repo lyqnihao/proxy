@@ -132,6 +132,9 @@ jobs:
                   # 清理临时文件
                   rm temp_content.txt
                   
+                  # 将文件添加到git暂存区
+                  git add v2cross/output.yaml
+                  
                   echo "download_status=success" >> $GITHUB_OUTPUT
                 else
                   echo "文件太小（$FILE_SIZE 字节），可能不是有效内容"
@@ -187,7 +190,7 @@ jobs:
           git config --global user.email "actions@github.com"
           
           # 提交信息包含北京时间戳
-          git commit -m "v2cross_${{ env.CURRENT_DATE }} - Update from $DYNAMIC_URL (at https://v2cross.com/1884.html)"
+          git commit -m "v2cross_${{ env.CURRENT_DATE }} - Update from ${{ env.DYNAMIC_URL }} (at https://v2cross.com/1884.html)"
           
           # 推送到远程仓库（使用GITHUB_TOKEN自动鉴权）
           git push
@@ -197,7 +200,7 @@ jobs:
       # --------------------------
       - name: Notify on failure
         # 触发条件：任何失败/下载错误/无内容变化
-        if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check_content.outputs.send_email == 'false' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
+        if: ${{ failure() || steps.download_content.outputs.download_status == 'failure' || steps.check_script.outputs.send_email == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
         uses: dawidd6/action-send-mail@v3
         with:
           # SMTP服务器配置（163邮箱示例）
@@ -217,7 +220,7 @@ jobs:
             - 脚本版本: 1.4
             - 订阅URL: ${{ env.DYNAMIC_URL }} from https://v2cross.com/1884.html
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 错误类型: ${{ steps.fetch-content.outputs.FETCH_ERROR && '下载失败' || steps.check_content.outputs.send_email == 'false' && '脚本运行失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
+            - 错误类型: ${{ steps.download_content.outputs.download_status == 'failure' && '下载失败' || steps.check_script.outputs.send_email == 'true' && '脚本运行失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
 
           # 收件人配置
           to: lyqnihao@163.com
