@@ -54,7 +54,7 @@ jobs:
       - name: Generate dynamic URL
         run: |
           # 根据 YEAR、MONTH 和 DAY 生成动态 URL，并存储到 DYNAMIC_URL 环境变量中
-          echo "DYNAMIC_URL=https://nodefree.githubrowcontent.com/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml" >> $GITHUB_ENV
+          echo "DYNAMIC_URL=https://node.nodefree.me/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml" >> $GITHUB_ENV
 
       # 步骤 4：创建 nodefree 目录（如果不存在）
       - name: Create nodefree directory if not exists
