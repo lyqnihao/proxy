@@ -162,7 +162,7 @@ jobs:
         id: commit_nodefree
         run: |
           # 从配置文件中获取URL模板并生成实际URL
-          NODEFREE_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', '''TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'''], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'nodefree']")
+          NODEFREE_URL=$(python -c "import json, os; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(YEAR=os.environ['YEAR'], MONTH=os.environ['MONTH'], DAY=os.environ['DAY'])) for sub in subs if sub['name'] == 'nodefree']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -186,7 +186,7 @@ jobs:
         id: commit_clashfree
         run: |
           # 获取clashfree的动态URL
-          CLASHFREE_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', '''TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'''], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'clashfree']")
+          CLASHFREE_URL=$(python -c "import json, os; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(YEAR=os.environ['YEAR'], MONTH=os.environ['MONTH'], DAY=os.environ['DAY'])) for sub in subs if sub['name'] == 'clashfree']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -234,7 +234,7 @@ jobs:
         id: commit_xconfig
         run: |
           # 获取xConfig的静态URL
-          XCONFIG_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xConfig'][0])")
+          XCONFIG_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xConfig']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -258,7 +258,7 @@ jobs:
         id: commit_cmliu
         run: |
           # 获取cmliu的静态URL
-          CMLIU_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'cmliu'][0])")
+          CMLIU_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'cmliu']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -282,7 +282,7 @@ jobs:
         id: commit_proxyqueen
         run: |
           # 从配置文件中获取URL模板并生成实际URL
-          PROXYQUEEN_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', '''TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'''], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'proxyqueen']")
+          PROXYQUEEN_URL=$(python -c "import json, os; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(YEAR=os.environ['YEAR'], MONTH=os.environ['MONTH'], DAY=os.environ['DAY'])) for sub in subs if sub['name'] == 'proxyqueen']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
