@@ -51,7 +51,7 @@ def main():
         
         # 各种网站的具体替换规则
         # clashgithub.com 的日期格式
-        (r'(https://raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash\d{8}\.yml)', rf'\g<1>{year_month}/\g<2>{date_str}\g<3>'),
+        (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash\d{8}\.yml)', rf'\g<1>{date_str}.yml'),
         
         # 修复 v2clash.blog 的日期格式，使其能正确匹配第38行的内容
         (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
@@ -125,7 +125,7 @@ def update_specific_area_only():
             line = re.sub(r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}", line)
             # 替换 clashgithub.com 的日期格式
             line = re.sub(
-                r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', 
+                r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash\d{8}(\.txt|\.yml)', 
                 rf'\g<1>{date_str}\2', 
                 line
             )
@@ -152,7 +152,7 @@ def update_specific_area_only():
             )
             # 添加 nodefree 的日期格式替换，包括 Mihomo 订阅链接
             line = re.sub(
-                r'(nodefree\.githubrowcontent\.com/)\d{4}/\d{2}/(m?)\d{8}(\.txt|\.yaml)', 
+                r'(node\.nodefree\.me/)\d{4}/\d{2}/(m?)\d{8}(\.txt|\.yaml)', 
                 rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
                 line
             )

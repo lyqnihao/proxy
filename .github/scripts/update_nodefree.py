@@ -3,7 +3,7 @@
 NodeFree 订阅更新器
 
 功能：
-- 从 nodefree.githubrowcontent.com 获取每日订阅
+- 从 https://node.nodefree.me/ 获取每日订阅
 - 支持动态日期 URL：根据当前日期自动生成下载链接
 - 自动检测变更并提交到 Git
 
@@ -16,7 +16,7 @@ NodeFree 订阅更新器
 
 示例：
 如果今天是 2025-12-03，会生成 URL：
-https://nodefree.githubrowcontent.com/2025/12/20251203.yaml
+https://node.nodefree.me/2025/12/20251203.yaml
 """
 import os
 import sys
@@ -38,7 +38,7 @@ def main():
         # nodefree 每天都会发布一个新的订阅文件
         # 文件名格式为：YYYYMMDD.yaml
         # 文件路径格式为：/YYYY/MM/YYYYMMDD.yaml
-        url = f"https://nodefree.githubrowcontent.com/{year_month}/{date_str}.yaml"
+        url = f"https://node.nodefree.me/{year_month}/{date_str}.yaml"
         # 指定输出文件位置
         output_file = "nodefree/target.yaml"
         
