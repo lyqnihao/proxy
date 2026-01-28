@@ -54,24 +54,28 @@ def main():
         (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
         (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash)(\d{8})(\.yml)', rf'\g<1>{date_str}\g<3>'),
         
-        # 修复 v2clash.blog 的日期格式，使其能正确匹配第38行的内容
-        (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
-        (r'(v2clash\.blog/clash/)\d{8}\.yaml', rf'\g<1>{date_str}.yaml'),
-        (r'(v2clash\.blog/v2ray/)\d{8}\.txt', rf'\g<1>{date_str}.txt'),
-        (r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', rf'\g<1>{date_str}\2.txt'),
-        
         # nodefree 的日期格式（通用方法，支持各种前缀）
         (r'(node\.nodefree\.me/)\d{4}/\d{2}/([a-zA-Z]*)\d{8}(\.txt|\.yaml)', rf'\g<1>{year_month}/\g<2>{date_str}\g<3>'),
     ]
-
+    
     # 检查是否需要包含 v2clash 的替换
     # HAS_V2CLASH_NEW 是一个环境变量，如果 v2clash.blog 有新文章就设为 true
     has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
     if has_v2:
         print('包含 v2clash 多种格式替换')
+        # 添加 v2clash.blog 的日期格式替换规则
+        v2clash_replacements = [
+            (r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', rf'\g<1>{date_str}\2'),
+            (r'(v2clash\.blog/clash/)\d{8}\.yaml', rf'\g<1>{date_str}.yaml'),
+            (r'(v2clash\.blog/v2ray/)\d{8}\.txt', rf'\g<1>{date_str}.txt'),
+            (r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', rf'\g<1>{date_str}\2.txt'),
+        ]
+        replacements.extend(v2clash_replacements)
     else:
         # v2clash 无新文章，不更新 v2clash 相关的 URL
         print('跳过 v2clash 替换（未检测到新帖）')
+
+
 
     # 应用所有替换规则
     # 对每个规则，使用 re.sub() 进行正则替换
@@ -107,6 +111,9 @@ def update_specific_area_only():
     
     date_str = f"{year}{month}{day}"
     year_month = f"{year}/{month}"
+    
+    # 检查是否需要包含 v2clash 的替换
+    has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
 
     # 只更新包含特定关键词的行，避免修改其他内容
     lines = content.split('\n')
@@ -130,27 +137,28 @@ def update_specific_area_only():
                 rf'\g<1>{date_str}\2', 
                 line
             )
-            # 添加 v2clash.blog 的多种日期格式替换
-            line = re.sub(
-                r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)([^-\w.]*)', 
-                rf'\g<1>{date_str}\2\3', 
-                line
-            )
-            line = re.sub(
-                r'(v2clash\.blog/clash/)\d{8}\.yaml', 
-                rf'\g<1>{date_str}.yaml', 
-                line
-            )
-            line = re.sub(
-                r'(v2clash\.blog/v2ray/)\d{8}\.txt', 
-                rf'\g<1>{date_str}.txt', 
-                line
-            )
-            line = re.sub(
-                r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', 
-                rf'\g<1>{date_str}\2.txt', 
-                line
-            )
+            # 添加 v2clash.blog 的多种日期格式替换（仅在检测到新文章时更新）
+            if has_v2:
+                line = re.sub(
+                    r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)([^-\w.]*)', 
+                    rf'\g<1>{date_str}\2\3', 
+                    line
+                )
+                line = re.sub(
+                    r'(v2clash\.blog/clash/)\d{8}\.yaml', 
+                    rf'\g<1>{date_str}.yaml', 
+                    line
+                )
+                line = re.sub(
+                    r'(v2clash\.blog/v2ray/)\d{8}\.txt', 
+                    rf'\g<1>{date_str}.txt', 
+                    line
+                )
+                line = re.sub(
+                    r'(v2clash\.blog/rss/)\d{8}(-v2ray)?\.txt', 
+                    rf'\g<1>{date_str}\2.txt', 
+                    line
+                )
             # 添加 nodefree 的日期格式替换，包括 Mihomo 订阅链接
             line = re.sub(
                 r'(node\.nodefree\.me/)\d{4}/\d{2}/(m?)\d{8}(\.txt|\.yaml)', 
