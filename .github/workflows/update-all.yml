@@ -161,8 +161,8 @@ jobs:
       - name: 提交nodefree变更
         id: commit_nodefree
         run: |
-          # 从配置文件中获取URL模板并生成实际URL
-          NODEFREE_URL=$(python -c "import json, os; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(YEAR=os.environ['YEAR'], MONTH=os.environ['MONTH'], DAY=os.environ['DAY'])) for sub in subs if sub['name'] == 'nodefree']")
+          # 生成动态URL
+          NODEFREE_URL="https://node.nodefree.me/$YEAR/$MONTH/$YEAR$MONTH$DAY.yaml"
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -185,8 +185,8 @@ jobs:
       - name: 提交clashfree变更
         id: commit_clashfree
         run: |
-          # 获取clashfree的动态URL
-          CLASHFREE_URL=$(python -c "import json, os; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(YEAR=os.environ['YEAR'], MONTH=os.environ['MONTH'], DAY=os.environ['DAY'])) for sub in subs if sub['name'] == 'clashfree']")
+          # 生成动态URL
+          CLASHFREE_URL="https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash$YEAR$MONTH$DAY.yml"
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -234,7 +234,7 @@ jobs:
         id: commit_xconfig
         run: |
           # 获取xConfig的静态URL
-          XCONFIG_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xConfig']")
+          XCONFIG_URL=$(jq -r '.[] | select(.name=="xConfig") | .url' .github/config/subscriptions.json)
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -258,7 +258,7 @@ jobs:
         id: commit_cmliu
         run: |
           # 获取cmliu的静态URL
-          CMLIU_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'cmliu']")
+          CMLIU_URL=$(jq -r '.[] | select(.name=="cmliu") | .url' .github/config/subscriptions.json)
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
@@ -281,8 +281,8 @@ jobs:
       - name: 提交proxyqueen变更
         id: commit_proxyqueen
         run: |
-          # 从配置文件中获取URL模板并生成实际URL
-          PROXYQUEEN_URL=$(python -c "import json, os; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(YEAR=os.environ['YEAR'], MONTH=os.environ['MONTH'], DAY=os.environ['DAY'])) for sub in subs if sub['name'] == 'proxyqueen']")
+          # 生成动态URL
+          PROXYQUEEN_URL="https://v2clash.blog/Link/$YEAR$MONTH$DAY-clash.yaml"
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
