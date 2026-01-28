@@ -165,8 +165,10 @@ jobs:
           NODEFREE_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'nodefree']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add nodefree/target.yaml
           # 检查是否有变更
-          if git diff --staged --quiet nodefree/target.yaml; then
+          if git diff --staged --quiet; then
             # 没有变更，记录环境变量
             echo "no_changes_nodefree=true" >> $GITHUB_ENV
           else
@@ -187,8 +189,10 @@ jobs:
           CLASHFREE_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'clashfree']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add clashfree/output.yaml
           # 检查是否有变更
-          if git diff --staged --quiet clashfree/output.yaml; then
+          if git diff --staged --quiet; then
             # 没有变更，记录环境变量
             echo "no_changes_clashfree=true" >> $GITHUB_ENV
           else
@@ -209,8 +213,10 @@ jobs:
           V2CROSS_URL=$(python -c "import subprocess; import json; result = subprocess.run(['python', 'v2cross/update.py'], capture_output=True, text=True); print(result.stdout.strip() if result.returncode == 0 else [sub['url_script'] for sub in json.load(open('.github/config/subscriptions.json')) if sub['name'] == 'v2cross'][0])")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add v2cross/output.yaml
           # 检查是否有变更
-          if git diff --staged --quiet v2cross/output.yaml; then
+          if git diff --staged --quiet; then
             # 没有变更，记录环境变量
             echo "no_changes_v2cross=true" >> $GITHUB_ENV
           else
@@ -231,8 +237,10 @@ jobs:
           XCONFIG_URL=$(python -c "import json; f = open('.github/config/subscriptions.json'); subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'xConfig']; f.close()")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add xConfig/output.yaml
           # 检查是否有变更
-          if git diff --staged --quiet xConfig/output.yaml; then
+          if git diff --staged --quiet; then
             # 没有变更，记录环境变量
             echo "no_changes_xconfig=true" >> $GITHUB_ENV
           else
@@ -253,8 +261,10 @@ jobs:
           CMLIU_URL=$(python -c "import json; with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url']) for sub in subs if sub['name'] == 'cmliu']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add cmliu/target.yaml
           # 检查是否有变更
-          if git diff --staged --quiet cmliu/target.yaml; then
+          if git diff --staged --quiet; then
             # 没有变更，记录环境变量
             echo "no_changes_cmliu=true" >> $GITHUB_ENV
           else
@@ -275,8 +285,10 @@ jobs:
           PROXYQUEEN_URL=$(python -c "import json; import subprocess; def get_beijing_time(): result = subprocess.run(['bash', '-c', 'TZ=\"Asia/Shanghai\" date +\"%Y %m %d\"'], capture_output=True, text=True); parts = result.stdout.strip().split(); return {'YEAR': parts[0], 'MONTH': parts[1], 'DAY': parts[2]}; time_info = get_beijing_time(); with open('.github/config/subscriptions.json', 'r') as f: subs = json.load(f); [print(sub['url_template'].format(**time_info)) for sub in subs if sub['name'] == 'proxyqueen']")
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add proxyqueen/output.yaml
           # 检查是否有变更
-          if git diff --staged --quiet proxyqueen/output.yaml; then
+          if git diff --staged --quiet; then
             # 没有变更，记录环境变量
             echo "no_changes_proxyqueen=true" >> $GITHUB_ENV
           else
