@@ -54,53 +54,40 @@
 - 当前跟踪更新的地址：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2<br>
 - 跟踪更新地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
-## 2.2、其它未跟踪的永久订阅地址
+## 2.2、未跟踪、或需每日手动点击更新地址的订阅
 
-- [[DanFeng 公益代理](https://snippet.danfeng.site/) [@danfeng_chat](https://t.me/danfeng_chat)] (诗词)  每天到网站点击获取订阅地址
-  https://irw3kqasin.chinat.eu.org/sub?uuid=00a85603-d8c6-437d-a8bd-ea521107bd87&host=snippet.danfeng.theworkpc.com
-  https://g1u763it7b.chinat.eu.org/sub?uuid=a2a396c3-f40e-4dee-bdbb-b1201f12dc1c&host=snippet.danfeng.cn.mt&path=/danfeng?ed=2560
+- [[ChromeGo](https://github.com/bannedbook/fanqiang/releases) -dongtaiwang.com|https://github.com/Alvin9999-newpac/fanqiang]
 
-- [SSDXZ-实时优选]
-  https://new.ssdxz.cn/sub?format=auto&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560
+  [第一组](https://www.gitlabip.xyz/Alvin9999/PAC/)：其实用第一条就可以了。目前YouTube和各AI都可以用，建议负载均衡。
 
-- [ChromeGo -dongtaiwang.com|https://github.com/Alvin9999-newpac/fanqiang]
-https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml
-https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml
-https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml
-https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml
-https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml
-https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml
+  [订阅地址-1](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)
 
-- [白嫖のHome @ZDYZ2]
-https://sublink.634676.xyz/sub
+  [第二组](https://gitlab.com/free9999/ipupdate/-/tree/master/backup/img/1/2/ipp/clash.meta2?ref_type=heads)：内容同第一组，选择性使用。
 
-- [SCP|]
-https://sub.scpnb.top/base64
+  [订阅地址-1](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)
 
-- [资源分享:软件|网站|开源 ‍☠️ Channel:@txwl666]
-https://rss.zyfx6.xyz/clash
-
-- [NoMoreWalls|防范境外势力渗透] (https://github.com/peasoft/NoMoreWalls?tab=readme-ov-file)
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
-https://testingcf.jsdelivr.net/gh/peasoft/NoMoreWalls@master/list.meta.yml
-
-- [每日更新|机场推荐:dafei.de]
-https://gh-proxy.com/raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
-https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fgh-proxy.com%2Fraw.githubusercontent.com%2Fssrsub%2Fssr%2Fmaster%2Fclash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online_Full.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
-
-- [[裤佬️](https://jsnzkpg.github.io/)|克拉云 https://kelayun.notepin.co @stymei1] 
-  https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg
-  https://upld.zone.id/uploads/q9iq9e5iq/clash.txt
-
-- 
-
-## 2.3、未跟踪、或需每日手动点击更新地址的订阅
-
-- [无界探索](www.bsbb.cc)：TG[@vpnnodes](https://t.me/vpnnodes) | 每天到网站点击，等待10秒获取订阅地址
+- [白嫖のHome | [Channel:@ZDYZ2](https://d.zrf.me/)]：群里常有群友贡献节点和订阅
+  [🌥本频道专属永久订阅节点](https://t.me/ZDYZ2/5459)：https://sublink.634676.xyz/sub
+  
+- [SCP || 每日免费节点 | [[Channel:@ShareCentrePro](https://t.me/ShareCentrePro)]
+  https://sub.scpnb.top/base64
+  
+- [资源分享:软件|网站|开源 | ‍☠️ [Channel:@txwl666](https://d.zrf.me/)]
+  https://rss.zyfx6.xyz/clash
+  
+- [NoMoreWalls|防范境外势力渗透](https://github.com/peasoft/NoMoreWalls?tab=readme-ov-file)
+  https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
+  https://testingcf.jsdelivr.net/gh/peasoft/NoMoreWalls@master/list.meta.yml
+  
+- [[每日更新](https://github.com/ssrsub/ssr) | 机场推荐:dafei.de]
+  https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
+  https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fssrsub%2Fssr%2Fmaster%2Fclash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online_Full.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+  
+- [无界探索](www.bsbb.cc)：TG [Channel:@vpnnodes](https://t.me/vpnnodes) | 每天到网站点击，等待10秒获取订阅地址
 
   https://www.bsbb.cc/clash/index.html
 
-- [ZRF.ME 周润发](https://zrf.me/) | 科学公益站：TG[@tgq](https://d.zrf.me/tgq) | 永久订阅，有IP检查、[节点转订阅器](https://zrf.zrf.me/)、[订阅转换工具](https://sub.zrfme.com/)
+- [ZRF.ME 周润发](https://zrf.me/) | 科学公益站：TG [Channel:@tgq](https://d.zrf.me/tgq) | 永久订阅，有IP检查、[节点转订阅器](https://zrf.zrf.me/)、[订阅转换工具](https://sub.zrfme.com/)
 
   Vless 公益订阅：https://lsmoo.pages.dev/lsm/15235ce9-4cd2-4483-b6b6-7fc4a3f44735
 
@@ -108,16 +95,36 @@ https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fgh-proxy.com%2Fr
 
 - [裤佬️](https://jsnzkpg.github.io/)：TG[@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅
 
+  https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg
+
+  附带 克拉云：https://upld.zone.id/uploads/q9iq9e5iq/clash.txt
+
 - [橘子电报频道](https://juzi.tg18.cc/)：到TG[@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址
   
-  非固定地址：https://v1.mk/aDLKAYK
+  待验证是否永久
+  
+  短地址：https://v1.mk/aDLKAYK
+  
+  长地址：https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fcache.ravelloh.top%3Fuuid%3Db469e664-8ab6-6052-95cd-484d467e80cb&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+  
+  纯节点：https://cache.ravelloh.top?uuid=b469e664-8ab6-6052-95cd-484d467e80cb
   
 - [富婆订阅](https://fpyjdy.zzong6599.workers.dev/)：本身订阅不稳定，但提供多订阅合集格式及多个永久订阅地址
+  
+  
+  
+- 未知 | 多国可筛选：?c=后边国家代码，以英文逗号分隔，整个筛选部分去掉则是全部
+  
+  http://8.149.134.37:12585/clash/proxies?c=US,HK,TW,CA,JP,SG
+  
+- 未知 | 多国节点，可更新，节点可用
+  
+  https://wpds.qzz.io/suiyuan
   
 - 未知 | 伊朗TG[@AZARBAYJAB1](https://t.me/AZARBAYJAB1)
   https://shz.al/25Ae
   
-- [🚀 订阅管理面板](https://new.ssdxz.cn/)：
+- [SSDXZ | 🚀 订阅管理面板](https://new.ssdxz.cn/)：
   
   **⚡** 实时优选：https://new.ssdxz.cn/sub?format=clashp&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204
   
@@ -125,9 +132,9 @@ https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fgh-proxy.com%2Fr
   
   🔥 全协议订阅：https://new.ssdxz.cn/sub?format=clashp&type=all&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204
   
-- [DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat)
+- [DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词) | 每天到网站点击获取订阅地址
   
-  https://zn26ri.chinat.eu.org/sub?uuid=a2a396c3-f40e-4dee-bdbb-b1201f12dc1c&host=snippet.danfeng.loc.cc&path=/danfeng?ed=2560
+  
   
 - [手搓VLESS节点生成器](https://ip.cloudip.ggff.net/)：[Github](https://github.com/gslege/CloudflareIP) | 生成一组VLESS节点，可借助[节点转订阅器](https://zrf.zrf.me/)转为订阅地址
   
@@ -136,6 +143,7 @@ https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fgh-proxy.com%2Fr
   
   
   ***本网页整合很多免费订阅项目，来源复杂，更新周期不定，而且部分已经消失。*** <br>
+  
 
 # 三、一些自建项目
 
@@ -152,12 +160,51 @@ https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fgh-proxy.com%2Fr
 ## 3.4、[数码解码](https://smjm.ct.ws/免费搭建独立永久属于自己的vps节点/)/[YouTube频道](https://www.youtube.com/@DECODING-w7d)
   免费服务、免费VPS、免费域名等，通过VPS部署节点。<br>
 
+## 3.5、[ZRF.ME | 周润发](https://zrf.me/)
+
+  很多免费Cloudflare项目教程，如节点订阅、[订阅转换](https://blog.zrf.me/p/SubWeb/)、[Github加速](https://blog.zrf.me/p/GitHub-Proxy/)、[博客](https://blog.zrf.me/p/Rewards/)、[Libre TV](https://blog.zrf.me/p/LibreTV/)、[网盘](https://blog.zrf.me/p/Cloudflare-R2-oss/)、[短链接](https://blog.zrf.me/p/notes-sink/)、[新闻热榜](https://blog.zrf.me/p/NewsNow/)、[临时邮箱](https://blog.zrf.me/p/65/)、[UptimeRobot](https://blog.zrf.me/p/62/) 等。
+
 
 # 四、一些在线工具
+
+## 4.1、订阅转换工具
+
+| 名称                 | 订阅转换前端 地址                                           |
+| -------------------- | ----------------------------------------------------------- |
+| 周润发订阅转换       | [https://sub.zrfme.com](https://sub.zrfme.com/)             |
+| CM订阅转换           | [https://sub.cmliussss.com](https://sub.cmliussss.com/)     |
+| 肥羊订阅转换         | [https://suburl.v1.mk](https://suburl.v1.mk/)               |
+| nameless13提供       | [https://api.nameless13.com](https://api.nameless13.com/)   |
+| subconverter作者提供 | [https://sub.xeton.dev](https://sub.xeton.dev/)             |
+| sub-web作者提供      | [https://sub-web.netlify.app](https://sub-web.netlify.app/) |
+| 920提供              | [https://sub.xjz.im](https://sub.xjz.im/)                   |
+| Sublink（歪兔）      | [https://sublink.dev](https://sublink.dev/)                 |
+| SoCloud 订阅转换     | [https://subcsub.com](https://subcsub.com/)                 |
+
+| 名称                                    | 订阅转换后端API 地址                                         |
+| --------------------------------------- | ------------------------------------------------------------ |
+| 周润发HK后端【由YXVM赞助服务】          | [https://subapi.zrfme.com](https://subapi.zrfme.com/)        |
+| CM负载均衡后端【vless reality+hy1+hy2】 | [https://subapi.cmliussss.net](https://subapi.cmliussss.net/) |
+| CM应急备用后端【vless reality+hy1+hy2】 | [https://subapi.fxxk.dedyn.io](https://subapi.fxxk.dedyn.io/) |
+| 肥羊增强型后端【vless reality+hy1+hy2】 | [https://url.v1.mk](https://url.v1.mk/)                      |
+| 肥羊备用后端【vless reality+hy1+hy2】   | [https://sub.d1.mk](https://sub.d1.mk/)                      |
+| 白嫖哥【vless reality+hy1+hy2】         | [https://api.sub.zaoy.cn](https://api.sub.zaoy.cn/)          |
+| nameless13提供                          | [https://www.nameless13.com](https://www.nameless13.com/)    |
+| subconverter作者提供                    | [https://sub.xeton.dev](https://sub.xeton.dev/)              |
+| sub-web作者提供                         | [https://api.wcc.best](https://api.wcc.best/)                |
+| 920后端                                 | [https://sub.xjz.im](https://sub.xjz.im/)                    |
+| Sublink后端（歪兔）                     | [https://api.sublink.dev](https://api.sublink.dev/)          |
+| SoCloud 后端                            | [https://api.subcsub.com](https://api.subcsub.com/)          |
+
+[**自建一个属于你的订阅转换系统**](https://blog.zrf.me/p/SubWeb/)
+
+## 4.2、UUID生成工具
+
 - 在线[生成 UUID ](https://www.v2fly.org/awesome/tools.html)的工具。
 - [另一个UUID](https://www.lddgo.net/string/uuid)的在线工具。
 
-## 4.1、[GitHub 文件加速](https://yishijie.gitlab.io/ziyuan/)：
+## 4.3、[GitHub 文件加速](https://yishijie.gitlab.io/ziyuan/)：
+
   可检测节点连通性
 | mirror-result	| time	| status-success |
 | :--: | :--: | :--: |
@@ -208,7 +255,7 @@ https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fgh-proxy.com%2Fr
 |https://tvv.tw/	|955ms	|成功|
 |https://gh-proxy.net/	|706ms	|成功|
 
-## 4.2、[Docker加速]()：
+## 4.4、[Docker加速]()：
 
 # 五、各平台代理工具
 
