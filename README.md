@@ -53,9 +53,9 @@ Cloudflare自建汇聚订阅<br>
 
 ## 2.2、未跟踪、或需每日手动点击更新地址的订阅
 
-- [[ChromeGo](https://github.com/bannedbook/fanqiang/releases) -dongtaiwang.com|https://github.com/Alvin9999-newpac/fanqiang]<br>
+- [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]<br>
 
-  [第一组](https://www.gitlabip.xyz/Alvin9999/PAC/)：其实用第一条就可以了。目前YouTube和各AI都可以用，建议负载均衡。<br>
+  [第一组](https://github.com/bannedbook/fanqiang/releases)：其实用第一条就可以了。目前YouTube和各AI都可以用，建议负载均衡。<br>
 
   [订阅地址-1](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)<br>
 
@@ -63,7 +63,7 @@ Cloudflare自建汇聚订阅<br>
 
   [订阅地址-1](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)<br>
 
-- [白嫖のHome | [Channel:@ZDYZ2](https://d.zrf.me/)]：群里常有群友贡献节点和订阅<br>
+- [白嫖のHome | [Channel:@ZDYZ2](https://t.me/ZDYZ2)]：群里常有群友贡献节点和订阅<br>
 
   [🌥本频道专属永久订阅节点](https://t.me/ZDYZ2/5459)：https://sublink.634676.xyz/sub<br>
   
@@ -71,9 +71,9 @@ Cloudflare自建汇聚订阅<br>
 
   [SCP官方订阅](https://t.me/ShareCentrePro/4123)：https://sub.scpnb.top/base64<br>
   
-- [资源分享:软件|网站|开源 | ‍☠️ [Channel:@txwl666](https://d.zrf.me/)]<br>
+- [资源分享:软件|网站|开源 | ‍☠️ [Channel:@txwl666](https://t.me/txwl666)]<br>
 
-  https://rss.zyfx6.xyz/clash<br>
+  [永久订阅](https://t.me/txwl666/6237)：https://rss.zyfx6.xyz/clash<br>
   
 - [NoMoreWalls|防范境外势力渗透<br>](https://github.com/peasoft/NoMoreWalls?tab=readme-ov-file)
 
@@ -81,7 +81,7 @@ Cloudflare自建汇聚订阅<br>
   
   https://testingcf.jsdelivr.net/gh/peasoft/NoMoreWalls@master/list.meta.yml<br>
   
-- [[每日更新](https://github.com/ssrsub/ssr) | 机场推荐:dafei.de]<br>
+- [[每日更新](https://github.com/ssrsub/ssr) | 机场推荐:[dafei.de](https://dafei.de/) | [Channel:@dafei_de](https://t.me/dafei_de)]<br>
 
   https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml<br>
   
@@ -143,8 +143,6 @@ Cloudflare自建汇聚订阅<br>
 - [手搓VLESS节点生成器](https://ip.cloudip.ggff.net/)：[Github](https://github.com/gslege/CloudflareIP) | 生成一组VLESS节点，可借助[节点转订阅器](https://zrf.zrf.me/)转为订阅地址<br>
   
   https://zrf.zrf.me/sub?uuid=04c808e2-0b59-47b0-a54b-32fc7ef1c902&encryption=none&security=tls&sni=cf.cloudip.ggff.net&fp=random&insecure=0&allowInsecure=0&type=ws&host=cf.cloudip.ggff.net&path=pyip%3Dproxyip.cmliussss.net<br>
-  
-  
   
   ***本网页整合很多免费订阅项目，来源复杂，更新周期不定，而且部分已经消失。*** <br>
   
