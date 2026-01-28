@@ -12,15 +12,15 @@
     "dir": "nodefree",
     "output_file": "target.yaml",
     "url_type": "dynamic_date",
-    "url_template": "https://nodefree.githubrowcontent.com/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
+    "url_template": "https://node.nodefree.me/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
     "description": "免费节点 - 每日更新"
   },
   {
     "name": "clashfree",
     "dir": "clashfree",
     "output_file": "output.yaml",
-    "url_type": "static",
-    "url": "https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml",
+    "url_type": "dynamic_date",
+    "url_template": "https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash{YEAR}{MONTH}{DAY}.yml",
     "description": "免费节点 Clash 订阅"
   },
   {
@@ -45,7 +45,7 @@
     "dir": "xConfig",
     "output_file": "output.yaml",
     "url_type": "static",
-    "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "url": "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt",
     "description": "XConfig - Xray 代理抓取器"
   }
 ]

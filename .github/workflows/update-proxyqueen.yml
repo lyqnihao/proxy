@@ -11,9 +11,9 @@ name: Update proxyqueen
 
 # 触发条件
 on:
-  schedule:
+  #schedule:
   # 北京时间每12小时更新：1:35 AM (UTC 17:35前一天) 和 1:35 PM (UTC 5:35)
-  - cron: '35 17,5 * * *'
+  #- cron: '35 17,5 * * *'
   # 已改为手动模式，由统一工作流 update-all.yml 调度
   workflow_dispatch:
 
