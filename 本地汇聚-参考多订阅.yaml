@@ -1,0 +1,1181 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxy-providers:
+  未知-多国节点:
+    type: http
+    url: https://wpds.qzz.io/suiyuan
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/未知-多国节点.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  橘子电报:
+    type: http
+    url: https://v1.mk/aDLKAYK
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/橘子电报.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  SSDXZ-实时优选:
+    type: http
+    url: "https://new.ssdxz.cn/sub?format=auto&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=/?ed=2560"
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/SSDXZ-实时优选.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ChromeGo_1:
+    type: http
+    url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ChromeGo_1.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ChromeGo_2:
+    type: http
+    url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ChromeGo_2.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ChromeGo_3:
+    type: http
+    url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ChromeGo_3.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ChromeGo_4:
+    type: http
+    url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ChromeGo_4.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ChromeGo_5:
+    type: http
+    url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ChromeGo_5.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ChromeGo_6:
+    type: http
+    url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ChromeGo_6.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  白嫖のHome:
+    type: http
+    url: https://sublink.634676.xyz/sub
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/白嫖のHome.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  SCP:
+    type: http
+    url: https://sub.scpnb.top/base64
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/SCP.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  资源分享:
+    type: http
+    url: https://rss.zyfx6.xyz/clash
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/资源分享.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  NoMoreWalls:
+    type: http
+    url: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/NoMoreWalls.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  每日更新:
+    type: http
+    url: https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/每日更新.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  裤佬️:
+    type: http
+    url: https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/裤佬️.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  克拉云:
+    type: http
+    url: https://upld.zone.id/uploads/q9iq9e5iq/clash.txt
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/克拉云.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  ZRF-周润发:
+    type: http
+    url: https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/ZRF-周润发.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  未知-伊朗TG:
+    type: http
+    url: https://shz.al/25Ae
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/未知-伊朗TG.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  手搓VLESS节点:
+    type: http
+    url: "https://zrf.zrf.me/sub?uuid=04c808e2-0b59-47b0-a54b-32fc7ef1c902&encryption=none&security=tls&sni=cf.cloudip.ggff.net&fp=random&insecure=0&allowInsecure=0&type=ws&host=cf.cloudip.ggff.net&path=pyip=proxyip.cmliussss.net"
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/手搓VLESS节点.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  cloudflare-vless-trojan:
+    type: http
+    url: https://cloudflare-vless-trojan.lyqnihao.workers.dev/86c50e3a-5b87-49dd-bd20-03c7f2735e48/cl
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/cloudflare-vless-trojan.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  edtunnel-1g9:
+    type: http
+    url: https://edtunnel-1g9.pages.dev/bestip/5c11d0d4-6b9d-499e-9d27-5b9b13e87002
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/edtunnel-1g9.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  edgetunnel-cmliu:
+    type: http
+    url: https://edgetunnel-cmliu.lyqnihao.workers.dev/sub?token=9a63cf4e989aecaf97f862fd0b9b85ab
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/edgetunnel-cmliu.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  proxyqueen:
+    type: http
+    url: https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/proxyqueen.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  nodefree:
+    type: http
+    url: https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/nodefree.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  clashfree:
+    type: http
+    url: https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/clashfree.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  v2cross:
+    type: http
+    url: https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/v2cross.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  xConfig:
+    type: http
+    url: https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/xConfig.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🔮 负载均衡(散列)
+	  - 🔮 负载均衡(轮询)
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: .*
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: .*
+  - name: 🔯 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: .*
+  - name: 🔮 负载均衡(散列)
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+    filter: .*
+  - name: 🔮 负载均衡(轮询)
+    type: load-balance
+    strategy: round-robin
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+    filter: .*
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 💬 Ai平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - 🎥 奈飞节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 巴哈姆特
+    type: select
+    proxies:
+      - 🇨🇳 台湾节点
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇨🇳 台湾节点
+      - 🇭🇰 香港节点
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软Bing
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🎶 网易音乐
+    type: select
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (网易|音乐|解锁|Music|NetEase)
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
+      - 🚀 手动切换
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (港|HK|hk|Hong Kong|HongKong|hongkong)
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (台|新北|彰化|TW|Taiwan)
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (新加坡|坡|狮城|SG|Singapore)
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (KR|Korea|KOR|首尔|韩|韓)
+  - name: 🎥 奈飞节点
+    type: select
+    use:
+      - 未知-多国节点
+      - 橘子电报
+      - SSDXZ-实时优选
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 白嫖のHome
+      - SCP
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - 裤佬️
+      - 克拉云
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - 手搓VLESS节点
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: (NF|奈飞|解锁|Netflix|NETFLIX|Media)
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,BanAD,🛑 广告拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Bing,Ⓜ️ 微软Bing
+  - RULE-SET,OneDrive,Ⓜ️ 微软云盘
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,📲 电报消息
+  - RULE-SET,AI,💬 Ai平台
+  - RULE-SET,OpenAi,💬 Ai平台
+  - RULE-SET,NetEaseMusic,🎶 网易音乐
+  - RULE-SET,Epic,🎮 游戏平台
+  - RULE-SET,Origin,🎮 游戏平台
+  - RULE-SET,Sony,🎮 游戏平台
+  - RULE-SET,Steam,🎮 游戏平台
+  - RULE-SET,Nintendo,🎮 游戏平台
+  - RULE-SET,YouTube,📹 油管视频
+  - RULE-SET,Netflix,🎥 奈飞视频
+  - RULE-SET,Bahamut,📺 巴哈姆特
+  - RULE-SET,BilibiliHMT,📺 哔哩哔哩
+  - RULE-SET,Bilibili,📺 哔哩哔哩
+  - RULE-SET,ChinaMedia,🌏 国内媒体
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,ProxyGFWlist,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - RULE-SET,Download,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0"
+    path: ./providers/7156953299935574564.yaml
+    interval: 86400
+  UnBan:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVW5CYW4ubGlzdA"
+    path: ./providers/7573362162235439048.yaml
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuQUQubGlzdA"
+    path: ./providers/5345470858595246832.yaml
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q"
+    path: ./providers/12627286518854712958.yaml
+    interval: 86400
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVGQ00ubGlzdA"
+    path: ./providers/13526767378282193442.yaml
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvR29vZ2xlQ04ubGlzdA"
+    path: ./providers/18094093153187793194.yaml
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9TdGVhbUNOLmxpc3Q"
+    path: ./providers/9218514496462299588.yaml
+    interval: 86400
+  Bing:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmluZy5saXN0"
+    path: ./providers/17784654422352058730.yaml
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvT25lRHJpdmUubGlzdA"
+    path: ./providers/11441598284839060820.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTWljcm9zb2Z0Lmxpc3Q"
+    path: ./providers/10538434793549721944.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQXBwbGUubGlzdA"
+    path: ./providers/14560487744959213540.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVGVsZWdyYW0ubGlzdA"
+    path: ./providers/6502624741183612233.yaml
+    interval: 86400
+  AI:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9BSS5saXN0"
+    path: ./providers/7329684518282624683.yaml
+    interval: 86400
+  OpenAi:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQWkubGlzdA"
+    path: ./providers/3258957679647165343.yaml
+    interval: 86400
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9OZXRFYXNlTXVzaWMubGlzdA"
+    path: ./providers/15200902571451284617.yaml
+    interval: 86400
+  Epic:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9FcGljLmxpc3Q"
+    path: ./providers/2002866050337731182.yaml
+    interval: 86400
+  Origin:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcmlnaW4ubGlzdA"
+    path: ./providers/8760189456110913115.yaml
+    interval: 86400
+  Sony:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Tb255Lmxpc3Q"
+    path: ./providers/6043895292220349504.yaml
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9TdGVhbS5saXN0"
+    path: ./providers/1173690015095316719.yaml
+    interval: 86400
+  Nintendo:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9OaW50ZW5kby5saXN0"
+    path: ./providers/8436305167591952502.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Zb3VUdWJlLmxpc3Q"
+    path: ./providers/6665783339279527800.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9OZXRmbGl4Lmxpc3Q"
+    path: ./providers/6953567076524950087.yaml
+    interval: 86400
+  Bahamut:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9CYWhhbXV0Lmxpc3Q"
+    path: ./providers/3972157704973231643.yaml
+    interval: 86400
+  BilibiliHMT:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9CaWxpYmlsaUhNVC5saXN0"
+    path: ./providers/8993805089376963824.yaml
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9CaWxpYmlsaS5saXN0"
+    path: ./providers/6602777030040451893.yaml
+    interval: 86400
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFNZWRpYS5saXN0"
+    path: ./providers/6311591946191099983.yaml
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0"
+    path: ./providers/11865208451954205364.yaml
+    interval: 86400
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlHRldsaXN0Lmxpc3Q"
+    path: ./providers/1518598190744914170.yaml
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA"
+    path: ./providers/4162648423616508953.yaml
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFDb21wYW55SXAubGlzdA"
+    path: ./providers/2560834305431378741.yaml
+    interval: 86400
+  Download:
+    type: http
+    behavior: classical
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvRG93bmxvYWQubGlzdA"
+    path: ./providers/892107463922605120.yaml
+    interval: 86400
