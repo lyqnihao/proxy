@@ -226,6 +226,19 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+  am-cf-tunnel-sub:
+    type: http
+    url: https://am-cf-tunnel-sub.lyqnihao.dpdns.org/ec872d8f-72b0-4a04-b612-0327d85e18ed?clash
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/am-cf-tunnel-sub.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
   edtunnel-1g9:
     type: http
     url: https://edtunnel-1g9.pages.dev/bestip/5c11d0d4-6b9d-499e-9d27-5b9b13e87002
@@ -351,6 +364,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -381,6 +395,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -411,6 +426,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -428,6 +444,7 @@ proxy-groups:
     tolerance: 50
     use:
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -445,6 +462,7 @@ proxy-groups:
     tolerance: 50
     use:
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -646,6 +664,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -711,6 +730,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -741,6 +761,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -771,6 +792,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -801,6 +823,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -831,6 +854,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -861,6 +885,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -888,6 +913,7 @@ proxy-groups:
       - ZRF-周润发
       - 未知-伊朗TG
       - byjoeycfnew
+      - am-cf-tunnel-sub
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
