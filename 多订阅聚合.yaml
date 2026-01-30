@@ -423,7 +423,7 @@ proxy-groups:
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
-    url: https://gemini.google.com/
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     use:
@@ -455,9 +455,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ♻️ 自动选择
-      - 🔮 负载均衡
       - 🔮 CF自建
+      - 🔮 负载均衡
+      - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
@@ -473,10 +473,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🔮 CF自建
+      - 🔮 负载均衡
       - 🇨🇳 台湾节点
       - 🇺🇲 美国节点
-      - 🔮 负载均衡
-      - 🔮 CF自建
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
@@ -491,9 +491,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ♻️ 自动选择
-      - 🔮 负载均衡
       - 🔮 CF自建
+      - 🔮 负载均衡
+      - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
@@ -506,10 +506,10 @@ proxy-groups:
   - name: 🎥 奈飞视频
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🎥 奈飞节点
-      - 🔮 负载均衡
       - 🔮 CF自建
+      - 🔮 负载均衡
+      - 🎥 奈飞节点
+      - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
@@ -522,10 +522,10 @@ proxy-groups:
   - name: 📺 巴哈姆特
     type: select
     proxies:
-      - ♻️ 自动选择
       - 🇨🇳 台湾节点
-      - 🔮 负载均衡
       - 🔮 CF自建
+      - ♻️ 自动选择
+      - 🔮 负载均衡
       - 🚀 节点选择
       - 🚀 手动切换
       - DIRECT
@@ -538,10 +538,10 @@ proxy-groups:
   - name: 🌍 国外媒体
     type: select
     proxies:
+      - 🔮 CF自建
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🔮 负载均衡
-      - 🔮 CF自建
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -563,9 +563,9 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 🔮 CF自建
       - 🚀 节点选择
       - 🔮 负载均衡
-      - 🔮 CF自建
       - 🇺🇲 美国节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -683,11 +683,11 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - ♻️ 自动选择
+      - 🔮 CF自建
       - DIRECT
+      - ♻️ 自动选择
       - 🚀 节点选择
       - 🔮 负载均衡
-      - 🔮 CF自建
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
