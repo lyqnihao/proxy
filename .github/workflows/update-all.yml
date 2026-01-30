@@ -94,18 +94,35 @@ jobs:
         id: readme
         run: |
           HAS_V2CLASH_NEW=false
-          # 改进检测逻辑，支持更多日期格式
           TODAY="${{ env.YEAR }}${{ env.MONTH }}${{ env.DAY }}"
           TODAY_ALT="${{ env.YEAR }}-${{ env.MONTH }}-${{ env.DAY }}"
           TODAY_CN="${{ env.YEAR }}年${{ env.MONTH }}月${{ env.DAY }}日"
           echo "检查 v2clash.blog 是否包含日期: $TODAY 或 $TODAY_ALT 或 $TODAY_CN"
-          # 检查 v2clash.blog 网站是否有今日更新
-          if curl -sL https://v2clash.blog/ | grep -qE "$TODAY|$TODAY_ALT|$TODAY_CN"; then
+          
+          # 尝试直接访问今天的链接
+          V2RAY_URL="https://v2clash.blog/Link/$TODAY-v2ray.txt"
+          CLASH_URL="https://v2clash.blog/Link/$TODAY-clash.yaml"
+          echo "检查 v2ray 链接: $V2RAY_URL"
+          echo "检查 clash 链接: $CLASH_URL"
+          
+          # 检查 HTTP 状态码
+          if curl -s -o /dev/null -w "%{http_code}" "$V2RAY_URL" | grep -q '^2'; then
             HAS_V2CLASH_NEW=true
-            echo "检测到 v2clash.blog 有今日更新"
+            echo "检测到 v2clash.blog 有今日 v2ray 更新"
+          elif curl -s -o /dev/null -w "%{http_code}" "$CLASH_URL" | grep -q '^2'; then
+            HAS_V2CLASH_NEW=true
+            echo "检测到 v2clash.blog 有今日 clash 更新"
           else
-            echo "未检测到 v2clash.blog 今日更新"
+            # 回退到页面内容检测
+            echo "直接链接访问失败，尝试页面内容检测"
+            if curl -sL https://v2clash.blog/ | grep -qE "$TODAY|$TODAY_ALT|$TODAY_CN"; then
+              HAS_V2CLASH_NEW=true
+              echo "检测到 v2clash.blog 有今日更新（页面内容）"
+            else
+              echo "未检测到 v2clash.blog 今日更新"
+            fi
           fi
+          
           # 将检测结果写入环境变量
           echo "HAS_V2CLASH_NEW=$HAS_V2CLASH_NEW" >> $GITHUB_ENV
           export HAS_V2CLASH_NEW YEAR=${{ env.YEAR }} MONTH=${{ env.MONTH }} DAY=${{ env.DAY }} SPECIAL_UPDATE_MODE=specific_area

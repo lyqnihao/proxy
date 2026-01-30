@@ -151,8 +151,8 @@ def update_specific_area_only():
             # 替换 v2clash.blog 的多种日期格式（仅在检测到新文章时更新）
             if has_v2:
                 line = re.sub(
-                    r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)([^-\w.]*)', 
-                    rf'\g<1>{date_str}\2\3', 
+                    r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)', 
+                    rf'\g<1>{date_str}\2', 
                     line
                 )
                 line = re.sub(
