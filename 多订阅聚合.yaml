@@ -5,12 +5,12 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxy-providers:
-  未知-多国节点:
+  临时_1:
     type: http
-    url: https://wpds.qzz.io/suiyuan
+    url: https://skr8oblwwy.chinat.eu.org/sub?uuid=a2a396c3-f40e-4dee-bdbb-b1201f12dc1c&host=danfeng.443888.xyz&path=/danfeng?ed=2560
     interval: 3600
     proxy: DIRECT
-    path: ./providers/未知-多国节点.yaml
+    path: ./providers/临时_1.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -18,12 +18,12 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-  橘子电报:
+  未知-多国节点:
     type: http
-    url: https://v1.mk/aDLKAYK
+    url: https://wpds.qzz.io/suiyuan
     interval: 3600
     proxy: DIRECT
-    path: ./providers/橘子电报.yaml
+    path: ./providers/未知-多国节点.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -122,32 +122,6 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-  白嫖のHome:
-    type: http
-    url: https://sublink.634676.xyz/sub
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/白嫖のHome.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
-  SCP:
-    type: http
-    url: https://sub.scpnb.top/base64
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/SCP.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
   资源分享:
     type: http
     url: https://rss.zyfx6.xyz/clash
@@ -193,19 +167,6 @@ proxy-providers:
     interval: 3600
     proxy: DIRECT
     path: ./providers/裤佬️.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
-  克拉云:
-    type: http
-    url: https://upld.zone.id/uploads/q9iq9e5iq/clash.txt
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/克拉云.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -374,8 +335,8 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -383,13 +344,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -408,8 +365,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -417,13 +374,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -442,8 +395,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -451,13 +404,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -655,8 +604,8 @@ proxy-groups:
   - name: 🎶 网易音乐
     type: select
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -664,13 +613,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -723,8 +668,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -732,13 +677,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -757,8 +698,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -766,13 +707,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -791,8 +728,8 @@ proxy-groups:
     interval: 300
     tolerance: 150
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -800,13 +737,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -825,8 +758,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -834,13 +767,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -859,8 +788,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -868,13 +797,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -893,8 +818,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -902,13 +827,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
@@ -924,8 +845,8 @@ proxy-groups:
   - name: 🎥 奈飞节点
     type: select
     use:
+      - 临时_1
       - 未知-多国节点
-      - 橘子电报
       - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
@@ -933,13 +854,9 @@ proxy-groups:
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 白嫖のHome
-      - SCP
       - 资源分享
       - NoMoreWalls
       - 每日更新
-      - 裤佬️
-      - 克拉云
       - ZRF-周润发
       - 未知-伊朗TG
       - 手搓VLESS节点
