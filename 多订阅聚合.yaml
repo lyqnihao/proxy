@@ -324,6 +324,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -427,6 +428,9 @@ proxy-groups:
     tolerance: 50
     use:
       - byjoeycfnew
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -434,11 +438,23 @@ proxy-groups:
       - ChromeGo_5
       - ChromeGo_6
     filter: .*
+  - name: 🔮 CF自建
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - byjoeycfnew
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+    filter: .*
   - name: 📲 电报消息
     type: select
     proxies:
       - ♻️ 自动选择
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🚀 节点选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
@@ -454,6 +470,7 @@ proxy-groups:
       - 🇨🇳 台湾节点
       - 🇺🇲 美国节点
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
@@ -467,6 +484,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🚀 节点选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
@@ -482,6 +500,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎥 奈飞节点
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🚀 节点选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
@@ -497,6 +516,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇨🇳 台湾节点
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🚀 节点选择
       - 🚀 手动切换
       - DIRECT
@@ -512,6 +532,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -535,6 +556,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🇺🇲 美国节点
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
@@ -656,6 +678,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
