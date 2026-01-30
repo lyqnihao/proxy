@@ -5,12 +5,25 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxy-providers:
-  临时_1:
+  AA临时_1:
     type: http
     url: https://skr8oblwwy.chinat.eu.org/sub?uuid=a2a396c3-f40e-4dee-bdbb-b1201f12dc1c&host=danfeng.443888.xyz&path=/danfeng?ed=2560
     interval: 3600
     proxy: DIRECT
-    path: ./providers/临时_1.yaml
+    path: ./providers/AA临时_1.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    override:
+      skip-cert-verify: true
+      udp: true
+  AA临时_2:
+    type: http
+    url: ""
+    interval: 3600
+    proxy: DIRECT
+    path: ./providers/AA临时_2.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -24,19 +37,6 @@ proxy-providers:
     interval: 3600
     proxy: DIRECT
     path: ./providers/未知-多国节点.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
-  SSDXZ-实时优选:
-    type: http
-    url: "https://new.ssdxz.cn/sub?format=auto&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=/?ed=2560"
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/SSDXZ-实时优选.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -161,19 +161,6 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-  裤佬️:
-    type: http
-    url: https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/裤佬️.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
   ZRF-周润发:
     type: http
     url: https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
@@ -228,7 +215,7 @@ proxy-providers:
       udp: true
   am-cf-tunnel-sub:
     type: http
-    url: https://am-cf-tunnel-sub.lyqnihao.dpdns.org/ec872d8f-72b0-4a04-b612-0327d85e18ed?clash
+    url: https://am-cf-tunnel-sub.lyqnihao.dpdns.org/ec872d8f-72b0-4a04-b612-0327d85e18ed?sub&UUID=lyqnihao&HOST=am-cf-tunnel-sub.lyqnihao.dpdns.org&NAT64=true
     interval: 3600
     proxy: DIRECT
     path: ./providers/am-cf-tunnel-sub.yaml
@@ -349,9 +336,9 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -380,9 +367,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -411,9 +398,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -649,9 +636,9 @@ proxy-groups:
   - name: 🎶 网易音乐
     type: select
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -715,9 +702,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -746,9 +733,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -777,9 +764,9 @@ proxy-groups:
     interval: 300
     tolerance: 150
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -808,9 +795,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -839,9 +826,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -870,9 +857,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -898,9 +885,9 @@ proxy-groups:
   - name: 🎥 奈飞节点
     type: select
     use:
-      - 临时_1
+      - AA临时_1
+      - AA临时_2
       - 未知-多国节点
-      - SSDXZ-实时优选
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
