@@ -200,12 +200,12 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-  手搓VLESS节点:
+  byjoeycfnew:
     type: http
-    url: "https://zrf.zrf.me/sub?uuid=04c808e2-0b59-47b0-a54b-32fc7ef1c902&encryption=none&security=tls&sni=cf.cloudip.ggff.net&fp=random&insecure=0&allowInsecure=0&type=ws&host=cf.cloudip.ggff.net&path=pyip=proxyip.cmliussss.net"
+    url: https://byjoeycfnew.lyqnihao.dpdns.org/lyqnihao/sub?target=clash
     interval: 3600
     proxy: DIRECT
-    path: ./providers/手搓VLESS节点.yaml
+    path: ./providers/byjoeycfnew.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -215,7 +215,7 @@ proxy-providers:
       udp: true
   cloudflare-vless-trojan:
     type: http
-    url: https://cloudflare-vless-trojan.lyqnihao.workers.dev/86c50e3a-5b87-49dd-bd20-03c7f2735e48/cl
+    url: https://cloudflare-vless-trojan.lyqnihao.dpdns.org/86c50e3a-5b87-49dd-bd20-03c7f2735e40/pcl
     interval: 3600
     proxy: DIRECT
     path: ./providers/cloudflare-vless-trojan.yaml
@@ -241,7 +241,7 @@ proxy-providers:
       udp: true
   edgetunnel-cmliu:
     type: http
-    url: https://edgetunnel-cmliu.lyqnihao.workers.dev/sub?token=9a63cf4e989aecaf97f862fd0b9b85ab
+    url: https://edgetunnel-cmliu.lyqnihao.dpdns.org/sub?token=f29c63de6f526f6968629d69004f459d
     interval: 3600
     proxy: DIRECT
     path: ./providers/edgetunnel-cmliu.yaml
@@ -349,7 +349,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -379,7 +379,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -409,7 +409,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -426,6 +426,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
+      - byjoeycfnew
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
@@ -618,7 +619,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -682,7 +683,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -712,7 +713,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -742,7 +743,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -772,7 +773,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -802,7 +803,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -832,7 +833,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
@@ -859,7 +860,7 @@ proxy-groups:
       - 每日更新
       - ZRF-周润发
       - 未知-伊朗TG
-      - 手搓VLESS节点
+      - byjoeycfnew
       - cloudflare-vless-trojan
       - edtunnel-1g9
       - edgetunnel-cmliu
