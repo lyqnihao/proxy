@@ -101,6 +101,7 @@ def update_specific_area_only():
     if not os.path.exists(readme_path):
         print('README.md 文件未找到')
         sys.exit(0)
+    print(f"DEBUG: update_specific_area_only called with YEAR={os.environ.get('YEAR')}, MONTH={os.environ.get('MONTH')}, DAY={os.environ.get('DAY')}")
 
     with open(readme_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -114,6 +115,10 @@ def update_specific_area_only():
     
     # 检查是否需要包含 v2clash 的替换
     has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
+    if has_v2:
+        print('包含 v2clash 多种格式替换')
+    else:
+        print('跳过 v2clash 替换（未检测到新帖）')
 
     # 只更新包含特定关键词的行，避免修改其他内容
     lines = content.split('\n')
@@ -122,7 +127,7 @@ def update_specific_area_only():
     
     for line in lines:
         # 只更新包含特定关键词的行
-        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig']):
+        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash']):
             # 应用日期替换
             original_line = line
             # 替换 $YEAR$MONTH$DAY 格式
@@ -137,10 +142,16 @@ def update_specific_area_only():
                 rf'\g<1>{date_str}\2', 
                 line
             )
-            # 添加 v2clash.blog 的多种日期格式替换（仅在检测到新文章时更新）
+            # 替换 raw.githubusercontent.com/clashfree 的日期格式
+            line = re.sub(
+                r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash)(\d{8})(\.yml)', 
+                rf'\g<1>{date_str}\g<3>', 
+                line
+            )
+            # 替换 v2clash.blog 的多种日期格式（仅在检测到新文章时更新）
             if has_v2:
                 line = re.sub(
-                    r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|\.yaml)([^-\w.]*)', 
+                    r'(v2clash\.blog/Link/)\d{8}(-v2ray\.txt|-clash\.yaml)([^-\w.]*)', 
                     rf'\g<1>{date_str}\2\3', 
                     line
                 )
@@ -159,6 +170,9 @@ def update_specific_area_only():
                     rf'\g<1>{date_str}\2.txt', 
                     line
                 )
+            else:
+                # v2clash 无新文章，跳过更新 v2clash 相关的 URL
+                pass
             # 添加 nodefree 的日期格式替换，包括 Mihomo 订阅链接
             line = re.sub(
                 r'(node\.nodefree\.me/)\d{4}/\d{2}/(m?)\d{8}(\.txt|\.yaml)', 
