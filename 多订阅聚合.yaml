@@ -512,7 +512,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     url: https://gemini.google.com/
     interval: 300
     tolerance: 50
-    proxies:
+    use: # 【关键】指定动态节点来源，替换掉 `proxies:`
       - 🔮 CF自建
       - 🔮 负载均衡
       - 🇨🇳 台湾节点
