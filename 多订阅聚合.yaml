@@ -508,11 +508,12 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🚀 手动切换
       - DIRECT
   - name: 💬 Ai平台
-    type: url-test
+    type: select
     url: https://gemini.google.com/
     interval: 300
     tolerance: 50
-    use: # 【关键】指定动态节点来源，替换掉 `proxies:`
+    proxies:
+      - 💬 AI节点
       - 🔮 CF自建
       - 🔮 负载均衡
       - 🇨🇳 台湾节点
@@ -521,7 +522,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🚀 手动切换
-    filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
   - name: 📹 油管视频
     type: url-test
     url: http://www.youtube.com/
@@ -735,6 +735,24 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
       - 🚀 手动切换
+  - name: 💬 AI节点
+    type: url-test
+    url: https://gemini.google.com/
+    interval: 300
+    tolerance: 50
+    use:
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - byjoeycfnew
+      - am-cf-tunnel-sub
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+    filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
