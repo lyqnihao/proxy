@@ -492,7 +492,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 📲 电报消息
     type: select
     url: http://t.me/
-    interval: 1800
+    interval: 900
     tolerance: 250
     proxies:
       - 🔮 负载均衡
@@ -510,7 +510,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 💬 Ai平台
     type: select
     url: https://gemini.google.com/
-    interval: 1800
+    interval: 900
     tolerance: 350
     use:
       - ChromeGo_1
@@ -536,7 +536,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 📹 油管视频
     type: select
     url: http://www.youtube.com/
-    interval: 1800
+    interval: 900
     tolerance: 350
     proxies:
       - 🔮 负载均衡
