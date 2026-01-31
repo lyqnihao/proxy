@@ -355,9 +355,9 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 🚀 节点选择 # 第一个代理组的名称，会显示在客户端面板上
     type: select # 代理组的类型。select类型：提供一个节点列表供用户手动选择其中一个使用
     proxies: # 该代理组下包含的成员列表，可以是具体节点名，也可以是其他代理组的名称
+      - 🔮 负载均衡 # 子代理组（通常type为load-balance）
       - ♻️ 自动选择 # 子代理组（通常type为url-test或fallback）
       - 🔯 故障转移 # 子代理组（通常type为fallback）
-      - 🔮 负载均衡 # 子代理组（通常type为load-balance）
       - 🔮 CF自建 # 这是一个具体节点或子组的名称
       - 🇭🇰 香港节点 # 这是一个按地区归类的子代理组
       - 🇨🇳 台湾节点 # 
@@ -495,8 +495,8 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     interval: 300
     tolerance: 50
     proxies:
-      - 🔮 CF自建
       - 🔮 负载均衡
+      - 🔮 CF自建
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
@@ -512,24 +512,35 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     url: https://gemini.google.com/
     interval: 300
     tolerance: 50
+    use:
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - byjoeycfnew
+      - am-cf-tunnel-sub
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+    filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
     proxies:
-      - 💬 AI节点
-      - 🔮 CF自建
       - 🔮 负载均衡
+      - 🔮 CF自建
+      - ♻️ 自动选择
+      - 🚀 手动切换
       - 🇨🇳 台湾节点
       - 🇺🇲 美国节点
-      - 🚀 节点选择
-      - ♻️ 自动选择
       - 🇸🇬 狮城节点
-      - 🚀 手动切换
   - name: 📹 油管视频
     type: url-test
     url: http://www.youtube.com/
     interval: 300
     tolerance: 50
     proxies:
-      - 🔮 CF自建
       - 🔮 负载均衡
+      - 🔮 CF自建
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
@@ -542,8 +553,8 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 🎥 奈飞视频
     type: select
     proxies:
-      - 🔮 CF自建
       - 🔮 负载均衡
+      - 🔮 CF自建
       - 🎥 奈飞节点
       - ♻️ 自动选择
       - 🚀 节点选择
@@ -561,10 +572,10 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     interval: 300
     tolerance: 50
     proxies:
+      - 🔮 负载均衡
       - 🇨🇳 台湾节点
       - 🔮 CF自建
       - ♻️ 自动选择
-      - 🔮 负载均衡
       - 🚀 节点选择
       - 🚀 手动切换
       - DIRECT
@@ -577,10 +588,10 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 🌍 国外媒体
     type: select
     proxies:
+      - 🔮 负载均衡
       - 🔮 CF自建
       - ♻️ 自动选择
       - 🚀 节点选择
-      - 🔮 负载均衡
       - 🇭🇰 香港节点
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
@@ -735,24 +746,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
       - 🚀 手动切换
-  - name: 💬 AI节点
-    type: url-test
-    url: https://gemini.google.com/
-    interval: 300
-    tolerance: 50
-    use:
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-    filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
