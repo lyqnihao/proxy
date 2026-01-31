@@ -490,7 +490,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - edgetunnel-cmliu
     filter: .*
   - name: 📲 电报消息
-    type: url-test
+    type: select
     url: http://t.me/
     interval: 300
     tolerance: 50
@@ -534,7 +534,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🇺🇲 美国节点
       - 🇸🇬 狮城节点
   - name: 📹 油管视频
-    type: url-test
+    type: select
     url: http://www.youtube.com/
     interval: 300
     tolerance: 50
@@ -567,7 +567,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🚀 手动切换
       - DIRECT
   - name: 📺 巴哈姆特
-    type: url-test
+    type: select
     url: https://www.gamer.com.tw/ # 【关键】测试地址使用目标网站本身，能最精准地筛选出访问此网站最快的节点
     interval: 300
     tolerance: 50
