@@ -1,10 +1,15 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: rule
-log-level: info
-external-controller: 127.0.0.1:9090
-proxy-providers:
+# 第一部分：基础端口和模式设置
+port: 7890 # HTTP代理端口，供系统、浏览器等软件使用
+socks-port: 7891 # SOCKS5代理端口，供支持此协议的专用软件（如Telegram）使用
+allow-lan: true # 允许局域网连接，开启后同一网络下的其他设备可使用本机代理
+mode: rule # 规则模式，流量将根据下方rules规则列表进行智能分流（推荐）
+log-level: info # 日志级别，info记录常规运行信息，调试时可改为debug
+
+# 第二部分：外部控制
+external-controller: 127.0.0.1:9090 # 外部控制接口，用于连接网页面板（如访问 http://127.0.0.1:9090/ui）
+
+# 第三部分：代理源 (不同订阅提供者)
+proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动态加载和管理节点列表
   AA临时_1:
     type: http
     url: https://skr8oblwwy.chinat.eu.org/sub?uuid=a2a396c3-f40e-4dee-bdbb-b1201f12dc1c&host=danfeng.443888.xyz&path=/danfeng?ed=2560
@@ -31,19 +36,19 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-  未知-多国节点:
-    type: http
-    url: https://wpds.qzz.io/suiyuan
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/未知-多国节点.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
+  未知-多国节点: # 代理提供者的自定义名称，通常描述其节点特点（如地区、类型）
+    type: http # 代理提供者类型。选项：http（从订阅链接获取）、file（从本地文件加载）
+    url: https://wpds.qzz.io/suiyuan # 远程订阅链接地址，核心将从此链接获取节点信息
+    interval: 3600 # 自动更新订阅的间隔时间（秒）。3600秒=1小时
+    proxy: DIRECT # 拉取此订阅时使用的网络。选项：DIRECT（直连），或指向一个已定义代理（如：PROXY）
+    path: ./providers/未知-多国节点.yaml # 订阅内容在本地缓存的相对路径和文件名
+    health-check: # 【健康检查】配置段开始
+      enable: true # 是否启用健康检查。选项：true（启用）， false（禁用）
+      url: https://cp.cloudflare.com/generate_204 # 健康检查使用的测试地址，返回204状态码即视为连通
+      interval: 300 # 执行健康检查的间隔时间（秒）。300秒=5分钟
+    override: # 【覆盖】全局设置的参数段开始
+      skip-cert-verify: true # 是否跳过TLS证书验证。选项：true（跳过，不校验证书）， false（严格验证，更安全）
+      udp: true # 是否允许此订阅的节点转发UDP流量。选项：true（允许）， false（仅允许TCP）
   ChromeGo_1:
     type: http
     url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml
@@ -57,6 +62,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+	  additional-prefix: "[ChromeGo]" # 为从此订阅加载的所有节点名称前统一添加"[ChromeGo]"前缀，用于在列表中快速识别节点来源
   ChromeGo_2:
     type: http
     url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml
@@ -70,6 +76,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+	  additional-prefix: "[ChromeGo]" # 为从此订阅加载的所有节点名称前统一添加"[ChromeGo]"前缀，用于在列表中快速识别节点来源
   ChromeGo_3:
     type: http
     url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml
@@ -83,6 +90,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+	  additional-prefix: "[ChromeGo]" # 为从此订阅加载的所有节点名称前统一添加"[ChromeGo]"前缀，用于在列表中快速识别节点来源
   ChromeGo_4:
     type: http
     url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml
@@ -96,6 +104,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+	  additional-prefix: "[ChromeGo]" # 为从此订阅加载的所有节点名称前统一添加"[ChromeGo]"前缀，用于在列表中快速识别节点来源
   ChromeGo_5:
     type: http
     url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml
@@ -109,6 +118,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+	  additional-prefix: "[ChromeGo]" # 为从此订阅加载的所有节点名称前统一添加"[ChromeGo]"前缀，用于在列表中快速识别节点来源
   ChromeGo_6:
     type: http
     url: https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml
@@ -122,6 +132,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
+	  additional-prefix: "[ChromeGo]" # 为从此订阅加载的所有节点名称前统一添加"[ChromeGo]"前缀，用于在列表中快速识别节点来源
   资源分享:
     type: http
     url: https://rss.zyfx6.xyz/clash
@@ -317,24 +328,78 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-proxy-groups:
-  - name: 🚀 节点选择
-    type: select
-    proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🔮 负载均衡
-      - 🔮 CF自建
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
-      - 🚀 手动切换
-      - DIRECT
-  - name: 🚀 手动切换
-    type: select
+
+# 第四部分：代理节点列表
+proxies: # 【代理节点列表】开始，这里定义所有具体的单个服务器节点（如果未使用proxy-providers，节点需在此手动定义）
+- name: 旁路由_251 # 节点名称，可自定义，在客户端列表和代理组中显示。（如等级、地区、线路、编号）
+  type: socks5 # 节点协议类型。选项：ss（Shadowsocks）、vmess（V2Ray）、trojan、http(s)、socks5等
+  server: 192.168.10.251 # 服务器的域名或IP地址
+  port: 7893 # 服务器的连接端口
+  # username: “user123” # 【HTTP代理专用】认证用户名（如果需要）
+  # password: “pass123” # 【HTTP代理专用】认证密码（如果需要）
+  # 以下是可选的TLS相关字段（仅当 type: https 时可能需要）
+  # skip-cert-verify: true
+  # sni: proxy.example.com
+- name: 旁路由_252 # 节点名称，可自定义，在客户端列表和代理组中显示。（如等级、地区、线路、编号）
+  type: socks5 # 节点协议类型。选项：ss（Shadowsocks）、vmess（V2Ray）、trojan、http(s)、socks5等
+  server: 192.168.10.252 # 服务器的域名或IP地址
+  port: 7893 # 服务器的连接端口
+  # username: “user123” # 【HTTP代理专用】认证用户名（如果需要）
+  # password: “pass123” # 【HTTP代理专用】认证密码（如果需要）
+  # 以下是可选的TLS相关字段（仅当 type: https 时可能需要）
+  # skip-cert-verify: true
+  # sni: proxy.example.com
+
+# 第五部分：代理组
+proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组组织起来，并设置选择策略
+  - name: 🚀 节点选择 # 第一个代理组的名称，会显示在客户端面板上
+    type: select # 代理组的类型。select类型：提供一个节点列表供用户手动选择其中一个使用
+    proxies: # 该代理组下包含的成员列表，可以是具体节点名，也可以是其他代理组的名称
+      - ♻️ 自动选择 # 子代理组（通常type为url-test或fallback）
+      - 🔯 故障转移 # 子代理组（通常type为fallback）
+      - 🔮 负载均衡 # 子代理组（通常type为load-balance）
+      - 🔮 CF自建 # 这是一个具体节点或子组的名称
+      - 🇭🇰 香港节点 # 这是一个按地区归类的子代理组
+      - 🇨🇳 台湾节点 # 
+      - 🇸🇬 狮城节点 # 
+      - 🇯🇵 日本节点 # 
+      - 🇺🇲 美国节点 # 
+      - 🇰🇷 韩国节点 # 
+      - 🚀 手动切换 # 可能是一个包含所有具体节点的select组，供用户精确选择
+      - DIRECT # 直连，即不经过任何代理。这是Clash内置的特殊策略
+  - name: 🚀 手动切换 # 代理组名称，用户可在此组内手动选择一个节点使用
+    type: select # 代理组类型：手动选择模式
+    use: # 【使用】指令，用于从指定的proxy-providers（代理提供者）动态拉取节点作为本组成员
+      - AA临时_1 # 引用的代理提供者名称（即在proxy-providers:段中定义的“AA临时_1”订阅源）。本组将包含该订阅源下的所有节点。
+      - AA临时_2
+      - 未知-多国节点
+      - ChromeGo_1
+      - ChromeGo_2
+      - ChromeGo_3
+      - ChromeGo_4
+      - ChromeGo_5
+      - ChromeGo_6
+      - 资源分享
+      - NoMoreWalls
+      - 每日更新
+      - ZRF-周润发
+      - 未知-伊朗TG
+      - byjoeycfnew
+      - am-cf-tunnel-sub
+      - cloudflare-vless-trojan
+      - edtunnel-1g9
+      - edgetunnel-cmliu
+      - proxyqueen
+      - nodefree
+      - clashfree
+      - v2cross
+      - xConfig
+    filter: ".*" # 【过滤】规则，使用正则表达式匹配节点名称。`.*`表示匹配所有节点（即不过滤，全部使用）。
+  - name: ♻️ 自动选择 # 代理组名称，通常代表会自动选取最优节点的组
+    type: url-test # 代理组类型：通过测试URL的延迟和可用性，自动选择延迟最低的节点
+    url: http://www.gstatic.com/generate_204 # 用于延迟测试的网址。访问此地址若返回HTTP 204状态码，则视为节点可用并记录耗时
+    interval: 300 # 自动执行延迟测试的间隔时间（秒）。300秒=5分钟
+    tolerance: 50 # 容忍度（毫秒）。当新测出的最优节点比当前使用节点的延迟低超过此值时，才会切换。用于避免频繁切换。
     use:
       - AA临时_1
       - AA临时_2
@@ -361,39 +426,8 @@ proxy-groups:
       - v2cross
       - xConfig
     filter: .*
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
-    filter: .*
-  - name: 🔯 故障转移
-    type: fallback
+  - name: 🔯 故障转移 # 代理组名称，通常用于在主节点故障时自动切换到备用节点
+    type: fallback # 代理组类型：故障转移模式。按顺序使用组内节点，仅当当前节点不可用时才会切换到下一个
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -424,8 +458,9 @@ proxy-groups:
       - xConfig
     filter: .*
   - name: 🔮 负载均衡
-    type: load-balance
-    strategy: consistent-hashing
+    type: load-balance # 代理组类型：负载均衡模式。流量会按策略分发给组内多个节点，共同分担负载
+    strategy: consistent-hashing # 负载均衡策略：一致性哈希，散列。将同一目标（如相同IP或域名）的流量始终分配给同一节点，避免频繁切换导致连接中断。
+	# strategy: round-robin # 负载均衡另一策略：轮询。按顺序将新连接依次分配给组内每个节点，简单公平，但同一网站可能由不同节点处理。
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -486,6 +521,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🚀 手动切换
+	filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
   - name: 📹 油管视频
     type: url-test
     url: http://www.youtube.com/
@@ -520,7 +556,10 @@ proxy-groups:
       - 🚀 手动切换
       - DIRECT
   - name: 📺 巴哈姆特
-    type: select
+    type: url-test
+    url: https://www.gamer.com.tw/ # 【关键】测试地址使用目标网站本身，能最精准地筛选出访问此网站最快的节点
+    interval: 300
+    tolerance: 50
     proxies:
       - 🇨🇳 台湾节点
       - 🔮 CF自建
@@ -910,8 +949,10 @@ proxy-groups:
       - v2cross
       - xConfig
     filter: (NF|奈飞|解锁|Netflix|NETFLIX|Media)
-rules:
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+
+# 第六部分：规则
+rules: # 【分流规则】开始。按从上到下的顺序匹配，决定流量走向（走代理、直连或拒绝）
+  - RULE-SET,LocalAreaNetwork,DIRECT # 【规则集】语法。表示引用一个名为“LocalAreaNetwork”的预定义规则集，如果匹配（即流量属于局域网），则执行动作“DIRECT”（即直连，不代理）
   - RULE-SET,UnBan,🎯 全球直连
   - RULE-SET,BanAD,🛑 广告拦截
   - RULE-SET,BanProgramAD,🍃 应用净化
@@ -942,15 +983,17 @@ rules:
   - RULE-SET,ChinaDomain,🎯 全球直连
   - RULE-SET,ChinaCompanyIp,🎯 全球直连
   - RULE-SET,Download,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
-rule-providers:
-  LocalAreaNetwork:
-    type: http
-    behavior: classical
-    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0"
-    path: ./providers/7156953299935574564.yaml
-    interval: 86400
+  - GEOIP,CN,🎯 全球直连 # 【GEOIP规则】若流量的目标IP地址属于中国（CN），则交给“🎯 全球直连”组处理（通常为直连）
+  - MATCH,🐟 漏网之鱼 # 【MATCH规则】最终兜底规则。所有未被前面任何规则匹配的流量，全部交给“🐟 漏网之鱼”代理组处理
+
+# 第七部分：规则提供者
+rule-providers: # 【规则提供者】开始，用于从远程订阅链接动态加载和管理分流规则集
+  LocalAreaNetwork: # 规则集的自定义名称，与rules部分中“RULE-SET,LocalAreaNetwork”的引用名对应
+    type: http # 类型为http，表示通过HTTP/HTTPS链接获取规则集
+    behavior: classical # 规则集的行为模式。classical（经典模式）表示规则文件为纯文本列表（域名、IP等），按行匹配
+    url: "https://api.asailor.org/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0" # 远程规则集订阅链接地址（通常是经过封装的ACL4SSR等规则项目链接）
+    path: ./providers/7156953299935574564.yaml # 规则集在本地缓存的相对路径和文件名（通常由哈希值命名，避免冲突）
+    interval: 86400 # 自动更新规则集的间隔时间（秒）。86400秒 = 24小时
   UnBan:
     type: http
     behavior: classical
