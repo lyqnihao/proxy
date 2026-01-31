@@ -460,7 +460,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
   - name: 🔮 负载均衡
     type: load-balance # 代理组类型：负载均衡模式。流量会按策略分发给组内多个节点，共同分担负载
     strategy: consistent-hashing # 负载均衡策略：一致性哈希，散列。将同一目标（如相同IP或域名）的流量始终分配给同一节点，避免频繁切换导致连接中断。
-	# strategy: round-robin # 负载均衡另一策略：轮询。按顺序将新连接依次分配给组内每个节点，简单公平，但同一网站可能由不同节点处理。
+    # strategy: round-robin # 负载均衡另一策略：轮询。按顺序将新连接依次分配给组内每个节点，简单公平，但同一网站可能由不同节点处理。
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
