@@ -963,8 +963,8 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
 
 # 第六部分：规则
 rules: # 【分流规则】开始。按从上到下的顺序匹配，决定流量走向（走代理、直连或拒绝）
-  - RULE-SET,lyqnihao.dpdns.org,DIRECT # 自有域名直连规则
   - RULE-SET,LocalAreaNetwork,DIRECT # 【规则集】语法。表示引用一个名为“LocalAreaNetwork”的预定义规则集，如果匹配（即流量属于局域网），则执行动作“DIRECT”（即直连，不代理）
+  - RULE-SET,lyqnihao.dpdns.org,DIRECT # 自有域名直连规则
   - RULE-SET,UnBan,🎯 全球直连
   - RULE-SET,BanAD,🛑 广告拦截
   - RULE-SET,BanProgramAD,🍃 应用净化
