@@ -430,16 +430,48 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     if not url:
         return 1, f"[{name}] 错误: 无可用 URL"
     
-    # 删除旧文件（为了检测变更，需要先删除旧文件）
-    # 确保目录存在后再尝试删除文件
-    if os.path.exists(output_file_path):
-        os.remove(output_file_path)
+    # 下载到临时文件，避免破坏现有文件
+    import tempfile
+    with tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix='.yaml') as tmp_file:
+        temp_file_path = tmp_file.name
     
-    # 下载文件，传递订阅名称以便特殊处理
-    success, error = fetch_url(url, output_file_path, name)
+    success, error = fetch_url(url, temp_file_path, name)
     if not success:
-        # 下载失败
+        # 下载失败，删除临时文件，保留原文件不变
+        try:
+            os.remove(temp_file_path)
+        except Exception:
+            pass
         return 1, f"[{name}] 错误: {error}"
+    
+    # 验证临时文件大小（非空）
+    try:
+        file_size = os.path.getsize(temp_file_path)
+        if file_size == 0:
+            os.remove(temp_file_path)
+            return 1, f"[{name}] 错误: 下载的文件为空"
+        # 对于非v2cross订阅，检查最小大小（500字节）
+        if name != "v2cross" and file_size < 500:
+            os.remove(temp_file_path)
+            return 1, f"[{name}] 错误: 下载的文件太小（{file_size}字节）"
+    except Exception as e:
+        os.remove(temp_file_path)
+        return 1, f"[{name}] 错误: 无法验证文件大小: {e}"
+    
+    # 检查临时文件与现有文件是否相同
+    file_changed = True
+    if os.path.exists(output_file_path):
+        import filecmp
+        if filecmp.cmp(output_file_path, temp_file_path, shallow=False):
+            file_changed = False
+    
+    if file_changed:
+        # 替换原文件
+        os.replace(temp_file_path, output_file_path)
+    else:
+        # 内容相同，删除临时文件
+        os.remove(temp_file_path)
+        return 0, f"[{name}] 无变更"
     
     # 检查文件是否有变更（与上次提交比较）
     has_changes, err = git_add_file(output_file_path)
@@ -451,7 +483,7 @@ def update_subscription(config: dict) -> Tuple[int, str]:
         # 有变更 -> 提交成功
         return 0, f"[{name}] 已更新: {url}"
     else:
-        # 无变更 -> 文件内容与上次相同
+        # 无变更 -> 文件内容与上次相同（理论上不会发生，因为filecmp已检查）
         return 0, f"[{name}] 无变更"
 
 def main():
