@@ -198,6 +198,8 @@ Cloudflare自建汇聚订阅<br>
 | Sublink后端（歪兔）                     | [https://api.sublink.dev](https://api.sublink.dev/)          |
 | SoCloud 后端                            | [https://api.subcsub.com](https://api.subcsub.com/)          |
 
+- [各种配置模板](https://github.com/HenryChiao/MIHOMO_YAMLS)
+
 ## 4.2、UUID生成工具
 
 - 在线[生成 UUID ](https://www.v2fly.org/awesome/tools.html)的工具。<br>
