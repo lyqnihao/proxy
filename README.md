@@ -87,9 +87,8 @@ Cloudflare自建汇聚订阅<br>
   
   https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fssrsub%2Fssr%2Fmaster%2Fclash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online_Full.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true<br>
   
-- [无界探索](www.bsbb.cc)：TG [Channel:@vpnnodes](https://t.me/vpnnodes) | 每天到网站点击，等待10秒获取订阅地址<br>
-
-  https://www.bsbb.cc/clash/index.html<br>
+- ~~[无界探索](www.bsbb.cc)：TG [Channel:@vpnnodes](https://t.me/vpnnodes) | 每天到网站点击，等待10秒获取订阅地址<br>
+  https://www.bsbb.cc/clash/index.html<br>~~
 
 - [ZRF.ME 周润发](https://zrf.me/) | 科学公益站：TG [Channel:@tgq](https://d.zrf.me/tgq) | 永久订阅，有IP检查、[节点转订阅器](https://zrf.zrf.me/)、[订阅转换工具](https://sub.zrfme.com/)<br>
 
@@ -107,11 +106,11 @@ Cloudflare自建汇聚订阅<br>
   
   待验证是否永久<br>
   
-  短地址：https://v1.mk/aDLKAYK<br>
+  ~~短地址：https://v1.mk/aDLKAYK<br>~~
   
-  长地址：https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fcache.ravelloh.top%3Fuuid%3Db469e664-8ab6-6052-95cd-484d467e80cb&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true<br>
+  ~~长地址：https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fcache.ravelloh.top%3Fuuid%3Db469e664-8ab6-6052-95cd-484d467e80cb&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true<br>~~
   
-  纯节点：https://cache.ravelloh.top?uuid=b469e664-8ab6-6052-95cd-484d467e80cb<br>
+  ~~纯节点：https://cache.ravelloh.top?uuid=b469e664-8ab6-6052-95cd-484d467e80cb<br>~~
   
 - [富婆订阅](https://fpyjdy.zzong6599.workers.dev/)：本身订阅不稳定，但提供多订阅合集格式及多个永久订阅地址<br>
   
@@ -127,14 +126,14 @@ Cloudflare自建汇聚订阅<br>
   
 - 未知 | 伊朗TG[@AZARBAYJAB1](https://t.me/AZARBAYJAB1)<br>
   https://shz.al/25Ae<br>
+
+ - ~~[SSDXZ | 🚀 订阅管理面板](https://new.ssdxz.cn/)：<br>~~
+
+   ~~**⚡** 实时优选：https://new.ssdxz.cn/sub?format=clashp&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>~~
   
-- [SSDXZ | 🚀 订阅管理面板](https://new.ssdxz.cn/)：<br>
+   ~~🏆 每日精选 (Top20)：https://new.ssdxz.cn/sub?format=clashp&type=top20&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>~~
   
-  **⚡** 实时优选：https://new.ssdxz.cn/sub?format=clashp&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>
-  
-  🏆 每日精选 (Top20)：https://new.ssdxz.cn/sub?format=clashp&type=top20&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>
-  
-  🔥 全协议订阅：https://new.ssdxz.cn/sub?format=clashp&type=all&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>
+   ~~🔥 全协议订阅：https://new.ssdxz.cn/sub?format=clashp&type=all&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>~~
   
 - [DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词) | 每天到网站点击获取订阅地址<br>
   
@@ -144,7 +143,7 @@ Cloudflare自建汇聚订阅<br>
   
   https://zrf.zrf.me/sub?uuid=04c808e2-0b59-47b0-a54b-32fc7ef1c902&encryption=none&security=tls&sni=cf.cloudip.ggff.net&fp=random&insecure=0&allowInsecure=0&type=ws&host=cf.cloudip.ggff.net&path=pyip%3Dproxyip.cmliussss.net<br>
   
-  ***本网页整合很多免费订阅项目，来源复杂，更新周期不定，而且部分已经消失。*** <br>
+  ***本网页整合很多免费订阅项目，来源复杂，更新周期不定，而且部分可能已经消失。*** <br>
   
 
 # 三、一些自建项目
