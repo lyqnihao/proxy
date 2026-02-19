@@ -27,11 +27,11 @@ Cloudflare自建汇聚订阅<br>
 - Mihomo订阅链接：https://node.nodefree.me/2026/02/m20260219.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
-### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
+### [clashfree网站](https://clashgithub.com/) / ~~[GitHub](https://github.com/free-nodes/clashfree)~~：<br>
 类似nodefree，网站每4小时更新，动态日期更新地址。<br>
 - v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260219.txt<br>
 - clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260219.yml<br>
-- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260219.yml<br>
+- ~~GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260219.yml~~<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
 ### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>

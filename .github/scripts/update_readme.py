@@ -48,12 +48,13 @@ def main():
         # 基础占位符替换
         (r'\$YEAR\$MONTH\$DAY', date_str),              # $YEAR$MONTH$DAY -> YYYYMMDD
         (r'\$YEAR/\$MONTH', year_month),                # $YEAR/$MONTH -> YYYY/MM
-        
+
         # 各种网站的具体替换规则
-        # clashgithub.com 的日期格式
-        (r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', rf'\g<1>{date_str}\2'),
+        # clashgithub.com 的日期格式（新格式）
+        (r'(clashgithub\.com/wp-content/uploads/rss/)(clash)?(\d{8})(\.\w+)', rf'\g<1>{date_str}\4'),
+        # 旧的 GitHub raw 地址（保留用于向后兼容，但不再使用）
         (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash)(\d{8})(\.yml)', rf'\g<1>{date_str}\g<3>'),
-        
+
         # nodefree 的日期格式（通用方法，支持各种前缀）
         (r'(node\.nodefree\.me/)\d{4}/\d{2}/([a-zA-Z]*)\d{8}(\.txt|\.yaml)', rf'\g<1>{year_month}/\g<2>{date_str}\g<3>'),
     ]
@@ -136,10 +137,10 @@ def update_specific_area_only():
             line = re.sub(r'\$YEAR/\$MONTH/\d{8}', f"{year_month}/{date_str}", line)
             # 替换 /YYYY/MM/XXXXXXXX 格式
             line = re.sub(r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}", line)
-            # 替换 clashgithub.com 的日期格式
+            # 替换 clashgithub.com 的日期格式（新格式：YYYYMMDD.yml，无clash前缀）
             line = re.sub(
-                r'(clashgithub\.com/wp-content/uploads/rss/)\d{8}(\.txt|\.yml)', 
-                rf'\g<1>{date_str}\2', 
+                r'(clashgithub\.com/wp-content/uploads/rss/)(clash)?(\d{8})(\.\w+)',
+                rf'\g<1>{date_str}\4',
                 line
             )
             # 替换 raw.githubusercontent.com/clashfree 的日期格式
