@@ -467,10 +467,18 @@ def update_subscription(config: dict) -> Tuple[int, str]:
         import filecmp
         if filecmp.cmp(output_file_path, temp_file_path, shallow=False):
             file_changed = False
+            # 获取文件大小信息用于日志
+            try:
+                existing_size = os.path.getsize(output_file_path)
+                new_size = file_size
+                print(f"[{name}] 文件内容相同，大小: {existing_size} -> {new_size} 字节")
+            except Exception:
+                pass
     
     if file_changed:
         # 替换原文件
         os.replace(temp_file_path, output_file_path)
+        print(f"[{name}] 文件已替换（{file_size} 字节）")
     else:
         # 内容相同，删除临时文件
         os.remove(temp_file_path)
