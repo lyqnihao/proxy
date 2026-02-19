@@ -165,6 +165,9 @@ def fetch_url(url: str, output_file: str, subscription_name: str = "") -> Tuple[
                 continue
             return False, f"下载异常: {last_err}"
 
+    return False, "下载失败：未知错误"
+
+
 def git_has_changes(file_path: str) -> Tuple[bool, Optional[str]]:
     """
     检查文件是否有未暂存的变更
@@ -518,6 +521,16 @@ def main():
         if not subscriptions:
             print(f"订阅未找到: {target_name}")
             return 1
+    else:
+        # 支持排除特定订阅：如果设置了 EXCLUDE_SUBS 环境变量，排除逗号分隔的订阅列表
+        exclude_str = os.environ.get('EXCLUDE_SUBS')
+        if exclude_str:
+            exclude_list = [name.strip() for name in exclude_str.split(',') if name.strip()]
+            original_count = len(subscriptions)
+            subscriptions = [s for s in subscriptions if s.get('name') not in exclude_list]
+            excluded_count = original_count - len(subscriptions)
+            if excluded_count > 0:
+                print(f"已排除 {excluded_count} 个订阅: {', '.join(exclude_list)}")
     
     # 标志：是否有任何订阅更新失败
     has_error = False

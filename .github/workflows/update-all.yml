@@ -1,6 +1,10 @@
 # 工作流名称
 name: 合并更新
 
+# 版本：1.8
+# 修订说明：
+# - 添加排除订阅功能，支持通过EXCLUDE_SUBS环境变量临时跳过cmliu更新
+# - 修复文件更新逻辑，使用临时文件避免目标网址无内容时清空现有文件
 # 版本：1.7
 # 修订说明：
 # - 修复提交逻辑Python单行命令中的引号嵌套语法错误，确保每个订阅源都有独立的提交信息
@@ -171,6 +175,7 @@ jobs:
           YEAR: ${{ env.YEAR }}
           MONTH: ${{ env.MONTH }}
           DAY: ${{ env.DAY }}
+          EXCLUDE_SUBS: cmliu
         continue-on-error: true
       
       # 分别提交各个订阅的变更
@@ -273,6 +278,7 @@ jobs:
       # 提交cmliu变更
       - name: 提交cmliu变更
         id: commit_cmliu
+        if: false
         run: |
           # 获取cmliu的静态URL
           CMLIU_URL=$(jq -r '.[] | select(.name=="cmliu") | .url' .github/config/subscriptions.json)
@@ -326,7 +332,6 @@ jobs:
           env.no_changes_clashfree == 'false' ||
           env.no_changes_v2cross == 'false' ||
           env.no_changes_xconfig == 'false' ||
-          env.no_changes_cmliu == 'false' ||
           env.no_changes_proxyqueen == 'false' ||
           steps.commit_readme.outcome == 'success'
           )
@@ -351,7 +356,7 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.7
+            - 脚本版本: 1.8
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
