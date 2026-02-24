@@ -52,8 +52,8 @@ def main():
         # 各种网站的具体替换规则
         # clashgithub.com 的日期格式（新格式）
         (r'(clashgithub\.com/wp-content/uploads/rss/)(clash)?(\d{8})(\.\w+)', rf'\g<1>{date_str}\4'),
-        # 旧的 GitHub raw 地址（保留用于向后兼容，但不再使用）
-        (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash)(\d{8})(\.yml)', rf'\g<1>{date_str}\g<3>'),
+        # GitHub raw 地址（支持 main 和 master 分支）
+        (r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/(main|master)/clash)(\d{8})(\.yml)', rf'\g<1>{date_str}\g<4>'),
 
         # nodefree 的日期格式（通用方法，支持各种前缀）
         (r'(node\.nodefree\.me/)\d{4}/\d{2}/([a-zA-Z]*)\d{8}(\.txt|\.yaml)', rf'\g<1>{year_month}/\g<2>{date_str}\g<3>'),
@@ -143,10 +143,10 @@ def update_specific_area_only():
                 rf'\g<1>{date_str}\4',
                 line
             )
-            # 替换 raw.githubusercontent.com/clashfree 的日期格式
+            # 替换 raw.githubusercontent.com/clashfree 的日期格式（支持 main 和 master 分支）
             line = re.sub(
-                r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/main/clash)(\d{8})(\.yml)', 
-                rf'\g<1>{date_str}\g<3>', 
+                r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/(main|master)/clash)(\d{8})(\.yml)',
+                rf'\g<1>{date_str}\g<4}',
                 line
             )
             # 替换 v2clash.blog 的多种日期格式（仅在检测到新文章时更新）
