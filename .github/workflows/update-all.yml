@@ -134,7 +134,12 @@ jobs:
           
           # 将检测结果写入环境变量
           echo "HAS_V2CLASH_NEW=$HAS_V2CLASH_NEW" >> $GITHUB_ENV
-          export HAS_V2CLASH_NEW YEAR=${{ env.YEAR }} MONTH=${{ env.MONTH }} DAY=${{ env.DAY }} SPECIAL_UPDATE_MODE=specific_area
+          # 导出环境变量供 Python 脚本使用
+          export HAS_V2CLASH_NEW
+          export YEAR=${{ env.YEAR }}
+          export MONTH=${{ env.MONTH }}
+          export DAY=${{ env.DAY }}
+          export SPECIAL_UPDATE_MODE=specific_area
           # 运行更新 README 的脚本
           python .github/scripts/update_readme.py
           # 标记步骤完成
@@ -236,8 +241,8 @@ jobs:
       - name: 提交xConfig变更
         id: commit_xconfig
         run: |
-          # 获取xConfig的静态URL
-          XCONFIG_URL=$(jq -r '.[] | select(.name=="xConfig") | .url' .github/config/subscriptions.json)
+          # 生成xConfig的动态URL
+          XCONFIG_URL="https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v${YEAR}${MONTH}${DAY}2"
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
