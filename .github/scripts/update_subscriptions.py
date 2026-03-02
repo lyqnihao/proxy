@@ -275,6 +275,46 @@ def check_v2clash_new_post() -> bool:
         # 网络错误或超时时返回 False
         return False
 
+def check_clashfree_new_post() -> bool:
+    """
+    检查 clashgithub.com 是否有今天的新发布
+
+    工作原理：
+    1. 获取今天的日期（多种格式）
+    2. 访问 clashgithub.com 网站（首页）
+    3. 用 grep 搜索网页内容中是否包含今天的日期
+    4. 如果找到，说明有新文件发布
+
+    返回值：
+    - True: 有新发布
+    - False: 无新发布或网络错误
+    """
+    # 获取北京时间信息
+    time_info = get_beijing_time()
+    # 生成几种日期格式来匹配网页内容
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
+    today_alt = time_info['DATE']  # YYYY-MM-DD 格式
+    # 中文日期格式（如果网页使用中文）
+    today_cn = f"{time_info['YEAR']}年{time_info['MONTH']}月{time_info['DAY']}日"
+
+    try:
+        # 使用 bash 命令组合 curl 和 grep
+        result = subprocess.run(
+            [
+                "bash", "-c",  # 执行 bash 命令
+                # 下面是 bash 命令的组合：
+                # curl 获取网页，|（管道）传给 grep，grep 搜索日期字符串
+                f"curl -sL https://clashgithub.com/ 2>/dev/null | grep -qE '{today}|{today_alt}|{today_cn}'"
+            ],
+            capture_output=True,
+            timeout=15  # 15 秒超时（网络操作）
+        )
+        # 返回码为 0 表示 grep 找到了匹配的内容
+        return result.returncode == 0
+    except:
+        # 网络错误或超时时返回 False
+        return False
+
 def run_url_script(script: str) -> Tuple[bool, Optional[str]]:
     """
     执行脚本以生成 URL
@@ -421,14 +461,19 @@ def update_subscription(config: dict) -> Tuple[int, str]:
         if not success:
             # 脚本执行失败
             return 1, f"[{name}] 错误: {url}"
-    
+
     # 检查前置条件（某些订阅需要满足特定条件才能下载）
     if config.get('requires_check') == 'v2clash_blog':
         # 前置条件: v2clash.blog 必须有新文章
         if not check_v2clash_new_post():
             # v2clash 无新文章，跳过这个订阅（不是错误，只是条件不满足）
             return 0, f"[{name}] 跳过: v2clash.blog 无新发布"
-    
+    elif config.get('requires_check') == 'clashfree':
+        # 前置条件: clashgithub.com 必须有新发布
+        if not check_clashfree_new_post():
+            # clashfree 无新发布，跳过这个订阅（不是错误，只是条件不满足）
+            return 0, f"[{name}] 跳过: clashgithub.com 无新发布"
+
     # 检查 URL 是否有效
     if not url:
         return 1, f"[{name}] 错误: 无可用 URL"

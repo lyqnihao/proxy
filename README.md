@@ -67,7 +67,7 @@ Cloudflare自建汇聚订阅<br>
 
   [🌥本频道专属永久订阅节点](https://t.me/ZDYZ2/5459)：https://sublink.634676.xyz/sub<br>
   
-- [SCP || 每日免费节点 | [[Channel:@ShareCentrePro](https://t.me/ShareCentrePro)]<br>
+- [SCP || 每日免费节点 | [Channel:@ShareCentrePro](https://t.me/ShareCentrePro)]<br>
 
   [SCP官方订阅](https://t.me/ShareCentrePro/4123)：https://sub.scpnb.top/base64<br>
   
@@ -105,13 +105,7 @@ Cloudflare自建汇聚订阅<br>
 - [橘子电报频道](https://juzi.tg18.cc/)：到TG[@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
   
   待验证是否永久<br>
-  
-  ~~短地址：https://v1.mk/aDLKAYK<br>~~
-  
-  ~~长地址：https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fcache.ravelloh.top%3Fuuid%3Db469e664-8ab6-6052-95cd-484d467e80cb&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true<br>~~
-  
-  ~~纯节点：https://cache.ravelloh.top?uuid=b469e664-8ab6-6052-95cd-484d467e80cb<br>~~
-  
+    
 - [富婆订阅](https://fpyjdy.zzong6599.workers.dev/)：本身订阅不稳定，但提供多订阅合集格式及多个永久订阅地址<br>
   
   <br>
@@ -127,13 +121,6 @@ Cloudflare自建汇聚订阅<br>
 - 未知 | 伊朗TG[@AZARBAYJAB1](https://t.me/AZARBAYJAB1)<br>
   https://shz.al/25Ae<br>
 
- - ~~[SSDXZ | 🚀 订阅管理面板](https://new.ssdxz.cn/)：<br>~~
-
-   ~~**⚡** 实时优选：https://new.ssdxz.cn/sub?format=clashp&type=hour&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>~~
-  
-   ~~🏆 每日精选 (Top20)：https://new.ssdxz.cn/sub?format=clashp&type=top20&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>~~
-  
-   ~~🔥 全协议订阅：https://new.ssdxz.cn/sub?format=clashp&type=all&uuid=29ff2954-dfea-4d20-8089-059cfa861453&host=2new.ssdxz.cn&path=%2F%3Fed%3D2560&testurl=https%3A%2F%2Fcp.cloudflare.com%2Fgenerate_204<br>~~
   
 - [DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词) | 每天到网站点击获取订阅地址<br>
   
