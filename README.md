@@ -29,15 +29,15 @@ Cloudflare自建汇聚订阅<br>
 
 ### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 类似nodefree，网站每4小时更新，动态日期更新地址。<br>
-- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260303.txt<br>
-- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260303.yml<br>
-- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260303.yml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260302.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260302.yml<br>
+- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260302.yml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
 ### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://v2clash.blog/Link/20260225-v2ray.txt<br>
-- clash订阅链接：https://v2clash.blog/Link/20260225-clash.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20260302-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20260302-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
 ### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
