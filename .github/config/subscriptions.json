@@ -45,8 +45,8 @@
     "name": "xConfig",
     "dir": "xConfig",
     "output_file": "output.yaml",
-    "url_type": "static",
-    "url": "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt",
-    "description": "XConfig - Xray 代理抓取器"
+    "url_type": "dynamic_date",
+    "url_template": "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v{YEAR}{MONTH}{DAY}2",
+    "description": "XConfig - V2Ray免费节点每日更新"
   }
 ]

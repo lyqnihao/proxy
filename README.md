@@ -40,18 +40,17 @@ Cloudflare自建汇聚订阅<br>
 - clash订阅链接：https://v2clash.blog/Link/20260302-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
-### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
-网站每天动态地址，每6小时更新一次。<br>
-- 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
-- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml<br>
-
 ### [xConfig](https://xconfig.pages.dev/index2)：<br>
 整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js<br>
-- 当前跟踪目标：https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt<br>
+- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202603032<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
 ## 2.2、未跟踪、或需每日手动点击更新地址的订阅
+
+- [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+网站每天动态地址，每6小时更新一次。<br>
+- 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
 - [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]<br>
 

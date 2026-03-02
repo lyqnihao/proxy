@@ -50,6 +50,8 @@ def main():
         (r'\$YEAR/\$MONTH', year_month),                # $YEAR/$MONTH -> YYYY/MM
 
         # 各种网站的具体替换规则
+        # xConfig 的日期格式（v+YYYYMMDD+2）
+        (r'(raw\.githubusercontent\.com/free-nodes/v2rayfree/main/v)(\d{9})', r'\g<1>' + date_str + '2'),
         # clashgithub.com 的日期格式（新格式）
         (r'(clashgithub\.com/wp-content/uploads/rss/)(clash)?(\d{8})(\.\w+)', rf'\g<1>{date_str}\4'),
         # GitHub raw 地址（支持 main 和 master 分支）

@@ -1,6 +1,10 @@
 # 工作流名称
 name: 合并更新
 
+# 版本：1.9
+# 修订说明：
+# - v2cross的Github地址固定，去掉这个更新任务
+# - xConfig变更为追随aiboboxx/v2rayfree的动态地址
 # 版本：1.8
 # 修订说明：
 # - clashfree的Github地址变化，换网站的订阅地址作为更新源
@@ -228,30 +232,6 @@ jobs:
           fi
         continue-on-error: true
 
-      # 提交v2cross变更
-      - name: 提交v2cross变更
-        id: commit_v2cross
-        run: |
-          # 获取v2cross的动态URL（通过执行脚本）
-          V2CROSS_URL=$(python -c "import subprocess; import json; result = subprocess.run(['python', 'v2cross/update.py'], capture_output=True, text=True); print(result.stdout.strip() if result.returncode == 0 else [sub['url_script'] for sub in json.load(open('.github/config/subscriptions.json')) if sub['name'] == 'v2cross'][0])")
-          # 获取当前北京时间
-          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
-          # 先将文件添加到暂存区
-          git add v2cross/output.yaml
-          # 检查是否有变更
-          if git diff --staged --quiet; then
-            # 没有变更，记录环境变量
-            echo "no_changes_v2cross=true" >> $GITHUB_ENV
-          else
-            # 有变更，配置 Git 用户信息并提交
-            git config --global user.name "GitHub Actions"
-            git config --global user.email "actions@github.com"
-            git commit -m "v2cross_${CURRENT_DATE} - Update from $V2CROSS_URL (at https://v2cross.com/1884.html)"
-            # 记录环境变量
-            echo "no_changes_v2cross=false" >> $GITHUB_ENV
-          fi
-        continue-on-error: true
-
       # 提交xConfig变更
       - name: 提交xConfig变更
         id: commit_xconfig
@@ -331,7 +311,6 @@ jobs:
           !cancelled() && (
           env.no_changes_nodefree == 'false' ||
           env.no_changes_clashfree == 'false' ||
-          env.no_changes_v2cross == 'false' ||
           env.no_changes_xconfig == 'false' ||
           env.no_changes_proxyqueen == 'false' ||
           steps.commit_readme.outcome == 'success'
@@ -357,7 +336,7 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.8
+            - 脚本版本: 1.9
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
