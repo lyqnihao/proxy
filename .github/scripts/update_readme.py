@@ -50,8 +50,8 @@ def main():
         (r'\$YEAR/\$MONTH', year_month),                # $YEAR/$MONTH -> YYYY/MM
 
         # 各种网站的具体替换规则
-        # xConfig 的日期格式（v+YYYYMMDD+2）
-        (r'(raw\.githubusercontent\.com/free-nodes/v2rayfree/main/v)(\d{9})', r'\g<1>' + date_str + '2'),
+        # xConfig 的日期格式（v+YYYYMMDD+2），支持 free-nodes 和 aiboboxx 仓库
+        (r'(raw\.githubusercontent\.com/(free-nodes|aiboboxx)/v2rayfree/main/v)(\d{9})', r'\g<1>' + date_str + '2'),
         # clashgithub.com 的日期格式（新格式）
         (r'(clashgithub\.com/wp-content/uploads/rss/)(clash)?(\d{8})(\.\w+)', rf'\g<1>{date_str}\4'),
         # GitHub raw 地址（支持 main 和 master 分支）
@@ -149,6 +149,12 @@ def update_specific_area_only():
             line = re.sub(
                 r'(raw\.githubusercontent\.com/free-nodes/clashfree/refs/heads/(main|master)/clash)(\d{8})(\.yml)',
                 r'\g<1>' + date_str + r'\4',
+                line
+            )
+            # 替换 xConfig 的日期格式（v+YYYYMMDD+2），支持 free-nodes 和 aiboboxx 仓库
+            line = re.sub(
+                r'(raw\.githubusercontent\.com/(free-nodes|aiboboxx)/v2rayfree/main/v)(\d{9})',
+                r'\g<1>' + date_str + '2',
                 line
             )
             # 替换 v2clash.blog 的多种日期格式（仅在检测到新文章时更新）
