@@ -294,6 +294,8 @@ def check_clashfree_new_post() -> bool:
     # 生成几种日期格式来匹配网页内容
     today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
     today_alt = time_info['DATE']  # YYYY-MM-DD 格式
+    # YYYY.MM.DD 格式（clashfree 使用）
+    today_dot = f"{time_info['YEAR']}.{time_info['MONTH']}.{time_info['DAY']}"
     # 中文日期格式（如果网页使用中文）
     today_cn = f"{time_info['YEAR']}年{time_info['MONTH']}月{time_info['DAY']}日"
 
@@ -304,7 +306,7 @@ def check_clashfree_new_post() -> bool:
                 "bash", "-c",  # 执行 bash 命令
                 # 下面是 bash 命令的组合：
                 # curl 获取网页，|（管道）传给 grep，grep 搜索日期字符串
-                f"curl -sL https://clashgithub.com/ 2>/dev/null | grep -qE '{today}|{today_alt}|{today_cn}'"
+                f"curl -sL https://clashgithub.com/ 2>/dev/null | grep -qE '{today}|{today_alt}|{today_dot}|{today_cn}'"
             ],
             capture_output=True,
             timeout=15  # 15 秒超时（网络操作）
