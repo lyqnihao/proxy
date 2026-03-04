@@ -5,24 +5,34 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 未知 SS-01 | free-nodes, server: 93.174.164.89, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 0bc801a7cac5f134}
-  - {name: 🇬🇧 GB SS-02 | free-nodes, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: 未知 SS-03 | free-nodes, server: 147.45.135.39, port: 4205, type: ss, cipher: chacha20-ietf-poly1305, password: c0Zy18nHmjcUfome1fYPhA}
-  - {name: 🇷🇺 RU SS-04 | free-nodes, server: 212.192.14.226, port: 41968, type: ss, cipher: chacha20-ietf-poly1305, password: gC7aQv9DsENaVfKzTPDKYV}
-  - {name: 未知 SS-05 | free-nodes, server: 195.93.253.240, port: 14130, type: ss, cipher: chacha20-ietf-poly1305, password: lPUORlzWO34p128hso3Abd}
-  - {name: 🇺🇸 US SS-06 | free-nodes, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==}
-  - {name: 未知 SS-07 | free-nodes, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==}
-  - {name: 🇩🇪 DE SS-08 | free-nodes, server: 144.217.7.33, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==}
-  - {name: 🇩🇪 DE SS-09 | free-nodes, server: 57.128.214.100, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==}
-  - {name: 🇯🇵 JP SS-10 | free-nodes, server: 103.106.228.175, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
-  - {name: 未知 SS-11 | free-nodes, server: 38.180.161.123, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN}
-  - {name: 未知 SS-12 | free-nodes, server: 38.180.2.141, port: 5499, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV}
-  - {name: 未知 SS-13 | free-nodes, server: 154.223.16.41, port: 4444, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM}
-  - {name: 🇸🇬 SG TROJAN-14 | free-nodes, server: ubu.okaoclax.me, port: 443, type: trojan, password: 13c169be-8592-4eaa-94cb-69c859e7d987, sni: ubu.okaoclax.me, network: ws, ws-opts: {path: /trojan-ws, headers: {Host: ubu.okaoclax.me}}}
-  - {name: 🇯🇵 JP TROJAN-15 | free-nodes, server: 160.16.106.99, port: 2001, type: trojan, password: 262f1d150049457ac1d6e66b020fa980, sni: www.nintendogames.net, skip-cert-verify: false}
-  - {name: 🇺🇸 US TROJAN-16 | free-nodes, server: 160.16.124.17, port: 4920, type: trojan, password: 262f1d150049457ac1d6e66b020fa980, sni: www.nintendogames.net}
-  - {name: 🇬🇧 GB TROJAN-17 | free-nodes, server: 194.150.166.151, port: 52047, type: trojan, password: zp630tdUuD, sni: aws.amazon.com, skip-cert-verify: true}
-  - {name: 未知 SS-121 | free-nodes, server: 127.0.0.1, port: 80, type: ss, cipher: aes-128-gcm, password: 6601fb90e9b3}
+  - {name: 未知 SS-01 | free-nodes, server: 89.223.88.33, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 7c31a67b41b18c26}
+  - {name: 未知 SS-02 | free-nodes, server: 93.174.164.89, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 0bc801a7cac5f134}
+  - {name: 未知 SS-03 | free-nodes, server: 203.202.232.78, port: 60299, type: ss, cipher: chacha20-ietf-poly1305, password: AVLbEUEtBD59FsRqcNyEib}
+  - {name: 未知 SS-04 | free-nodes, server: 5.181.2.76, port: 36608, type: ss, cipher: chacha20-ietf-poly1305, password: JOZ5Mb3nJCmmoKhd8Cc9aC}
+  - {name: 未知 SS-05 | free-nodes, server: 154.46.31.106, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: QFWzCw2uX9B9i6qAYeFBIE}
+  - {name: 未知 SS-06 | free-nodes, server: 45.80.231.75, port: 31019, type: ss, cipher: chacha20-ietf-poly1305, password: XN6Xf0ZqwDeFrt39TQraen}
+  - {name: 未知 SS-07 | free-nodes, server: 147.45.135.39, port: 4205, type: ss, cipher: chacha20-ietf-poly1305, password: c0Zy18nHmjcUfome1fYPhA}
+  - {name: 🇷🇺 RU SS-08 | free-nodes, server: 212.192.14.226, port: 41968, type: ss, cipher: chacha20-ietf-poly1305, password: gC7aQv9DsENaVfKzTPDKYV}
+  - {name: 🇺🇸 US SS-09 | free-nodes, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
+  - {name: 🇨🇳 TW SS-10 | free-nodes, server: download.riferoser.icu, port: 56594, type: ss, cipher: chacha20-ietf-poly1305, password: mzeMYBJYp4Bo7nA1qYLvv7QG73igtAA85nt4pr8A9ntx2qhDfYgRtiJ7iH7VrcneQKNmtvpbsvvFKPaUATYELi18iH56Ttr4}
+  - {name: 未知 SS-11 | free-nodes, server: 82.38.31.35, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 未知 SS-12 | free-nodes, server: 178.17.61.67, port: 5790, type: ss, cipher: chacha20-ietf-poly1305, password: qS3skwmolrQ70q842irQD0}
+  - {name: 🇺🇸 US SS-13 | free-nodes, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==}
+  - {name: 🇩🇪 DE SS-14 | free-nodes, server: 57.128.214.100, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==}
+  - {name: 🇸🇬 SG SS-15 | free-nodes, server: 194.233.94.119, port: 80, type: ss, cipher: aes-256-gcm, password: 8t2xeemUtyui4zAv}
+  - {name: 🇩🇪 DE SS-16 | free-nodes, server: 2.58.81.221, port: 80, type: ss, cipher: aes-256-gcm, password: 9dQS3geeylyrRth9}
+  - {name: 未知 SS-17 | free-nodes, server: 38.180.197.41, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
+  - {name: 🇯🇵 JP SS-18 | free-nodes, server: 103.106.228.175, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
+  - {name: 未知 SS-19 | free-nodes, server: 38.180.161.123, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN}
+  - {name: 未知 SS-20 | free-nodes, server: 38.180.2.141, port: 5499, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV}
+  - {name: 未知 SS-21 | free-nodes, server: 154.223.16.41, port: 4444, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM}
+  - {name: 🇬🇧 GB SS-22 | free-nodes, server: 149.102.149.207, port: 443, type: ss, cipher: aes-256-gcm, password: umWwoQJEJGf74SLe}
+  - {name: 🇭🇰 HK TROJAN-23 | free-nodes, server: 188.116.22.217, port: 2083, type: trojan, password: 0zmdDXd0Qt5ff_7Qg67R-Rtq4Tmt4c, sni: xo.e0f.cx, skip-cert-verify: false, network: ws, ws-opts: {path: /trojan-ws, headers: {Host: xo.e0f.cx}}}
+  - {name: 🇸🇬 SG TROJAN-24 | free-nodes, server: ubu.okaoclax.me, port: 443, type: trojan, password: 13c169be-8592-4eaa-94cb-69c859e7d987, sni: ubu.okaoclax.me, network: ws, ws-opts: {path: /trojan-ws, headers: {Host: ubu.okaoclax.me}}}
+  - {name: 🇸🇬 SG TROJAN-25 | free-nodes, server: 153.121.65.107, port: 3419, type: trojan, password: 262f1d150049457ac1d6e66b020fa980, sni: www.nintendogames.net}
+  - {name: 🇺🇸 US TROJAN-26 | free-nodes, server: 160.16.72.33, port: 4920, type: trojan, password: 262f1d150049457ac1d6e66b020fa980, sni: www.nintendogames.net}
+  - {name: 🇺🇸 US TROJAN-27 | free-nodes, server: 5.34.222.4, port: 43074, type: trojan, password: 347ca311-8fc2-499c-8fe1-bd0ecb50f1b3, sni: iepl.jpz2.cat.bilibili.com, skip-cert-verify: true}
+  - {name: TR TROJAN-28 | free-nodes, server: 18.183.167.108, port: 331, type: trojan, password: f7dbed8b1ca85124e793ba6c0bcfd0db, sni: www.nintendogames.net, skip-cert-verify: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -36,23 +46,33 @@ proxy-groups:
     type: select
     proxies:
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -60,23 +80,33 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 📹 油管视频
     type: select
     proxies:
@@ -98,46 +128,66 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 🤖 OpenAi
     type: select
     proxies:
@@ -152,46 +202,66 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -199,23 +269,33 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -239,38 +319,50 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 未知 SS-01 | free-nodes
-      - 🇬🇧 GB SS-02 | free-nodes
+      - 未知 SS-02 | free-nodes
       - 未知 SS-03 | free-nodes
-      - 🇷🇺 RU SS-04 | free-nodes
+      - 未知 SS-04 | free-nodes
       - 未知 SS-05 | free-nodes
-      - 🇺🇸 US SS-06 | free-nodes
+      - 未知 SS-06 | free-nodes
       - 未知 SS-07 | free-nodes
-      - 🇩🇪 DE SS-08 | free-nodes
-      - 🇩🇪 DE SS-09 | free-nodes
-      - 🇯🇵 JP SS-10 | free-nodes
+      - 🇷🇺 RU SS-08 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇨🇳 TW SS-10 | free-nodes
       - 未知 SS-11 | free-nodes
       - 未知 SS-12 | free-nodes
-      - 未知 SS-13 | free-nodes
-      - 🇸🇬 SG TROJAN-14 | free-nodes
-      - 🇯🇵 JP TROJAN-15 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
-      - 🇬🇧 GB TROJAN-17 | free-nodes
-      - 未知 SS-121 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇩🇪 DE SS-14 | free-nodes
+      - 🇸🇬 SG SS-15 | free-nodes
+      - 🇩🇪 DE SS-16 | free-nodes
+      - 未知 SS-17 | free-nodes
+      - 🇯🇵 JP SS-18 | free-nodes
+      - 未知 SS-19 | free-nodes
+      - 未知 SS-20 | free-nodes
+      - 未知 SS-21 | free-nodes
+      - 🇬🇧 GB SS-22 | free-nodes
+      - 🇭🇰 HK TROJAN-23 | free-nodes
+      - 🇸🇬 SG TROJAN-24 | free-nodes
+      - 🇸🇬 SG TROJAN-25 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
+      - TR TROJAN-28 | free-nodes
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
+      - 🇭🇰 HK TROJAN-23 | free-nodes
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
     proxies:
-      - 🇺🇸 US SS-06 | free-nodes
-      - 🇺🇸 US TROJAN-16 | free-nodes
+      - 🇺🇸 US SS-09 | free-nodes
+      - 🇺🇸 US SS-13 | free-nodes
+      - 🇺🇸 US TROJAN-26 | free-nodes
+      - 🇺🇸 US TROJAN-27 | free-nodes
 rules:
   - PROCESS-NAME,cfnat-android-arm64,🎯 全球直连
   - PROCESS-NAME,cfnat-darwin-amd64,🎯 全球直连
