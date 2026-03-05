@@ -22,22 +22,22 @@ Cloudflare自建汇聚订阅<br>
 
 ### [nodefree](https://nodefree.me/)：<br>
 原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
-- v2ray订阅链接：https://node.nodefree.me/2026/03/20260305.txt<br>
-- Clash订阅链接：https://node.nodefree.me/2026/03/20260305.yaml<br>
-- Mihomo订阅链接：https://node.nodefree.me/2026/03/m20260305.yaml<br>
+- v2ray订阅链接：https://node.nodefree.me/2026/03/20260306.txt<br>
+- Clash订阅链接：https://node.nodefree.me/2026/03/20260306.yaml<br>
+- Mihomo订阅链接：https://node.nodefree.me/2026/03/m20260306.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
 ### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 类似nodefree，网站每4小时更新，动态日期更新地址。<br>
-- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260305.txt<br>
-- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260305.yml<br>
-- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260305.yml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260306.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260306.yml<br>
+- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260306.yml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
 ### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://v2clash.blog/Link/20260304-v2ray.txt<br>
-- clash订阅链接：https://v2clash.blog/Link/20260304-clash.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20260306-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20260306-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
 ### [xConfig](https://xconfig.pages.dev/index2)：<br>
