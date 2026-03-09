@@ -130,7 +130,7 @@ def update_specific_area_only():
     
     for line in lines:
         # 只更新包含特定关键词的行
-        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash']):
+        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree']):
             # 应用日期替换
             original_line = line
             # 替换 $YEAR$MONTH$DAY 格式
