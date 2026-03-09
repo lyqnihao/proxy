@@ -1,3 +1,6 @@
+# 版本：2.0
+# 修订原因：
+# - v2cross现在只用于获取动态URL更新README.md，不再下载和更新文件
 # 版本：1.4
 # 修订原因：
 # - 同步改进的文件大小验证方法，使用500字节作为阈值
@@ -12,8 +15,8 @@
 # 修订原因：
 # - 修订bug
 # 版本：1.0
-# 这是一个用于每天自动更新 v2cross 订阅文件的 GitHub Actions 工作流。
-# 功能包括：从 订阅URL 读取内容、Python 脚本仅用于获取目标网址和网址内容、内容检查、提交更改和邮件通知。
+# 这是一个用于获取 v2cross 动态订阅地址的 GitHub Actions 工作流。
+# 功能包括：通过 Python 脚本获取动态 URL，用于更新 README.md。
 
 # GitHub Actions 工作流完整修正版
 name: Update v2cross
@@ -90,7 +93,7 @@ jobs:
           fi
 
       # --------------------------
-      # 步骤6：脚本状态检查（保持原样）
+      # 步骤6：脚本状态检查
       # --------------------------      
       - name: 检查脚本状态
         id: check_script
@@ -100,107 +103,15 @@ jobs:
             echo "error_type=脚本运行失败" >> $GITHUB_OUTPUT
           else
             echo "send_email=false" >> $GITHUB_OUTPUT
+            echo "✓ v2cross URL获取成功: ${{ env.DYNAMIC_URL }}"
           fi
 
       # --------------------------
-      # 步骤7：创建存储目录（保持原样）
-      # --------------------------
-      - name: Create v2cross directory
-        run: mkdir -p v2cross
-
-      # --------------------------
-      # 步骤8：下载并检查内容（关键修改点）
-      # --------------------------      
-      - name: 下载并检查内容
-        id: download_content
-        run: |
-          if [ "${{ steps.run_script.outputs.script_status }}" == "success" ]; then
-            echo "开始下载内容..."
-            
-            # 使用动态URL下载内容到临时文件
-            if curl -L -H "Cache-Control: no-cache" -o temp_content.txt "${{ env.DYNAMIC_URL }}"; then
-              # 检查临时文件是否存在且非空
-              if [ -s temp_content.txt ]; then
-                # 检查文件大小是否符合要求（大于500字节）
-                FILE_SIZE=$(stat -c %s temp_content.txt)
-                if [ "$FILE_SIZE" -ge 500 ]; then
-                  echo "内容下载成功，文件大小为 $FILE_SIZE 字节"
-                  
-                  # 将内容写入最终文件
-                  cat temp_content.txt > v2cross/output.yaml
-                  
-                  # 清理临时文件
-                  rm temp_content.txt
-                  
-                  # 将文件添加到git暂存区
-                  git add v2cross/output.yaml
-                  
-                  echo "download_status=success" >> $GITHUB_OUTPUT
-                else
-                  echo "文件太小（$FILE_SIZE 字节），可能不是有效内容"
-                  echo "download_status=failure" >> $GITHUB_OUTPUT
-                  rm temp_content.txt
-                  exit 1
-                fi
-              else
-                echo "下载的文件为空"
-                echo "download_status=failure" >> $GITHUB_OUTPUT
-                rm temp_content.txt
-                exit 1
-              fi
-            else
-              echo "curl命令执行失败"
-              echo "download_status=failure" >> $GITHUB_OUTPUT
-              exit 1
-            fi
-          else
-            echo "跳过下载，因为脚本执行失败"
-            echo "download_status=skipped" >> $GITHUB_OUTPUT
-          fi
-
-      # --------------------------
-      # 步骤9：检测文件变更（关键逻辑）
-      # --------------------------
-      - name: 检测文件变更
-        id: check-changes
-        run: |
-          # 显示详细变更状态（调试用）
-          git status --porcelain
-          
-          # 核心检测逻辑：比对暂存区与仓库差异
-          if git diff --staged --quiet; then
-            # 无变化时设置标记
-            echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
-            echo "文件未变化"
-          else
-            # 检测到变化时设置标记
-            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
-            echo "检测到变更"
-          fi
-
-      # --------------------------
-      # 步骤10：提交变更（条件执行）
-      # --------------------------
-      - name: 提交变更
-        # 仅当检测到变化时执行
-        if: steps.check-changes.outputs.HAS_CHANGES == 'true'
-        run: |
-          # 配置git用户信息（必需字段）
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          
-          # 提交信息包含北京时间戳
-          git commit -m "v2cross_${{ env.CURRENT_DATE }} - Update from ${{ env.DYNAMIC_URL }} (at https://v2cross.com/1884.html)"
-          
-          # 推送到远程仓库（使用GITHUB_TOKEN自动鉴权）
-          git push
-
-      # --------------------------
-      # 步骤11：异常通知（综合判断）
+      # 步骤7：异常通知（脚本失败时发送邮件）
       # --------------------------
       - name: Notify on failure
-        # 触发条件：任何失败/下载错误/无内容变化
-        if: ${{ failure() || steps.download_content.outputs.download_status == 'failure' || steps.check_script.outputs.send_email == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
+        # 触发条件：脚本运行失败
+        if: failure() || steps.check_script.outputs.send_email == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           # SMTP服务器配置（163邮箱示例）
@@ -211,16 +122,16 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           
           # 邮件主题（含时间戳）
-          subject: "v2cross更新出错 ${{ env.CURRENT_DATE }}"
+          subject: "v2cross获取URL出错 ${{ env.CURRENT_DATE }}"
           
           # 邮件正文模板（使用管道符保持格式）
           body: |
             详情报告：
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 1.4
-            - 订阅URL: ${{ env.DYNAMIC_URL }} from https://v2cross.com/1884.html
+            - 脚本版本: 2.0
+            - 功能: 仅获取动态URL用于更新README.md
             - 日志链接: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            - 错误类型: ${{ steps.download_content.outputs.download_status == 'failure' && '下载失败' || steps.check_script.outputs.send_email == 'true' && '脚本运行失败' || steps.check-changes.outputs.HAS_CHANGES == 'false' && '内容未变' || '其他错误' }}
+            - 错误类型: ${{ steps.check_script.outputs.error_type }}
 
           # 收件人配置
           to: lyqnihao@163.com

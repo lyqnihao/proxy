@@ -486,6 +486,19 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     if not urls or not any(urls):
         return 1, f"[{name}] 错误: 无可用 URL"
     
+    # url_only 模式：只输出 URL，不下载和更新文件
+    if config.get('url_only'):
+        # 直接使用第一个 URL（或脚本生成的 URL）
+        success_url = urls[0]
+        # 输出 URL 到环境变量供 README 更新使用
+        output_file = os.getenv('GITHUB_OUTPUT')
+        if output_file:
+            url_var_name = f"{name.upper()}_URL"
+            with open(output_file, 'a') as f:
+                f.write(f"{url_var_name}={success_url}\n")
+        print(f"[{name}] URL获取成功: {success_url} (仅用于README更新)")
+        return 0, f"[{name}] URL已获取: {success_url}"
+    
     # 多地址故障转移：按顺序尝试每个地址
     import tempfile
     success_url = None
