@@ -50,7 +50,10 @@ Cloudflare自建汇聚订阅<br>
 
 - [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 网站每天动态地址，每6小时更新一次。<br>
-- 订阅地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+
+  每日动态地址：https://9527521.xyz/pubconfig/nFX1fG3uJwKYmMPy<br>
+
+  GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
 - [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]<br>
 

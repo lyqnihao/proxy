@@ -13,6 +13,25 @@ import re       # 正则表达式库（用于查找和替换日期模式）
 import os       # 操作系统接口
 import sys      # 系统特定参数和函数
 
+def fetch_v2cross_dynamic_url():
+    """获取 v2cross 的动态订阅地址"""
+    try:
+        result = subprocess.run(
+            ["python", "v2cross/update.py"],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        if result.returncode == 0:
+            url = result.stdout.strip()
+            if url.startswith('http'):
+                print(f"✓ 获取到 v2cross 动态地址: {url}")
+                return url
+        return None
+    except Exception as e:
+        print(f"获取 v2cross 动态地址失败: {e}")
+        return None
+
 def main():
     """主函数 - 执行 README 日期更新"""
     # README 文件路径
@@ -78,6 +97,14 @@ def main():
         # v2clash 无新文章，不更新 v2clash 相关的 URL
         print('跳过 v2clash 替换（未检测到新帖）')
 
+    # 获取 v2cross 动态地址
+    v2cross_url = fetch_v2cross_dynamic_url()
+    if v2cross_url:
+        # 添加 v2cross 动态地址替换规则
+        # 匹配 9527521.xyz 开头的地址并替换
+        v2cross_pattern = r'(https://9527521\.xyz/pubconfig/)[^\s<>]+'
+        replacements.append((v2cross_pattern, v2cross_url))
+
 
 
     # 应用所有替换规则
@@ -115,7 +142,7 @@ def update_specific_area_only():
     
     date_str = f"{year}{month}{day}"
     year_month = f"{year}/{month}"
-    
+
     # 检查是否需要包含 v2clash 的替换
     has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
     if has_v2:
@@ -123,14 +150,17 @@ def update_specific_area_only():
     else:
         print('跳过 v2clash 替换（未检测到新帖）')
 
+    # 获取 v2cross 动态地址
+    v2cross_url = fetch_v2cross_dynamic_url()
+
     # 只更新包含特定关键词的行，避免修改其他内容
     lines = content.split('\n')
     updated_lines = []
     updated = False
-    
+
     for line in lines:
         # 只更新包含特定关键词的行
-        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree']):
+        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree', 'v2cross']):
             # 应用日期替换
             original_line = line
             # 替换 $YEAR$MONTH$DAY 格式
@@ -189,6 +219,14 @@ def update_specific_area_only():
                 line
             )
             
+            # 替换 v2cross 动态地址
+            if v2cross_url:
+                line = re.sub(
+                    r'(https://9527521\.xyz/pubconfig/)[^\s<>]+',
+                    v2cross_url,
+                    line
+                )
+
             if line != original_line:
                 updated = True
                 

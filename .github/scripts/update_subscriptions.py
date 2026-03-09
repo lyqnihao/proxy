@@ -575,6 +575,12 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     
     if has_changes:
         # 有变更 -> 提交成功
+        # 将实际使用的URL写入环境变量文件，供workflow使用
+        output_file = os.getenv('GITHUB_OUTPUT')
+        if output_file:
+            url_var_name = f"{name.upper()}_URL"
+            with open(output_file, 'a') as f:
+                f.write(f"{url_var_name}={success_url}\n")
         return 0, f"[{name}] 已更新: {success_url}"
     else:
         # 无变更 -> 文件内容与上次相同（理论上不会发生，因为filecmp已检查）
