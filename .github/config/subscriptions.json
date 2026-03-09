@@ -20,9 +20,11 @@
     "dir": "clashfree",
     "output_file": "output.yaml",
     "url_type": "dynamic_date",
-    "url_template": "https://clashgithub.com/wp-content/uploads/rss/{YEAR}{MONTH}{DAY}.yml",
-    "requires_check": "clashfree",
-    "description": "免费节点 Clash 订阅"
+    "url_templates": [
+      "https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash{YEAR}{MONTH}{DAY}.yml",
+      "https://clashgithub.com/wp-content/uploads/rss/{YEAR}{MONTH}{DAY}.yml"
+    ],
+    "description": "免费节点 Clash 订阅 - 多地址故障转移"
   },
   {
     "name": "proxyqueen",

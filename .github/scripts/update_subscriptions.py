@@ -449,20 +449,26 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     # 获取当前时间信息（用于动态日期 URL）
     time_info = get_time_info()
     
-    # 根据 URL 类型确定要下载的 URL
-    url = None
+    # 根据 URL 类型确定要下载的 URL 列表
+    urls = []
     if config.get('url_type') == 'static':
         # 类型 1: 静态 URL（固定不变）
-        url = config.get('url')
+        urls = [config.get('url')]
     elif config.get('url_type') == 'dynamic_date':
-        # 类型 2: 动态日期 URL（包含日期变量，需要替换）
-        url = expand_url(config.get('url_template'), time_info)
+        # 类型 2: 动态日期 URL（支持单地址或多地址故障转移）
+        if config.get('url_templates'):
+            # 多地址模式：按顺序尝试每个地址
+            urls = [expand_url(tpl, time_info) for tpl in config.get('url_templates')]
+        else:
+            # 单地址模式（向后兼容）
+            urls = [expand_url(config.get('url_template'), time_info)]
     elif config.get('url_type') == 'dynamic_script':
         # 类型 3: 脚本生成 URL（需要执行脚本获取）
         success, url = run_url_script(config.get('url_script'))
         if not success:
             # 脚本执行失败
             return 1, f"[{name}] 错误: {url}"
+        urls = [url]
 
     # 检查前置条件（某些订阅需要满足特定条件才能下载）
     if config.get('requires_check') == 'v2clash_blog':
@@ -476,37 +482,67 @@ def update_subscription(config: dict) -> Tuple[int, str]:
             # clashfree 无新发布，跳过这个订阅（不是错误，只是条件不满足）
             return 0, f"[{name}] 跳过: clashgithub.com 无新发布"
 
-    # 检查 URL 是否有效
-    if not url:
+    # 检查 URL 列表是否有效
+    if not urls or not any(urls):
         return 1, f"[{name}] 错误: 无可用 URL"
     
-    # 下载到临时文件，避免破坏现有文件
+    # 多地址故障转移：按顺序尝试每个地址
     import tempfile
-    with tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix='.yaml') as tmp_file:
-        temp_file_path = tmp_file.name
+    success_url = None
+    temp_file_path = None
+    file_size = 0
     
-    success, error = fetch_url(url, temp_file_path, name)
-    if not success:
-        # 下载失败，删除临时文件，保留原文件不变
+    for url in urls:
+        if not url:
+            continue
+        
+        print(f"[{name}] 尝试地址: {url}")
+        
+        # 下载到临时文件
+        with tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix='.yaml') as tmp_file:
+            temp_file_path = tmp_file.name
+        
+        success, error = fetch_url(url, temp_file_path, name)
+        if not success:
+            print(f"[{name}] 地址失败: {error}")
+            try:
+                os.remove(temp_file_path)
+            except Exception:
+                pass
+            temp_file_path = None
+            continue
+        
+        # 验证临时文件大小（非空且足够大）
         try:
-            os.remove(temp_file_path)
-        except Exception:
-            pass
-        return 1, f"[{name}] 错误: {error}"
+            file_size = os.path.getsize(temp_file_path)
+            if file_size == 0:
+                print(f"[{name}] 地址失败: 下载的文件为空")
+                os.remove(temp_file_path)
+                temp_file_path = None
+                continue
+            # 对于非v2cross订阅，检查最小大小（500字节）
+            if name != "v2cross" and file_size < 500:
+                print(f"[{name}] 地址失败: 下载的文件太小（{file_size}字节）")
+                os.remove(temp_file_path)
+                temp_file_path = None
+                continue
+        except Exception as e:
+            print(f"[{name}] 地址失败: 无法验证文件大小: {e}")
+            try:
+                os.remove(temp_file_path)
+            except Exception:
+                pass
+            temp_file_path = None
+            continue
+        
+        # 成功！记录成功的 URL 并跳出循环
+        success_url = url
+        print(f"[{name}] ✓ 地址成功: {url} ({file_size} 字节)")
+        break
     
-    # 验证临时文件大小（非空）
-    try:
-        file_size = os.path.getsize(temp_file_path)
-        if file_size == 0:
-            os.remove(temp_file_path)
-            return 1, f"[{name}] 错误: 下载的文件为空"
-        # 对于非v2cross订阅，检查最小大小（500字节）
-        if name != "v2cross" and file_size < 500:
-            os.remove(temp_file_path)
-            return 1, f"[{name}] 错误: 下载的文件太小（{file_size}字节）"
-    except Exception as e:
-        os.remove(temp_file_path)
-        return 1, f"[{name}] 错误: 无法验证文件大小: {e}"
+    # 检查是否所有地址都失败
+    if not success_url:
+        return 1, f"[{name}] 错误: 所有地址均不可用"
     
     # 检查临时文件与现有文件是否相同
     file_changed = True
@@ -539,7 +575,7 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     
     if has_changes:
         # 有变更 -> 提交成功
-        return 0, f"[{name}] 已更新: {url}"
+        return 0, f"[{name}] 已更新: {success_url}"
     else:
         # 无变更 -> 文件内容与上次相同（理论上不会发生，因为filecmp已检查）
         return 0, f"[{name}] 无变更"
