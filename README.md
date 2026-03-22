@@ -106,7 +106,7 @@ Cloudflare自建汇聚订阅<br>
 
 - [橘子电报频道](https://juzi.tg18.cc/)：到TG[@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
   
-  待验证是否永久<br>
+  <br>
     
 - [富婆订阅](https://fpyjdy.zzong6599.workers.dev/)：本身订阅不稳定，但提供多订阅合集格式及多个永久订阅地址<br>
   
@@ -124,7 +124,7 @@ Cloudflare自建汇聚订阅<br>
   https://shz.al/25Ae<br>
 
   
-- [DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词) | 每天到网站点击获取订阅地址<br>
+- ~~[DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词) | 每天到网站点击获取订阅地址~~<br>
   
   <br>
   
