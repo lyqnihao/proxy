@@ -13,35 +13,41 @@ external-controller: 127.0.0.1:9090
 
 # 代理节点列表 (静态定义)
 proxies:
+  - name: 旁路由_6
+    输入: socks5
+    server: 192.168.10.6
+    port: 7893
   - name: 旁路由_251
-    type: socks5
+    输入: socks5
     server: 192.168.10.251
     port: 7893
   - name: 旁路由_252
-    type: socks5
+    输入: socks5
     server: 192.168.10.252
     port: 7893
 
 # 代理组
 proxy-groups:
   - name: PROXY # 默认代理组 (所有规则将指向此组)
-    type: select
+    输入: select
     proxies:
       - 🚀 自动选择
       - DIRECT
+      - 旁路由_6
       - 旁路由_251
       - 旁路由_252
 
   - name: 🚀 自动选择 # 自动测试并选择最佳节点
-    type: url-test
+    输入: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 旁路由_6
       - 旁路由_251
       - 旁路由_252
 
   - name: 🛑 广告拦截
-    type: select
+    输入: select
     proxies:
       - REJECT
       - DIRECT
