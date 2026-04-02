@@ -102,7 +102,7 @@ Cloudflare自建汇聚订阅<br>
 
   https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg<br>
 
-  附带 克拉云：https://upld.zone.id/uploads/q9iq9e5iq/clash.txt<br>
+  ~~附带 克拉云：https://upld.zone.id/uploads/q9iq9e5iq/clash.txt~~<br>
 
 - [橘子电报频道](https://juzi.tg18.cc/)：到TG[@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
   
