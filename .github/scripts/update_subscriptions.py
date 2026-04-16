@@ -377,6 +377,125 @@ def expand_url(template: str, time_info: dict) -> str:
         DAY=time_info['DAY']       # 替换 {DAY}
     )
 
+def sync_git_repo(git_url: str, target_dir: str, subscription_name: str = "") -> Tuple[bool, Optional[str], bool]:
+    """
+    从 GitHub 仓库同步文件到本地目录
+
+    工作流程：
+    1. 克隆远程仓库到临时目录
+    2. 遍历源仓库中的文件
+    3. 对于每个文件：只有当源文件存在且有效（大小 > 0）时才复制到目标位置
+    4. 如果源文件不存在或为空，保留本地现有文件
+    5. 清理临时目录
+
+    参数：
+    - git_url: Git 仓库地址
+    - target_dir: 本地目标目录
+    - subscription_name: 订阅名称，用于日志输出
+
+    返回值：
+    - (True, None, has_changes): 同步成功，has_changes 表示是否有变更
+    - (False, 错误信息, False): 同步失败
+    """
+    import shutil
+    import tempfile
+
+    temp_clone_dir = None
+    has_changes = False
+
+    try:
+        # 1. 创建临时目录用于克隆
+        temp_clone_dir = tempfile.mkdtemp(prefix='git_sync_')
+        print(f"[{subscription_name}] 克隆仓库到临时目录...")
+
+        # 2. 使用 git clone（浅克隆，depth=1）
+        clone_cmd = ["git", "clone", "--depth=1", git_url, temp_clone_dir]
+        result = subprocess.run(clone_cmd, capture_output=True, text=True, timeout=60)
+
+        if result.returncode != 0:
+            stderr = (result.stderr or "").strip()
+            return False, f"克隆失败: {stderr[:300]}", False
+
+        print(f"[{subscription_name}] 克隆成功")
+
+        # 3. 确保目标目录存在
+        os.makedirs(target_dir, exist_ok=True)
+
+        # 4. 遍历源仓库中的所有文件
+        for root, dirs, files in os.walk(temp_clone_dir):
+            # 跳过 .git 目录
+            if '.git' in dirs:
+                dirs.remove('.git')
+
+            for filename in files:
+                # 跳过 .git 目录下的文件
+                if '.git' in root:
+                    continue
+
+                # 获取源文件完整路径
+                src_file = os.path.join(root, filename)
+
+                # 检查源文件是否有效（大小 > 0）
+                try:
+                    src_size = os.path.getsize(src_file)
+                    if src_size == 0:
+                        print(f"[{subscription_name}] 跳过空文件: {filename}")
+                        continue
+                except Exception as e:
+                    print(f"[{subscription_name}] 无法获取文件大小: {filename}, {e}")
+                    continue
+
+                # 计算相对路径
+                rel_path = os.path.relpath(src_file, temp_clone_dir)
+                # 获取目标文件完整路径
+                dst_file = os.path.join(target_dir, rel_path)
+
+                # 确保目标文件的目录存在
+                dst_dir = os.path.dirname(dst_file)
+                if dst_dir:
+                    os.makedirs(dst_dir, exist_ok=True)
+
+                # 5. 检查是否需要复制
+                # 如果目标文件已存在且内容相同，则跳过
+                should_copy = True
+                if os.path.exists(dst_file):
+                    try:
+                        import filecmp
+                        if filecmp.cmp(src_file, dst_file, shallow=False):
+                            should_copy = False
+                            print(f"[{subscription_name}] 文件相同，跳过: {rel_path}")
+                    except Exception:
+                        # 比较失败，假设需要复制
+                        pass
+
+                if should_copy:
+                    # 复制文件
+                    shutil.copy2(src_file, dst_file)
+                    print(f"[{subscription_name}] 已更新: {rel_path} ({src_size} 字节)")
+                    has_changes = True
+
+        # 6. 清理临时目录
+        try:
+            shutil.rmtree(temp_clone_dir)
+        except Exception as e:
+            print(f"[{subscription_name}] 清理临时目录失败: {e}")
+
+        return True, None, has_changes
+
+    except subprocess.TimeoutExpired:
+        return False, "克隆超时", False
+    except Exception as e:
+        return False, f"同步异常: {str(e)[:300]}", False
+    finally:
+        # 确保临时目录被清理
+        if temp_clone_dir and os.path.exists(temp_clone_dir):
+            try:
+                import shutil
+                shutil.rmtree(temp_clone_dir)
+            except Exception:
+                pass
+
+
 def get_time_info() -> dict:
     """
     获取时间信息，优先使用环境变量（由 GitHub Actions 设置），否则计算系统时间
@@ -485,6 +604,30 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     # 检查 URL 列表是否有效
     if not urls or not any(urls):
         return 1, f"[{name}] 错误: 无可用 URL"
+
+    # git_sync 模式：从 GitHub 仓库同步文件
+    if config.get('url_type') == 'git_sync':
+        git_url = urls[0]
+        directory = config.get('dir')
+
+        print(f"[{name}] 开始同步 Git 仓库...")
+        success, error, has_changes = sync_git_repo(git_url, directory, name)
+
+        if not success:
+            return 1, f"[{name}] 错误: {error}"
+
+        if has_changes:
+            # 检查 git 变更
+            # 先将目录添加到暂存区（递归添加目录中的所有文件）
+            subprocess.run(["git", "add", directory], check=False)
+            has_git_changes, err = git_has_changes(directory)
+            if err:
+                return 1, f"[{name}] Git错误: {err}"
+            if has_git_changes:
+                return 0, f"[{name}] 已更新"
+        else:
+            print(f"[{name}] 无变更")
+        return 0, f"[{name}] 同步完成"
     
     # url_only 模式：只输出 URL，不下载和更新文件
     if config.get('url_only'):
