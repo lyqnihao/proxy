@@ -64,15 +64,15 @@ jobs:
     steps:
       # 检出代码库
       - name: 检出代码库
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       # 设置 Python 环境
       - name: 设置 Python 环境
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.8'
+          python-version: '3.12'
       
       # 安装 Python 依赖
       - name: 安装 Python 依赖
