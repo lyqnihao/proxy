@@ -554,20 +554,45 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     name = config.get('name')                    # 订阅名称（如 'cmliu'）
     directory = config.get('dir')                # 存储目录（如 'cmliu'）
     output_file_name = config.get('output_file')  # 输出文件名（如 'target.yaml'）
-    output_file_path = os.path.join(directory, output_file_name)  # 完整路径
-    
+
     # 创建存储目录（如果不存在）
     # exist_ok=True 表示目录已存在时不报错
     os.makedirs(directory, exist_ok=True)
-    
+
+    # git_sync 模式：从 GitHub 仓库同步文件（需要提前处理，避免 output_file_path 问题）
+    if config.get('url_type') == 'git_sync':
+        git_url = config.get('url')
+
+        print(f"[{name}] 开始同步 Git 仓库...")
+        success, error, has_changes = sync_git_repo(git_url, directory, name)
+
+        if not success:
+            return 1, f"[{name}] 错误: {error}"
+
+        if has_changes:
+            # 检查 git 变更
+            # 先将目录添加到暂存区（递归添加目录中的所有文件）
+            subprocess.run(["git", "add", directory], check=False)
+            has_git_changes, err = git_has_changes(directory)
+            if err:
+                return 1, f"[{name}] Git错误: {err}"
+            if has_git_changes:
+                return 0, f"[{name}] 已更新"
+        else:
+            print(f"[{name}] 无变更")
+        return 0, f"[{name}] 同步完成"
+
+    # 普通订阅类型：构建输出文件路径
+    output_file_path = os.path.join(directory, output_file_name)  # 完整路径
+
     # 确保输出文件存在，如果不存在则创建一个空文件
     if not os.path.exists(output_file_path):
         with open(output_file_path, 'w') as f:
             pass  # 创建空文件
-    
+
     # 获取当前时间信息（用于动态日期 URL）
     time_info = get_time_info()
-    
+
     # 根据 URL 类型确定要下载的 URL 列表
     urls = []
     if config.get('url_type') == 'static':
@@ -604,30 +629,6 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     # 检查 URL 列表是否有效
     if not urls or not any(urls):
         return 1, f"[{name}] 错误: 无可用 URL"
-
-    # git_sync 模式：从 GitHub 仓库同步文件
-    if config.get('url_type') == 'git_sync':
-        git_url = urls[0]
-        directory = config.get('dir')
-
-        print(f"[{name}] 开始同步 Git 仓库...")
-        success, error, has_changes = sync_git_repo(git_url, directory, name)
-
-        if not success:
-            return 1, f"[{name}] 错误: {error}"
-
-        if has_changes:
-            # 检查 git 变更
-            # 先将目录添加到暂存区（递归添加目录中的所有文件）
-            subprocess.run(["git", "add", directory], check=False)
-            has_git_changes, err = git_has_changes(directory)
-            if err:
-                return 1, f"[{name}] Git错误: {err}"
-            if has_git_changes:
-                return 0, f"[{name}] 已更新"
-        else:
-            print(f"[{name}] 无变更")
-        return 0, f"[{name}] 同步完成"
     
     # url_only 模式：只输出 URL，不下载和更新文件
     if config.get('url_only'):
