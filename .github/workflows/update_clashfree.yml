@@ -36,7 +36,7 @@ jobs:
       # 步骤1：检出代码库（关键基础步骤）
       # --------------------------
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # 获取完整提交历史（避免浅克隆导致文件比对异常）
           fetch-depth: 0  
