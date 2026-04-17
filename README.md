@@ -55,7 +55,7 @@ Cloudflare自建汇聚订阅<br>
 
   GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
-- [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]<br>
+- [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]：延时比较大，但无限流量，网速也很好，部分节点支持AI。<br>
 
   [第一组](https://github.com/bannedbook/fanqiang/releases)：其实用第一条就可以了。目前YouTube和各AI都可以用，建议负载均衡。<br>
 
@@ -94,15 +94,13 @@ Cloudflare自建汇聚订阅<br>
 
 - [ZRF.ME 周润发](https://zrf.me/) | 科学公益站：TG [Channel:@tgq](https://d.zrf.me/tgq) | 永久订阅，有IP检查、[节点转订阅器](https://zrf.zrf.me/)、[订阅转换工具](https://sub.zrfme.com/)<br>
 
-  Vless 公益订阅：https://lsmoo.pages.dev/lsm/15235ce9-4cd2-4483-b6b6-7fc4a3f44735<br>
+  ~~Vless 公益订阅：https://lsmoo.pages.dev/lsm/15235ce9-4cd2-4483-b6b6-7fc4a3f44735~~<br>
 
   yaml格式的订阅：https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml<br>
 
 - [裤佬️](https://jsnzkpg.github.io/)：TG[@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅<br>
 
   https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg<br>
-
-  ~~附带 克拉云：https://upld.zone.id/uploads/q9iq9e5iq/clash.txt~~<br>
 
 - [橘子电报频道](https://juzi.tg18.cc/)：到TG[@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
   
@@ -124,7 +122,7 @@ Cloudflare自建汇聚订阅<br>
   https://shz.al/25Ae<br>
 
   
-- ~~[DanFeng 公益代理](https://snippet.danfeng.site/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词) | 每天到网站点击获取订阅地址~~<br>
+- [DanFeng 公益代理](https://sniweb.danfeng.eu.org/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
   
   <br>
   
