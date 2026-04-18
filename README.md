@@ -19,6 +19,9 @@
 Cloudflare自建汇聚订阅<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
 
+### [DanFeng 公益代理](https://sniweb.danfeng.eu.org/)：<br>
+[TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
+- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml<br>
 
 ### [nodefree](https://nodefree.me/)：<br>
 原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
@@ -87,22 +90,19 @@ Cloudflare自建汇聚订阅<br>
 
   https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml<br>
   
-  https://subapi.cmliussss.net/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fssrsub%2Fssr%2Fmaster%2Fclash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online_Full.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true<br>
-  
 - [无界探索](<https://www.bsbb.cc>)：TG [Channel:@vpnnodes](https://t.me/vpnnodes) | 每天到网站点击，等待10秒获取订阅地址<br>
+
   <https://www.bsbb.cc/api/sub.php><br>
 
-- [ZRF.ME 周润发](https://zrf.me/) | 科学公益站：TG [Channel:@tgq](https://d.zrf.me/tgq) | 永久订阅，有IP检查、[节点转订阅器](https://zrf.zrf.me/)、[订阅转换工具](https://sub.zrfme.com/)<br>
-
-  ~~Vless 公益订阅：https://lsmoo.pages.dev/lsm/15235ce9-4cd2-4483-b6b6-7fc4a3f44735~~<br>
+- [ZRF.ME 周润发](https://zrf.me/) | 科学公益站：TG[Channel:@tgq](https://d.zrf.me/tgq) | [Github](https://github.com/shaoyouvip/free) | 永久订阅，有IP检查、[节点转订阅器](https://zrf.zrf.me/)、[订阅转换工具](https://sub.zrfme.com/)<br>
 
   yaml格式的订阅：https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml<br>
 
-- [裤佬️](https://jsnzkpg.github.io/)：TG[@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅<br>
+- [裤佬️](https://jsnzkpg.github.io/)：TG[Channel:@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅<br>
 
   https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg<br>
 
-- [橘子电报频道](https://juzi.tg18.cc/)：到TG[@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
+- [橘子电报频道](https://juzi.tg18.cc/)：到TG[Channel:@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
   
   <br>
     
@@ -119,11 +119,7 @@ Cloudflare自建汇聚订阅<br>
   https://wpds.qzz.io/suiyuan<br>
   
 - 未知 | 伊朗TG[@AZARBAYJAB1](https://t.me/AZARBAYJAB1)<br>
-  https://shz.al/25Ae<br>
 
-  
-- [DanFeng 公益代理](https://sniweb.danfeng.eu.org/)：TG[@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
-  
   <br>
   
 - [手搓VLESS节点生成器](https://ip.cloudip.ggff.net/)：[Github](https://github.com/gslege/CloudflareIP) | 生成一组VLESS节点，可借助[节点转订阅器](https://zrf.zrf.me/)转为订阅地址<br>

@@ -1,6 +1,9 @@
 # 工作流名称
 name: 合并更新
 
+# 版本：2.1
+# 修订说明：
+# - 添加 danfeng 订阅（DanFeng 公益代理）
 # 版本：2.0
 # 修订说明：
 # - 添加 fgrjk 订阅（锋哥影视 Git 仓库同步）
@@ -340,6 +343,34 @@ jobs:
           fi
         continue-on-error: true
 
+      # 提交danfeng变更
+      - name: 提交danfeng变更
+        id: commit_danfeng
+        run: |
+          # 使用脚本输出的实际URL
+          DANFENG_URL="${{ steps.update.outputs.DANFENG_URL }}"
+          # 如果脚本没有输出URL，使用默认值
+          if [ -z "$DANFENG_URL" ]; then
+            DANFENG_URL="https://sniweb.danfeng.eu.org/"
+          fi
+          # 获取当前北京时间
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将文件添加到暂存区
+          git add DanFeng/output.yaml
+          # 检查是否有变更
+          if git diff --staged --quiet; then
+            # 没有变更，记录环境变量
+            echo "no_changes_danfeng=true" >> $GITHUB_ENV
+          else
+            # 有变更，配置 Git 用户信息并提交
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "danfeng_${CURRENT_DATE} - Update from https://sniweb.danfeng.eu.org/"
+            # 记录环境变量
+            echo "no_changes_danfeng=false" >> $GITHUB_ENV
+          fi
+        continue-on-error: true
+
       # 推送所有变更
       - name: 推送变更到远程仓库
         if: |
@@ -349,6 +380,7 @@ jobs:
           env.no_changes_xconfig == 'false' ||
           env.no_changes_proxyqueen == 'false' ||
           env.no_changes_fgrjk == 'false' ||
+          env.no_changes_danfeng == 'false' ||
           steps.commit_readme.outcome == 'success'
           )
         run: |
@@ -372,7 +404,7 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 2.0
+            - 脚本版本: 2.1
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
