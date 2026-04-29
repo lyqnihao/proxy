@@ -25,28 +25,28 @@ Cloudflare自建汇聚订阅<br>
 
 ### [nodefree](https://nodefree.me/)：<br>
 原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
-- v2ray订阅链接：https://node.nodefree.me/2026/04/20260429.txt<br>
-- Clash订阅链接：https://node.nodefree.me/2026/04/20260429.yaml<br>
-- Mihomo订阅链接：https://node.nodefree.me/2026/04/m20260429.yaml<br>
+- v2ray订阅链接：https://node.nodefree.me/2026/04/20260430.txt<br>
+- Clash订阅链接：https://node.nodefree.me/2026/04/20260430.yaml<br>
+- Mihomo订阅链接：https://node.nodefree.me/2026/04/m20260430.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
 ### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 类似nodefree，网站每4小时更新，动态日期更新地址。<br>
-- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260429.txt<br>
-- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260429.yml<br>
-- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260429.yml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260430.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260430.yml<br>
+- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260430.yml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
 ### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://v2clash.blog/Link/20260429-v2ray.txt<br>
-- clash订阅链接：https://v2clash.blog/Link/20260429-clash.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20260430-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20260430-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
 ### [xConfig](https://xconfig.pages.dev/index2)：<br>
 整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js<br>
-- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202604292<br>
+- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202604302<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
 ## 2.2、未跟踪、或需每日手动点击更新地址的订阅
