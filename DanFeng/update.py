@@ -14,13 +14,12 @@ def fetch_page_content(url: str) -> tuple:
     """获取网页内容"""
     try:
         result = subprocess.run(
-            ["powershell", "-Command",
-             f"(Invoke-WebRequest -Uri '{url}' -UseBasicParsing).Content"],
+            ["curl", "-s", "-L", "-A", "Mozilla/5.0", url],
             capture_output=True,
             text=True,
             timeout=30
         )
-        if result.returncode == 0:
+        if result.returncode == 0 and result.stdout:
             return True, result.stdout
         return False, ""
     except Exception as e:
