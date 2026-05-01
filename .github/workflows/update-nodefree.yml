@@ -137,8 +137,8 @@ jobs:
       - name: Send email on no changes or failure
         # 如果工作流失败、FETCH_ERROR 为 true 或 HAS_CHANGES 为 false，则执行此步骤
         if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
-        # 使用 dawidd6/action-send-mail@v3 动作发送邮件
-        uses: dawidd6/action-send-mail@v3
+        # 使用 dawidd6/action-send-mail@v17 动作发送邮件
+        uses: dawidd6/action-send-mail@v17
         with:
           # 163 邮箱的 SMTP 服务器地址
           server_address: smtp.163.com

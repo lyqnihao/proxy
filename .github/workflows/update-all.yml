@@ -1,6 +1,10 @@
 # 工作流名称
 name: 合并更新
 
+# 版本：2.2
+# 修订说明：
+# - 修复 danfeng 订阅的错误
+# - 更新 Node.js 24 环境
 # 版本：2.1
 # 修订说明：
 # - 添加 danfeng 订阅（DanFeng 公益代理）
@@ -71,13 +75,13 @@ jobs:
     steps:
       # 检出代码库
       - name: 检出代码库
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
         with:
           fetch-depth: 0
 
       # 设置 Python 环境
       - name: 设置 Python 环境
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6.2.0
         with:
           python-version: '3.12'
       
@@ -398,7 +402,7 @@ jobs:
           failure() || 
           steps.readme.outcome == 'failure' || 
           steps.update.outcome == 'failure'
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v17
         with:
           server_address: smtp.163.com
           server_port: 465
@@ -408,7 +412,7 @@ jobs:
           body: |
             自动更新订阅出错
             - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 2.1
+            - 脚本版本: 2.2
             - README: ${{ steps.readme.outcome }}
             - 订阅更新: ${{ steps.update.outcome }}
             - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}

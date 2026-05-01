@@ -112,7 +112,7 @@ jobs:
       - name: Notify on failure
         # 触发条件：脚本运行失败
         if: failure() || steps.check_script.outputs.send_email == 'true'
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v17
         with:
           # SMTP服务器配置（163邮箱示例）
           server_address: smtp.163.com

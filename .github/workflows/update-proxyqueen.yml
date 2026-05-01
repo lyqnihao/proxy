@@ -149,8 +149,8 @@ jobs:
       - name: Send email on failure
         # 仅在工作流失败或下载出错时发送邮件（无新帖/无变化不发送）
         if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' }}
-        # 使用 dawidd6/action-send-mail@v3 动作发送邮件
-        uses: dawidd6/action-send-mail@v3
+        # 使用 dawidd6/action-send-mail@v17 动作发送邮件
+        uses: dawidd6/action-send-mail@v17
         with:
           # 163 邮箱的 SMTP 服务器地址
           server_address: smtp.163.com

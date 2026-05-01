@@ -99,7 +99,7 @@ jobs:
       # 步骤8：失败通知（邮件）
       - name: 失败通知（邮件）
         if: failure() || steps.check-changes.outputs.HAS_CHANGES == 'false'
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v17
         with:
           server_address: smtp.163.com
           server_port: 465

@@ -150,7 +150,7 @@ jobs:
       - name: Notify on failure
         # 触发条件：任何失败/下载错误/无内容变化
         if: ${{ failure() || steps.fetch-content.outputs.FETCH_ERROR == 'true' || steps.check-changes.outputs.HAS_CHANGES == 'false' }}
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v17
         with:
           # SMTP服务器配置（163邮箱示例）
           server_address: smtp.163.com
