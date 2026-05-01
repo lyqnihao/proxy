@@ -12,6 +12,7 @@ README 动态日期更新器
 import re       # 正则表达式库（用于查找和替换日期模式）
 import os       # 操作系统接口
 import sys      # 系统特定参数和函数
+import subprocess  # 执行外部命令
 
 def fetch_v2cross_dynamic_url():
     """获取 v2cross 的动态订阅地址"""
