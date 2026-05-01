@@ -63,6 +63,10 @@ jobs:
   update-all:
     runs-on: ubuntu-latest
 
+    # 设置环境变量（在步骤之前设置，确保对所有 action 生效）
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     # 步骤定义
     steps:
       # 检出代码库
@@ -76,10 +80,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      # 设置 Node.js 24 环境变量（解决 Node.js 20 弃用警告）
-      - name: 设置 Node.js 24 环境
-        run: echo "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true" >> $GITHUB_ENV
       
       # 安装 Python 依赖
       - name: 安装 Python 依赖

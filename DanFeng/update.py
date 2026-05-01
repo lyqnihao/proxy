@@ -68,14 +68,16 @@ def generate_subscription_url(auth_token: str, domains: list) -> str:
     random_sub = random_label(12)
     random_domain = random.choice(domains)
 
-    url = f"https://{random_sub}.chinat.eu.org/sub?uuid={urllib.parse.quote(auth_token)}&host={urllib.parse.quote(random_domain)}&path=/danfeng?ed=2560&ech=1"
+    # 对 path 参数进行编码，避免嵌套的 ? 导致 URL 格式错误
+    path_value = "/danfeng?ed=2560"
+    url = f"https://{random_sub}.chinat.eu.org/sub?uuid={urllib.parse.quote(auth_token)}&host={urllib.parse.quote(random_domain)}&path={urllib.parse.quote(path_value, safe='')}&ech=1"
 
     return url
 
 def main():
     url = "https://sniweb.danfeng.eu.org/"
 
-    print("正在获取 DanFeng 订阅页面...")
+    # 静默获取页面（不要输出调试信息，以免影响 stdout 的 URL 输出）
 
     success, content = fetch_page_content(url)
     if not success or not content:
@@ -87,13 +89,9 @@ def main():
         print("解析页面变量失败")
         return 1
 
-    print(f"获取 authToken 成功: {auth_token[:8]}...")
-    print(f"获取 domains 成功: {len(domains)} 个域名")
-
     subscription_url = generate_subscription_url(auth_token, domains)
-    print(f"生成的订阅链接: {subscription_url}")
 
-    # 输出到 stdout，供外部脚本使用
+    # 只输出 URL 到 stdout（供外部脚本使用），不要有其他输出
     print(subscription_url)
 
     return 0
