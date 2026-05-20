@@ -27,7 +27,22 @@ def fetch_page_content(url: str) -> tuple:
             if any(x in lower for x in ("checking your browser", "please verify you are", "正在进行安全验证", "cloudflare", "jschl_vc")):
                 # 尝试使用 cloudscraper 绕过（如果可用）
                 try:
-                    import cloudscraper
+                    try:
+                        import cloudscraper
+                    except ImportError:
+                        # 尝试自动安装 cloudscraper
+                        try:
+                            subprocess.run(
+                                [sys.executable, "-m", "pip", "install", "cloudscraper"],
+                                check=True,
+                                capture_output=True,
+                                text=True,
+                                timeout=300,
+                            )
+                            import cloudscraper
+                        except Exception as e_install:
+                            raise ImportError(f"cloudscraper 未安装且自动安装失败: {e_install}")
+
                     scraper = cloudscraper.create_scraper()
                     r = scraper.get(url, timeout=30)
                     if r.status_code == 200 and r.text:
@@ -37,7 +52,7 @@ def fetch_page_content(url: str) -> tuple:
                 except Exception as e:
                     return False, (
                         "检测到 Cloudflare 验证页面，且未能使用 cloudscraper 绕过。"
-                        " 请安装并尝试：pip install cloudscraper ，或手动在浏览器中完成验证。"
+                        " 请手动运行：pip install cloudscraper 或在浏览器中完成验证。"
                         f" (内部错误: {e})"
                     )
             return True, stdout

@@ -19,7 +19,7 @@
 Cloudflare自建汇聚订阅<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
 
-### [DanFeng 公益代理](https://sniweb.danfeng.eu.org/)：<br>
+### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml<br>
 
