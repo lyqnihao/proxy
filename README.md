@@ -23,6 +23,10 @@ Cloudflare自建汇聚订阅<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml<br>
 
+### [V2Nodes](https://www.v2nodes.com/)：<br>
+[TG@v2nodes](https://t.me/v2nodes) | (V2Nodes 🚀) | 每天到网站点击获取订阅地址，可选按国家分列<br>
+- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml<br>
+
 ### [nodefree](https://nodefree.me/)：<br>
 原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
 - v2ray订阅链接：https://node.nodefree.me/2026/05/20260521.txt<br>
