@@ -2,11 +2,13 @@
 """
 DanFeng 订阅链接生成器
 从 https://2sniweb.danfeng.eu.org/ 获取动态订阅链接
+支持网页自动获取、环境变量、或硬编码备选值
 """
 
 import re
 import subprocess
 import sys
+import os
 import random
 import urllib.parse
 
@@ -19,6 +21,17 @@ ACCEPT_HEADERS = (
     "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,"
     "image/webp,*/*;q=0.8"
 )
+
+# 硬编码的备选配置（用户手动更新的值）
+DEFAULT_AUTH_TOKEN = os.environ.get(
+    "DANFENG_AUTH_TOKEN",
+    "26524cce-d514-4014-a426-365fb266a14d"
+)
+DEFAULT_DOMAINS = os.environ.get(
+    "DANFENG_DOMAINS",
+    "_acme-challenge.443888.xyz,vtxpxgne.mirror-node.sh21.eu.org,wsm52.gateway-api-01.chinav.indevs.in,ar2m.api-backend.sh21.eu.org,qrqt.backend-edge.sh21.eu.org,sguj46k.static-node-01.chinav.eu.org,t39sed.gateway-api.sh21.eu.org,omn15.files-cdn.chinat.indevs.in,mz0tgmxz.user-api.chinav.eu.org,tq0iwf.user-service.chinav.eu.org,v3wdc.app-node.chinam.indevs.in,y4z.cdn-a.chinav.indevs.in,nai3.api-gateway-01.chinat.indevs.in,ii5.static-node-01.chinav.indevs.in,la463cv6.static-cache.chinam.indevs.in,y0wkd.app-edge.chinav.indevs.in,nxahk.media-cdn.sh21.eu.org,n76.api-node-sg.chinav.indevs.in,sg156m.cdn-edge-eu.sh21.eu.org,jek.media-cdn.chinav.eu.org,srd0l.monitor-edge.chinav.indevs.in,pkw.download.fgfw.qzz.io,le8535x4.data-stream.sh21.eu.org,vfa9.cdn-stream.fgfw.indevs.in,eedu7.mail.danfeng.qzz.io,nlrkld.files-api.danfeng.cyou,fo5xj.monitor-edge.chinat.indevs.in,c1mxc.api-gateway.fgfw.qzz.io,zllj95qn.api-node-sg.chinat.indevs.in,v8mbk9s.node-stream.danfeng.qzz.io,w9rw8g1k.node-c.danfeng.gv.uy,z8c.node-01.fgfw.qzz.io,n8wra.edge-a.danfeng.cyou,mv7wx5dn.node.chinat.indevs.in,munbd.user-node.sh21.eu.org,txunvh.api-node-02.danfeng.gv.uy,a44.static-node-01.chinav.eu.org,mrdt2a.node-01.danfeng.qzz.io,nmdul.node-cache.chinat.indevs.in,a36k.media-cdn-sg.chinav.indevs.in,x6n3ydn.mirror-cdn.danfeng.bond,yv4a7gbe.backend-api.chinam.indevs.in,lmy.node-cache-01.sh21.eu.org,bbyvxzyc.stream-cdn.danfeng.cyou,zt7onv.auth-node.chinam.indevs.in,qznql.node-proxy.chinat.indevs.in"
+).split(",")
+
 
 
 def _is_cloudflare_or_blocked(content: str) -> bool:
@@ -80,6 +93,17 @@ def _install_package(package: str) -> None:
     )
 
 
+def _install_playwright() -> None:
+    _install_package("playwright")
+    subprocess.run(
+        [sys.executable, "-m", "playwright", "install", "chromium"],
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=600,
+    )
+
+
 def _fetch_with_cloudscraper(url: str) -> tuple:
     try:
         try:
@@ -88,11 +112,17 @@ def _fetch_with_cloudscraper(url: str) -> tuple:
             _install_package("cloudscraper")
             import cloudscraper
 
-        for browser_option in (None, {"custom": USER_AGENT}):
+        browser_options = (
+            None,
+            "chrome",
+            {"browser": "chrome", "platform": "windows", "mobile": False},
+            {"custom": USER_AGENT},
+        )
+        for browser_option in browser_options:
             try:
                 scraper = (
                     cloudscraper.create_scraper(browser=browser_option)
-                    if browser_option
+                    if browser_option is not None
                     else cloudscraper.create_scraper()
                 )
                 r = scraper.get(url, timeout=30, headers={"Accept": ACCEPT_HEADERS})
@@ -110,8 +140,12 @@ def _fetch_with_cloudscraper(url: str) -> tuple:
 def _fetch_with_playwright(url: str) -> tuple:
     try:
         from playwright.sync_api import sync_playwright
-    except ImportError as e:
-        return False, f"playwright 未安装: {e}"
+    except ImportError:
+        try:
+            _install_playwright()
+            from playwright.sync_api import sync_playwright
+        except Exception as e:
+            return False, f"playwright 安装失败: {e}"
 
     try:
         with sync_playwright() as playwright:
@@ -219,14 +253,24 @@ def main():
     # 静默获取页面（不要输出调试信息，以免影响 stdout 的 URL 输出）
 
     success, content = fetch_page_content(url)
-    if not success or not content:
-        print(f"错误：获取页面失败: {content}", file=sys.stderr)
-        return 1
+    auth_token = None
+    domains = None
 
-    auth_token, domains = extract_variables(content)
+    if success and content:
+        auth_token, domains = extract_variables(content)
+
+    # 如果网页获取失败或提取失败，使用硬编码的备选值
     if not auth_token or not domains:
-        print("错误：解析页面变量失败", file=sys.stderr)
-        return 1
+        auth_token = DEFAULT_AUTH_TOKEN
+        domains = DEFAULT_DOMAINS
+        if not auth_token or not domains:
+            print(
+                "错误：无法获取 authToken 和 domains。"
+                " 请手动在浏览器访问 https://2sniweb.danfeng.eu.org/ 并获取，"
+                " 或设置环境变量 DANFENG_AUTH_TOKEN 和 DANFENG_DOMAINS。",
+                file=sys.stderr
+            )
+            return 1
 
     subscription_url = generate_subscription_url(auth_token, domains)
 
