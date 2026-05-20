@@ -10,58 +10,159 @@ import sys
 import random
 import urllib.parse
 
-def fetch_page_content(url: str) -> tuple:
-    """获取网页内容"""
-    try:
-        result = subprocess.run(
-            ["curl", "-s", "-L", "-A", "Mozilla/5.0", url],
-            capture_output=True,
-            text=True,
-            timeout=30
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/122.0.0.0 Safari/537.36"
+)
+ACCEPT_HEADERS = (
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,"
+    "image/webp,*/*;q=0.8"
+)
+
+
+def _is_cloudflare_or_blocked(content: str) -> bool:
+    lower = content.lower()
+    return any(
+        token in lower
+        for token in (
+            "checking your browser",
+            "please verify you are",
+            "正在进行安全验证",
+            "cloudflare",
+            "jschl_vc",
+            "cf-challenge",
+            "access denied",
+            "forbidden",
         )
-        stdout = (result.stdout or "")
-        # 如果 curl 成功返回内容，先返回它
-        if result.returncode == 0 and stdout:
-            # 检测常见的 Cloudflare 验证页面特征
-            lower = stdout.lower()
-            if any(x in lower for x in ("checking your browser", "please verify you are", "正在进行安全验证", "cloudflare", "jschl_vc")):
-                # 尝试使用 cloudscraper 绕过（如果可用）
-                try:
-                    try:
-                        import cloudscraper
-                    except ImportError:
-                        # 尝试自动安装 cloudscraper
-                        try:
-                            subprocess.run(
-                                [sys.executable, "-m", "pip", "install", "cloudscraper"],
-                                check=True,
-                                capture_output=True,
-                                text=True,
-                                timeout=300,
-                            )
-                            import cloudscraper
-                        except Exception as e_install:
-                            raise ImportError(f"cloudscraper 未安装且自动安装失败: {e_install}")
+    )
 
-                    scraper = cloudscraper.create_scraper()
-                    r = scraper.get(url, timeout=30)
-                    if r.status_code == 200 and r.text:
-                        return True, r.text
-                    else:
-                        return False, f"cloudscraper 返回状态 {r.status_code}"
-                except Exception as e:
-                    return False, (
-                        "检测到 Cloudflare 验证页面，且未能使用 cloudscraper 绕过。"
-                        " 请手动运行：pip install cloudscraper 或在浏览器中完成验证。"
-                        f" (内部错误: {e})"
-                    )
-            return True, stdout
 
-        stderr = (result.stderr or "").strip()
-        stdout = stdout.strip()
-        return False, f"curl 返回码 {result.returncode}; stderr={stderr[:300]}; stdout={stdout[:300]}"
+def _fetch_with_curl(url: str) -> tuple:
+    base_command = [
+        "curl",
+        "-s",
+        "-L",
+        "-A",
+        USER_AGENT,
+        "-H",
+        f"Accept: {ACCEPT_HEADERS}",
+        url,
+    ]
+
+    for extra in ([], ["--compressed"]):
+        try:
+            result = subprocess.run(
+                base_command[:-1] + extra + [base_command[-1]],
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            stdout = (result.stdout or "")
+            if result.returncode == 0 and stdout:
+                return True, stdout
+            stderr = (result.stderr or "").strip()
+            stdout = stdout.strip()
+            if result.returncode != 0:
+                return False, f"curl 返回码 {result.returncode}; stderr={stderr[:300]}; stdout={stdout[:300]}"
+        except Exception as e:
+            return False, str(e)
+    return False, "curl 返回空结果"
+
+
+def _install_package(package: str) -> None:
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", package],
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=300,
+    )
+
+
+def _fetch_with_cloudscraper(url: str) -> tuple:
+    try:
+        try:
+            import cloudscraper
+        except ImportError:
+            _install_package("cloudscraper")
+            import cloudscraper
+
+        for browser_option in (None, {"custom": USER_AGENT}):
+            try:
+                scraper = (
+                    cloudscraper.create_scraper(browser=browser_option)
+                    if browser_option
+                    else cloudscraper.create_scraper()
+                )
+                r = scraper.get(url, timeout=30, headers={"Accept": ACCEPT_HEADERS})
+                if r.status_code == 200 and r.text:
+                    return True, r.text
+                if r.status_code != 403:
+                    return False, f"cloudscraper 返回状态 {r.status_code}"
+            except Exception:
+                continue
+        return False, "cloudscraper 返回状态 403"
     except Exception as e:
         return False, str(e)
+
+
+def _fetch_with_playwright(url: str) -> tuple:
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError as e:
+        return False, f"playwright 未安装: {e}"
+
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True, args=["--no-sandbox"])
+            page = browser.new_page(user_agent=USER_AGENT)
+            page.goto(url, timeout=60000)
+            content = page.content()
+            browser.close()
+            if content:
+                return True, content
+            return False, "playwright 获取页面内容失败"
+    except Exception as e:
+        return False, str(e)
+
+
+def fetch_page_content(url: str) -> tuple:
+    """获取网页内容"""
+    success, content = _fetch_with_curl(url)
+    if success and content:
+        if _is_cloudflare_or_blocked(content):
+            success, content = _fetch_with_cloudscraper(url)
+            if success and content:
+                return True, content
+            if content and "403" in content:
+                browser_success, browser_content = _fetch_with_playwright(url)
+                if browser_success and browser_content:
+                    return True, browser_content
+            return False, (
+                "检测到 Cloudflare 验证页面或禁止访问，且 cloudscraper 无法成功获取。"
+                " 请安装 playwright 并运行 `python -m playwright install chromium`，"
+                " 或手动在浏览器中完成验证。"
+                f" (cloudscraper 结果: {content})"
+            )
+        return True, content
+
+    if not success:
+        success, content = _fetch_with_cloudscraper(url)
+        if success and content:
+            return True, content
+        if content and "403" in content:
+            browser_success, browser_content = _fetch_with_playwright(url)
+            if browser_success and browser_content:
+                return True, browser_content
+        return False, (
+            "无法通过 curl 或 cloudscraper 获取页面。"
+            " 请检查网络或安装 playwright。"
+            f" (详情: {content})"
+        )
+
+    return False, "未知错误：无法获取页面内容"
+
 
 def extract_variables(content: str) -> tuple:
     """从页面内容中提取 authToken 和 domains"""
