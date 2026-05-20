@@ -394,7 +394,7 @@ jobs:
           # 获取当前北京时间
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
           # 先将文件添加到暂存区
-          git add .github/V2Nodes/output.yaml
+          git add V2Nodes/output.yaml
           # 检查是否有变更
           if git diff --staged --quiet; then
             # 没有变更，记录环境变量
