@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 DanFeng 订阅链接生成器
-从 https://sniweb.danfeng.eu.org/ 获取动态订阅链接
+从 https://2sniweb.danfeng.eu.org/ 获取动态订阅链接
 """
 
 import re
@@ -21,9 +21,11 @@ def fetch_page_content(url: str) -> tuple:
         )
         if result.returncode == 0 and result.stdout:
             return True, result.stdout
-        return False, ""
+        stderr = (result.stderr or "").strip()
+        stdout = (result.stdout or "").strip()
+        return False, f"curl 返回码 {result.returncode}; stderr={stderr[:300]}; stdout={stdout[:300]}"
     except Exception as e:
-        return False, ""
+        return False, str(e)
 
 def extract_variables(content: str) -> tuple:
     """从页面内容中提取 authToken 和 domains"""
@@ -75,18 +77,18 @@ def generate_subscription_url(auth_token: str, domains: list) -> str:
     return url
 
 def main():
-    url = "https://sniweb.danfeng.eu.org/"
+    url = "https://2sniweb.danfeng.eu.org/"
 
     # 静默获取页面（不要输出调试信息，以免影响 stdout 的 URL 输出）
 
     success, content = fetch_page_content(url)
     if not success or not content:
-        print("获取页面失败")
+        print(f"错误：获取页面失败: {content}", file=sys.stderr)
         return 1
 
     auth_token, domains = extract_variables(content)
     if not auth_token or not domains:
-        print("解析页面变量失败")
+        print("错误：解析页面变量失败", file=sys.stderr)
         return 1
 
     subscription_url = generate_subscription_url(auth_token, domains)

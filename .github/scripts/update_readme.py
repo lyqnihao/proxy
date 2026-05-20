@@ -16,6 +16,12 @@ import subprocess  # 执行外部命令
 
 def fetch_v2cross_dynamic_url():
     """获取 v2cross 的动态订阅地址"""
+    # 优先使用环境变量中传入的动态 URL，这可以避免重复执行脚本
+    env_url = os.environ.get('DYNAMIC_URL') or os.environ.get('V2CROSS_URL')
+    if env_url and env_url.startswith('http'):
+        print(f"✓ 从环境变量读取到 v2cross 动态地址: {env_url}")
+        return env_url
+
     try:
         result = subprocess.run(
             ["python", "v2cross/update.py"],
@@ -28,6 +34,7 @@ def fetch_v2cross_dynamic_url():
             if url.startswith('http'):
                 print(f"✓ 获取到 v2cross 动态地址: {url}")
                 return url
+        print(f"x 获取 v2cross 动态地址失败，脚本退出码: {result.returncode}, stderr: {result.stderr.strip()[:300]}")
         return None
     except Exception as e:
         print(f"获取 v2cross 动态地址失败: {e}")
@@ -160,8 +167,9 @@ def update_specific_area_only():
     updated = False
 
     for line in lines:
-        # 只更新包含特定关键词的行
-        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree', 'v2cross']):
+        # 只更新包含特定关键词的行，或包含 v2cross 的旧动态 URL
+        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree', 'v2cross']) \
+                or re.search(r'https://9527521\.xyz/pubconfig/[^\s<>]+', line):
             # 应用日期替换
             original_line = line
             # 替换 $YEAR$MONTH$DAY 格式

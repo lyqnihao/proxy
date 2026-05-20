@@ -75,13 +75,13 @@ jobs:
     steps:
       # 检出代码库
       - name: 检出代码库
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       # 设置 Python 环境
       - name: 设置 Python 环境
-        uses: actions/setup-python@v6.2.0
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       
