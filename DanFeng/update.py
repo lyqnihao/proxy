@@ -19,10 +19,31 @@ def fetch_page_content(url: str) -> tuple:
             text=True,
             timeout=30
         )
-        if result.returncode == 0 and result.stdout:
-            return True, result.stdout
+        stdout = (result.stdout or "")
+        # 如果 curl 成功返回内容，先返回它
+        if result.returncode == 0 and stdout:
+            # 检测常见的 Cloudflare 验证页面特征
+            lower = stdout.lower()
+            if any(x in lower for x in ("checking your browser", "please verify you are", "正在进行安全验证", "cloudflare", "jschl_vc")):
+                # 尝试使用 cloudscraper 绕过（如果可用）
+                try:
+                    import cloudscraper
+                    scraper = cloudscraper.create_scraper()
+                    r = scraper.get(url, timeout=30)
+                    if r.status_code == 200 and r.text:
+                        return True, r.text
+                    else:
+                        return False, f"cloudscraper 返回状态 {r.status_code}"
+                except Exception as e:
+                    return False, (
+                        "检测到 Cloudflare 验证页面，且未能使用 cloudscraper 绕过。"
+                        " 请安装并尝试：pip install cloudscraper ，或手动在浏览器中完成验证。"
+                        f" (内部错误: {e})"
+                    )
+            return True, stdout
+
         stderr = (result.stderr or "").strip()
-        stdout = (result.stdout or "").strip()
+        stdout = stdout.strip()
         return False, f"curl 返回码 {result.returncode}; stderr={stderr[:300]}; stdout={stdout[:300]}"
     except Exception as e:
         return False, str(e)
