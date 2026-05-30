@@ -58,7 +58,7 @@ Cloudflare自建汇聚订阅<br>
 - [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
-  每日动态地址：https://9527521.xyz/pubconfig/XwA6nLZl1d2z7HcN<br>
+  每日动态地址：https://9527521.xyz/pubconfig/ONF8espboBvWwy3l<br>
 
   GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
