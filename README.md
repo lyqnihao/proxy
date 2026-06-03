@@ -25,9 +25,9 @@
 | [nodefree](https://nodefree.me/) | [nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) | [nodefree/target.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) | 2026-06-01 |
 | [clashfree](https://clashgithub.com/) | [clashfree/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) | [clashfree/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) | 2026-06-03 |
 | [Proxyqueen](https://www.proxyqueen.top/) | [proxyqueen/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) | [proxyqueen/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) | 2026-06-03 |
-| [Clash Meta](https://clash-meta.github.io/free-nodes/) | [clash-meta/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | [clash-meta/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | 2026-06-03 |
+| [Clash Meta](https://clash-meta.github.io/free-nodes/) | [clash-meta/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | [clash-meta/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | 2026-06-01 |
 | [Node V2ray](https://nodev2ray.com/) | [nodev2ray/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) | [nodev2ray/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) | 2026-06-03 |
-| [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | 2026-06-03 |
+| [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | 2026-06-02 |
 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | 2026-06-03 |
 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | 2026-06-03 |
 
@@ -65,8 +65,8 @@
 
 ### [Clash Meta免费节点订阅站](https://clash-meta.github.io/free-nodes/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260603.txt<br>
-- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260603.yaml<br>
+- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.txt<br>
+- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml<br>
 
 ### [Node V2ray 网站](https://nodev2ray.com/) ：<br>
@@ -77,8 +77,8 @@
 
 ### [免费节点-oneClash 网站](https://oneclash.cc/freenode) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://oss.oneclash.cc/2026/06/20260603.txt<br>
-- clash订阅链接：https://oss.oneclash.cc/2026/06/20260603.yaml<br>
+- v2ray订阅链接：https://oss.oneclash.cc/2026/06/20260602.txt<br>
+- clash订阅链接：https://oss.oneclash.cc/2026/06/20260602.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml<br>
 
 ### [v2rayShare 订阅站](https://v2rayshare.net/) ：<br>
