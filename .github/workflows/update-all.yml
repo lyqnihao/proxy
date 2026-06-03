@@ -5,6 +5,7 @@ name: 合并更新
 # - 添加 4 个新订阅：clash-meta、nodev2ray、oneclash、v2rayhare
 # - 修复 fgrjk 订阅提交信息错误问题（git_sync 模式提前执行 git add 导致其他订阅提交时包含 fgrjk 变更）
 # - 更新 subscriptions.json 和 update_readme.py 以支持新订阅
+# - 添加 对订阅内容编码作自动转换，内容统一为UTF8
 # 版本：2.3
 # 修订说明：
 # - 添加 V2Nodes 订阅
@@ -521,6 +522,10 @@ jobs:
           env.no_changes_fgrjk == 'false' ||
           env.no_changes_danfeng == 'false' ||
           env.no_changes_v2nodes == 'false' ||
+          env.no_changes_clash_meta == 'false' ||
+          env.no_changes_nodev2ray == 'false' ||
+          env.no_changes_oneclash == 'false' ||
+          env.no_changes_v2rayhare == 'false' ||
           steps.commit_readme.outcome == 'success'
           )
         run: |

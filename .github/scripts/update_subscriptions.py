@@ -12,7 +12,8 @@
 import os        # 操作系统接口（文件、环境变量）
 import sys       # 系统特定参数和函数（用于 exit）
 import json      # JSON 文件解析
-import subprocess  # 执行外部命令（curl、git、bash）
+import subprocess
+import chardet  # 执行外部命令（curl、git、bash）
 import re        # 正则表达式（虽然这里没用到，保留兼容性）
 from pathlib import Path  # 路径操作（虽然这里没用到，保留兼容性）
 from datetime import datetime  # 日期时间（虽然这里没用到，保留兼容性）
@@ -274,6 +275,216 @@ def check_v2clash_new_post() -> bool:
     except:
         # 网络错误或超时时返回 False
         return False
+
+
+
+def check_nodefree_new_post() -> bool:
+    """
+    检查 nodefree.me 是否有今天的新发布
+    """
+    time_info = get_beijing_time()
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']
+    
+    url = f"https://node.nodefree.me/{time_info['YEAR']}/{time_info['MONTH']}/{today}.yaml"
+    try:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip().startswith('2'):
+            return True
+    except Exception:
+        pass
+    return False
+
+def check_xconfig_new_post() -> bool:
+    """
+    检查 xConfig 是否有今天的新发布
+    """
+    time_info = get_beijing_time()
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']
+    
+    url = f"https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v{today}2"
+    try:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip().startswith('2'):
+            return True
+    except Exception:
+        pass
+    return False
+
+def check_nodev2ray_new_post() -> bool:
+    """
+    检查 nodev2ray.com 是否有今天的新发布
+    """
+    time_info = get_beijing_time()
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']
+    
+    url = f"https://node.nodev2ray.com/uploads/{time_info['YEAR']}/{time_info['MONTH']}/0-{today}.yaml"
+    try:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip().startswith('2'):
+            return True
+    except Exception:
+        pass
+    return False
+
+def check_oneclash_new_post() -> bool:
+    """
+    检查 oneclash.cc 是否有今天的新发布
+    """
+    time_info = get_beijing_time()
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']
+    
+    url = f"https://oss.oneclash.cc/{time_info['YEAR']}/{time_info['MONTH']}/{today}.yaml"
+    try:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip().startswith('2'):
+            return True
+    except Exception:
+        pass
+    return False
+
+
+def detect_encoding(file_path: str) -> str:
+    """
+    检测文件编码
+    
+    参数：
+    - file_path: 文件路径
+    
+    返回值：
+    - 编码名称（如 'utf-8', 'gbk', 'gb18030' 等）
+    """
+    import chardet
+    
+    try:
+        with open(file_path, 'rb') as f:
+            raw_data = f.read(4096)  # 读取前4KB用于检测
+            result = chardet.detect(raw_data)
+            encoding = result.get('encoding', 'utf-8')
+            confidence = result.get('confidence', 0)
+            
+            # 如果置信度太低，默认使用 utf-8
+            if confidence < 0.7:
+                encoding = 'utf-8'
+            
+            # 规范化编码名称
+            encoding = encoding.lower().replace('-', '')
+            if encoding in ['gb2312', 'gbk', 'gb18030']:
+                encoding = 'gb18030'
+            elif encoding in ['utf8']:
+                encoding = 'utf-8'
+            
+            return encoding
+    except Exception:
+        return 'utf-8'
+
+def convert_to_utf8(file_path: str, original_encoding: str) -> bool:
+    """
+    将文件从原始编码转换为 UTF-8
+    
+    参数：
+    - file_path: 文件路径
+    - original_encoding: 原始编码
+    
+    返回值：
+    - True: 转换成功
+    - False: 转换失败
+    """
+    try:
+        # 读取原始内容
+        with open(file_path, 'r', encoding=original_encoding, errors='ignore') as f:
+            content = f.read()
+        
+        # 写入 UTF-8 编码
+        with open(file_path, 'w', encoding='utf-8', newline='') as f:
+            f.write(content)
+        
+        return True
+    except Exception:
+        return False
+
+
+def check_v2rayhare_new_post() -> bool:
+    """
+    检查 v2rayshare.net 是否有今天的新发布
+    """
+    time_info = get_beijing_time()
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']
+    
+    url = f"https://static.v2rayshare.net/{time_info['YEAR']}/{time_info['MONTH']}/{today}.yaml"
+    try:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip().startswith('2'):
+            return True
+    except Exception:
+        pass
+    return False
+
+def check_clash_meta_new_post() -> bool:
+    """
+    检查 clash-meta.github.io 是否有今天的新发布
+    
+    返回值：
+    - True: 有新发布
+    - False: 无新发布或网络错误
+    """
+    time_info = get_beijing_time()
+    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
+    today_alt = time_info['DATE']  # YYYY-MM-DD 格式
+    
+    url = "https://clash-meta.github.io/free-nodes/"
+    try:
+        result = subprocess.run(
+            ["curl", "-sL", url],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0:
+            if today in result.stdout or today_alt in result.stdout:
+                return True
+    except Exception:
+        pass
+    
+    # 如果页面检查失败，尝试直接访问今天的订阅链接
+    url_template = f"https://clash-meta.github.io/uploads/{time_info['YEAR']}/{time_info['MONTH']}/0-{today}.yaml"
+    try:
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url_template],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip().startswith('2'):
+            return True
+    except Exception:
+        pass
+    
+    return False
 
 def check_clashfree_new_post() -> bool:
     """
@@ -623,6 +834,31 @@ def update_subscription(config: dict) -> Tuple[int, str]:
         if not check_clashfree_new_post():
             # clashfree 无新发布，跳过这个订阅（不是错误，只是条件不满足）
             return 0, f"[{name}] 跳过: clashgithub.com 无新发布"
+    elif config.get('requires_check') == 'clash_meta_blog':
+        # 前置条件: clash-meta.github.io 必须有新发布
+        if not check_clash_meta_new_post():
+            # clash-meta 无新发布，跳过这个订阅（不是错误，只是条件不满足）
+            return 0, f"[{name}] 跳过: clash-meta.github.io 无新发布"
+    elif config.get('requires_check') == 'nodefree_blog':
+        # 前置条件: nodefree.me 必须有新发布
+        if not check_nodefree_new_post():
+            return 0, f"[{name}] 跳过: nodefree.me 无新发布"
+    elif config.get('requires_check') == 'xconfig_blog':
+        # 前置条件: xConfig 必须有新发布
+        if not check_xconfig_new_post():
+            return 0, f"[{name}] 跳过: xConfig 无新发布"
+    elif config.get('requires_check') == 'nodev2ray_blog':
+        # 前置条件: nodev2ray.com 必须有新发布
+        if not check_nodev2ray_new_post():
+            return 0, f"[{name}] 跳过: nodev2ray.com 无新发布"
+    elif config.get('requires_check') == 'oneclash_blog':
+        # 前置条件: oneclash.cc 必须有新发布
+        if not check_oneclash_new_post():
+            return 0, f"[{name}] 跳过: oneclash.cc 无新发布"
+    elif config.get('requires_check') == 'v2rayhare_blog':
+        # 前置条件: v2rayshare.net 必须有新发布
+        if not check_v2rayhare_new_post():
+            return 0, f"[{name}] 跳过: v2rayshare.net 无新发布"
 
     # 检查 URL 列表是否有效
     if not urls or not any(urls):
@@ -698,6 +934,15 @@ def update_subscription(config: dict) -> Tuple[int, str]:
     # 检查是否所有地址都失败
     if not success_url:
         return 1, f"[{name}] 错误: 所有地址均不可用"
+    
+    # 先将临时文件转换为 UTF-8（确保比较的一致性）
+    detected_encoding = detect_encoding(temp_file_path)
+    if detected_encoding != 'utf-8':
+        print(f"[{name}] 检测到编码: {detected_encoding}，正在转换为 UTF-8...")
+        if convert_to_utf8(temp_file_path, detected_encoding):
+            print(f"[{name}] ✓ 编码转换成功")
+        else:
+            print(f"[{name}] ⚠ 编码转换失败，保持原样")
     
     # 检查临时文件与现有文件是否相同
     file_changed = True

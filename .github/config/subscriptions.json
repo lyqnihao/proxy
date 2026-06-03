@@ -13,7 +13,8 @@
     "output_file": "target.yaml",
     "url_type": "dynamic_date",
     "url_template": "https://node.nodefree.me/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
-    "description": "免费节点 - 每日更新"
+    "description": "免费节点 - 每日更新",
+    "requires_check": "nodefree_blog"
   },
   {
     "name": "clashfree",
@@ -24,7 +25,8 @@
       "https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash{YEAR}{MONTH}{DAY}.yml",
       "https://clashgithub.com/wp-content/uploads/rss/{YEAR}{MONTH}{DAY}.yml"
     ],
-    "description": "免费节点 Clash 订阅 - 多地址故障转移"
+    "description": "免费节点 Clash 订阅 - 多地址故障转移",
+    "requires_check": "clashfree"
   },
   {
     "name": "proxyqueen",
@@ -81,6 +83,7 @@
     "output_file": "output.yaml",
     "url_type": "dynamic_date",
     "url_template": "https://clash-meta.github.io/uploads/{YEAR}/{MONTH}/0-{YEAR}{MONTH}{DAY}.yaml",
+    "requires_check": "clash_meta_blog",
     "description": "Clash Meta免费节点订阅站"
   },
   {
@@ -89,7 +92,8 @@
     "output_file": "output.yaml",
     "url_type": "dynamic_date",
     "url_template": "https://node.nodev2ray.com/uploads/{YEAR}/{MONTH}/0-{YEAR}{MONTH}{DAY}.yaml",
-    "description": "Node V2ray 网站"
+    "description": "Node V2ray 网站",
+    "requires_check": "nodev2ray_blog"
   },
   {
     "name": "oneclash",
@@ -97,7 +101,8 @@
     "output_file": "output.yaml",
     "url_type": "dynamic_date",
     "url_template": "https://oss.oneclash.cc/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
-    "description": "免费节点-oneClash 网站"
+    "description": "免费节点-oneClash 网站",
+    "requires_check": "oneclash_blog"
   },
   {
     "name": "v2rayhare",
@@ -105,6 +110,7 @@
     "output_file": "output.yaml",
     "url_type": "dynamic_date",
     "url_template": "https://static.v2rayshare.net/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
-    "description": "v2rayShare 订阅站"
+    "description": "v2rayShare 订阅站",
+    "requires_check": "v2rayhare_blog"
   }
 ]
