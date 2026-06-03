@@ -52,8 +52,8 @@
 
 ### [Clash Meta免费节点订阅站](https://clash-meta.github.io/free-nodes/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.txt<br>
-- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.yaml<br>
+- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260603.txt<br>
+- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260603.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml<br>
 
 ### [Node V2ray 网站](https://nodev2ray.com/) ：<br>
@@ -85,7 +85,7 @@
 - [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
-  每日动态地址：https://9527521.xyz/pubconfig/pHsX4aBkuISUl5jy<br>
+  每日动态地址：https://9527521.xyz/pubconfig/gxh9fUGq8VsQKJIz<br>
 
   GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
