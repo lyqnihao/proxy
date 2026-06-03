@@ -817,4 +817,10 @@ def main():
 # Python 文件执行的标准入口
 # 这行确保只有当这个文件被直接执行（而不是被 import）时，main() 才会被调用
 if __name__ == '__main__':
-    sys.exit(main())  # 调用 main()，并将返回值作为程序的退出码
+    try:
+        sys.exit(main())  # 调用 main()，并将返回值作为程序的退出码
+    except Exception as e:
+        print(f"[ERROR] 脚本执行异常: {str(e)}")
+        import traceback
+        print(f"[ERROR] 异常详情: {traceback.format_exc()}")
+        sys.exit(1)
