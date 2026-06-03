@@ -7,7 +7,9 @@
 1. [Python 基础概念](#python-基础概念)
 2. [本项目使用的核心技术](#本项目使用的核心技术)
 3. [代码文件详解](#代码文件详解)
-4. [常见问题解答](#常见问题解答)
+4. [订阅更新流程详解](#订阅更新流程详解)
+5. [代码复用指南](#代码复用指南)
+6. [常见问题解答](#常见问题解答)
 
 ---
 
@@ -155,6 +157,24 @@ with open('config.json', 'r') as f:
 subscriptions = data['subscriptions']  # 获取 subscriptions 字段
 ```
 
+### 5. 编码检测与转换（chardet）
+
+```python
+import chardet
+
+# 检测文件编码
+with open('file.yaml', 'rb') as f:
+    raw_data = f.read(4096)
+    result = chardet.detect(raw_data)
+    encoding = result.get('encoding', 'utf-8')
+
+# 转换为 UTF-8
+with open('file.yaml', 'r', encoding=encoding) as f:
+    content = f.read()
+with open('file.yaml', 'w', encoding='utf-8') as f:
+    f.write(content)
+```
+
 ---
 
 ## 代码文件详解
@@ -172,12 +192,17 @@ subscriptions = data['subscriptions']  # 获取 subscriptions 字段
  ↓
 循环处理每个订阅
  │
- ├─ 确定 URL（固定/动态日期/脚本生成）
- ├─ 检查前置条件（v2clash 是否有新文章）
- ├─ 下载文件
- ├─ 检测变更
- ├─ 提交到 Git
- │
+ ├─ 检查前置条件（如博客更新检查）
+ ├─ 生成或获取 URL
+ │   ├─ static: 直接使用固定 URL
+ │   ├─ dynamic_date: 替换日期变量
+ │   ├─ dynamic_script: 执行脚本获取 URL
+ │   └─ git_sync: 同步 Git 仓库
+ ├─ 下载文件到临时位置
+ ├─ 编码检测与转换（统一为 UTF-8）
+ ├─ 检测内容变更（与现有文件比较）
+ ├─ 若有变更则替换文件
+ └─ 标记变更状态
  ↓
 返回结果（成功/失败）
  ↓
@@ -239,10 +264,38 @@ result = expand_url(template, time_info)
 # 结果：https://example.com/2025/12/20251203.yaml
 ```
 
-**`format()` 方法如何工作：**
-- `{YEAR}` 会被替换成 YEAR 对应的值
-- 一个占位符可以出现多次
-- 替换是按名称进行的
+#### `detect_encoding()` 和 `convert_to_utf8()`
+
+```python
+def detect_encoding(file_path: str) -> str:
+    """检测文件编码"""
+    import chardet
+    with open(file_path, 'rb') as f:
+        raw_data = f.read(4096)
+        result = chardet.detect(raw_data)
+        encoding = result.get('encoding', 'utf-8')
+        # 处理编码名称规范化
+        encoding = encoding.lower().replace('-', '')
+        if encoding in ['gb2312', 'gbk', 'gb18030']:
+            encoding = 'gb18030'
+        return encoding
+
+def convert_to_utf8(file_path: str, original_encoding: str) -> bool:
+    """将文件转换为 UTF-8"""
+    try:
+        with open(file_path, 'r', encoding=original_encoding, errors='ignore') as f:
+            content = f.read()
+        with open(file_path, 'w', encoding='utf-8', newline='') as f:
+            f.write(content)
+        return True
+    except Exception:
+        return False
+```
+
+**为什么需要编码转换？**
+- 有些订阅源返回的文件不是 UTF-8 编码
+- 如果直接比较，可能导致误判（编码不同但内容相同）
+- 统一编码后再比较，可以避免这个问题
 
 ### 2. `update_readme.py` - README 日期更新
 
@@ -290,6 +343,185 @@ from updater_utils import get_beijing_time, fetch_url, git_add_and_check
 # 现在就可以直接使用这些函数了
 time_info = get_beijing_time()
 success, error = fetch_url(url, output_file)
+```
+
+---
+
+## 订阅更新流程详解
+
+### 完整流程
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                     GitHub Actions 触发                              │
+│              (每 12 小时自动触发 / 手动触发)                        │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                        步骤 1: 检出代码                              │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    步骤 2: 获取北京时间                              │
+│              计算 YEAR, MONTH, DAY, DATE, TIME                      │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    步骤 3: 前置博客检查                              │
+│         检查 v2clash.blog 和 clash-meta.github.io                   │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    步骤 4: 更新 README.md                            │
+│              替换动态日期标记（如 $YEAR$MONTH$DAY）                  │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                步骤 5: 执行 update_subscriptions.py                 │
+│                    处理所有订阅配置                                  │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    步骤 6: 独立提交变更                              │
+│         每个订阅独立执行 git add → git commit                        │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    步骤 7: 推送变更                                  │
+│              仅当有变更时才执行 git push                            │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    步骤 8: 发送错误通知                              │
+│              仅当发生错误时发送邮件通知                              │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### 单个订阅的处理流程
+
+```
+对于每个订阅配置：
+    │
+    ├─ 1. 检查前置条件
+    │     └─ 如果 requires_check 且未通过 → 跳过此订阅
+    │
+    ├─ 2. 生成 URL
+    │     ├─ static → 直接使用配置的 URL
+    │     ├─ dynamic_date → 替换 {YEAR}{MONTH}{DAY}
+    │     ├─ dynamic_script → 执行脚本获取 URL
+    │     └─ git_sync → 使用 Git 仓库地址
+    │
+    ├─ 3. 下载文件
+    │     └─ 使用 curl 下载到临时文件
+    │
+    ├─ 4. 编码处理
+    │     ├─ 检测文件编码
+    │     └─ 如果不是 UTF-8 → 转换为 UTF-8
+    │
+    ├─ 5. 比较内容
+    │     └─ 比较临时文件与现有文件
+    │          ├─ 相同 → 标记为"无变更"
+    │          └─ 不同 → 替换原文件，标记为"已更新"
+    │
+    └─ 6. 记录状态
+```
+
+---
+
+## 代码复用指南
+
+### 添加新订阅的步骤
+
+1. **编辑配置文件**：在 `subscriptions.json` 中添加新条目
+
+2. **创建目录**：在项目根目录创建对应的目录
+
+3. **添加提交步骤**：在 `update-all.yml` 中添加对应的提交步骤
+
+4. **更新推送条件**：确保推送条件包含新订阅
+
+### 订阅配置模板
+
+**静态 URL（static）**：
+```json
+{
+  "name": "my-sub",
+  "dir": "my-sub",
+  "output_file": "output.yaml",
+  "url_type": "static",
+  "url": "https://example.com/subscribe.yaml",
+  "description": "我的订阅"
+}
+```
+
+**动态日期（dynamic_date）**：
+```json
+{
+  "name": "my-sub",
+  "dir": "my-sub",
+  "output_file": "output.yaml",
+  "url_type": "dynamic_date",
+  "url_template": "https://example.com/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
+  "requires_check": "v2clash_blog",
+  "description": "我的订阅"
+}
+```
+
+**脚本生成（dynamic_script）**：
+```json
+{
+  "name": "my-sub",
+  "dir": "my-sub",
+  "output_file": "output.yaml",
+  "url_type": "dynamic_script",
+  "url_script": "python my-sub/update.py",
+  "description": "我的订阅"
+}
+```
+
+**Git 同步（git_sync）**：
+```json
+{
+  "name": "my-sub",
+  "dir": "my-sub",
+  "output_file": "output.yaml",
+  "url_type": "git_sync",
+  "url": "https://github.com/user/repo.git",
+  "description": "我的订阅"
+}
+```
+
+### 提交信息格式
+
+统一格式：
+```
+{项目名}_{日期时间} - Update from {订阅地址} (at {跟踪地址})
+```
+
+示例：
+```
+clash-meta_2025-12-20 13:35:00 - Update from https://clash-meta.github.io/uploads/2025/12/0-20251220.yaml (at https://clash-meta.github.io/free-nodes/)
+```
+
+### 日志输出规范
+
+```
+[{name}] 尝试地址: `{url}`
+[{name}] ✓ 地址成功: `{url}` ({size} 字节)
+[{name}] 文件已替换（{size} 字节）
+[{name}] 已更新: `{url}`
+[{name}] 无变更
+[{name}] 跳过: {原因}
+[{name}] 错误: {错误信息}
+[{name}] 检测到编码: {编码}，正在转换为 UTF-8...
 ```
 
 ---
@@ -370,7 +602,15 @@ result = re.sub(pattern, replacement, text)
 - `\1` 指向第一个捕获组的内容
 - `\2` 指向第二个捕获组的内容
 
-### Q5: 如何调试 Python 代码？
+### Q5: 为什么需要编码转换？
+
+**A:** 不同订阅源可能使用不同的编码格式，如果不统一编码：
+- 中文可能显示为乱码
+- 比较文件时可能误判为"有变更"（因为编码不同）
+
+解决方法：下载后先转换为 UTF-8，再比较内容。
+
+### Q6: 如何调试 Python 代码？
 
 **A:** 添加 `print()` 语句查看程序执行过程
 
@@ -386,7 +626,7 @@ success, error = fetch_url(url, output_file)
 print(f"DEBUG: success = {success}, error = {error}")  # 查看下载结果
 ```
 
-### Q6: 什么是类型提示？
+### Q7: 什么是类型提示？
 
 **A:** 告诉其他人（和自己）函数的输入和输出类型
 
@@ -449,4 +689,4 @@ def fetch_url(url: str, output_file: str) -> Tuple[bool, Optional[str]]:
 - [正则表达式教程](https://www.regular-expressions.info/)
 - [Git 基础](https://git-scm.com/book/zh/v2)
 - [GitHub Actions 文档](https://docs.github.com/cn/actions)
-
+- [chardet 文档](https://chardet.readthedocs.io/)

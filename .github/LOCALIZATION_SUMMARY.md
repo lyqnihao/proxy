@@ -12,10 +12,10 @@
   - `获取北京时间信息`
   - `更新 README 动态日期`
   - `更新所有订阅`
-  - `提交变更`
+  - `提交变更`（各订阅独立提交）
   - `发送错误通知邮件`
-- **提交信息**: `chore: 自动更新订阅 [时间戳]`
-- **注释**: 中文化所有注释
+- **提交信息**: `{项目名}_{日期时间} - Update from {订阅地址}`
+- **注释**: 中文化所有注释（版本 2.4）
 
 ---
 
@@ -31,18 +31,22 @@
 - `git_has_changes()`: "检查文件是否有暂存的变更"
 - `git_add_file()`: "将文件添加到 Git 暂存区并检查是否有变更"
 - `check_v2clash_new_post()`: "检查 v2clash.blog 是否有今天的新发布"
+- `check_clash_meta_new_post()`: "检查 clash-meta.github.io 是否有今天的新发布"
 - `run_url_script()`: "执行脚本以生成 URL"
 - `expand_url()`: "将 URL 模板中的日期变量替换为实际日期"
 - `get_time_info()`: "获取时间信息，优先使用环境变量（由 GitHub Actions 设置），否则计算系统时间"
 - `update_subscription()`: "更新单个订阅源"
+- `detect_encoding()`: "检测文件编码"
+- `convert_to_utf8()`: "将文件转换为 UTF-8 编码"
 
 **输出消息**:
 - 错误: `[{name}] 错误: {错误信息}`
-- 跳过: `[{name}] 跳过: v2clash.blog 无新发布`
+- 跳过: `[{name}] 跳过: {原因}`
 - 更新: `[{name}] 已更新: {URL}`
 - 无变更: `[{name}] 无变更`
 - 配置未找到: `配置文件未找到: {路径}`
 - 订阅未找到: `订阅未找到: {名称}`
+- 编码转换: `[{name}] 检测到编码: {编码}，正在转换为 UTF-8...`
 
 #### ✅ `update_readme.py` - README 更新器（中文注释）
 **输出消息**:
@@ -99,6 +103,13 @@
 4. `proxyqueen`: "代理女王 - 来自 v2clash 博客"
 5. `v2cross`: "V2Cross - 通过脚本生成"
 6. `xconfig`: "XConfig - Xray 代理抓取器"
+7. `clash-meta`: "Clash Meta免费节点订阅站"
+8. `nodev2ray`: "NodeV2Ray - 每日更新节点"
+9. `oneclash`: "OneClash - Clash 订阅源"
+10. `v2rayhare`: "V2RayShare - 免费节点分享"
+11. `fgrjk`: "FGBLH fgrjk 订阅"
+12. `danfeng`: "DanFeng - 订阅源"
+13. `v2nodes`: "V2Nodes - 汇聚节点订阅"
 
 ---
 
@@ -130,6 +141,7 @@
 - `os.environ` - Python 内置模块，不可修改
 - `sys.exit()` - Python 内置函数，不可修改
 - `json.load()` - Python 库函数名，不可修改
+- `chardet.detect()` - 编码检测库，保持原样
 
 ### 5. SMTP 和邮件配置
 - `smtp.163.com` - 邮件服务器地址，不可修改
@@ -140,6 +152,7 @@
 - 日期格式 `YYYYMMDD` 中的 `{YEAR}{MONTH}{DAY}` - 模板变量，不可修改
 - URL 路径中的 `v2clash.blog/Link/` - API 端点，不可修改
 - 文件路径如 `target.yaml`, `output.yaml` - 配置文件名，不可修改
+- 前置检查类型如 `v2clash_blog`, `clash_meta_blog` - 标识符，保持原样
 
 ---
 
@@ -147,11 +160,11 @@
 
 | 项目 | 英文 | 中文 | 比例 |
 |------|------|------|------|
-| 工作流步骤名称 | 7 | 7 | 100% |
-| 函数注释 | 8 | 8 | 100% |
-| 输出消息 | 20+ | 20+ | 100% |
-| 配置描述 | 6 | 6 | 100% |
-| **总计** | **40+** | **40+** | **100%** |
+| 工作流步骤名称 | 10+ | 10+ | 100% |
+| 函数注释 | 12+ | 12+ | 100% |
+| 输出消息 | 30+ | 30+ | 100% |
+| 配置描述 | 13 | 13 | 100% |
+| **总计** | **60+** | **60+** | **100%** |
 
 ---
 
@@ -164,7 +177,7 @@
 
 ### 脚本调试改进
 - ✅ Python 脚本的错误信息现在是中文
-- ✅ 更新状态（已更新/无变更/跳过）显示为中文
+- ✅ 更新状态（已更新/无变更/跳过/编码转换）显示为中文
 - ✅ 故障诊断信息更容易理解
 
 ### 配置可读性改进
@@ -194,4 +207,6 @@
 | URL | URL | 保持原样 |
 | GitHub Actions | GitHub Actions | 产品名 |
 | v2clash.blog | v2clash.blog | 网站名 |
-
+| clash-meta.github.io | clash-meta.github.io | 网站名 |
+| UTF-8 | UTF-8 | 编码格式 |
+| Encoding | 编码 | 技术术语 |

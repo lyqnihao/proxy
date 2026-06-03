@@ -2,16 +2,17 @@
 
 ## 项目概述
 
-完成了将 7 个独立的订阅更新工作流合并为一个统一、可扩展的系统。
+完成了将多个独立的订阅更新工作流合并为一个统一、可扩展的系统。
 
 ### 关键成就
 
-✅ **工作流整合**：7 个独立工作流 → 1 个主工作流 + 6 个配置条目
+✅ **工作流整合**：多个独立工作流 → 1 个主工作流 + 配置驱动
 ✅ **智能调度**：每 12 小时自动更新（北京时间 1:35 AM 和 1:35 PM）
 ✅ **配置驱动**：基于 JSON 配置，添加新订阅无需修改代码
-✅ **灵活的 URL 类型**：支持静态 URL、动态日期模板、脚本生成
-✅ **v2clash 感知**：仅当有新发布时更新相关订阅
+✅ **灵活的 URL 类型**：支持静态 URL、动态日期模板、脚本生成、Git 同步
+✅ **前置检查**：支持多种前置检查条件（v2clash_blog、clash_meta_blog）
 ✅ **智能通知**：仅在出现真实错误时发送邮件
+✅ **编码统一**：自动检测并转换文件编码为 UTF-8
 
 ---
 
@@ -22,7 +23,7 @@
 ```
 .github/
 ├── config/
-│   ├── subscriptions.json          # 订阅配置注册表
+│   ├── subscriptions.json          # 订阅配置注册表（核心）
 │   └── README.md                   # 配置文档
 ├── scripts/
 │   ├── update_subscriptions.py     # 通用更新器（核心）
@@ -47,24 +48,26 @@
 2. **步骤序列**
    - ① 检出代码
    - ② 计算北京时间（YEAR, MONTH, DAY）
-   - ③ 检查 v2clash.blog 有无新文章
+   - ③ 检查各博客站点有无新文章（v2clash_blog, clash_meta_blog）
    - ④ 更新 README.md 动态日期
    - ⑤ 调用 `update_subscriptions.py` 处理所有订阅
-   - ⑥ 检测变更并提交
+   - ⑥ 检测变更并提交（每个订阅独立提交）
    - ⑦ 仅在失败时发送邮件通知
 
 3. **订阅更新流程**（通用脚本）
    ```
    加载 subscriptions.json
    └─→ 遍历每个订阅
-       ├─→ 检查前置条件（如 v2clash 检查）
+       ├─→ 检查前置条件（如博客更新检查）
        ├─→ 生成或获取 URL
-       │   ├─ static: 直接使用
+       │   ├─ static: 直接使用固定 URL
        │   ├─ dynamic_date: 替换日期变量
-       │   └─ dynamic_script: 执行脚本
-       ├─→ 下载文件
-       ├─→ 检测内容变更
-       └─→ 若有变更则 git 提交
+       │   ├─ dynamic_script: 执行脚本获取 URL
+       │   └─ git_sync: 同步 Git 仓库
+       ├─→ 下载文件到临时位置
+       ├─→ 编码检测与转换（统一为 UTF-8）
+       ├─→ 检测内容变更（与现有文件比较）
+       └─→ 若有变更则替换文件并标记
    ```
 
 ---
@@ -73,25 +76,35 @@
 
 ### 订阅配置（subscriptions.json）
 
-目前支持 **6 个订阅源**：
+目前支持 **13 个订阅源**：
 
-| 名称 | 类型 | 来源 | 检查条件 |
-|------|------|------|---------|
-| cmliu | static | CF Workers 汇聚 | 无 |
-| nodefree | dynamic_date | nodefree 每日 | 无 |
-| clashfree | static | free-nodes | 无 |
-| proxyqueen | dynamic_date | v2clash.blog | v2clash_blog |
-| v2cross | dynamic_script | Python 脚本 | 无 |
-| xconfig | static | xray-proxy | 无 |
+| 名称 | 类型 | 来源 | 检查条件 | 说明 |
+|------|------|------|---------|------|
+| cmliu | static | CF Workers 汇聚 | 无 | 固定地址，无每日更新 |
+| nodefree | dynamic_date | nodefree.me | nodefree_blog | 日期模板，每日更新帖子（需检查博客） |
+| clashfree | dynamic_date | free-nodes | clashfree_blog | 日期模板，每日更新帖子（需检查博客） |
+| proxyqueen | dynamic_date | v2clash.blog | v2clash_blog | 日期模板，每日更新帖子（需检查博客） |
+| v2cross | dynamic_script | Python 脚本 | 无 | 脚本生成 |
+| xconfig | dynamic_date | xray-proxy | 无 | 日期模板，固定更新 |
+| clash-meta | dynamic_date | clash-meta.github.io | clash_meta_blog | 日期模板，每日更新帖子（需检查博客） |
+| nodev2ray | dynamic_date | nodev2ray.com | nodev2ray_blog | 日期模板，每日更新帖子（需检查博客） |
+| oneclash | dynamic_date | oneclash.cc | oneclash_blog | 日期模板，每日更新帖子（需检查博客） |
+| v2rayhare | dynamic_date | v2rayshare.net | v2rayhare_blog | 日期模板，每日更新帖子（需检查博客） |
+| fgrjk | git_sync | GitHub 仓库 | 无 | Git 同步 |
+| danfeng | dynamic_script | 脚本生成 | 无 | 脚本生成，需要 User-Agent |
+| v2nodes | dynamic_script | 脚本生成 | 无 | 脚本生成 |
 
 ### URL 类型说明
 
 #### Type 1: Static（静态）
 ```json
 {
-  "name": "clashfree",
+  "name": "cmliu",
+  "dir": "cmliu",
+  "output_file": "sub.txt",
   "url_type": "static",
-  "url": "https://raw.githubusercontent.com/..."
+  "url": "https://raw.githubusercontent.com/...",
+  "description": "汇聚订阅 - CloudFlare 工作者自建"
 }
 ```
 → 每次下载相同的固定 URL
@@ -100,72 +113,79 @@
 ```json
 {
   "name": "nodefree",
+  "dir": "nodefree",
+  "output_file": "output.yaml",
   "url_type": "dynamic_date",
-  "url_template": "https://raw.../2025/12/20251220.yaml"
-  // {YEAR}, {MONTH}, {DAY} 会被替换
+  "url_template": "https://node.nodefree.me/{YEAR}/{MONTH}/{YEAR}{MONTH}{DAY}.yaml",
+  "description": "免费节点 - 每日更新"
 }
 ```
-→ URL 包含日期，自动按当前时间替换
+→ URL 包含日期变量 `{YEAR}`, `{MONTH}`, `{DAY}`，自动按当前时间替换
 
 #### Type 3: Dynamic Script（脚本生成）
 ```json
 {
   "name": "v2cross",
+  "dir": "v2cross",
+  "output_file": "target.yaml",
   "url_type": "dynamic_script",
-  "url_script": "python v2cross/update.py"
+  "url_script": "python v2cross/update.py",
+  "description": "V2Cross - 通过脚本生成"
 }
 ```
 → 执行脚本获取 URL（脚本输出作为 URL）
 
-#### Type 4: 前置检查
+#### Type 4: Git Sync（Git 同步）
 ```json
 {
-  "name": "proxyqueen",
-  "requires_check": "v2clash_blog",
-  // ...
+  "name": "fgrjk",
+  "dir": "FGBLH/fgrjk",
+  "output_file": "fgrjk.yaml",
+  "url_type": "git_sync",
+  "url": "https://github.com/FGBLH/fgrjk.git",
+  "description": "FGBLH fgrjk 订阅"
 }
 ```
-→ 仅当 v2clash.blog 有新发布时才下载
+→ 克隆远程 Git 仓库并同步特定文件
+
+#### Type 5: 前置检查（requires_check）
+```json
+{
+  "name": "clash-meta",
+  "dir": "clash-meta",
+  "output_file": "output.yaml",
+  "url_type": "dynamic_date",
+  "url_template": "https://clash-meta.github.io/uploads/{YEAR}/{MONTH}/0-{YEAR}{MONTH}{DAY}.yaml",
+  "requires_check": "clash_meta_blog",
+  "description": "Clash Meta免费节点订阅站"
+}
+```
+→ 仅当指定博客有新发布时才下载
 
 ---
 
 ## 关键改进
 
 ### 1. 统一调度
-**之前**：7 个不同的 cron 时间表
-- cmliu: 每天 4:05 UTC
-- nodefree: 每2天 4:05 UTC
-- clashfree: 每8小时 17:35 UTC
-- proxyqueen: 每天 1:35 UTC
-- v2cross: 每6小时 1:05 UTC
-- xconfig: 每天 4:05 UTC
-- readme: 每天 0:00 UTC
+**之前**：多个不同的 cron 时间表
+**现在**：统一每 12 小时，北京时间 1:35 & 13:35
 
-**现在**：统一每12小时，北京时间 1:35 & 13:35
-```yaml
-cron: '35 17,5 * * *'  # 推理：
-# UTC 17:35 = 北京时间次日 01:35
-# UTC 05:35 = 北京时间当日 13:35
+### 2. 编码统一
+**之前**：文件编码不一致，中文乱码
+**现在**：自动检测编码并转换为 UTF-8
+```python
+# 流程：下载 → 检测编码 → 转换为 UTF-8 → 比较内容 → 替换文件
 ```
 
-### 2. 错误处理
+### 3. 错误处理
 **之前**：邮件在任何情况下都发送
 **现在**：智能过滤
 - ✅ 发送：真实错误（下载失败、脚本错误）
-- ❌ 不发送：内容无变更
+- ❌ 不发送：内容无变更、前置条件未满足
 
-### 3. 可扩展性
+### 4. 可扩展性
 **之前**：每添加订阅需要新建工作流文件
 **现在**：只需修改 `subscriptions.json`
-```json
-{
-  "name": "new-subscription",
-  "dir": "new-sub",
-  "output_file": "output.yaml",
-  "url_type": "static",
-  "url": "https://..."
-}
-```
 
 ---
 
@@ -181,12 +201,13 @@ cron: '35 17,5 * * *'  # 推理：
   "dir": "my-new-sub",
   "output_file": "output.yaml",
   "url_type": "static",
-  "url": "https://example.com/subscribe.yaml"
+  "url": "https://example.com/subscribe.yaml",
+  "description": "我的新订阅"
 }
 ```
 3. 本地创建对应目录：`mkdir -p my-new-sub`
-4. 提交更改
-5. 主工作流会自动在下次运行时处理新订阅
+4. 在 `update-all.yml` 中添加对应的提交步骤和推送条件
+5. 提交更改
 
 ### 手动触发
 
@@ -207,18 +228,69 @@ cron: '35 17,5 * * *'  # 推理：
 
 ---
 
+## 代码复用指南
+
+### 提交信息格式
+
+所有订阅提交遵循统一格式：
+```
+{项目名}_{日期时间} - Update from {订阅地址} (at {跟踪地址})
+```
+
+示例：
+```
+clash-meta_2025-12-20 13:35:00 - Update from https://clash-meta.github.io/uploads/2025/12/0-20251220.yaml (at https://clash-meta.github.io/free-nodes/)
+```
+
+### 日志输出格式
+
+脚本输出遵循统一格式：
+```
+[{name}] 尝试地址: `{url}`
+[{name}] ✓ 地址成功: `{url}` ({size} 字节)
+[{name}] 文件已替换（{size} 字节）
+[{name}] 已更新: `{url}`
+[{name}] 无变更
+[{name}] 跳过: {原因}
+[{name}] 错误: {错误信息}
+```
+
+### 前置检查函数
+
+目前支持的前置检查：
+- `v2clash_blog`: 检查 v2clash.blog 是否有今日新文章
+- `clash_meta_blog`: 检查 clash-meta.github.io 是否有今日新文章
+
+添加新检查函数：在 `update_subscriptions.py` 中添加 `check_{check_name}_new_post()` 函数
+
+---
+
 ## 技术细节
 
 ### 时间处理
 - **主工作流**：提取北京时间 YEAR/MONTH/DAY
 - **通用脚本**：优先使用环境变量，回退到系统计算
-- **v2clash 检查**：在下载前检查该日期是否有新文章
+- **博客检查**：在下载前检查该日期是否有新文章
+
+### 编码处理
+```python
+# 检测编码
+detected_encoding = detect_encoding(temp_file_path)
+
+# 转换为 UTF-8（如果不是）
+if detected_encoding != 'utf-8':
+    convert_to_utf8(temp_file_path, detected_encoding)
+
+# 比较内容（两者都是 UTF-8）
+if filecmp.cmp(output_file_path, temp_file_path, shallow=False):
+    file_changed = False
+```
 
 ### Git 操作
 ```bash
 git add <file>
 git diff --staged --quiet  # 检测变更
-git commit -m "..."
+git commit -m "{项目名}_{日期时间} - Update from {URL}"
 git push
 ```
 
@@ -231,14 +303,15 @@ git push
 
 ## 测试清单
 
-□ 主工作流每12小时正常运行
-□ 所有6个订阅都被正确更新
+□ 主工作流每 12 小时正常运行
+□ 所有 13 个订阅都被正确更新
 □ README.md 的日期被正确替换
 □ 无内容变更时不发送邮件
 □ 出现错误时邮件正确发送
-□ v2clash 检查逻辑正常工作
+□ 前置检查逻辑正常工作
 □ 可通过手动触发运行工作流
 □ 日期变量正确传递到 Python 脚本
+□ 编码转换正常工作
 
 ---
 
@@ -253,11 +326,16 @@ git push
 - 检查 `subscriptions.json` 中的 URL 是否有效
 - 验证 `dir` 目录是否存在
 - 查看工作流运行日志中的错误信息
+- 检查前置条件是否满足
 
 ### 日期替换不工作
 - 确保 README.md 包含正确的日期模式
 - 验证环境变量是否正确导出
 - 查看 `update_readme.py` 的输出
+
+### 编码问题
+- 检查文件是否为 UTF-8 编码
+- 查看脚本日志中的编码检测信息
 
 ---
 
@@ -279,4 +357,3 @@ git push
 - [订阅配置指南](.github/config/README.md)
 - [工作流详情](.github/workflows/update-all.yml)
 - [通用更新脚本](.github/scripts/update_subscriptions.py)
-
