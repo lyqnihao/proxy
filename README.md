@@ -18,7 +18,7 @@
 
   每 12 小时自动更新（北京时间 00:05 AM 和 12:05 PM），如果程序运行错误，则向xxx@163.com发送报错邮件。<br>
 
-| 爬虫目标 | 订阅链接 | [镜像加速订阅链接](https://gh-proxy.com/) | 更新日期 |
+| 跟踪目标 | 订阅链接 | [镜像加速订阅链接](https://gh-proxy.com/) | 更新日期 |
 | ---- | ---- | ---- | ---- |
 | [DanFeng](https://2sniweb.danfeng.eu.org/) | [DanFeng/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | [DanFeng/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | 2026-06-03 |
 | [V2Nodes](https://www.v2nodes.com/) | [V2Nodes/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | [V2Nodes/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | 2026-06-03 |
