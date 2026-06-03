@@ -1,13 +1,16 @@
 # 一、用搜索方式查找订阅
 
 ## 1.1、[Github公益项目](https://github.com/search?q=saved%3Av2rayfree+&type=repositories&saved_searches=%5B%7B%22name%22%3A%22v2rayfree%22%2C%22query%22%3A%22v2ray+free%22%7D%5D&expanded_query=v2ray+free+&s=updated&o=desc)：<br>
-用free+V2Ray搜项目，看星标多的一般都是，看代码raw<br>
+ - 用free+V2Ray搜项目，看星标多的一般都是，看代码raw<br>
 
 ## 1.2、[FOFA网络空间搜索Clash订阅1](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
-搜索语句：body="port: 7890" && body="socks-port: 7891" && body="allow-lan: true"<br>
+ - 搜索语句：body="port: 7890" && body="socks-port: 7891" && body="allow-lan: true"<br>
 
 ## 1.3、[FOFA网络空间搜索Clash订阅2](https://fofa.info/result?qbase64=Ym9keT0i6Ieq5Yqo5oqT5Y%20WdGfpopHpgZPjgIHorqLpmIXlnLDlnYDjgIHlhazlvIDkupLogZTnvZHkuIrnmoRzc%20OAgXNzcuOAgXZtZXNz44CBdHJvamFu6IqC54K55L%20h5oGvIg%3D%3D)：<br>
-搜索语句：body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"<br>
+ - 搜索语句：body="自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息"<br>
+
+## 1.4、[Telegram](https://web.telegram.org/k/#节点)
+ - 在纸飞机Telegram上搜索：代理、节点、订阅、白嫖 等关键词
 
 # 二、常用好用的订阅地址
 
@@ -15,9 +18,9 @@
 
   每天1点半13点半自动检测更新，如果内容未更新或程序运行错误，则向xxx@163.com发送报错邮件。<br>
 
-### 汇聚订阅-CF：<br>
-Cloudflare自建汇聚订阅<br>
-- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/cmliu/target.yaml<br>
+### ~~汇聚订阅-CF：~~<br>
+~~Cloudflare自建汇聚订阅~~<br>
+ - 取消该项目~~
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
@@ -47,10 +50,34 @@ Cloudflare自建汇聚订阅<br>
 - clash订阅链接：https://v2clash.blog/Link/20260603-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
+### [Clash Meta免费节点订阅站](https://clash-meta.github.io/free-nodes/) ：<br>
+类似nodefree，动态日期更新地址。<br>
+- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.txt<br>
+- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.yaml<br>
+- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml<br>
+
+### [Node V2ray 网站](https://nodev2ray.com/) ：<br>
+类似nodefree，动态日期更新地址。<br>
+- v2ray订阅链接：https://node.nodev2ray.com/uploads/2026/06/0-20260602.txt<br>
+- clash订阅链接：https://node.nodev2ray.com/uploads/2026/06/0-20260602.yaml<br>
+- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml<br>
+
+### [免费节点-oneClash 网站](https://oneclash.cc/freenode) ：<br>
+类似nodefree，动态日期更新地址。<br>
+- v2ray订阅链接：https://oss.oneclash.cc/2026/06/20260602.txt<br>
+- clash订阅链接：https://oss.oneclash.cc/2026/06/20260602.yaml<br>
+- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml<br>
+
+### [v2rayShare 订阅站](https://v2rayshare.net/) ：<br>
+类似nodefree，动态日期更新地址。<br>
+- v2ray订阅链接：https://static.v2rayshare.net/2026/06/20260602.txt<br>
+- clash订阅链接：https://static.v2rayshare.net/2026/06/20260602.yaml<br>
+- 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml<br>
+
 ### [xConfig](https://xconfig.pages.dev/index2)：<br>
 整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js<br>
-- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202606032<br>
+- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202606022<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
 ## 2.2、未跟踪、或需每日手动点击更新地址的订阅

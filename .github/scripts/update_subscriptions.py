@@ -570,9 +570,7 @@ def update_subscription(config: dict) -> Tuple[int, str]:
             return 1, f"[{name}] 错误: {error}"
 
         if has_changes:
-            # 检查 git 变更
-            # 先将目录添加到暂存区（递归添加目录中的所有文件）
-            subprocess.run(["git", "add", directory], check=False)
+            # 检查 git 变更（不提前 add，让后续提交步骤处理）
             has_git_changes, err = git_has_changes(directory)
             if err:
                 return 1, f"[{name}] Git错误: {err}"

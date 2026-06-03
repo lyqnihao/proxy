@@ -168,7 +168,7 @@ def update_specific_area_only():
 
     for line in lines:
         # 只更新包含特定关键词的行，或包含 v2cross 的旧动态 URL
-        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree', 'v2cross']) \
+        if any(keyword in line for keyword in ['nodefree', 'clashfree', 'clashgithub', 'xconfig', 'xConfig', 'v2clash', 'aiboboxx', 'v2rayfree', 'v2cross', 'clash-meta', 'nodev2ray', 'oneclash', 'v2rayhare', 'v2rayshare']) \
                 or re.search(r'https://9527521\.xyz/pubconfig/[^\s<>]+', line):
             # 应用日期替换
             original_line = line
@@ -225,6 +225,30 @@ def update_specific_area_only():
             line = re.sub(
                 r'(node\.nodefree\.me/)\d{4}/\d{2}/(m?)\d{8}(\.txt|\.yaml)', 
                 rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
+                line
+            )
+            # 添加 clash-meta 的日期格式替换
+            line = re.sub(
+                r'(clash-meta\.github\.io/uploads/)\d{4}/\d{2}/(0-)\d{8}(\.txt|\.yaml)', 
+                rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
+                line
+            )
+            # 添加 nodev2ray 的日期格式替换
+            line = re.sub(
+                r'(node\.nodev2ray\.com/uploads/)\d{4}/\d{2}/(0-)\d{8}(\.txt|\.yaml)', 
+                rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
+                line
+            )
+            # 添加 oneclash 的日期格式替换
+            line = re.sub(
+                r'(oss\.oneclash\.cc/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
+                rf'\g<1>{year}/{month}/{date_str}\g<2>', 
+                line
+            )
+            # 添加 v2rayhare 的日期格式替换
+            line = re.sub(
+                r'(static\.v2rayshare\.net/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
+                rf'\g<1>{year}/{month}/{date_str}\g<2>', 
                 line
             )
             
