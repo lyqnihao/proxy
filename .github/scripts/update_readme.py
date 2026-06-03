@@ -75,6 +75,8 @@ def main():
         # 基础占位符替换
         (r'\$YEAR\$MONTH\$DAY', date_str),              # $YEAR$MONTH$DAY -> YYYYMMDD
         (r'\$YEAR/\$MONTH', year_month),                # $YEAR/$MONTH -> YYYY/MM
+        # 更新日期占位符（用于表格中的更新日期列）
+        (r'\$UPDATE_DATE\$', f"{year}-{month}-{day}"),   # $UPDATE_DATE$ -> YYYY-MM-DD
 
         # 各种网站的具体替换规则
         # xConfig 的日期格式（v+YYYYMMDD+2），支持 free-nodes 和 aiboboxx 仓库
@@ -176,6 +178,8 @@ def update_specific_area_only():
             line = re.sub(r'\$YEAR\$MONTH\$DAY', date_str, line)
             # 替换 $YEAR/$MONTH/XXXXXXXX 格式
             line = re.sub(r'\$YEAR/\$MONTH/\d{8}', f"{year_month}/{date_str}", line)
+            # 替换更新日期占位符（用于表格中的更新日期列）
+            line = re.sub(r'\$UPDATE_DATE\$', f"{year}-{month}-{day}", line)
             # 替换 /YYYY/MM/XXXXXXXX 格式
             line = re.sub(r'/\d{4}/\d{2}/\d{8}', f"/{year}/{month}/{date_str}", line)
             # 替换 clashgithub.com 的日期格式（新格式：YYYYMMDD.yml，无clash前缀）
