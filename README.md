@@ -65,8 +65,8 @@
 
 ### [Clash Meta免费节点订阅站](https://clash-meta.github.io/free-nodes/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260603.txt<br>
-- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260603.yaml<br>
+- v2ray订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.txt<br>
+- clash订阅链接：https://clash-meta.github.io/uploads/2026/06/0-20260601.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml<br>
 
 ### [Node V2ray 网站](https://nodev2ray.com/) ：<br>
