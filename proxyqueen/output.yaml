@@ -9,773 +9,141 @@ unified-delay: true
 global-client-fingerprint: chrome
 keep-alive-interval: 360
 proxies:
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新), server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新), server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5, server: 121.191.33.84, port: 30303, type: trojan, password: 433e785b-2077-47f7-a43d-985f63dd18d1, sni: vpn.rnmcnm.com, skip-cert-verify: true, network: ws, ws-opts: {path: /trojan, headers: {Host: vpn.rnmcnm.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14, server: renderer-stream-1-411.mirra.now, port: 443, type: vmess, uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /api/v1/gpu-stream/socket, headers: {Host: renderer-stream-1-411.mirra.now}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17, server: 2a02:6ea0:d32f::f8fe:349b, port: 24202, type: vmess, uuid: b20a7042-70ff-4376-a79f-b68f9edb7519, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: <nil>, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20, server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6003, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21, server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6004, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22, server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6001, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23, server: jpbgp.netvigor.cc, port: 19128, type: trojan, password: gcuCpQfaiVeDBdWG, sni: yazhou10.dynu.net, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31, server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6003, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32, server: 119.195.0.158, port: 35342, type: trojan, password: rYuChHcwQZskq9E0zdoR, sni: vpn5.rnmcnm.com, skip-cert-verify: true, network: ws, ws-opts: {path: /ws-79dffb8106db, headers: {Host: vpn5.rnmcnm.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33, server: 218.152.227.25, port: 12000, type: trojan, password: 433e785b-2077-47f7-a43d-985f63dd18d1, sni: vpn.rnmcnm.com, skip-cert-verify: true, network: ws, ws-opts: {path: /trojan, headers: {Host: vpn.rnmcnm.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新), server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6004, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新), server: renderer-stream-1-411.mirra.now, port: 443, type: vmess, uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: renderer-stream-1-411.mirra.now, network: ws, ws-opts: {path: /api/v1/gpu-stream/socket, headers: {Host: renderer-stream-1-411.mirra.now}}, udp: true}
-  - {name: 🇯🇵 JP日本(v2clash.blog 2026-6.4更新), server: 2a02:6ea0:d32f::f8fe:349b, port: 24202, type: vmess, uuid: b20a7042-70ff-4376-a79f-b68f9edb7519, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang, headers: {Host: 2a02:6ea0:d32f::f8fe:349b}}, udp: true}
-  - {name: 🇭🇰 HK香港(v2clash.blog 2026-6.4更新), server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2, server: world.t.51guangtaobao.com, port: 2510, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新), server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2, server: hackney-latest-strike.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: XUMTygEM1jVYIvysXKqA5T, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3, server: world.t.51guangtaobao.com, port: 2510, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新), server: world.t.51guangtaobao.com, port: 2512, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇭 瑞士(v2clash.blog 2026-6.4更新), server: world.t.51guangtaobao.com, port: 2510, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42, server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47, server: 119.195.0.158, port: 35342, type: trojan, password: rYuChHcwQZskq9E0zdoR, sni: vpn5.rnmcnm.com, skip-cert-verify: true, network: ws, ws-opts: {path: /ws-79dffb8106db, headers: {Host: vpn5.rnmcnm.com}}, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48, server: world.t.51guangtaobao.com, port: 2510, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2, server: 211.76.176.98, port: 19128, type: trojan, password: gcuCpQfaiVeDBdWG, sni: yazhou10.dynu.net, skip-cert-verify: true, udp: true}
-  - {name: 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3, server: wing2452.nyc.mn, port: 443, type: trojan, password: bpb-trojan, sni: wing2452.nyc.mn, skip-cert-verify: true, network: ws, ws-opts: {path: /tr, headers: {Host: wing2452.nyc.mn}}, udp: true}
-  - {name: 🇫🇷 FR法国(v2clash.blog 2026-6.4更新), server: 45.92.218.56, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: RjG_Pd534ZVJRMdODjCNMA, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13, server: 185.129.84.12, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: DQHK4mtugy7xMNChJjB9Jm, udp: true}
-  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.5更新), server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true}
+  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true}
+  - {name: 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新), server: wing2452.nyc.mn, port: 443, type: trojan, password: bpb-trojan, sni: wing2452.nyc.mn, skip-cert-verify: true, network: ws, ws-opts: {path: /tr, headers: {Host: wing2452.nyc.mn}}, udp: true}
+  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.5更新), server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true}
+  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true}
+  - {name: 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: true, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true}
+  - {name: 🇫🇷 FR法国(v2clash.blog 2026-6.5更新), server: 45.92.218.56, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: RjG_Pd534ZVJRMdODjCNMA, udp: true}
+  - {name: 🇩🇪 DE德国(v2clash.blog 2026-6.5更新), server: hackney-latest-strike.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: XUMTygEM1jVYIvysXKqA5T, udp: true}
+  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3, server: r3mrcg001286ek2.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true}
+  - {name: 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4, server: wing2452.nyc.mn, port: 443, type: trojan, password: bpb-trojan, sni: wing2452.nyc.mn, skip-cert-verify: true, network: ws, ws-opts: {path: /tr, headers: {Host: wing2452.nyc.mn}}, udp: true}
+  - {name: 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新), server: T2clM0QlM0Q6@..., port: 0, type: socks5, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2, server: 45.92.218.56, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: RjG_Pd534ZVJRMdODjCNMA, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -798,97 +166,18 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 2
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 3
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 4
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 5
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 6
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 7
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 8
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 9
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 10
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 11
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 12
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 13
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 14
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 15
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 16
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 17
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 18
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 19
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 20
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 21
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 22
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 23
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 24
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 25
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 26
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 27
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 28
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 29
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 30
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 31
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 32
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 33
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 34
-      - 🇸🇬 SG新加坡(v2clash.blog 2026-6.4更新)
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新)
-      - 🇯🇵 JP日本(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新)
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新)
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 2
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 3
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 4
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 5
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 7
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 8
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 9
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 2
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 3
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 4
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 5
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 6
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 11
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 12
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 13
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 14
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 15
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 16
-      - 🇬🇧 GB英国(v2clash.blog 2026-6.4更新) 17
-      - 🇭🇰 HK香港(v2clash.blog 2026-6.4更新) 3
-      - 🇨🇳 TW台湾(v2clash.blog 2026-6.4更新)
-      - 🇨🇭 瑞士(v2clash.blog 2026-6.4更新)
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 35
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 36
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 37
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 38
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 39
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 40
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 41
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 42
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 43
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 44
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 45
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 46
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 47
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 48
-      - 🇺🇸 US美国(v2clash.blog 2026-6.4更新) 49
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 2
-      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.4更新) 3
-      - 🇫🇷 FR法国(v2clash.blog 2026-6.4更新)
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 7
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 8
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 9
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 10
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 11
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 12
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 13
-      - 🇩🇪 DE德国(v2clash.blog 2026-6.4更新) 14
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 2
+      - 🇳🇱 NL荷兰(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新)
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 2
+      - 🇬🇧 GB英国(v2clash.blog 2026-6.5更新) 3
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新)
+      - 🇩🇪 DE德国(v2clash.blog 2026-6.5更新)
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 3
+      - 🇺🇸 US美国(v2clash.blog 2026-6.5更新) 4
+      - 🇰🇷 KR韩国(v2clash.blog 2026-6.5更新)
+      - 🇫🇷 FR法国(v2clash.blog 2026-6.5更新) 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
