@@ -98,7 +98,7 @@
 - [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
-  每日动态地址：https://9527521.xyz/pubconfig/B2JugA8y9dF4PH56<br>
+  每日动态地址：https://9527521.xyz/pubconfig/HMZ67E3m0JpvN9LA<br>
 
   GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
