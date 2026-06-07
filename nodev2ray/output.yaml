@@ -25,16 +25,33 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 proxies:
-  - name: 俄羅斯丨yoyapai.com
-    type: vless
-    server: r1.mizulina.top
-    port: 22231
-    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-    servername: r1.mizulina.top
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
+  - name: 美國節點
+    type: vmess
+    server: 2a02:6ea0:d32f::f8fe:349b
+    port: 24202
+    uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
+    alterId: 0
+    cipher: auto
+    tls: false
     skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /github.com/Alvin9999-newpac/fanqiang
+      headers:
+        Host: 2a02:6ea0:d32f::f8fe:349b
+    udp: true
+  - name: 美國節點_1
+    type: vmess
+    server: 2a02:6ea0:d32f::f8fe:349b
+    port: 24202
+    uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /github.com/Alvin9999-newpac/fanqiang
     udp: true
   - name: 日本節點
     type: vmess
@@ -51,32 +68,6 @@ proxies:
       headers:
         Host: 2a02:6ea0:d32f::f8fe:349b
     udp: true
-  - name: 美國節點
-    type: vmess
-    server: 2a02:6ea0:d32f::f8fe:349b
-    port: 24202
-    uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /github.com/Alvin9999-newpac/fanqiang
-    udp: true
-  - name: 美國節點_1
-    type: vmess
-    server: 2a02:6ea0:d32f::f8fe:349b
-    port: 24202
-    uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /github.com/Alvin9999-newpac/fanqiang
-    udp: true
   - name: 美國節點_2
     type: vmess
     server: 2a02:6ea0:d32f::f8fe:349b
@@ -89,42 +80,44 @@ proxies:
     network: ws
     ws-opts:
       path: /github.com/Alvin9999-newpac/fanqiang
-      headers:
-        Host: 2a02:6ea0:d32f::f8fe:349b
     udp: true
-  - name: 俄羅斯節點丨yoyapai.com
+  - name: 美國節點_3
+    type: vmess
+    server: 2a02:6ea0:d32f::f8fe:349b
+    port: 24202
+    uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /github.com/Alvin9999-newpac/fanqiang
+    udp: true
+  - name: 俄羅斯丨yoyapai.com
+    type: vless
+    server: 85.234.114.53
+    port: 443
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    client-fingerprint: edge
+    skip-cert-verify: true
+    udp: true
+  - name: 俄羅斯丨yoyapai.com_1
     type: vless
     server: r1.mizulina.top
     port: 22231
     uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
     servername: r1.mizulina.top
     tls: true
+    flow: xtls-rprx-vision
     client-fingerprint: edge
     skip-cert-verify: true
     udp: true
-  - name: 俄羅斯節點丨yoyapai.com_1
-    type: vless
-    server: 85.234.114.53
-    port: 22231
-    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-    servername: r1.mizulina.top
-    tls: true
-    client-fingerprint: edge
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點_3
+  - name: 英國節點
     type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點
-    type: vmess
-    server: 82.198.246.250
+    server: 82.198.246.214
     port: 180
     uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     alterId: 0
@@ -134,57 +127,7 @@ proxies:
     udp: true
   - name: 美國節點_4
     type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_1
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_1
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_2
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點_5
-    type: vmess
-    server: 82.198.246.250
+    server: 82.198.246.214
     port: 180
     uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     alterId: 0
@@ -194,27 +137,7 @@ proxies:
     udp: true
   - name: 英國
     type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_2
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_3
-    type: vmess
-    server: 82.198.246.250
+    server: 82.198.246.214
     port: 180
     uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     alterId: 0
@@ -223,134 +146,6 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 英國_1
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點_6
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_3
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_4
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點_7
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_5
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_4
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_5
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_6
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_6
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點_8
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點丨yoyapai.com
-    type: ss
-    server: hackney-latest-strike.freesocks.work
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: XUMTygEM1jVYIvysXKqA5T
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_7
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -380,7 +175,37 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國_1
+  - name: 美國
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_1
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_2
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_3
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -400,6 +225,76 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
+  - name: 英國_5
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_4
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_5
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_6
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國_1
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_5
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_7
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: 英國節點_8
     type: vmess
     server: 82.198.246.214
@@ -407,6 +302,16 @@ proxies:
     uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     alterId: 0
     cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_6
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
     tls: false
     skip-cert-verify: true
     udp: true
@@ -430,34 +335,6 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 德國節點丨yoyapai.com
-    type: ss
-    server: hackney-latest-strike.freesocks.work
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: XUMTygEM1jVYIvysXKqA5T
-    skip-cert-verify: true
-    udp: true
-  - name: 英國_5
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_7
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
   - name: 英國節點_11
     type: vmess
     server: 82.198.246.214
@@ -468,15 +345,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US美國丨yoyapai.com
-    type: ss
-    server: hackney-latest-strike.freesocks.work
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: XUMTygEM1jVYIvysXKqA5T
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_12
+  - name: 美國_2
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -486,15 +355,27 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 德國丨yoyapai.com
-    type: ss
-    server: hackney-latest-strike.freesocks.work
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: XUMTygEM1jVYIvysXKqA5T
+  - name: 英國_6
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國_6
+  - name: 美國_3
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_12
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -524,7 +405,75 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
+  - name: 🇺🇸 US美國丨yoyapai.com
+    type: ss
+    server: hackney-latest-strike.freesocks.work
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: XUMTygEM1jVYIvysXKqA5T
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_9
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_7
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_10
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: 英國節點_13
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國_4
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: aes-128-gcm
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_11
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_12
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -554,106 +503,6 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_16
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_17
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_18
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_8
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國_9
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國_10
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國_2
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_19
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國_11
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國_12
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
   - name: 英國_13
     type: vmess
     server: 82.198.246.214
@@ -664,57 +513,17 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 德國節點_9
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點_9
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_20
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國_3
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: aes-128-gcm
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_21
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
   - name: 英國_14
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國_5
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -734,7 +543,25 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_10
+  - name: 英國節點_16
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點丨yoyapai.com
+    type: ss
+    server: hackney-latest-strike.freesocks.work
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: XUMTygEM1jVYIvysXKqA5T
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_8
     type: vmess
     server: 82.198.246.250
     port: 180
@@ -744,9 +571,9 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_11
+  - name: 英國節點_17
     type: vmess
-    server: 82.198.246.250
+    server: 82.198.246.214
     port: 180
     uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     alterId: 0
@@ -754,37 +581,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_12
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_10
-    type: vmess
-    server: 82.198.246.250
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 俄羅斯丨yoyapai.com_1
-    type: vless
-    server: r1.mizulina.top
-    port: 22231
-    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-    servername: r1.mizulina.top
-    tls: true
-    client-fingerprint: edge
-    skip-cert-verify: true
-    udp: true
-  - name: 俄羅斯丨yoyapai.com_2
+  - name: 俄羅斯節點丨yoyapai.com
     type: vless
     server: r1.mizulina.top
     port: 22231
@@ -794,40 +591,7 @@ proxies:
     client-fingerprint: chrome
     skip-cert-verify: true
     udp: true
-  - name: 美國節點丨yoyapai.com_1
-    type: trojan
-    server: 167.68.4.199
-    port: 2053
-    password: Aimer
-    sni: epge.muarua.filegear-sg.me
-    skip-cert-verify: true
-    tls: true
-    ws-opts:
-      path: /?ed=2560&proxyip=ts.hpc.tw
-      headers:
-        Host: epge.muarua.filegear-sg.me
-    udp: true
-  - name: 美國_4
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: aes-128-gcm
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_22
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_23
+  - name: 英國節點_18
     type: vmess
     server: 82.198.246.250
     port: 180
@@ -837,83 +601,37 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國_16
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點丨yoyapai.com_2
-    type: trojan
-    server: 167.68.4.199
-    port: 2053
-    password: Aimer
-    sni: epge.muarua.filegear-sg.me
-    skip-cert-verify: true
-    tls: true
-    ws-opts:
-      path: /?ed
-      headers:
-        Host: epge.muarua.filegear-sg.me
-    udp: true
-  - name: 美國_5
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_24
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國_17
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國丨yoyapai.com
+  - name: 俄羅斯丨yoyapai.com_2
     type: vless
-    server: 80.93.202.40
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime02.workers.dev
+    server: r1.mizulina.top
+    port: 22231
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    client-fingerprint: edge
     skip-cert-verify: true
     udp: true
-  - name: 英國_18
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
+  - name: 俄羅斯丨yoyapai.com_3
+    type: vless
+    server: r1.mizulina.top
+    port: 22231
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    client-fingerprint: chrome
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_13
+  - name: 俄羅斯節點丨yoyapai.com_1
+    type: vless
+    server: 85.234.114.53
+    port: 22231
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    client-fingerprint: edge
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_16
     type: vmess
     server: 82.198.246.214
     port: 180
@@ -930,86 +648,26 @@ proxies:
     uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
     servername: r1.mizulina.top
     tls: true
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點丨yoyapai.com_3
-    type: trojan
-    server: 167.68.4.199
-    port: 2053
-    password: Aimer
-    sni: epge.muarua.filegear-sg.me
-    skip-cert-verify: true
-    tls: true
-    ws-opts:
-      path: /
-      headers:
-        Host: epge.muarua.filegear-sg.me
-    udp: true
-  - name: 俄羅斯丨yoyapai.com_3
-    type: vless
-    server: 85.234.114.53
-    port: 443
-    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-    servername: r1.mizulina.top
-    tls: true
     client-fingerprint: edge
     skip-cert-verify: true
     udp: true
-  - name: 美國丨yoyapai.com
-    type: trojan
-    server: jpbgp.netvigor.cc
-    port: 19128
-    password: gcuCpQfaiVeDBdWG
-    sni: yazhou10.dynu.net
-    skip-cert-verify: true
-    tls: true
-    udp: true
-  - name: 荷蘭丨yoyapai.com
-    type: hysteria2
-    server: hy2.aspidnet.xyz
+  - name: 德國丨yoyapai.com
+    type: ss
+    server: hackney-latest-strike.freesocks.work
     port: 443
-    password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-    sni: hy2.aspidnet.xyz
+    cipher: chacha20-ietf-poly1305
+    password: XUMTygEM1jVYIvysXKqA5T
     skip-cert-verify: true
-    obfs: salamander
-    obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
     udp: true
-  - name: 美國節點丨yoyapai.com_4
+  - name: 德國節點丨yoyapai.com
     type: ss
-    server: 195.58.49.104
-    port: 20129
-    cipher: aes-256-gcm
-    password: fbaf33bcffe53cf9
-    skip-cert-verify: true
-    udp: true
-  - name: 荷蘭丨yoyapai.com_1
-    type: hysteria2
-    server: hy2.aspidnet.xyz
+    server: hackney-latest-strike.freesocks.work
     port: 443
-    password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-    sni: hy2.aspidnet.xyz
-    skip-cert-verify: true
-    obfs: salamander
-    obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-    udp: true
-  - name: 美國節點丨yoyapai.com_5
-    type: ss
-    server: 45.140.169.244
-    port: 20981
-    cipher: aes-256-gcm
-    password: cfe685726eea2c4b
+    cipher: chacha20-ietf-poly1305
+    password: XUMTygEM1jVYIvysXKqA5T
     skip-cert-verify: true
     udp: true
-  - name: 美國節點丨yoyapai.com_6
-    type: ss
-    server: 212.192.12.98
-    port: 20129
-    cipher: aes-256-gcm
-    password: 7e1dd4c55bf85da5
-    skip-cert-verify: true
-    udp: true
-  - name: 美國節點丨yoyapai.com_7
+  - name: 美國節點丨yoyapai.com_1
     type: ss
     server: tinkered-pennies-puppies.freesocks.work
     port: 443
@@ -1017,7 +675,7 @@ proxies:
     password: hbGrpfvNrJsUmKmPbR3iY2
     skip-cert-verify: true
     udp: true
-  - name: 美國節點丨yoyapai.com_8
+  - name: 美國節點丨yoyapai.com_2
     type: ss
     server: tinkered-pennies-puppies.freesocks.work
     port: 443
@@ -1025,18 +683,20 @@ proxies:
     password: hbGrpfvNrJsUmKmPbR3iY2
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_14
+  - name: 俄羅斯
     type: vmess
-    server: 2a02:6ea0:d32f::f8fe:349b
-    port: 24202
-    uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
+    server: renderer-stream-1-411.mirra.now
+    port: 443
+    uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /github.com/Alvin9999-newpac/fanqiang
+      path: /api/v1/gpu-stream/socket
+      headers:
+        Host: renderer-stream-1-411.mirra.now
     udp: true
   - name: 美國_6
     type: vmess
@@ -1048,7 +708,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_15
+  - name: 美國節點_9
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1058,7 +718,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國_19
+  - name: 英國_17
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1068,7 +728,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_16
+  - name: 美國節點_10
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1078,7 +738,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國_20
+  - name: 英國_18
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1088,7 +748,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_17
+  - name: 美國節點_11
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1098,7 +758,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_18
+  - name: 美國節點_12
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1118,7 +778,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_19
+  - name: 美國節點_13
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1138,7 +798,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_25
+  - name: 英國節點_19
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1148,7 +808,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_26
+  - name: 英國節點_20
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1158,7 +818,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_20
+  - name: 美國節點_14
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1168,37 +828,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_27
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_11
-    type: vmess
-    server: 82.198.246.37
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 德國節點_12
-    type: vmess
-    server: 82.198.246.37
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 英國節點_28
+  - name: 美國節點_15
     type: vmess
     server: 82.198.246.250
     port: 180
@@ -1208,7 +838,37 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_21
+  - name: 德國節點
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_19
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 德國節點_1
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 德國節點_2
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1218,7 +878,17 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_29
+  - name: 英國節點_21
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_16
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1228,7 +898,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_22
+  - name: 英國節點_22
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1238,7 +908,47 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_30
+  - name: 英國節點_23
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_17
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_24
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_18
+    type: vmess
+    server: 82.198.246.37
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_25
     type: vmess
     server: 82.198.246.37
     port: 180
@@ -1261,6 +971,26 @@ proxies:
       short-id: 478dc6
     skip-cert-verify: true
     udp: true
+  - name: 英國節點_26
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國_20
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: 美國_8
     type: vmess
     server: 82.198.246.37
@@ -1281,19 +1011,22 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_23
-    type: vmess
-    server: 82.198.246.214
-    port: 180
-    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    alterId: 0
-    cipher: aes-128-gcm
+  - name: 英國丨yoyapai.com
+    type: vless
+    server: 80.93.202.40
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
     tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime02.workers.dev
     skip-cert-verify: true
     udp: true
-  - name: 英國節點_31
+  - name: 德國節點_3
     type: vmess
-    server: 82.198.246.214
+    server: 82.198.246.250
     port: 180
     uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     alterId: 0
@@ -1301,7 +1034,87 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_24
+  - name: 德國節點_4
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_19
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 德國節點_5
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 德國節點_6
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_20
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 德國節點_7
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_21
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 英國節點_27
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點_22
     type: vmess
     server: 103.181.164.145
     port: 51556
@@ -1311,7 +1124,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_25
+  - name: 美國節點_23
     type: vmess
     server: 103.181.164.145
     port: 51556
@@ -1341,7 +1154,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_26
+  - name: 美國節點_24
     type: vmess
     server: 103.181.164.145
     port: 51556
@@ -1405,7 +1218,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_27
+  - name: 美國節點_25
     type: vmess
     server: 103.181.164.145
     port: 54022
@@ -1424,6 +1237,15 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
+    udp: true
+  - name: 美國丨yoyapai.com
+    type: trojan
+    server: jpbgp.netvigor.cc
+    port: 19128
+    password: gcuCpQfaiVeDBdWG
+    sni: yazhou10.dynu.net
+    skip-cert-verify: true
+    tls: true
     udp: true
   - name: 美國丨yoyapai.com_1
     type: trojan
@@ -1522,7 +1344,7 @@ proxies:
     password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
     skip-cert-verify: true
     udp: true
-  - name: 美國節點_28
+  - name: 美國節點_26
     type: vmess
     server: 82.198.246.97
     port: 180
@@ -2058,20 +1880,142 @@ proxies:
       headers:
         Host: vpn5.rnmcnm.com
     udp: true
-  - name: 俄羅斯
-    type: vmess
-    server: renderer-stream-1-411.mirra.now
-    port: 443
-    uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
-    alterId: 0
-    cipher: auto
-    tls: true
+  - name: 美國節點丨yoyapai.com_3
+    type: ss
+    server: 212.192.12.98
+    port: 20129
+    cipher: aes-256-gcm
+    password: 7e1dd4c55bf85da5
     skip-cert-verify: true
-    network: ws
+    udp: true
+  - name: 美國節點丨yoyapai.com_4
+    type: ss
+    server: 195.58.49.104
+    port: 20129
+    cipher: aes-256-gcm
+    password: fbaf33bcffe53cf9
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點丨yoyapai.com_5
+    type: ss
+    server: 45.140.169.244
+    port: 20981
+    cipher: aes-256-gcm
+    password: cfe685726eea2c4b
+    skip-cert-verify: true
+    udp: true
+  - name: 美國節點丨yoyapai.com_6
+    type: trojan
+    server: 167.68.4.199
+    port: 2053
+    password: Aimer
+    sni: epge.muarua.filegear-sg.me
+    skip-cert-verify: true
+    tls: true
     ws-opts:
-      path: /api/v1/gpu-stream/socket
+      path: /?ed=2560&proxyip=ts.hpc.tw
       headers:
-        Host: renderer-stream-1-411.mirra.now
+        Host: epge.muarua.filegear-sg.me
+    udp: true
+  - name: 美國節點丨yoyapai.com_7
+    type: trojan
+    server: 167.68.4.199
+    port: 2053
+    password: Aimer
+    sni: epge.muarua.filegear-sg.me
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: epge.muarua.filegear-sg.me
+    udp: true
+  - name: 美國節點丨yoyapai.com_8
+    type: trojan
+    server: 167.68.4.199
+    port: 2053
+    password: Aimer
+    sni: epge.muarua.filegear-sg.me
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /?ed
+      headers:
+        Host: epge.muarua.filegear-sg.me
+    udp: true
+  - name: 荷蘭丨yoyapai.com
+    type: hysteria2
+    server: hy2.aspidnet.xyz
+    port: 443
+    password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+    sni: hy2.aspidnet.xyz
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+    udp: true
+  - name: 荷蘭丨yoyapai.com_1
+    type: hysteria2
+    server: hy2.aspidnet.xyz
+    port: 443
+    password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+    sni: hy2.aspidnet.xyz
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+    udp: true
+  - name: 新加坡節點丨yoyapai.com
+    type: trojan
+    server: gg.772fk.cn
+    port: 21526
+    password: b447bda5-35b2-4332-9746-994e5db3fa4e
+    sni: sg02.ckcloud.info
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 新加坡節點丨yoyapai.com_1
+    type: trojan
+    server: g.772fk.cn
+    port: 40276
+    password: b447bda5-35b2-4332-9746-994e5db3fa4e
+    sni: sg01.ckcloud.info
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 越南節點丨yoyapai.com
+    type: trojan
+    server: g.772fk.cn
+    port: 54295
+    password: b447bda5-35b2-4332-9746-994e5db3fa4e
+    sni: vn01.ckcloud.info
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 印度節點丨yoyapai.com
+    type: trojan
+    server: g.772fk.cn
+    port: 45852
+    password: b447bda5-35b2-4332-9746-994e5db3fa4e
+    sni: id01.ckcloud.info
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 澳大利亞丨yoyapai.com
+    type: trojan
+    server: gg.772fk.cn
+    port: 63640
+    password: b447bda5-35b2-4332-9746-994e5db3fa4e
+    sni: aus01.ckcloud.info
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 土耳其節點丨yoyapai.com
+    type: trojan
+    server: g.772fk.cn
+    port: 15762
+    password: b447bda5-35b2-4332-9746-994e5db3fa4e
+    sni: tur01.ckcloud.info
+    skip-cert-verify: true
+    tls: true
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -2079,144 +2023,126 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -2225,7 +2151,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -2271,148 +2197,143 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -2421,7 +2342,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -2467,7 +2388,20 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -2477,144 +2411,126 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -2623,7 +2539,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -2669,150 +2585,145 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -2821,7 +2732,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -2867,150 +2778,145 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -3019,7 +2925,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -3065,150 +2971,145 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -3217,7 +3118,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -3263,7 +3164,20 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -3286,144 +3200,126 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 俄羅斯丨yoyapai.com
-      - 日本節點
       - 美國節點
       - 美國節點_1
+      - 日本節點
       - 美國節點_2
-      - 俄羅斯節點丨yoyapai.com
-      - 俄羅斯節點丨yoyapai.com_1
       - 美國節點_3
-      - 德國節點
-      - 美國節點_4
+      - 俄羅斯丨yoyapai.com
+      - 俄羅斯丨yoyapai.com_1
       - 英國節點
-      - 德國節點_1
-      - 英國節點_1
-      - 英國節點_2
-      - 美國節點_5
+      - 美國節點_4
       - 英國
-      - 德國節點_2
-      - 英國節點_3
       - 英國_1
-      - 美國節點_6
-      - 德國節點_3
-      - 英國節點_4
-      - 美國節點_7
-      - 英國節點_5
-      - 德國節點_4
-      - 德國節點_5
-      - 德國節點_6
-      - 英國節點_6
-      - 美國
-      - 美國節點_8
-      - 美國節點丨yoyapai.com
-      - 英國節點_7
       - 英國_2
       - 英國_3
-      - 美國_1
+      - 美國
+      - 英國節點_1
+      - 英國節點_2
+      - 英國節點_3
       - 英國_4
+      - 英國_5
+      - 英國節點_4
+      - 英國節點_5
+      - 英國節點_6
+      - 美國_1
+      - 美國節點_5
+      - 英國節點_7
       - 英國節點_8
+      - 美國節點_6
       - 英國節點_9
       - 英國節點_10
-      - 德國節點丨yoyapai.com
-      - 英國_5
-      - 德國節點_7
       - 英國節點_11
-      - 🇺🇸 US美國丨yoyapai.com
-      - 英國節點_12
-      - 德國丨yoyapai.com
+      - 美國_2
       - 英國_6
+      - 美國_3
+      - 英國節點_12
       - 英國_7
       - 英國_8
-      - 英國節點_13
-      - 英國節點_14
-      - 英國節點_15
-      - 英國節點_16
-      - 英國節點_17
-      - 英國節點_18
-      - 德國節點_8
+      - 🇺🇸 US美國丨yoyapai.com
       - 英國_9
+      - 美國節點_7
       - 英國_10
-      - 美國_2
-      - 英國節點_19
+      - 英國節點_13
+      - 美國_4
       - 英國_11
       - 英國_12
+      - 英國節點_14
+      - 英國節點_15
       - 英國_13
-      - 德國節點_9
-      - 美國節點_9
-      - 英國節點_20
-      - 美國_3
-      - 英國節點_21
       - 英國_14
+      - 美國_5
       - 英國_15
+      - 英國節點_16
+      - 美國節點丨yoyapai.com
+      - 美國節點_8
+      - 英國節點_17
+      - 俄羅斯節點丨yoyapai.com
+      - 英國節點_18
+      - 俄羅斯丨yoyapai.com_2
+      - 俄羅斯丨yoyapai.com_3
+      - 俄羅斯節點丨yoyapai.com_1
+      - 英國_16
+      - 俄羅斯節點丨yoyapai.com_2
+      - 德國丨yoyapai.com
+      - 德國節點丨yoyapai.com
+      - 美國節點丨yoyapai.com_1
+      - 美國節點丨yoyapai.com_2
+      - 俄羅斯
+      - 美國_6
+      - 美國節點_9
+      - 英國_17
       - 美國節點_10
+      - 英國_18
       - 美國節點_11
       - 美國節點_12
-      - 德國節點_10
-      - 俄羅斯丨yoyapai.com_1
-      - 俄羅斯丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_1
-      - 美國_4
+      - 亞太地區
+      - 美國節點_13
+      - 美國_7
+      - 英國節點_19
+      - 英國節點_20
+      - 美國節點_14
+      - 美國節點_15
+      - 德國節點
+      - 英國_19
+      - 德國節點_1
+      - 德國節點_2
+      - 英國節點_21
+      - 美國節點_16
       - 英國節點_22
       - 英國節點_23
-      - 英國_16
-      - 美國節點丨yoyapai.com_2
-      - 美國_5
-      - 英國節點_24
-      - 英國_17
-      - 英國丨yoyapai.com
-      - 英國_18
-      - 美國節點_13
-      - 俄羅斯節點丨yoyapai.com_2
-      - 美國節點丨yoyapai.com_3
-      - 俄羅斯丨yoyapai.com_3
-      - 美國丨yoyapai.com
-      - 荷蘭丨yoyapai.com
-      - 美國節點丨yoyapai.com_4
-      - 荷蘭丨yoyapai.com_1
-      - 美國節點丨yoyapai.com_5
-      - 美國節點丨yoyapai.com_6
-      - 美國節點丨yoyapai.com_7
-      - 美國節點丨yoyapai.com_8
-      - 美國節點_14
-      - 美國_6
-      - 美國節點_15
-      - 英國_19
-      - 美國節點_16
-      - 英國_20
       - 美國節點_17
+      - 英國節點_24
       - 美國節點_18
-      - 亞太地區
-      - 美國節點_19
-      - 美國_7
       - 英國節點_25
-      - 英國節點_26
-      - 美國節點_20
-      - 英國節點_27
-      - 德國節點_11
-      - 德國節點_12
-      - 英國節點_28
-      - 美國節點_21
-      - 英國節點_29
-      - 美國節點_22
-      - 英國節點_30
       - 烏克蘭節點丨yoyapai.com
+      - 英國節點_26
+      - 英國_20
       - 美國_8
       - 德國
+      - 英國丨yoyapai.com
+      - 德國節點_3
+      - 德國節點_4
+      - 美國節點_19
+      - 德國節點_5
+      - 德國節點_6
+      - 美國節點_20
+      - 德國節點_7
+      - 美國節點_21
+      - 英國節點_27
+      - 美國節點_22
       - 美國節點_23
-      - 英國節點_31
-      - 美國節點_24
-      - 美國節點_25
       - 亞太地區_1
       - 香港節點
-      - 美國節點_26
+      - 美國節點_24
       - 荷蘭節點丨yoyapai.com
       - 韩国+KT电信
       - 香港節點_1
       - 韩国+KT电信_1
       - 香港節點_2
-      - 美國節點_27
+      - 美國節點_25
       - 美國_9
+      - 美國丨yoyapai.com
       - 美國丨yoyapai.com_1
       - 新加坡丨yoyapai.com
       - 英國_21
@@ -3432,7 +3328,7 @@ proxy-groups:
       - 德國丨yoyapai.com_1
       - 丹麥丨yoyapai.com
       - 臺灣節點丨yoyapai.com
-      - 美國節點_28
+      - 美國節點_26
       - 🇰🇷KR南朝鮮丨yoyapai.com
       - 🇰🇷KR韓國節點丨yoyapai.com
       - 🇳🇱NL荷蘭丨yoyapai.com
@@ -3478,7 +3374,20 @@ proxy-groups:
       - 亞太地區丨yoyapai.com
       - 臺灣省丨yoyapai.com_1
       - 亞太地區丨yoyapai.com_1
-      - 俄羅斯
+      - 美國節點丨yoyapai.com_3
+      - 美國節點丨yoyapai.com_4
+      - 美國節點丨yoyapai.com_5
+      - 美國節點丨yoyapai.com_6
+      - 美國節點丨yoyapai.com_7
+      - 美國節點丨yoyapai.com_8
+      - 荷蘭丨yoyapai.com
+      - 荷蘭丨yoyapai.com_1
+      - 新加坡節點丨yoyapai.com
+      - 新加坡節點丨yoyapai.com_1
+      - 越南節點丨yoyapai.com
+      - 印度節點丨yoyapai.com
+      - 澳大利亞丨yoyapai.com
+      - 土耳其節點丨yoyapai.com
 rule-providers:
   LocalAreaNetwork:
     type: http
