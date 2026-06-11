@@ -534,6 +534,28 @@ jobs:
           fi
         continue-on-error: true
 
+      # 提交 README.md 表格日期更新
+      # 注意：此步骤在 update_subscriptions.py 的 finalize_readme_dates() 之后执行
+      - name: 提交 README.md 表格日期
+        id: commit_readme_dates
+        run: |
+          # 获取当前北京时间
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          # 先将 README.md 添加到暂存区
+          git add README.md
+          # 检查是否有变更
+          if git diff --staged --quiet; then
+            # 没有变更
+            echo "✗ README.md 表格日期未变化"
+          else
+            # 有变更，配置 Git 用户信息并提交
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git commit -m "README.md 表格日期更新 at $CURRENT_DATE"
+            echo "✓ README.md 表格日期已提交"
+          fi
+        continue-on-error: true
+
       # 推送所有变更
       - name: 推送变更到远程仓库
         if: |
@@ -549,7 +571,8 @@ jobs:
           env.no_changes_nodev2ray == 'false' ||
           env.no_changes_oneclash == 'false' ||
           env.no_changes_v2rayhare == 'false' ||
-          steps.commit_readme.outcome == 'success'
+          steps.commit_readme.outcome == 'success' ||
+          steps.commit_readme_dates.outcome == 'success'
           )
         run: |
           # 推送所有变更到远程仓库
