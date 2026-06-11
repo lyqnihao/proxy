@@ -357,28 +357,37 @@ def check_v2clash_new_post() -> bool:
     """
     # 获取北京时间信息
     time_info = get_beijing_time()
-    # 生成几种日期格式来匹配网页内容
-    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
-    today_alt = time_info['DATE']  # YYYY-MM-DD 格式
-    # 中文日期格式（如果网页使用中文）
-    today_cn = f"{time_info['YEAR']}年{time_info['MONTH']}月{time_info['DAY']}日"
+    year = time_info['YEAR']
+    month = time_info['MONTH']
+    day = time_info['DAY']
+    month_short = str(int(month))
+    day_short = str(int(day))
+    
+    # 生成多种日期格式来匹配网页内容
+    date_patterns = [
+        year + month + day,                    # YYYYMMDD
+        time_info['DATE'],                      # YYYY-MM-DD
+        f"{year}/{month}/{day}",                # YYYY/MM/DD
+        f"{year}-{month_short}-{day_short}",    # YYYY-M-D
+        f"{year}/{month_short}/{day_short}",    # YYYY/M/D
+        f"{year}年{month}月{day}日",            # YYYY年MM月DD日
+        f"{year}年{month_short}月{day_short}日", # YYYY年M月D日
+        f"{month}月{day}日",                    # MM月DD日
+        f"{month_short}月{day_short}日",        # M月D日
+    ]
+    grep_pattern = '|'.join(date_patterns)
     
     try:
-        # 使用 bash 命令组合 curl 和 grep
         result = subprocess.run(
             [
-                "bash", "-c",  # 执行 bash 命令
-                # 下面是 bash 命令的组合：
-                # curl 获取网页，|（管道）传给 grep，grep 搜索日期字符串
-                f"curl -sL https://v2clash.blog/ 2>/dev/null | grep -qE '{today}|{today_alt}|{today_cn}'"
+                "bash", "-c",
+                f"curl -sL https://v2clash.blog/ 2>/dev/null | grep -qE '{grep_pattern}'"
             ],
             capture_output=True,
-            timeout=15  # 15 秒超时（网络操作）
+            timeout=15
         )
-        # 返回码为 0 表示 grep 找到了匹配的内容
         return result.returncode == 0
     except:
-        # 网络错误或超时时返回 False
         return False
 
 
@@ -558,8 +567,28 @@ def check_clash_meta_new_post() -> bool:
     - False: 无新发布或网络错误
     """
     time_info = get_beijing_time()
-    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
-    today_alt = time_info['DATE']  # YYYY-MM-DD 格式
+    year = time_info['YEAR']
+    month = time_info['MONTH']
+    day = time_info['DAY']
+    month_short = str(int(month))  # 去掉前导零，如 06 -> 6
+    day_short = str(int(day))      # 去掉前导零，如 01 -> 1
+    
+    # 生成各种可能的日期格式
+    date_patterns = [
+        year + month + day,                    # YYYYMMDD (20260611)
+        time_info['DATE'],                      # YYYY-MM-DD (2026-06-11)
+        f"{year}/{month}/{day}",                # YYYY/MM/DD (2026/06/11)
+        f"{year}-{month_short}-{day_short}",    # YYYY-M-D (2026-6-1)
+        f"{year}/{month_short}/{day_short}",    # YYYY/M/D (2026/6/1)
+        f"{year}年{month}月{day}日",            # YYYY年MM月DD日 (2026年06月11日)
+        f"{year}年{month_short}月{day_short}日", # YYYY年M月D日 (2026年6月1日)
+        f"{month}/{day}",                       # MM/DD (06/11)
+        f"{month_short}/{day_short}",           # M/D (6/1)
+        f"{month}月{day}日",                    # MM月DD日 (06月11日)
+        f"{month_short}月{day_short}日",        # M月D日 (6月1日)
+    ]
+    
+    print(f"[clash-meta] 检查日期格式: {date_patterns}")
     
     url = "https://clash-meta.github.io/free-nodes/"
     try:
@@ -570,13 +599,22 @@ def check_clash_meta_new_post() -> bool:
             timeout=30
         )
         if result.returncode == 0:
-            if today in result.stdout or today_alt in result.stdout:
-                return True
-    except Exception:
-        pass
+            # 检查多种日期格式
+            for pattern in date_patterns:
+                if pattern in result.stdout:
+                    print(f"[clash-meta] 在页面中找到日期: {pattern}")
+                    return True
+            
+            # 调试：输出页面内容的前 500 字符，帮助诊断
+            print(f"[clash-meta] 页面内容片段: {result.stdout[:500]}")
+        else:
+            print(f"[clash-meta] 页面访问失败，返回码: {result.returncode}")
+    except Exception as e:
+        print(f"[clash-meta] 页面访问异常: {e}")
     
     # 如果页面检查失败，尝试直接访问今天的订阅链接
     url_template = f"https://clash-meta.github.io/uploads/{time_info['YEAR']}/{time_info['MONTH']}/0-{today}.yaml"
+    print(f"[clash-meta] 尝试直接访问: {url_template}")
     try:
         result = subprocess.run(
             ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url_template],
@@ -584,11 +622,17 @@ def check_clash_meta_new_post() -> bool:
             text=True,
             timeout=30
         )
-        if result.returncode == 0 and result.stdout.strip().startswith('2'):
-            return True
-    except Exception:
-        pass
+        if result.returncode == 0:
+            status_code = result.stdout.strip()
+            print(f"[clash-meta] HTTP 状态码: {status_code}")
+            if status_code.startswith('2'):
+                return True
+        else:
+            print(f"[clash-meta] 直接访问失败，返回码: {result.returncode}")
+    except Exception as e:
+        print(f"[clash-meta] 直接访问异常: {e}")
     
+    print("[clash-meta] 未检测到今日更新")
     return False
 
 def check_clashfree_new_post() -> bool:
@@ -607,30 +651,39 @@ def check_clashfree_new_post() -> bool:
     """
     # 获取北京时间信息
     time_info = get_beijing_time()
-    # 生成几种日期格式来匹配网页内容
-    today = time_info['YEAR'] + time_info['MONTH'] + time_info['DAY']  # YYYYMMDD 格式
-    today_alt = time_info['DATE']  # YYYY-MM-DD 格式
-    # YYYY.MM.DD 格式（clashfree 使用）
-    today_dot = f"{time_info['YEAR']}.{time_info['MONTH']}.{time_info['DAY']}"
-    # 中文日期格式（如果网页使用中文）
-    today_cn = f"{time_info['YEAR']}年{time_info['MONTH']}月{time_info['DAY']}日"
+    year = time_info['YEAR']
+    month = time_info['MONTH']
+    day = time_info['DAY']
+    month_short = str(int(month))
+    day_short = str(int(day))
+    
+    # 生成多种日期格式来匹配网页内容
+    date_patterns = [
+        year + month + day,                    # YYYYMMDD
+        time_info['DATE'],                      # YYYY-MM-DD
+        f"{year}.{month}.{day}",                # YYYY.MM.DD
+        f"{year}-{month_short}-{day_short}",    # YYYY-M-D
+        f"{year}.{month_short}.{day_short}",    # YYYY.M.D
+        f"{year}年{month}月{day}日",            # YYYY年MM月DD日
+        f"{year}年{month_short}月{day_short}日", # YYYY年M月D日
+        f"{month}月{day}日",                    # MM月DD日
+        f"{month_short}月{day_short}日",        # M月D日
+    ]
+    # 构建 grep 的正则表达式（用 | 连接所有格式）
+    grep_pattern = '|'.join(date_patterns)
 
     try:
         # 使用 bash 命令组合 curl 和 grep
         result = subprocess.run(
             [
-                "bash", "-c",  # 执行 bash 命令
-                # 下面是 bash 命令的组合：
-                # curl 获取网页，|（管道）传给 grep，grep 搜索日期字符串
-                f"curl -sL https://clashgithub.com/ 2>/dev/null | grep -qE '{today}|{today_alt}|{today_dot}|{today_cn}'"
+                "bash", "-c",
+                f"curl -sL https://clashgithub.com/ 2>/dev/null | grep -qE '{grep_pattern}'"
             ],
             capture_output=True,
-            timeout=15  # 15 秒超时（网络操作）
+            timeout=15
         )
-        # 返回码为 0 表示 grep 找到了匹配的内容
         return result.returncode == 0
     except:
-        # 网络错误或超时时返回 False
         return False
 
 def run_url_script(script: str) -> Tuple[bool, Optional[str]]:
