@@ -562,6 +562,8 @@ def check_clash_meta_new_post() -> bool:
     """
     检查 clash-meta.github.io 是否有今天的新发布
     
+    检测策略：优先直接检查订阅链接是否可用且内容正常
+    
     返回值：
     - True: 有新发布
     - False: 无新发布或网络错误
@@ -570,26 +572,47 @@ def check_clash_meta_new_post() -> bool:
     year = time_info['YEAR']
     month = time_info['MONTH']
     day = time_info['DAY']
-    month_short = str(int(month))  # 去掉前导零，如 06 -> 6
-    day_short = str(int(day))      # 去掉前导零，如 01 -> 1
+    today = year + month + day  # YYYYMMDD 格式
     
-    # 生成各种可能的日期格式
-    date_patterns = [
-        year + month + day,                    # YYYYMMDD (20260611)
-        time_info['DATE'],                      # YYYY-MM-DD (2026-06-11)
-        f"{year}/{month}/{day}",                # YYYY/MM/DD (2026/06/11)
-        f"{year}-{month_short}-{day_short}",    # YYYY-M-D (2026-6-1)
-        f"{year}/{month_short}/{day_short}",    # YYYY/M/D (2026/6/1)
-        f"{year}年{month}月{day}日",            # YYYY年MM月DD日 (2026年06月11日)
-        f"{year}年{month_short}月{day_short}日", # YYYY年M月D日 (2026年6月1日)
-        f"{month}/{day}",                       # MM/DD (06/11)
-        f"{month_short}/{day_short}",           # M/D (6/1)
-        f"{month}月{day}日",                    # MM月DD日 (06月11日)
-        f"{month_short}月{day_short}日",        # M月D日 (6月1日)
-    ]
+    # 订阅链接模板
+    v2ray_url = f"https://clash-meta.github.io/uploads/{year}/{month}/0-{today}.txt"
+    clash_url = f"https://clash-meta.github.io/uploads/{year}/{month}/0-{today}.yaml"
     
-    print(f"[clash-meta] 检查日期格式: {date_patterns}")
+    print(f"[clash-meta] 检查今日订阅链接:")
+    print(f"  v2ray: {v2ray_url}")
+    print(f"  clash: {clash_url}")
     
+    # 检查订阅链接是否可用
+    for url in [v2ray_url, clash_url]:
+        try:
+            result = subprocess.run(
+                ["curl", "-s", "-w", "%{http_code}", url],
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+            if result.returncode == 0:
+                status_code = result.stdout[-3:]  # 获取最后3个字符（HTTP状态码）
+                content = result.stdout[:-3]       # 获取状态码之前的内容
+                
+                print(f"[clash-meta] 检查 {url}")
+                print(f"  HTTP 状态码: {status_code}")
+                
+                if status_code.startswith('2'):
+                    # 检查内容是否有效（至少有一定长度且包含节点信息）
+                    content_length = len(content)
+                    print(f"  内容长度: {content_length} 字节")
+                    
+                    if content_length > 100:  # 内容至少100字节才认为有效
+                        print(f"[clash-meta] ✓ 检测到今日更新")
+                        return True
+                    else:
+                        print(f"[clash-meta] ✗ 内容过短，可能无效")
+        except Exception as e:
+            print(f"[clash-meta] 访问 {url} 异常: {e}")
+    
+    # 如果今日链接不可用，尝试检查页面内容（备用方案）
+    print(f"[clash-meta] 今日订阅链接不可用，尝试检查页面内容")
     url = "https://clash-meta.github.io/free-nodes/"
     try:
         result = subprocess.run(
@@ -600,37 +623,24 @@ def check_clash_meta_new_post() -> bool:
         )
         if result.returncode == 0:
             # 检查多种日期格式
+            month_short = str(int(month))
+            day_short = str(int(day))
+            date_patterns = [
+                today,                              # YYYYMMDD
+                time_info['DATE'],                   # YYYY-MM-DD
+                f"{year}/{month}/{day}",             # YYYY/MM/DD
+                f"{year}-{month_short}-{day_short}", # YYYY-M-D
+                f"{year}/{month_short}/{day_short}", # YYYY/M/D
+            ]
+            
             for pattern in date_patterns:
                 if pattern in result.stdout:
                     print(f"[clash-meta] 在页面中找到日期: {pattern}")
                     return True
-            
-            # 调试：输出页面内容的前 500 字符，帮助诊断
-            print(f"[clash-meta] 页面内容片段: {result.stdout[:500]}")
         else:
             print(f"[clash-meta] 页面访问失败，返回码: {result.returncode}")
     except Exception as e:
         print(f"[clash-meta] 页面访问异常: {e}")
-    
-    # 如果页面检查失败，尝试直接访问今天的订阅链接
-    url_template = f"https://clash-meta.github.io/uploads/{time_info['YEAR']}/{time_info['MONTH']}/0-{today}.yaml"
-    print(f"[clash-meta] 尝试直接访问: {url_template}")
-    try:
-        result = subprocess.run(
-            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", url_template],
-            capture_output=True,
-            text=True,
-            timeout=30
-        )
-        if result.returncode == 0:
-            status_code = result.stdout.strip()
-            print(f"[clash-meta] HTTP 状态码: {status_code}")
-            if status_code.startswith('2'):
-                return True
-        else:
-            print(f"[clash-meta] 直接访问失败，返回码: {result.returncode}")
-    except Exception as e:
-        print(f"[clash-meta] 直接访问异常: {e}")
     
     print("[clash-meta] 未检测到今日更新")
     return False
