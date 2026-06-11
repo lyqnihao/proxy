@@ -1202,9 +1202,11 @@ def main():
             if excluded_count > 0:
                 print(f"已排除 {excluded_count} 个订阅: {', '.join(exclude_list)}")
     
-    # 标志：是否有任何订阅更新失败
+    # 记录更新状态
     has_error = False
-    failed_subscriptions = []  # 记录失败的订阅
+    failed_subscriptions = []  # 记录失败的订阅（格式：(名称, 原因)）
+    succeeded_subscriptions = []  # 记录成功更新的订阅
+    skipped_subscriptions = []    # 记录跳过的订阅
     
     # 逐个处理每个订阅
     for sub_config in subscriptions:
@@ -1212,21 +1214,53 @@ def main():
         exit_code, message = update_subscription(sub_config)
         # 打印消息（会显示在 GitHub Actions 日志中）
         print(message)
-        # 如果返回码为 1（错误），标记有错误并记录失败的订阅
+        
+        sub_name = sub_config.get('name', 'Unknown')
+        
+        # 根据返回码分类记录
         if exit_code != 0:
             has_error = True
-            # 提取订阅名称并添加到失败列表
-            sub_name = sub_config.get('name', 'Unknown')
-            failed_subscriptions.append(f"{sub_name}")
+            # 提取错误原因（从消息中提取）
+            error_reason = message.replace(f"[{sub_name}] ", "").replace("错误: ", "")
+            failed_subscriptions.append((sub_name, error_reason))
+        elif "已更新" in message:
+            succeeded_subscriptions.append(sub_name)
+        elif "跳过" in message:
+            skip_reason = message.replace(f"[{sub_name}] 跳过: ", "")
+            skipped_subscriptions.append((sub_name, skip_reason))
     
-    # 如果有错误，输出失败的订阅信息到环境变量，供后续步骤使用
+    # 输出总结报告
+    print("\n" + "="*60)
+    print("🚀 订阅更新总结报告")
+    print("="*60)
+    
+    # 成功更新的订阅
+    if succeeded_subscriptions:
+        print(f"\n✓ 成功更新 ({len(succeeded_subscriptions)}):")
+        for name in succeeded_subscriptions:
+            print(f"  - {name}")
+    
+    # 跳过的订阅
+    if skipped_subscriptions:
+        print(f"\n⚠️  跳过 ({len(skipped_subscriptions)}):")
+        for name, reason in skipped_subscriptions:
+            print(f"  - {name}: {reason}")
+    
+    # 失败的订阅
     if failed_subscriptions:
-        failed_list = ", ".join(failed_subscriptions)
+        print(f"\n✗ 失败 ({len(failed_subscriptions)}):")
+        for name, reason in failed_subscriptions:
+            print(f"  - {name}: {reason}")
         # 将失败的订阅列表写入环境文件，供后续步骤使用
+        failed_list = ", ".join([name for name, _ in failed_subscriptions])
         output_file = os.getenv('GITHUB_OUTPUT')
         if output_file:
             with open(output_file, 'a') as f:
                 f.write(f"failed_subscriptions={failed_list}\n")
+    else:
+        print("\n✓ 所有订阅处理完成，无错误")
+    
+    print("\n" + "="*60)
     
     # 所有订阅处理完成后，一次性更新 README.md 中的日期
     finalize_readme_dates()
