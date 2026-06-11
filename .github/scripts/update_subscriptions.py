@@ -64,9 +64,11 @@ def finalize_readme_dates() -> None:
         print("没有需要更新的日期，跳过 README.md 更新")
         return
     
+    print(f"读取到 {len(updates)} 条更新记录: {updates}")
+    
     # 定义订阅名称到显示名称的映射
     name_mapping = {
-        'danfeng': 'DanFeng 公益代理',
+        'danfeng': 'DanFeng',
         'v2nodes': 'V2Nodes',
         'nodefree': 'nodefree',
         'clashfree': 'clashfree',
@@ -106,6 +108,8 @@ def finalize_readme_dates() -> None:
                         updated_line = '|'.join(parts)
                         any_changes = True
                         print(f"README.md: 更新 {display_name} 的日期: {old_date} -> {current_date}")
+                    else:
+                        print(f"README.md: {display_name} 日期已是最新: {current_date}")
                     break  # 每个行只处理一个订阅
         updated_lines.append(updated_line)
     
@@ -114,6 +118,8 @@ def finalize_readme_dates() -> None:
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(new_content)
         print("✓ README.md 日期更新完成")
+    else:
+        print("✗ README.md 无需更新")
     
     # 删除临时文件
     os.remove(temp_file)

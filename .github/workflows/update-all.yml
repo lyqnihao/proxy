@@ -160,6 +160,28 @@ jobs:
           echo "HAS_V2CLASH_NEW=$HAS_V2CLASH_NEW" >> $GITHUB_ENV
           # 导出环境变量供 Python 脚本使用
           export HAS_V2CLASH_NEW
+          # 根据订阅是否有变更来设置各项目的更新标志
+          # 如果订阅有更新（no_changes_* 为 false），则设置对应标志为 true
+          if [ "${{ env.no_changes_clash_meta }}" = "false" ]; then
+            export HAS_CLASH_META_NEW=true
+          else
+            export HAS_CLASH_META_NEW=false
+          fi
+          if [ "${{ env.no_changes_nodev2ray }}" = "false" ]; then
+            export HAS_NODEV2RAY_NEW=true
+          else
+            export HAS_NODEV2RAY_NEW=false
+          fi
+          if [ "${{ env.no_changes_oneclash }}" = "false" ]; then
+            export HAS_ONECLASH_NEW=true
+          else
+            export HAS_ONECLASH_NEW=false
+          fi
+          if [ "${{ env.no_changes_v2rayhare }}" = "false" ]; then
+            export HAS_V2RAYHARE_NEW=true
+          else
+            export HAS_V2RAYHARE_NEW=false
+          fi
           export YEAR=${{ env.YEAR }}
           export MONTH=${{ env.MONTH }}
           export DAY=${{ env.DAY }}
@@ -535,27 +557,27 @@ jobs:
         continue-on-error: true
       
       # 仅在出现真实错误时发送邮件通知（无内容变更时不发送）
-      - name: 发送错误通知邮件
-        if: |
-          failure() || 
-          steps.readme.outcome == 'failure' || 
-          steps.update.outcome == 'failure'
-        uses: dawidd6/action-send-mail@v17
-        with:
-          server_address: smtp.163.com
-          server_port: 465
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "订阅更新失败 ${{ env.CURRENT_DATE }}"
-          body: |
-            自动更新订阅出错
-            - 时间: ${{ env.CURRENT_DATE }}
-            - 脚本版本: 2.4
-            - README: ${{ steps.readme.outcome }}
-            - 订阅更新: ${{ steps.update.outcome }}
-            - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
-            
-            请查看运行日志以获取有关失败订阅的详细信息。
-            日志: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          to: lyqnihao@163.com
-          from: ${{ secrets.EMAIL_USERNAME }}
+      # - name: 发送错误通知邮件
+      #   if: |
+      #     failure() || 
+      #     steps.readme.outcome == 'failure' || 
+      #     steps.update.outcome == 'failure'
+      #   uses: dawidd6/action-send-mail@v17
+      #   with:
+      #     server_address: smtp.163.com
+      #     server_port: 465
+      #     username: ${{ secrets.EMAIL_USERNAME }}
+      #     password: ${{ secrets.EMAIL_PASSWORD }}
+      #     subject: "订阅更新失败 ${{ env.CURRENT_DATE }}"
+      #     body: |
+      #       自动更新订阅出错
+      #       - 时间: ${{ env.CURRENT_DATE }}
+      #       - 脚本版本: 2.4
+      #       - README: ${{ steps.readme.outcome }}
+      #       - 订阅更新: ${{ steps.update.outcome }}
+      #       - 失败的订阅源: ${{ env.FAILED_SUBSCRIPTIONS || '无具体信息' }}
+      #       
+      #       请查看运行日志以获取有关失败订阅的详细信息。
+      #       日志: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      #       to: lyqnihao@163.com
+      #       from: ${{ secrets.EMAIL_USERNAME }}

@@ -153,12 +153,37 @@ def update_specific_area_only():
     date_str = f"{year}{month}{day}"
     year_month = f"{year}/{month}"
 
-    # 检查是否需要包含 v2clash 的替换
+    # 检查是否需要包含各项目的替换（只有检测到新帖子时才更新）
     has_v2 = os.environ.get('HAS_V2CLASH_NEW', 'false').lower() == 'true'
+    has_clash_meta = os.environ.get('HAS_CLASH_META_NEW', 'false').lower() == 'true'
+    has_nodev2ray = os.environ.get('HAS_NODEV2RAY_NEW', 'false').lower() == 'true'
+    has_oneclash = os.environ.get('HAS_ONECLASH_NEW', 'false').lower() == 'true'
+    has_v2rayhare = os.environ.get('HAS_V2RAYHARE_NEW', 'false').lower() == 'true'
+    
     if has_v2:
         print('包含 v2clash 多种格式替换')
     else:
         print('跳过 v2clash 替换（未检测到新帖）')
+    
+    if has_clash_meta:
+        print('包含 clash-meta 格式替换')
+    else:
+        print('跳过 clash-meta 替换（未检测到新帖）')
+    
+    if has_nodev2ray:
+        print('包含 nodev2ray 格式替换')
+    else:
+        print('跳过 nodev2ray 替换（未检测到新帖）')
+    
+    if has_oneclash:
+        print('包含 oneclash 格式替换')
+    else:
+        print('跳过 oneclash 替换（未检测到新帖）')
+    
+    if has_v2rayhare:
+        print('包含 v2rayhare 格式替换')
+    else:
+        print('跳过 v2rayhare 替换（未检测到新帖）')
 
     # 获取 v2cross 动态地址
     v2cross_url = fetch_v2cross_dynamic_url()
@@ -231,30 +256,34 @@ def update_specific_area_only():
                 rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
                 line
             )
-            # 添加 clash-meta 的日期格式替换
-            line = re.sub(
-                r'(clash-meta\.github\.io/uploads/)\d{4}/\d{2}/(0-)\d{8}(\.txt|\.yaml)', 
-                rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
-                line
-            )
-            # 添加 nodev2ray 的日期格式替换
-            line = re.sub(
-                r'(node\.nodev2ray\.com/uploads/)\d{4}/\d{2}/(0-)\d{8}(\.txt|\.yaml)', 
-                rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
-                line
-            )
-            # 添加 oneclash 的日期格式替换
-            line = re.sub(
-                r'(oss\.oneclash\.cc/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
-                rf'\g<1>{year}/{month}/{date_str}\g<2>', 
-                line
-            )
-            # 添加 v2rayhare 的日期格式替换
-            line = re.sub(
-                r'(static\.v2rayshare\.net/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
-                rf'\g<1>{year}/{month}/{date_str}\g<2>', 
-                line
-            )
+            # 添加 clash-meta 的日期格式替换（仅在检测到新文章时更新）
+            if has_clash_meta:
+                line = re.sub(
+                    r'(clash-meta\.github\.io/uploads/)\d{4}/\d{2}/(0-)\d{8}(\.txt|\.yaml)', 
+                    rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
+                    line
+                )
+            # 添加 nodev2ray 的日期格式替换（仅在检测到新文章时更新）
+            if has_nodev2ray:
+                line = re.sub(
+                    r'(node\.nodev2ray\.com/uploads/)\d{4}/\d{2}/(0-)\d{8}(\.txt|\.yaml)', 
+                    rf'\g<1>{year}/{month}/\g<2>{date_str}\g<3>', 
+                    line
+                )
+            # 添加 oneclash 的日期格式替换（仅在检测到新文章时更新）
+            if has_oneclash:
+                line = re.sub(
+                    r'(oss\.oneclash\.cc/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
+                    rf'\g<1>{year}/{month}/{date_str}\g<2>', 
+                    line
+                )
+            # 添加 v2rayhare 的日期格式替换（仅在检测到新文章时更新）
+            if has_v2rayhare:
+                line = re.sub(
+                    r'(static\.v2rayshare\.net/)\d{4}/\d{2}/\d{8}(\.txt|\.yaml)', 
+                    rf'\g<1>{year}/{month}/{date_str}\g<2>', 
+                    line
+                )
             
             # 替换 v2cross 动态地址
             if v2cross_url:
