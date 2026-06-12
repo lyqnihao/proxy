@@ -18,18 +18,19 @@
 
   每 12 小时自动更新（北京时间 00:05 AM 和 12:05 PM）。~~如果程序运行错误，则向xxx@163.com发送报错邮件。~~<br>
 
-| 跟踪目标 | 订阅链接 | [镜像加速订阅链接](https://gh-proxy.com/) | 更新日期 |
+| 更新日期 | 跟踪目标 | [镜像加速<br>订阅链接](https://gh-proxy.com/) | 订阅链接 |
 | ---- | ---- | ---- | ---- |
-| [DanFeng](https://2sniweb.danfeng.eu.org/) | [DanFeng/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | [DanFeng/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | 2026-06-12 |
-| [V2Nodes](https://www.v2nodes.com/) | [V2Nodes/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | [V2Nodes/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | 2026-06-12 |
-| [nodefree](https://nodefree.me/) | [nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) | [nodefree/target.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) | 2026-06-11 |
-| [clashfree](https://clashgithub.com/) | [clashfree/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) | [clashfree/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) | 2026-06-12 |
-| [Proxyqueen](https://www.proxyqueen.top/) | [proxyqueen/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) | [proxyqueen/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) | 2026-06-09 |
-| [Clash Meta](https://clash-meta.github.io/free-nodes/) | [clash-meta/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | [clash-meta/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | 2026-06-10 |
-| [Node V2ray](https://nodev2ray.com/) | [nodev2ray/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) | [nodev2ray/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) | 2026-06-12 |
-| [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | 2026-06-11 |
-| [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | 2026-06-11 |
-| [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | 2026-06-12 |
+| 2026-06-12 | [DanFeng](https://2sniweb.danfeng.eu.org/) | [DanFeng/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | [DanFeng/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) |
+| 2026-06-12 | [V2Nodes](https://www.v2nodes.com/) | [V2Nodes/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | [V2Nodes/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) |
+| 2026-06-11 | [nodefree](https://nodefree.me/) | [nodefree/target.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) | [nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) |
+| 2026-06-12 | [clashfree](https://clashgithub.com/) | [clashfree/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) | [clashfree/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) |
+| 2026-06-09 | [Proxyqueen](https://www.proxyqueen.top/) | [proxyqueen/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) | [proxyqueen/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) |
+| 2026-06-10 | [Clash Meta](https://clash-meta.github.io/free-nodes/) | [clash-meta/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) | [clash-meta/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clash-meta/output.yaml) |
+| 2026-06-12 | [Node V2ray](https://nodev2ray.com/) | [nodev2ray/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) | [nodev2ray/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) |
+| 2026-06-11 | [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) |
+| 2026-06-11 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) |
+| 2026-06-12 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
+| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://mirror.v2gh.com/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub) | [GitHub订阅](https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub) |
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
@@ -89,14 +90,16 @@
 - 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202606122<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
-## 2.2、未跟踪、或需每日手动点击更新地址的订阅
-
-- [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
   每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
 
   GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+
+  国内加速订阅地址：https://mirror.v2gh.com/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+
+## 2.2、未跟踪、或需每日手动点击更新地址的订阅
 
 - [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]：延时比较大，但无限流量，网速也很好，部分节点支持AI。<br>
 

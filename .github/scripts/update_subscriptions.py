@@ -77,7 +77,8 @@ def finalize_readme_dates() -> None:
         'nodev2ray': 'Node V2ray',
         'oneclash': 'oneClash',
         'v2rayhare': 'v2rayShare',
-        'xconfig': 'xConfig'
+        'xconfig': 'xConfig',
+        'v2cross': 'v2cross'
     }
     
     readme_path = 'README.md'
@@ -1043,6 +1044,12 @@ def update_subscription(config: dict) -> Tuple[int, str]:
             url_var_name = f"{name.upper()}_URL"
             with open(output_file, 'a') as f:
                 f.write(f"{url_var_name}={success_url}\n")
+        
+        # 对于 v2cross，成功获取地址后记录更新日期
+        if name == "v2cross":
+            current_date = time_info.get('DATE', datetime.now().strftime('%Y-%m-%d'))
+            record_update_date(name, current_date)
+        
         print(f"[{name}] URL获取成功: {success_url} (仅用于README更新)")
         return 0, f"[{name}] URL已获取: {success_url}"
     
