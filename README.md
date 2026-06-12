@@ -103,7 +103,7 @@
 
 - [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]：延时比较大，但无限流量，网速也很好，部分节点支持AI。<br>
 
-  [第一组](https://github.com/bannedbook/fanqiang/releases)：其实用第一条就可以了。目前YouTube和各AI都可以用，建议负载均衡。<br>
+  [第一组](https://github.com/bannedbook/fanqiang/releases)：其实用第一条就可以了。目前YouTube好用，各AI时好时坏，建议AI另选节点。<br>
 
   [订阅地址-1](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://www.gitlabip.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)<br>
 
