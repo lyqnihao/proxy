@@ -16,7 +16,7 @@
 
 ## 2.1、Action自动跟踪更新的代理列表
 
-  每 12 小时自动更新（北京时间 00:05 AM 和 12:05 PM），如果程序运行错误，则向xxx@163.com发送报错邮件。<br>
+  每 12 小时自动更新（北京时间 00:05 AM 和 12:05 PM）。~~如果程序运行错误，则向xxx@163.com发送报错邮件。~~<br>
 
 | 跟踪目标 | 订阅链接 | [镜像加速订阅链接](https://gh-proxy.com/) | 更新日期 |
 | ---- | ---- | ---- | ---- |
@@ -30,10 +30,6 @@
 | [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | 2026-06-11 |
 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | 2026-06-11 |
 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | 2026-06-12 |
-
-### ~~汇聚订阅-CF：~~<br>
-~~Cloudflare自建汇聚订阅~~<br>
- - 取消该项目~~
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
