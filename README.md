@@ -20,8 +20,8 @@
 
 | 更新日期 | 跟踪目标 | [镜像加速<br>订阅链接](https://gh-proxy.com/) | 订阅链接 |
 | ---- | ---- | ---- | ---- |
-| 2026-06-12 | [DanFeng](https://2sniweb.danfeng.eu.org/) | [DanFeng/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | [DanFeng/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) |
-| 2026-06-12 | [V2Nodes](https://www.v2nodes.com/) | [V2Nodes/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | [V2Nodes/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) |
+| 2026-06-12 | [DanFeng](https://2sniweb.danfeng.eu.org/) | [DanFeng/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml) | 2026-06-12 |
+| 2026-06-12 | [V2Nodes](https://www.v2nodes.com/) | [V2Nodes/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/V2Nodes/output.yaml) | 2026-06-12 |
 | 2026-06-11 | [nodefree](https://nodefree.me/) | [nodefree/target.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) | [nodefree/target.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml) |
 | 2026-06-12 | [clashfree](https://clashgithub.com/) | [clashfree/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) | [clashfree/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml) |
 | 2026-06-09 | [Proxyqueen](https://www.proxyqueen.top/) | [proxyqueen/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) | [proxyqueen/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml) |
