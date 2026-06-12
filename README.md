@@ -16,7 +16,7 @@
 
 ## 2.1、Action自动跟踪更新的代理列表
 
-  每 12 小时自动更新（北京时间 00:05 AM 和 12:05 PM）。~~如果程序运行错误，则向xxx@163.com发送报错邮件。~~<br>
+  每 12 小时自动更新（北京时间 00:05 AM 和 12:05 PM），注：近期GitHub action自动运行时间经常延迟。~~如果程序运行错误，则向xxx@163.com发送报错邮件。~~<br>
 
 | 更新日期 | 跟踪目标 | [镜像加速<br>订阅链接](https://gh-proxy.com/) | 订阅链接 |
 | ---- | ---- | ---- | ---- |
@@ -93,11 +93,11 @@
 ### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
-  每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
+ - 每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
 
-  GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+ - GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
-  国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+ - 国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
 ## 2.2、未跟踪、或需每日手动点击更新地址的订阅
 
