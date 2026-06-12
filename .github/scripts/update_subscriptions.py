@@ -102,10 +102,10 @@ def finalize_readme_dates() -> None:
                 # 找到包含该订阅名称的表格行
                 parts = line.split('|')
                 if len(parts) >= 5:
-                    # 更新第四列（索引为 4，从 0 开始）的日期
-                    old_date = parts[4].strip()
+                    # 更新第一列（索引为 1，从 0 开始）的日期
+                    old_date = parts[1].strip()
                     if old_date != current_date:
-                        parts[4] = f' {current_date} '
+                        parts[1] = f' {current_date} '
                         updated_line = '|'.join(parts)
                         any_changes = True
                         print(f"README.md: 更新 {display_name} 的日期: {old_date} -> {current_date}")
