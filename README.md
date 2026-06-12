@@ -99,7 +99,7 @@
 
  - 国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
-## 2.2、未跟踪、或需每日手动点击更新地址的订阅
+## 2.2、未跟踪、或需每日手动获取订阅节点
 
 - [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]：延时比较大，但无限流量，网速也很好，部分节点支持AI。<br>
 
