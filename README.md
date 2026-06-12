@@ -101,7 +101,7 @@
 
 ## 2.2、未跟踪、或需每日手动获取订阅节点
 
-- [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang]： 延时比较大，但无限流量，网速也很好，部分节点支持AI。<br>
+- [ChromeGo -dongtaiwang.com | https://github.com/Alvin9999-newpac/fanqiang] ：延时比较大，但无限流量，网速也很好，部分节点支持AI。<br>
 
   [第一组](https://github.com/bannedbook/fanqiang/releases)：其实用第一条就可以了。目前YouTube好用，各AI时好时坏，建议AI另选节点。<br>
 
