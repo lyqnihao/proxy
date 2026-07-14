@@ -42,16 +42,16 @@
 
 ### [nodefree](https://nodefree.me/)：<br>
 原网站每日发帖更新，订阅地址随日期变化，但内容更新不频繁。<br>
-- v2ray订阅链接：https://node.nodefree.me/2026/07/20260714.txt<br>
-- Clash订阅链接：https://node.nodefree.me/2026/07/20260714.yaml<br>
-- Mihomo订阅链接：https://node.nodefree.me/2026/07/m20260714.yaml<br>
+- v2ray订阅链接：https://node.nodefree.me/2026/07/20260715.txt<br>
+- Clash订阅链接：https://node.nodefree.me/2026/07/20260715.yaml<br>
+- Mihomo订阅链接：https://node.nodefree.me/2026/07/m20260715.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml<br>
 
 ### [clashfree网站](https://clashgithub.com/) / [GitHub](https://github.com/free-nodes/clashfree)：<br>
 类似nodefree，网站每4小时更新，动态日期更新地址。<br>
-- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260714.txt<br>
-- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260714.yml<br>
-- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260714.yml<br>
+- v2ray订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260715.txt<br>
+- clash订阅链接：https://clashgithub.com/wp-content/uploads/rss/20260715.yml<br>
+- GitHub Clash动态地址：https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash20260715.yml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml<br>
 
 ### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
@@ -74,20 +74,20 @@
 
 ### [免费节点-oneClash 网站](https://oneclash.cc/freenode) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://oss.oneclash.cc/2026/07/20260714.txt<br>
-- clash订阅链接：https://oss.oneclash.cc/2026/07/20260714.yaml<br>
+- v2ray订阅链接：https://oss.oneclash.cc/2026/07/20260715.txt<br>
+- clash订阅链接：https://oss.oneclash.cc/2026/07/20260715.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml<br>
 
 ### [v2rayShare 订阅站](https://v2rayshare.net/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://static.v2rayshare.net/2026/07/20260714.txt<br>
-- clash订阅链接：https://static.v2rayshare.net/2026/07/20260714.yaml<br>
+- v2ray订阅链接：https://static.v2rayshare.net/2026/07/20260715.txt<br>
+- clash订阅链接：https://static.v2rayshare.net/2026/07/20260715.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml<br>
 
 ### [xConfig](https://xconfig.pages.dev/index2)：<br>
 整合很多个网络免费订阅，但好坏混杂，需自行筛选。<br>
 - 真实链接地址见此页面：https://xconfig.pages.dev/u3base-conf.js<br>
-- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202607142<br>
+- 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202607152<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
 ### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
