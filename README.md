@@ -29,7 +29,7 @@
 | 2026-07-14 | [Node V2ray](https://nodev2ray.com/) | [nodev2ray/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) | [nodev2ray/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodev2ray/output.yaml) |
 | 2026-07-14 | [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) |
 | 2026-07-14 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) |
-| 2026-07-13 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
+| 2026-07-14 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
 | 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub) | [GitHub订阅](https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub) |
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
