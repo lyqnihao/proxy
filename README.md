@@ -235,6 +235,8 @@
   可检测节点连通性<br>
 | mirror-result	| time	| status-success |
 | :--: | :--: | :--: |
+|https://ghproxy.net/	|770ms	|成功|
+|https://gh-proxy.com/	| 747ms	| 成功 |
 |https://gh.tryxd.cn/	|152ms	|成功|
 |https://gitproxy.click/	|280ms	|成功|
 |https://proxy.yaoyaoling.net/	|313ms	|成功|
@@ -249,34 +251,21 @@
 |https://gh.zhaojun.im/	|474ms	|成功|
 |https://gh.xx9527.cn/	|501ms	|成功|
 |https://githubapi.jjchizha.com/	|531ms	|成功|
-|https://gh-proxy.com/	| 747ms	| 成功 |
 |https://gh-proxy.llyke.com/	| 1035ms	| 成功 |
-|https://github.moeyy.xyz/	|N/A	||
-|https://ghproxy.net/	|770ms	|成功|
-|https://gh.chaoyi996.com/	|N/A	||
 |https://gh.idayer.com/	|738ms	|成功|
 |https://gh.monlor.com/	|659ms	|成功|
-|https://hub.gitmirror.com/	|N/A	||
-|https://ghp.miaostay.com/	|N/A	||
 |https://gh.qninq.cn/	|619ms	|成功|
 |https://ghfast.top/	|717ms	|成功|
-|https://mirrors.chenby.cn/	|N/A	||
-|https://gh.zwy.me/	|N/A	||
 |https://git.886.be/	|20400ms	|成功|
 |https://gh.noki.icu/	|1413ms	|成功|
-|https://gh-proxy.ygxz.in/	|N/A	||
 |https://github.xxlab.tech/	|640ms	|成功|
 |https://gh.pylas.xyz/	|965ms	|成功|
-|https://cdn.moran233.xyz/	|N/A	||
-|https://gp.zkitefly.eu.org/	|N/A	||
 |https://github.ednovas.xyz/	|642ms	|成功|
 |https://git.669966.xyz/	|1138ms	|成功|
 |https://ghproxy.1888866.xyz/	|1179ms	|成功|
 |https://git.40609891.xyz/	|1075ms	|成功|
 |https://gh.jasonzeng.dev/	|991ms	|成功|
 |https://gh.222322.xyz/	|825ms	|成功|
-|https://ghproxy.cianogame.top/	|N/A	||
-|https://gh.ddlc.top/	|N/A	||
 |https://gh.nxnow.top/	|1093ms	|成功|
 |https://gh.noki.eu.org/	|1011ms	|成功|
 |https://tvv.tw/	|955ms	|成功|
