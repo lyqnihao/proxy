@@ -90,7 +90,7 @@
 - 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202608032<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
-### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)：<br>
+### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)[V2RAY免费节点订阅-交流群(https://t.me/vvkj11/837711)]：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
  - 每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
@@ -98,6 +98,19 @@
  - GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
  - 国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+
+ - 🚀通用订阅1(优先):
+需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+
+免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+
+ - 😺Clash订阅1(优先)：
+需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+
+免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+
+ - 😺Clash订阅2：
+需外网：https://v1.mk/BYAwqNT
 
 ## 2.2、未跟踪、或需每日手动获取订阅节点
 
