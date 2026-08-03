@@ -90,7 +90,7 @@
 - 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202608032<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
-### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers)[V2RAY免费节点订阅-交流群(https://t.me/vvkj11/837711)]：<br>
+### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers) [V2RAY免费节点订阅-交流群](https://t.me/vvkj11/837711)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
  - 每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
