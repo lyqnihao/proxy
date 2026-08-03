@@ -30,7 +30,7 @@
 | 2026-08-03 | [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) |
 | 2026-08-03 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) |
 | 2026-08-02 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
-| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub) | [GitHub订阅](https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub) |
+| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) | [GitHub订阅](https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) |
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
