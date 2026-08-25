@@ -32,6 +32,9 @@
 | 2026-08-10 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
 | 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) | [GitHub订阅](https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) |
 
+GitHub - kooker/FreeSubsCheck: 免费节点、免费订阅 FreeSubs FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。 · GitHub
+https://github.com/kooker/FreeSubsCheck
+
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml<br>
