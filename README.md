@@ -92,27 +92,7 @@
 - 当前跟踪目标：https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202609112<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml<br>
 
-### [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers) [V2RAY免费节点订阅-交流群](https://t.me/vvkj11/837711)：<br>
-网站每天动态地址，每6小时更新一次。<br>
-
- - 每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
-
- - GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
-
- - 国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
-
- - 🚀通用订阅1(优先):
-需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
-
-免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
-
- - 😺Clash订阅1(优先)：
-需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
-
-免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
-
- - 😺Clash订阅2：
-需外网：https://v1.mk/BYAwqNT
+### 
 
 ## 2.2、未跟踪、或需每日手动获取订阅节点
 
@@ -134,6 +114,28 @@
 | **Base64 (通用)** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt` |
 | **通用TXT (XiaoXi)** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/byxiaoxi.txt` |
 | **通用TXT (kooker.jp)** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/kooker.jp.txt` |
+
+- [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers) [V2RAY免费节点订阅-交流群](https://t.me/vvkj11/837711)：<br>
+网站每天动态地址，每6小时更新一次。<br>
+
+ - 每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
+
+ - GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+
+ - 国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+
+ - 🚀通用订阅1(优先):
+需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+
+免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+
+ - 😺Clash订阅1(优先)：
+需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+
+免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+
+ - 😺Clash订阅2：
+需外网：https://v1.mk/BYAwqNT
 
 - [白嫖のHome | [Channel:@ZDYZ2](https://t.me/ZDYZ2)]：群里常有群友贡献节点和订阅<br>
 
@@ -165,9 +167,15 @@
 
   yaml格式的订阅：https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml<br>
 
-- [裤佬️](https://jsnzkpg.github.io/)：TG[Channel:@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅<br>
-
-  https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg<br>
+- [裤佬️](https://jsnzkpg.com/)：TG[Channel:@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅<br>
+| 图标 | 名称 | 地址 |
+|:---:|:---:|:---:|
+| 👖 | 所有资源汇总 | [收藏](https://jsnzkpg.com) |
+| ✈️ | Telegram频道 | [关注](https://t.me/stymei) |
+| ✈️ | Telegram群聊 | [进群](https://telegram.me/+j664EmVv8m0wZGVk) |
+| 🪜 | 永久节点订阅 | [复制](https://sub.445569.xyz) |
+| 📺 | 永久IPTV订阅 | [复制](https://live.445569.xyz/live.m3u) |
+| 🎥 | 永久TVbox订阅 | [复制](https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg) |
 
 - [橘子电报频道](https://juzi.tg18.cc/)：到TG[Channel:@juzibaipiao](https://t.me/juzi66)群发“密码”，获取数字密码，再回复给群获取当天订阅地址<br>
   
