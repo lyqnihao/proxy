@@ -108,7 +108,7 @@
 
 - [GitHub - kooker/FreeSubsCheck](https://github.com/kooker/FreeSubsCheck): FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。
   
-| 类型 | 订阅地址 |
+   | 类型 | 订阅地址 |
 | :--- | :--- |
 | **Mihomo / Clash Meta** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml` |
 | **Clash / Standard** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/all.yaml` |
@@ -125,18 +125,15 @@
 
    国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
-   🚀通用订阅1(优先):
-需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+   🚀通用订阅1(优先):需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
 
-免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+     免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
 
-   😺Clash订阅1(优先)：
-需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+   😺Clash订阅1(优先)：需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
 
-免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+     免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
 
-   😺Clash订阅2：
-需外网：https://v1.mk/BYAwqNT
+   😺Clash订阅2：需外网：https://v1.mk/BYAwqNT
 
 - [白嫖のHome | [Channel:@ZDYZ2](https://t.me/ZDYZ2)]：群里常有群友贡献节点和订阅<br>
 
