@@ -108,7 +108,7 @@
 
 - [GitHub - kooker/FreeSubsCheck](https://github.com/kooker/FreeSubsCheck): FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。
   
-   | 类型 | 订阅地址 |
+| 类型 | 订阅地址 |
 | :--- | :--- |
 | **Mihomo / Clash Meta** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml` |
 | **Clash / Standard** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/all.yaml` |
