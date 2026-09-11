@@ -165,6 +165,8 @@
 
   yaml格式的订阅：https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml<br>
 
+  带分流规则的mihomo订阅：https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml<br>
+
 - [裤佬️](https://jsnzkpg.com/)：TG[Channel:@stymei1](https://t.me/stymei1) | [Github](https://github.com/Jsnzkpg/Jsnzkpg) | 共享小火箭、Github加速、TVbox订阅、IPTV订阅、UZ影视订阅<br>
 | 图标 | 名称 | 地址 |
 |:---:|:---:|:---:|
