@@ -107,6 +107,7 @@
   [订阅地址-1](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)<br>
 
 - [GitHub - kooker/FreeSubsCheck](https://github.com/kooker/FreeSubsCheck): FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。
+  
 | 类型 | 订阅地址 |
 | :--- | :--- |
 | **Mihomo / Clash Meta** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml` |
@@ -118,23 +119,23 @@
 - [v2cross](https://v2cross.com/1884.html/)[（常用别名 Pawdroid）](https://github.com/Pawdroid/Free-servers) [V2RAY免费节点订阅-交流群](https://t.me/vvkj11/837711)：<br>
 网站每天动态地址，每6小时更新一次。<br>
 
- - 每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
+   每日动态地址：https://9527521.xyz/pubconfig/MtID5XBsWoSkm0JR<br>
 
- - GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+   GitHub固定地址：https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
- - 国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
+   国内加速订阅地址：https://gh-proxy.com/raw.githubusercontent.com/Pawdroid/Free-servers/main/sub<br>
 
- - 🚀通用订阅1(优先):
+   🚀通用订阅1(优先):
 需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
 
 免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
 
- - 😺Clash订阅1(优先)：
+   😺Clash订阅1(优先)：
 需外网：https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
 
 免外网：https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
 
- - 😺Clash订阅2：
+   😺Clash订阅2：
 需外网：https://v1.mk/BYAwqNT
 
 - [白嫖のHome | [Channel:@ZDYZ2](https://t.me/ZDYZ2)]：群里常有群友贡献节点和订阅<br>
