@@ -30,10 +30,9 @@
 | 2026-09-11 | [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) |
 | 2026-09-11 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) |
 | 2026-08-10 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
-| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) | [GitHub订阅](https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) |
+| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt) | [GitHub订阅](https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt) |
+| 2026-09-11 | [FreeSubsCheck](https://github.com/kooker/FreeSubsCheck) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) | [GitHub订阅](https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) |
 
-GitHub - kooker/FreeSubsCheck: 免费节点、免费订阅 FreeSubs FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。 · GitHub
-https://github.com/kooker/FreeSubsCheck
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
 [TG@danfeng_chat](https://t.me/danfeng_chat) | (诗词|古文|对联) | 每天到网站点击获取订阅地址<br>
@@ -126,6 +125,15 @@ https://github.com/kooker/FreeSubsCheck
   [第二组](https://gitlab.com/free9999/ipupdate/-/tree/master/backup/img/1/2/ipp/clash.meta2?ref_type=heads)：内容同第一组，选择性使用。<br>
 
   [订阅地址-1](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/1/config.yaml) , [2](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/2/config.yaml) , [3](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/3/config.yaml) , [4](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/4/config.yaml) , [5](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/5/config.yaml) , [6](https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/clash.meta2/6/config.yaml)<br>
+
+- [GitHub - kooker/FreeSubsCheck](https://github.com/kooker/FreeSubsCheck): FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。
+| 类型 | 订阅地址 |
+| :--- | :--- |
+| **Mihomo / Clash Meta** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml` |
+| **Clash / Standard** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/all.yaml` |
+| **Base64 (通用)** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt` |
+| **通用TXT (XiaoXi)** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/byxiaoxi.txt` |
+| **通用TXT (kooker.jp)** | `https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/kooker.jp.txt` |
 
 - [白嫖のHome | [Channel:@ZDYZ2](https://t.me/ZDYZ2)]：群里常有群友贡献节点和订阅<br>
 
