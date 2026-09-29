@@ -30,8 +30,8 @@
 | 2026-09-23 | [oneClash](https://oneclash.cc/freenode) | [oneclash/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) | [oneclash/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/oneclash/output.yaml) |
 | 2026-09-23 | [v2rayShare](https://v2rayshare.net/) | [v2rayhare/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) | [v2rayhare/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2rayhare/output.yaml) |
 | 2026-08-10 | [xConfig](https://xconfig.pages.dev/index2) | [xConfig/output.yaml](https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) | [xConfig/output.yaml](https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/xConfig/output.yaml) |
-| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt) | [GitHub订阅](https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt) |
-| 2026-09-11 | [FreeSubsCheck](https://github.com/kooker/FreeSubsCheck) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) | [GitHub订阅](https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) |
+| 2026-06-12 | [v2cross](https://v2cross.com/1884.html/) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) | [GitHub订阅](https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml) |
+| 2026-09-11 | [FreeSubsCheck](https://github.com/kooker/FreeSubsCheck) | [加速订阅](https://ghfast.top/https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt) | [GitHub订阅](https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt) |
 
 
 ### [DanFeng 公益代理](https://2sniweb.danfeng.eu.org/)：<br>
