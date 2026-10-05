@@ -58,8 +58,8 @@
 
 ### [Proxyqueen网站](https://www.proxyqueen.top/) / [v2clash](https://v2clash.blog/) ：<br>
 类似nodefree，动态日期更新地址。<br>
-- v2ray订阅链接：https://v2clash.blog/Link/20261003-v2ray.txt<br>
-- clash订阅链接：https://v2clash.blog/Link/20261003-clash.yaml<br>
+- v2ray订阅链接：https://v2clash.blog/Link/20261005-v2ray.txt<br>
+- clash订阅链接：https://v2clash.blog/Link/20261005-clash.yaml<br>
 - 跟踪更新固定地址：https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml<br>
 
 ### [Clash Meta免费节点订阅站](https://clash-meta.github.io/free-nodes/) ：<br>
