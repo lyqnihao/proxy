@@ -524,28 +524,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     url: https://gemini.google.com/
     interval: 900
     tolerance: 350
-    use: # 【使用】指令，用于从指定的proxy-providers（代理提供者）动态拉取节点作为本组成员
-      - 裤佬️_@stymei1 # 引用的代理提供者名称（即在proxy-providers:段中定义的“AA临时_1”订阅源）。本组将包含该订阅源下的所有节点。
-      - ChromeGo_merge
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - 未知_01
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
-    filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
     proxies:
       - 🔮 负载均衡
       - 🔮 CF自建
@@ -789,7 +767,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - clashfree
       - v2cross
       - xConfig
-    filter: (港|HK|hk|Hong Kong|HongKong|hongkong)
+    filter: (港|HK|hk|Hong Kong|HongKong|hongkong) # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
