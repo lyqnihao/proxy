@@ -369,93 +369,31 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - DIRECT # 直连，即不经过任何代理。这是Clash内置的特殊策略
   - name: 🚀 手动切换 # 代理组名称，用户可在此组内手动选择一个节点使用
     type: select # 代理组类型：手动选择模式
-    use: # 【使用】指令，用于从指定的proxy-providers（代理提供者）动态拉取节点作为本组成员
-      - AA临时_1 # 引用的代理提供者名称（即在proxy-providers:段中定义的“AA临时_1”订阅源）。本组将包含该订阅源下的所有节点。
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
+  #  use: # 【使用】指令，用于从指定的proxy-providers（代理提供者）动态拉取节点作为本组成员
+  #    - AA临时_1 # 引用的代理提供者名称（即在proxy-providers:段中定义的“AA临时_1”订阅源）。本组将包含该订阅源下的所有节点。
+  #    - ChromeGo_1
+  #    - ChromeGo_2
+  #    - ChromeGo_3
+  #    - ChromeGo_4
+  #    - ChromeGo_5
+  #    - ChromeGo_6
+  #    - 资源分享
+  #    - NoMoreWalls
+  #    - 每日更新
+  #    - ZRF-周润发
+  #    - 未知-伊朗TG
     filter: ".*" # 【过滤】规则，使用正则表达式匹配节点名称。`.*`表示匹配所有节点（即不过滤，全部使用）。
   - name: ♻️ 自动选择 # 代理组名称，通常代表会自动选取最优节点的组
     type: url-test # 代理组类型：通过测试URL的延迟和可用性，自动选择延迟最低的节点
     url: http://www.gstatic.com/generate_204 # 用于延迟测试的网址。访问此地址若返回HTTP 204状态码，则视为节点可用并记录耗时
     interval: 3600 # 自动执行延迟测试的间隔时间（秒）。3600秒=60分钟
     tolerance: 500 # 容忍度（毫秒）。当新测出的最优节点比当前使用节点的延迟低超过此值时，才会切换。用于避免频繁切换。
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: .*
   - name: 🔯 故障转移 # 代理组名称，通常用于在主节点故障时自动切换到备用节点
     type: fallback # 代理组类型：故障转移模式。按顺序使用组内节点，仅当当前节点不可用时才会切换到下一个
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 500
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: .*
   - name: 🔮 负载均衡
     type: load-balance # 代理组类型：负载均衡模式。流量会按策略分发给组内多个节点，共同分担负载
@@ -464,30 +402,12 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 150
-    use:
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
     filter: .*
   - name: 🔮 CF自建
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 300
-    use:
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
     filter: .*
   - name: 📲 电报消息
     type: select
@@ -512,18 +432,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     url: https://gemini.google.com/
     interval: 900
     tolerance: 350
-    use:
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
     filter: "(US|CA|UK|DE|FR|IE|NL|BE|SG|KR|TW|AU|NZ).*" # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
     proxies:
       - 🔮 负载均衡
@@ -685,31 +593,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🚀 手动切换
   - name: 🎶 网易音乐
     type: select
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (网易|音乐|解锁|Music|NetEase)
     proxies:
       - DIRECT
@@ -751,214 +634,39 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 350
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (港|HK|hk|Hong Kong|HongKong|hongkong)
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 350
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 350
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
   - name: 🇨🇳 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 350
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (台|新北|彰化|TW|Taiwan)
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 350
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (新加坡|坡|狮城|SG|Singapore)
   - name: 🇰🇷 韩国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 350
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (KR|Korea|KOR|首尔|韩|韓)
   - name: 🎥 奈飞节点
     type: select
-    use:
-      - AA临时_1
-      - AA临时_2
-      - 未知-多国节点
-      - ChromeGo_1
-      - ChromeGo_2
-      - ChromeGo_3
-      - ChromeGo_4
-      - ChromeGo_5
-      - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - byjoeycfnew
-      - am-cf-tunnel-sub
-      - cloudflare-vless-trojan
-      - edtunnel-1g9
-      - edgetunnel-cmliu
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
     filter: (NF|奈飞|解锁|Netflix|NETFLIX|Media)
 
 # 第六部分：规则
