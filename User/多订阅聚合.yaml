@@ -10,12 +10,12 @@ external-controller: 127.0.0.1:9090 # 外部控制接口，用于连接网页面
 
 # 第三部分：代理源 (不同订阅提供者)
 proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动态加载和管理节点列表
-  AA临时_1:
+  裤佬️_@stymei1:
     type: http
-    url: https://skr8oblwwy.chinat.eu.org/sub?uuid=a2a396c3-f40e-4dee-bdbb-b1201f12dc1c&host=danfeng.443888.xyz&path=/danfeng?ed=2560
+    url: https://sub.445569.xyz/
     interval: 3600
     proxy: DIRECT
-    path: ./providers/AA临时_1.yaml
+    path: ./providers/裤佬️_@stymei1.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -23,12 +23,12 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
     override:
       skip-cert-verify: true
       udp: true
-  AA临时_2:
+  ChromeGo_merge:
     type: http
-    url: https://v2clash.blog/Link/20260131-clash.yaml
+    url: https://ghproxy.net/raw.githubusercontent.com/Misaka-blog/chromego_merge/refs/heads/main/sub/merged_proxies_new.yaml
     interval: 3600
     proxy: DIRECT
-    path: ./providers/AA临时_2.yaml
+    path: ./providers/ChromeGo_merge.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -148,7 +148,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   NoMoreWalls:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
+    url: https://ghproxy.net/raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
     interval: 3600
     proxy: DIRECT
     path: ./providers/NoMoreWalls.yaml
@@ -161,7 +161,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   每日更新:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
+    url: https://ghproxy.net/raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
     interval: 3600
     proxy: DIRECT
     path: ./providers/每日更新.yaml
@@ -174,7 +174,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   ZRF-周润发:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
+    url: https://ghproxy.net/raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
     interval: 3600
     proxy: DIRECT
     path: ./providers/ZRF-周润发.yaml
@@ -198,12 +198,12 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
     override:
       skip-cert-verify: true
       udp: true
-  byjoeycfnew:
+  未知_01:
     type: http
-    url: https://byjoeycfnew.lyqnihao.dpdns.org/lyqnihao/sub?target=clash
+    url: https://wpds.qzz.io/suiyuan
     interval: 3600
     proxy: DIRECT
-    path: ./providers/byjoeycfnew.yaml
+    path: ./providers/未知_01.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -265,7 +265,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   proxyqueen:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml
+    url: https://ghproxy.net/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/proxyqueen/output.yaml
     interval: 3600
     proxy: DIRECT
     path: ./providers/proxyqueen.yaml
@@ -291,7 +291,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   clashfree:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml
+    url: https://ghproxy.net/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/clashfree/output.yaml
     interval: 3600
     proxy: DIRECT
     path: ./providers/clashfree.yaml
@@ -304,7 +304,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   v2cross:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml
+    url: https://ghproxy.net/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/v2cross/output.yaml
     interval: 3600
     proxy: DIRECT
     path: ./providers/v2cross.yaml
@@ -317,7 +317,7 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
       udp: true
   xConfig:
     type: http
-    url: https://gh-proxy.com/raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/row-url/all.txt
+    url: https://ghproxy.net/raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/row-url/all.txt
     interval: 3600
     proxy: DIRECT
     path: ./providers/xConfig.yaml
