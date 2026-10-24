@@ -185,12 +185,12 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
     override:
       skip-cert-verify: true
       udp: true
-  未知-伊朗TG:
+  ChromeGo_合并:
     type: http
-    url: https://shz.al/25Ae
+    url: https://sub.ikar.eu.org/?template=https%3A%2F%2Fraw.githubusercontent.com%2Fzhuqq2020%2FMihomo-Party-ACL4SSR%2Fmain%2FACL4SSR_Online_Full_AdblockPlus.yaml&url=https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F1%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F2%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F3%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F4%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F5%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F6%2Fconfig.yaml,https%3A%2F%2Fskr.daozhang.dpdns.org%2Fclash&mihomo=true&udp=true&adgdns=true
     interval: 3600
     proxy: DIRECT
-    path: ./providers/未知-伊朗TG.yaml
+    path: ./providers/ChromeGo_合并.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -211,12 +211,12 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
     override:
       skip-cert-verify: true
       udp: true
-  cloudflare-vless-trojan:
+  sublinkpro_fnos_all:
     type: http
-    url: https://cloudflare-vless-trojan.lyqnihao.dpdns.org/86c50e3a-5b87-49dd-bd20-03c7f2735e40/pcl
+    url: http://192.168.10.6:8800/c/?token=6adf684e977c0164ae2aa56802eecb7e&client=clash
     interval: 3600
     proxy: DIRECT
-    path: ./providers/cloudflare-vless-trojan.yaml
+    path: ./providers/sublinkpro_fnos_all.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -224,12 +224,12 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
     override:
       skip-cert-verify: true
       udp: true
-  am-cf-tunnel-sub:
+  Sublink_机场:
     type: http
-    url: https://am-cf-tunnel-sub.lyqnihao.dpdns.org/ec872d8f-72b0-4a04-b612-0327d85e18ed?sub&UUID=lyqnihao&HOST=am-cf-tunnel-sub.lyqnihao.dpdns.org&NAT64=true
+    url: http://192.168.10.6:8800/c/?token=fa4f3918540a6cb2f6e6ce5aa1270574&client=clash
     interval: 3600
     proxy: DIRECT
-    path: ./providers/am-cf-tunnel-sub.yaml
+    path: ./providers/Sublink_机场.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
@@ -358,7 +358,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🔮 负载均衡 # 子代理组（通常type为load-balance）
       - ♻️ 自动选择 # 子代理组（通常type为url-test或fallback）
       - 🔯 故障转移 # 子代理组（通常type为fallback）
-      - 🔮 CF自建 # 这是一个具体节点或子组的名称
+      - 🔮 ChromeGo # 这是一个具体节点或子组的名称
       - 🇭🇰 香港节点 # 这是一个按地区归类的子代理组
       - 🇨🇳 台湾节点 # 
       - 🇸🇬 狮城节点 # 
@@ -383,13 +383,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: ".*" # 【过滤】规则，使用正则表达式匹配节点名称。`.*`表示匹配所有节点（即不过滤，全部使用）。
   - name: ♻️ 自动选择 # 代理组名称，通常代表会自动选取最优节点的组
     type: url-test # 代理组类型：通过测试URL的延迟和可用性，自动选择延迟最低的节点
@@ -410,13 +412,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: .*
   - name: 🔯 故障转移 # 代理组名称，通常用于在主节点故障时自动切换到备用节点
     type: fallback # 代理组类型：故障转移模式。按顺序使用组内节点，仅当当前节点不可用时才会切换到下一个
@@ -437,13 +441,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: .*
   - name: 🔮 负载均衡
     type: load-balance # 代理组类型：负载均衡模式。流量会按策略分发给组内多个节点，共同分担负载
@@ -466,40 +472,29 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: .*
-  - name: 🔮 CF自建
+  - name: 🔮 ChromeGo
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 3600
     tolerance: 300
     use: # 【使用】指令，用于从指定的proxy-providers（代理提供者）动态拉取节点作为本组成员
-      - 裤佬️_@stymei1 # 引用的代理提供者名称（即在proxy-providers:段中定义的“AA临时_1”订阅源）。本组将包含该订阅源下的所有节点。
-      - ChromeGo_merge
-      - 未知-多国节点
       - ChromeGo_1
       - ChromeGo_2
       - ChromeGo_3
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - 资源分享
-      - NoMoreWalls
-      - 每日更新
-      - ZRF-周润发
-      - 未知-伊朗TG
-      - 未知_01
-      - proxyqueen
-      - nodefree
-      - clashfree
-      - v2cross
-      - xConfig
+      - ChromeGo_合并
     filter: .*
   - name: 📲 电报消息
     type: select
@@ -508,7 +503,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     tolerance: 250
     proxies:
       - 🔮 负载均衡
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
@@ -526,7 +521,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     tolerance: 350
     proxies:
       - 🔮 负载均衡
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - ♻️ 自动选择
       - 🚀 手动切换
       - 🇨🇳 台湾节点
@@ -539,7 +534,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     tolerance: 350
     proxies:
       - 🔮 负载均衡
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
@@ -553,7 +548,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     type: select
     proxies:
       - 🔮 负载均衡
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - 🎥 奈飞节点
       - ♻️ 自动选择
       - 🚀 节点选择
@@ -573,7 +568,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🇨🇳 台湾节点
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🚀 手动切换
@@ -588,7 +583,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     type: select
     proxies:
       - 🔮 负载均衡
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇭🇰 香港节点
@@ -612,7 +607,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     type: select
     proxies:
       - DIRECT
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - 🚀 节点选择
       - 🔮 负载均衡
       - 🇺🇲 美国节点
@@ -698,13 +693,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (网易|音乐|解锁|Music|NetEase)
     proxies:
       - DIRECT
@@ -730,7 +727,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     type: select
     proxies:
       - 🔮 负载均衡
-      - 🔮 CF自建
+      - 🔮 ChromeGo
       - DIRECT
       - ♻️ 自动选择
       - 🚀 节点选择
@@ -760,13 +757,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (港|HK|hk|Hong Kong|HongKong|hongkong) # 【关键】过滤规则：只保留名称中包含 US（美国）、SG（新加坡）、UK（英国）、TW（台湾）等支持地区的节点
   - name: 🇯🇵 日本节点
     type: url-test
@@ -787,13 +786,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
   - name: 🇺🇲 美国节点
     type: url-test
@@ -814,13 +815,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
   - name: 🇨🇳 台湾节点
     type: url-test
@@ -841,13 +844,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (台|新北|彰化|TW|Taiwan)
   - name: 🇸🇬 狮城节点
     type: url-test
@@ -868,13 +873,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (新加坡|坡|狮城|SG|Singapore)
   - name: 🇰🇷 韩国节点
     type: url-test
@@ -895,13 +902,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (KR|Korea|KOR|首尔|韩|韓)
   - name: 🎥 奈飞节点
     type: select
@@ -919,13 +928,15 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - 未知-伊朗TG
+      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
       - clashfree
       - v2cross
       - xConfig
+      - sublinkpro_fnos_all
+      - Sublink_机场
     filter: (NF|奈飞|解锁|Netflix|NETFLIX|Media)
 
 # 第六部分：规则
