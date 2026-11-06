@@ -39,7 +39,7 @@ dns:
   - https://1.0.0.1/dns-query
 proxies:
 - type: ss
-  name: 芬兰(v2clash.blog 2026-11.4更新)
+  name: 芬兰(v2clash.blog 2026-11.6更新)
   server: 202.50.253.27
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -47,19 +47,127 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-- type: anytls
-  name: 瑞典(v2clash.blog 2026-11.4更新)
-  server: er8u54dh.df6h451rh.xin
+- type: vless
+  name: 挪威(v2clash.blog 2026-11.6更新)
+  server: no1.fox-lisa.ru
   port: 443
-  password: 0324fbc29561
+  uuid: ccb8ff48-3934-4250-b4ec-bb76b95d154f
+  flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: px.ads.linkedin.com
-  sni: px.ads.linkedin.com
+  servername: no1.fox-lisa.ru
+  sni: no1.fox-lisa.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs
+    short-id: 027af64166562b09
+- type: trojan
+  name: 瑞典(v2clash.blog 2026-11.6更新)
+  server: 121.127.33.130
+  port: 443
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
+  udp: true
+  tls: true
+  servername: likejennie.pages.dev
+  sni: likejennie.pages.dev
   skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  name: 土耳其(v2clash.blog 2026-11.6更新)
+  server: 5.104.74.27
+  port: 8443
+  uuid: 857e5668-88b9-45cd-a600-79e55c04d8a8
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room07.filesnap.tech
+  sni: uk-room07.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
+    short-id: dbef98744832b751
+- type: vless
+  name: 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  server: 5.104.74.69
+  port: 8443
+  uuid: c6320c2e-15b3-4c3f-9d5a-d371828ea818
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room06.filesnap.tech
+  sni: uk-room06.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec
+    short-id: 17a35165f9d25923
+- type: vless
+  name: 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  server: 5.104.74.27
+  port: 8443
+  uuid: b3ac565c-fe3a-4279-868c-43c41c05e358
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room07.filesnap.tech
+  sni: uk-room07.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
+    short-id: dbef98744832b751
+- type: vless
+  name: 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  server: 5.104.74.70
+  port: 8443
+  uuid: a3d15e40-fa6b-4d11-af0b-24815c4b82fb
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room07.filesnap.tech
+  sni: uk-room07.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
+    short-id: dbef98744832b751
+- type: vless
+  name: 西班牙(v2clash.blog 2026-11.6更新)
+  server: 152.114.194.147
+  port: 443
+  uuid: ccb8ff48-3934-4250-b4ec-bb76b95d154f
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: es1.fox-lisa.ru
+  sni: es1.fox-lisa.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs
+    short-id: 027af64166562b09
+- type: vless
+  name: 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  server: es1.fox-lisa.ru
+  port: 443
+  uuid: ccb8ff48-3934-4250-b4ec-bb76b95d154f
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: es1.fox-lisa.ru
+  sni: es1.fox-lisa.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs
+    short-id: 027af64166562b09
 - type: ss
-  name: 意大利(v2clash.blog 2026-11.4更新)
+  name: 意大利(v2clash.blog 2026-11.6更新)
   server: 202.50.253.81
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -68,7 +176,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: vless
-  name: CA加拿大(v2clash.blog 2026-11.4更新)
+  name: CA加拿大(v2clash.blog 2026-11.6更新)
   server: 155.46.167.30
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -81,7 +189,7 @@ proxies:
     headers:
       Host: vms.lifetime50.workers.dev
 - type: vless
-  name: CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
+  name: CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: 172.64.152.19
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
@@ -97,7 +205,7 @@ proxies:
     headers:
       Host: jp3.yohototo.top
 - type: vless
-  name: CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
+  name: CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
   server: 172.64.149.88
   port: 443
   uuid: d37a75db-76b6-4db8-b213-0d5b044d138d
@@ -113,7 +221,7 @@ proxies:
     headers:
       Host: top-e4s.pages.dev
 - type: trojan
-  name: CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
+  name: CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
   server: 104.19.45.195
   port: 443
   password: pH[]S[Bh:_:D6T4k
@@ -127,22 +235,43 @@ proxies:
   ws-opts:
     path: /trsVu9Ualb1DOfGjpw
 - type: vless
-  name: DE德国(v2clash.blog 2026-11.4更新)
-  server: 185.44.64.166
-  port: 59397
-  uuid: ac36b6f8-d03d-46cb-808f-e655183fb76d
+  name: CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  server: ca1.fox-lisa.ru
+  port: 443
+  uuid: ccb8ff48-3934-4250-b4ec-bb76b95d154f
   flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: la.blogs.nvidia.com
-  sni: la.blogs.nvidia.com
+  servername: ca1.fox-lisa.ru
+  sni: ca1.fox-lisa.ru
   skip-cert-verify: false
   client-fingerprint: chrome
   reality-opts:
-    public-key: 7w6m1Z7wZk1KX7bBlCi50t_8T-HdC8aMizOcIyqcaS4
-    short-id: '1430'
+    public-key: NaCZ-sS4poEbFwKmD7ePAVyc5OhHxsD9nkAStjXkoWs
+    short-id: 027af64166562b09
 - type: vless
-  name: DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
+  name: CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  server: 185.148.107.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime55.workers.dev
+- type: vless
+  name: DE德国(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -158,39 +287,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  server: 185.125.103.113
-  port: 443
-  uuid: f0c9ebf7-76cc-44b7-8b30-b33ee0ffc898
-  udp: true
-  tls: true
-  servername: coding.grok2.indevs.in
-  sni: coding.grok2.indevs.in
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
-    headers:
-      Host: coding.grok2.indevs.in
-- type: vless
-  name: DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  server: 204.168.248.5
-  port: 443
-  uuid: f0c9ebf7-76cc-44b7-8b30-b33ee0ffc898
-  udp: true
-  tls: true
-  servername: coding.grok2.indevs.in
-  sni: coding.grok2.indevs.in
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
-    headers:
-      Host: coding.grok2.indevs.in
-- type: vless
-  name: DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
+  name: DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: 104.18.42.98
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
@@ -206,65 +303,105 @@ proxies:
     headers:
       Host: jp3.yohototo.top
 - type: vless
-  name: DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  server: 104.25.231.228
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  name: DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  server: 179.61.251.244
+  port: 7443
+  uuid: 635e8406-9253-4444-88a2-dad1f0826034
   udp: true
   tls: true
-  servername: ccc.010304.xyz
-  sni: ccc.010304.xyz
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
-- type: anytls
-  name: DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  server: 684616s4.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  udp: true
-  tls: true
-  servername: px.ads.linkedin.com
-  sni: px.ads.linkedin.com
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-- type: vless
-  name: DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  server: hw6.divarkhaghazi.com
-  port: 465
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
-  udp: true
-  tls: true
-  servername: hw6.divarkhaghazi.com.
-  sni: hw6.divarkhaghazi.com.
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /@Marisa_kristi
     headers:
-      Host: hw6.divarkhaghazi.com.
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
 - type: vless
-  name: FR法国(v2clash.blog 2026-11.4更新)
-  server: 216.24.57.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  server: swo2.nexfile.net
+  port: 4443
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
   udp: true
-  tls: false
+  tls: true
+  servername: swo2.nexfile.net
+  sni: swo2.nexfile.net
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime28.workers.dev
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/sync/
+    mode: auto
 - type: vless
-  name: FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
+  name: DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  server: ac3f32g.de18.h1clayd.click
+  port: 443
+  uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+  udp: true
+  tls: true
+  servername: ac3f32g.de18.h1clayd.click
+  sni: ac3f32g.de18.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: ios
+  reality-opts:
+    public-key: cO2bNRZvYDit8UqQk_zc6BaSBA7LiLMSmMHTwjU531Q
+    short-id: 051e90ed3d657158
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 01ad85319ae3
+- type: vless
+  name: DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  server: ac3f32g.de18.h1clayd.click
+  port: 443
+  uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+  udp: true
+  tls: true
+  servername: ac3f32g.de18.h1clayd.click
+  sni: ac3f32g.de18.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: edge
+  reality-opts:
+    public-key: cO2bNRZvYDit8UqQk_zc6BaSBA7LiLMSmMHTwjU531Q
+    short-id: 051e90ed3d657158
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 01ad85319ae3
+- type: vless
+  name: DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  server: aaf9a7x.de18.h1clayd.click
+  port: 443
+  uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+  udp: true
+  tls: true
+  servername: aaf9a7x.de18.h1clayd.click
+  sni: aaf9a7x.de18.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: qq
+  reality-opts:
+    public-key: JxuqY729RxyPX7D1cZigwHUYbkSPIx2H7vNTcrj4VBs
+    short-id: 19a70eda3a2416cb
+  network: xhttp
+  xhttp-opts:
+    path: /9e6c99f913ef
+    host: aaf9a7x.de18.h1clayd.click
+    mode: auto
+- type: vless
+  name: DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  server: 100497t.de18.h1clayd.click
+  port: 443
+  uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+  udp: true
+  tls: true
+  servername: 100497t.de18.h1clayd.click
+  sni: 100497t.de18.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: x-7K9P2E91DCL-0ONwm14gxDkUseukg98hYzB-1dW1A
+    short-id: 5be240e45d3c445c
+- type: vless
+  name: FR法国(v2clash.blog 2026-11.6更新)
   server: 62.210.70.194
   port: 37783
   uuid: a289c660-1b12-432b-a06c-c2ae469272b0
@@ -282,7 +419,69 @@ proxies:
     path: /OCrp5Ajs
     mode: auto
 - type: vless
-  name: HK香港(v2clash.blog 2026-11.4更新)
+  name: FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  server: w.geogame.ir
+  port: 2053
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
+  udp: true
+  tls: true
+  servername: w.geogame.ir
+  sni: w.geogame.ir
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- type: vless
+  name: FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  server: uk.zarqivo.ir
+  port: 2053
+  uuid: c25c2329-3038-4193-9b0c-2e115630c723
+  udp: true
+  tls: true
+  servername: Filano.zarqivo.ir
+  sni: Filano.zarqivo.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /
+    mode: auto
+- type: vless
+  name: GB英国(v2clash.blog 2026-11.6更新)
+  server: 152.175.6.229
+  port: 31884
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  udp: true
+  tls: true
+  servername: hk010.zestapp778.com
+  sni: hk010.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- type: vless
+  name: GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  server: 152.175.6.229
+  port: 31884
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  udp: true
+  tls: true
+  servername: hk010.zestapp778.com
+  sni: hk010.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- type: trojan
+  name: GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  server: sclass-c1.catcat321.com
+  port: 20086
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  udp: true
+  tls: true
+  servername: hk.catxstar.com
+  sni: hk.catxstar.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- type: vless
+  name: HK香港(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -300,7 +499,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: anytls
-  name: HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
+  name: HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: 56481.df6h451rh.xin
   port: 443
   password: 0324fbc29561
@@ -310,7 +509,7 @@ proxies:
   sni: images.ctfassets.net
   skip-cert-verify: false
 - type: anytls
-  name: HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
+  name: HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
   server: 56481.df6h451rh.xin
   port: 443
   password: 0324fbc29561
@@ -323,7 +522,7 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
 - type: anytls
-  name: HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
+  name: HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
   server: 56481.df6h451rh.xin
   port: 443
   password: 0324fbc29561
@@ -332,91 +531,33 @@ proxies:
   servername: images.ctfassets.net
   sni: images.ctfassets.net
   skip-cert-verify: false
-  client-fingerprint: chrome
-- type: anytls
-  name: HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  server: 56481.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  udp: true
-  tls: true
-  servername: images.ctfassets.net
-  sni: images.ctfassets.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- type: anytls
-  name: HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  server: 56481.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  udp: true
-  tls: true
-  servername: images.ctfassets.net
-  sni: images.ctfassets.net
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
   client-fingerprint: chrome
 - type: vless
-  name: JP日本(v2clash.blog 2026-11.4更新)
-  server: 159.242.242.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  name: HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  server: jp.sofast.live
+  port: 52683
+  uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
   udp: true
   tls: false
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime58.workers.dev
 - type: vless
-  name: JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  server: 195.85.59.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime58.workers.dev
-- type: vless
-  name: JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  server: 217.60.2.212
-  port: 443
-  uuid: f0c9ebf7-76cc-44b7-8b30-b33ee0ffc898
+  name: KR韩国(v2clash.blog 2026-11.6更新)
+  server: 129.151.64.169
+  port: 31867
+  uuid: adeb038d-f011-4733-b133-3791e76950f7
   udp: true
   tls: true
-  servername: coding.grok2.indevs.in
-  sni: coding.grok2.indevs.in
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
+    path: /@Marisa_kristi
     headers:
-      Host: coding.grok2.indevs.in
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
 - type: vless
-  name: JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  server: kclx.eu.org
-  port: 443
-  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
-  udp: true
-  tls: true
-  servername: kclx.eu.org
-  sni: kclx.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /154.16.10.34-8080
-    headers:
-      Host: kclx.eu.org
-- type: vless
-  name: NL荷兰(v2clash.blog 2026-11.4更新)
+  name: NL荷兰(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -430,78 +571,7 @@ proxies:
     path: /kavir
     mode: stream-one
 - type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  server: 212.34.128.120
-  port: 2083
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  tls: true
-  servername: podcasts.blog-forme.ru
-  sni: podcasts.blog-forme.ru
-  skip-cert-verify: false
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-  network: xhttp
-  xhttp-opts:
-    path: /v2/sync/af2c0c
-    mode: auto
-- type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  server: 212.34.128.120
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  tls: true
-  servername: podcasts.blog-forme.ru
-  sni: podcasts.blog-forme.ru
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-  network: xhttp
-  xhttp-opts:
-    path: /v2/sync/af2c0c
-    mode: auto
-- type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  server: podcasts.blog-forme.ru
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  tls: true
-  servername: podcasts.blog-forme.ru
-  sni: podcasts.blog-forme.ru
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-  network: xhttp
-  xhttp-opts:
-    path: /v2/sync/af2c0c
-    mode: auto
-- type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  server: 87.199.207.116
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  tls: true
-  servername: docs.blog-forme.ru
-  sni: docs.blog-forme.ru
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-  network: xhttp
-  xhttp-opts:
-    path: /v2/sync/af2c0c
-    mode: auto
-- type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
+  name: NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: 2a14:3f87:f001:46::a
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -519,7 +589,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
+  name: NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -537,7 +607,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
+  name: NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -555,73 +625,52 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  server: dey.lnmarketplace.net
-  port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  name: NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  server: 188.114.97.6
+  port: 8080
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
   udp: true
-  tls: true
-  servername: dey.lnmarketplace.net
-  sni: dey.lnmarketplace.net
+  tls: false
+  servername: fornewiran.ade-1000.workers.dev
+  sni: fornewiran.ade-1000.workers.dev
   skip-cert-verify: false
-  alpn:
-  - h2
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /kavir
-    host: dey.lnmarketplace.net
-    mode: stream-one
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
 - type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  server: 212.34.128.120
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  name: NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  server: fu.baiproxy.us.ci
+  port: 2087
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
   udp: true
   tls: true
-  servername: podcasts.blog-forme.ru
-  sni: podcasts.blog-forme.ru
   skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-  network: xhttp
-  xhttp-opts:
-    path: /v2/sync/af2c0c
-    mode: auto
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: fu.baiproxy.us.ci
 - type: vless
-  name: NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  server: 156.252.229.11
-  port: 8443
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  name: NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  server: 79.137.197.212
+  port: 2105
+  uuid: 663c0d65-f2bc-43f3-b329-1a4e2b781d44
   udp: true
   tls: true
-  servername: play.googleapis.com
-  sni: play.googleapis.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-- type: vless
-  name: PL波兰(v2clash.blog 2026-11.4更新)
-  server: 195.123.211.204
-  port: 81
-  uuid: f0c9ebf7-76cc-44b7-8b30-b33ee0ffc898
-  udp: true
-  tls: true
-  servername: coding.grok2.indevs.in
-  sni: coding.grok2.indevs.in
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
+    path: /@Marisa_kristi
     headers:
-      Host: coding.grok2.indevs.in
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
 - type: ss
-  name: RU俄罗斯(v2clash.blog 2026-11.4更新)
+  name: RU俄罗斯(v2clash.blog 2026-11.6更新)
   server: 46.17.46.27
   port: 18443
   password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
@@ -630,104 +679,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  server: 87.242.119.253
-  port: 443
-  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
-  udp: true
-  tls: true
-  servername: hvtlr-ru-47sb.fade.mom
-  sni: hvtlr-ru-47sb.fade.mom
-  skip-cert-verify: false
-  client-fingerprint: qq
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  server: 87.242.119.253
-  port: 443
-  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
-  udp: true
-  tls: true
-  servername: hvtlr-ru-47sb.fade.mom
-  sni: hvtlr-ru-47sb.fade.mom
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  - h2
-  client-fingerprint: ios
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  server: 5.129.202.80
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: mirror-50.topp-con.xyz
-  sni: mirror-50.topp-con.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8
-    short-id: 2ef2b10d5143d798
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  server: 178.130.46.211
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  servername: t5pmr.mail-node.gfw.kdns.fr
-  sni: t5pmr.mail-node.gfw.kdns.fr
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: t5pmr.mail-node.gfw.kdns.fr
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  server: 147.45.161.4
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: defs-68.topp-con.xyz
-  sni: defs-68.topp-con.xyz
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: xTePrM5IyjR8o52B2mRAO2nNivfyMpBZxya93MQk4Qc
-    short-id: 2a40b6d6495debf3
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  server: 87.242.119.253
-  port: 443
-  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
-  udp: true
-  tls: true
-  servername: hvtlr-ru-47sb.fade.mom
-  sni: hvtlr-ru-47sb.fade.mom
-  skip-cert-verify: false
-  client-fingerprint: edge
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  server: hw6.divarkhaghazi.com
-  port: 465
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
-  udp: true
-  tls: true
-  servername: hw6.divarkhaghazi.com.
-  sni: hw6.divarkhaghazi.com.
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- type: vless
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
+  name: RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: 201.51.4.89
   port: 443
   uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
@@ -741,45 +693,51 @@ proxies:
   reality-opts:
     public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
     short-id: b9120cd53ffd7bba
-- type: ss
-  name: RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  server: 46.17.46.27
-  port: 18443
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-  cipher: aes-256-gcm
+- type: vless
+  name: SG新加坡(v2clash.blog 2026-11.6更新)
+  server: 104.18.37.228
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: false
   skip-cert-verify: false
-- type: vless
-  name: SG新加坡(v2clash.blog 2026-11.4更新)
-  server: 85.137.51.53
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  servername: t5pmr.mail-node.gfw.kdns.fr
-  sni: t5pmr.mail-node.gfw.kdns.fr
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /
     headers:
-      Host: t5pmr.mail-node.gfw.kdns.fr
-- type: anytls
-  name: TW台湾(v2clash.blog 2026-11.4更新)
-  server: er8u54dh.df6h451rh.xin
+      Host: vms.lifetime29.workers.dev
+- type: vless
+  name: SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  server: 43.163.112.174
   port: 443
-  password: 0324fbc29561
+  uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
+  flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: px.ads.linkedin.com
-  sni: px.ads.linkedin.com
+  servername: www.cloudflare.com
+  sni: www.cloudflare.com
   skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
+    short-id: 0123456789abcdef
+- type: vless
+  name: SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  server: 43.174.195.1
+  port: 443
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  udp: true
+  tls: true
+  servername: kv.074167.xyz
+  sni: kv.074167.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: kv.074167.xyz
 - type: anytls
-  name: TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
+  name: TW台湾(v2clash.blog 2026-11.6更新)
   server: er8u54dh.df6h451rh.xin
   port: 443
   password: 0324fbc29561
@@ -792,7 +750,7 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
 - type: anytls
-  name: TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
+  name: TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: er8u54dh.df6h451rh.xin
   port: 443
   password: 0324fbc29561
@@ -801,9 +759,8 @@ proxies:
   servername: px.ads.linkedin.com
   sni: px.ads.linkedin.com
   skip-cert-verify: false
-  client-fingerprint: chrome
 - type: anytls
-  name: TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
+  name: TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
   server: er8u54dh.df6h451rh.xin
   port: 443
   password: 0324fbc29561
@@ -812,38 +769,9 @@ proxies:
   servername: px.ads.linkedin.com
   sni: px.ads.linkedin.com
   skip-cert-verify: false
-  alpn:
-  - http/1.1
   client-fingerprint: chrome
-- type: anytls
-  name: TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  server: er8u54dh.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  udp: true
-  tls: true
-  servername: px.ads.linkedin.com
-  sni: px.ads.linkedin.com
-  skip-cert-verify: false
 - type: vless
-  name: TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  server: api.ferrin.uk
-  port: 443
-  uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
-  udp: true
-  tls: true
-  servername: 7d1a74fd.ferrin.uk
-  sni: 7d1a74fd.ferrin.uk
-  skip-cert-verify: false
-  alpn:
-  - h2
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /es
-    mode: stream-one
-- type: vless
-  name: US美国(v2clash.blog 2026-11.4更新)
+  name: US美国(v2clash.blog 2026-11.6更新)
   server: tunell2027.crackerbinam.org
   port: 48312
   uuid: f47057d5-120d-4b42-b6d6-30469aef6813
@@ -857,7 +785,7 @@ proxies:
     public-key: d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y
     short-id: 902c315efc
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
   server: tunell2027.crackerbinam.org
   port: 48312
   uuid: f47057d5-120d-4b42-b6d6-30469aef6813
@@ -871,7 +799,7 @@ proxies:
     public-key: d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y
     short-id: 902c315efc
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
   server: 185.148.104.30
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -884,7 +812,7 @@ proxies:
     headers:
       Host: vms.lifetime51.workers.dev
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
   server: 5.83.129.236
   port: 443
   uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
@@ -898,7 +826,7 @@ proxies:
   grpc-opts:
     grpc-service-name: a9w9wmko0k2od14hv8v
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
   server: 63.141.128.30
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -911,7 +839,7 @@ proxies:
     headers:
       Host: vms.lifetime42.workers.dev
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
   server: 185.148.104.30
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -927,7 +855,7 @@ proxies:
     headers:
       Host: vms.lifetime51.workers.dev
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
   server: 185.148.104.30
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -942,7 +870,7 @@ proxies:
     headers:
       Host: vms.lifetime51.workers.dev
 - type: trojan
-  name: US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
   server: 172.66.47.18
   port: 443
   password: e7TTceggMwUMg+aFN:F4
@@ -955,7 +883,7 @@ proxies:
   ws-opts:
     path: /tr/SIeRkg2QvR2Zcpu0SeEMow?ed=2560
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
   server: 80.93.202.40
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -968,7 +896,7 @@ proxies:
     headers:
       Host: vms.lifetime02.workers.dev
 - type: trojan
-  name: US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
   server: 172.66.47.18
   port: 443
   password: e7TTceggMwUMg+aFN:F4
@@ -982,7 +910,7 @@ proxies:
   ws-opts:
     path: /tr/SIeRkg2QvR2Zcpu0SeEMow?ed=2560
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.63
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -991,7 +919,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
   server: 2a14:3f87:f001:46::a
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -1009,7 +937,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
   server: 8.35.211.73
   port: 2087
   uuid: 9f534ac4-3c58-4a16-8b74-13dff09a0cf1
@@ -1025,7 +953,7 @@ proxies:
     headers:
       Host: d39333476.pages.dev
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.36
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1034,7 +962,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.90
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1043,7 +971,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.54
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1052,7 +980,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.45
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1061,7 +989,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.99
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1070,7 +998,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.18
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1079,7 +1007,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
   server: 202.50.253.72
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -1088,7 +1016,7 @@ proxies:
   tls: false
   skip-cert-verify: false
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
   server: 2a14:3f87:f001:46::a
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -1106,7 +1034,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
   server: 2a14:3f87:f001:46::a
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -1124,7 +1052,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -1141,7 +1069,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -1158,7 +1086,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
   server: dey.lnmarketplace.net
   port: 443
   uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
@@ -1176,80 +1104,7 @@ proxies:
     host: dey.lnmarketplace.net
     mode: stream-one
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  server: 69.8.129.152
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  servername: t5pmr.mail-node.gfw.kdns.fr
-  sni: t5pmr.mail-node.gfw.kdns.fr
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: t5pmr.mail-node.gfw.kdns.fr
-- type: hysteria2
-  name: US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  server: 13.143.189.147
-  port: 4444
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  udp: true
-  tls: true
-  servername: pl2.nexfile.net
-  sni: pl2.nexfile.net
-  skip-cert-verify: false
-- type: vless
-  name: US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  server: 38.207.182.119
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  servername: t5pmr.mail-node.gfw.kdns.fr
-  sni: t5pmr.mail-node.gfw.kdns.fr
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: t5pmr.mail-node.gfw.kdns.fr
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.54
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.63
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.45
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
   server: www.codex2api.com
   port: 443
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
@@ -1267,7 +1122,7 @@ proxies:
     host: 667a1552s552.fuhuovps.xyz
     mode: auto
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
   server: cf.090227.xyz
   port: 443
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
@@ -1285,7 +1140,7 @@ proxies:
     host: 7fe50937s2316.fuhuovps.xyz
     mode: auto
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
   server: www.codex2api.com
   port: 443
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
@@ -1303,7 +1158,7 @@ proxies:
     host: 7fe50937s2316.fuhuovps.xyz
     mode: auto
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
   server: 92.53.189.40
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -1316,7 +1171,7 @@ proxies:
     headers:
       Host: vms.lifetime19.workers.dev
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
   server: 188.164.248.110
   port: 443
   uuid: 13134515-adc7-404b-8d2a-f9ad99e8dcbd
@@ -1332,21 +1187,7 @@ proxies:
     headers:
       Host: imanvipreserved.pages.dev
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  server: 79.182.39.57
-  port: 443
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  udp: true
-  tls: true
-  servername: a0688bt.us4.h1clayd.click
-  sni: a0688bt.us4.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
-    short-id: 257420d9d430152a
-- type: vless
-  name: US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
   server: www.codex2api.com
   port: 443
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
@@ -1364,25 +1205,7 @@ proxies:
     host: 618f4a11s220.fuhuovps.xyz
     mode: auto
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  server: www.codex2api.com
-  port: 443
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  udp: true
-  tls: true
-  servername: ffb30d2fs8746.fuhuovps.xyz
-  sni: ffb30d2fs8746.fuhuovps.xyz
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  network: xhttp
-  xhttp-opts:
-    path: 0b02d05c82e3f3516948e99f6e59758a
-    host: ffb30d2fs8746.fuhuovps.xyz
-    mode: auto
-- type: vless
-  name: US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
+  name: US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
   server: 162.120.94.30
   port: 8880
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -1395,8 +1218,8 @@ proxies:
     headers:
       Host: vms.lifetime07.workers.dev
 - type: vmess
-  name: US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  server: 104.27.0.1
+  name: US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  server: cf.0sm.com
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   cipher: auto
@@ -1410,146 +1233,190 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  server: 186.246.9.29
+  name: US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  server: cf-cname.xingpingcn.top
   port: 443
-  uuid: b2847c3b-5278-4b06-9c66-bc919d2dfec7
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   udp: true
   tls: true
-  servername: wordpress.com
-  sni: wordpress.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA
-    short-id: 50ad5564
-- type: anytls
-  name: US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  server: 684616s4.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  udp: true
-  tls: true
-  servername: px.ads.linkedin.com
-  sni: px.ads.linkedin.com
-  skip-cert-verify: false
-- type: vless
-  name: US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  server: dey.lnmarketplace.net
-  port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-  udp: true
-  tls: true
-  servername: dey.lnmarketplace.net
-  sni: dey.lnmarketplace.net
+  servername: 667a1552s552.fuhuovps.xyz
+  sni: 667a1552s552.fuhuovps.xyz
   skip-cert-verify: false
   alpn:
   - h2
+  - http/1.1
   network: xhttp
   xhttp-opts:
-    path: /kavir
-    host: dey.lnmarketplace.net
-    mode: stream-one
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.36
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
+    path: cf440705b2633814141ae4c3fd2d4617
+    host: 667a1552s552.fuhuovps.xyz
+    mode: auto
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  server: dey.lnmarketplace.net
+  name: US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  server: cf-cname.xingpingcn.top
   port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   udp: true
   tls: true
-  servername: dey.lnmarketplace.net
-  sni: dey.lnmarketplace.net
+  servername: 7fe50937s2316.fuhuovps.xyz
+  sni: 7fe50937s2316.fuhuovps.xyz
   skip-cert-verify: false
   alpn:
   - h2
+  - http/1.1
   network: xhttp
   xhttp-opts:
-    path: /kavir
-    host: dey.lnmarketplace.net
-    mode: stream-one
+    path: b34b667489c867378f1544355647ecfa
+    host: 7fe50937s2316.fuhuovps.xyz
+    mode: auto
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  server: dey.lnmarketplace.net
+  name: US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  server: cf.090227.xyz
   port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  uuid: 5b374761-e26c-4117-8af8-5c637992fcbf
   udp: true
   tls: true
-  servername: dey.lnmarketplace.net
-  sni: dey.lnmarketplace.net
+  servername: vls.baiyi.cloudns.org
+  sni: vls.baiyi.cloudns.org
   skip-cert-verify: false
-  alpn:
-  - h2
-  network: xhttp
-  xhttp-opts:
-    path: /kavir
-    host: dey.lnmarketplace.net
-    mode: stream-one
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: vls.baiyi.cloudns.org
+- type: vmess
+  name: US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  server: cf.0sm.com
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  server: 2a14:3f87:f001:46::a
-  port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  name: US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  server: 185.193.30.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime09.workers.dev
+- type: vmess
+  name: US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  server: 104.17.0.1
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  cipher: auto
+  alterId: 0
   udp: true
   tls: true
-  servername: dey.lnmarketplace.net
-  sni: dey.lnmarketplace.net
+  servername: or3.sfacg.uk
+  sni: or3.sfacg.uk
   skip-cert-verify: false
-  alpn:
-  - h2
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /kavir
-    host: dey.lnmarketplace.net
-    mode: stream-one
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.45
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+- type: vmess
+  name: US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  server: 104.17.0.1
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  cipher: auto
+  alterId: 0
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: false
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.99
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  server: cf.090227.xyz
+  port: 8443
+  uuid: 889fa37f-6bce-4674-8a49-1cc435e11de7
   udp: true
-  tls: false
+  tls: true
+  servername: liusuyan.cc.cd
+  sni: liusuyan.cc.cd
   skip-cert-verify: false
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+  network: ws
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.Net
+    headers:
+      Host: liusuyan.cc.cd
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  server: node.jaydentune.top
+  port: 443
+  uuid: 2af77824-f83d-4f50-9dd0-560bb6e7cd45
   udp: true
-  tls: false
+  tls: true
+  servername: node.jaydentune.top
+  sni: node.jaydentune.top
   skip-cert-verify: false
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  server: 202.50.253.81
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+  network: ws
+  ws-opts:
+    path: /ray
+    headers:
+      Host: node.jaydentune.top
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  server: help1.digikala-aparat-zula.com
+  port: 443
+  uuid: 20e565e1-3858-40bf-94e8-4ec9624fc985
+  udp: true
+  tls: true
+  servername: wallweb8.pages.dev
+  sni: wallweb8.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wallweb8.pages.dev
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  server: 104.18.221.221
+  port: 443
+  uuid: 2ea2719c-23e1-4cde-b192-c8652d55d9e5
+  udp: true
+  tls: true
+  servername: cfnode-11ivy8.pages.dev
+  sni: cfnode-11ivy8.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- type: vmess
+  name: US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  server: 107.175.76.215
+  port: 1288
+  uuid: 29a72eac-a4d1-4526-8fa0-d3ecc4e38b44
+  cipher: auto
+  alterId: 0
   udp: true
   tls: false
   skip-cert-verify: false
 - type: vmess
-  name: US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  server: cf.0sm.com
+  name: US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  server: 104.27.0.1
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   cipher: auto
@@ -1565,46 +1432,23 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
 - type: vmess
-  name: US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  server: cf.0sm.com
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  cipher: auto
+  name: US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  cipher: none
   alterId: 0
   udp: true
   tls: true
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws
+    path: /lMnsZUN4/
     headers:
-      Host: vmess.lbw666.dpdns.org
-- type: vless
-  name: US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  server: 104.18.40.100
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  servername: ccc.010304.xyz
-  sni: ccc.010304.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- type: ss
-  name: US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  server: xunlinknode.csdjhajkshdjkas.com
-  port: 40006
-  password: 28789988-887e-4e41-83cd-27bbfb7999ad
-  cipher: chacha20-ietf-poly1305
-  udp: true
-  tls: false
-  skip-cert-verify: false
+      Host: v2ray1.dozapp.xyz
 - type: vmess
-  name: US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  server: cf.0sm.com
+  name: US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  server: 104.21.7.133
   port: 80
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   cipher: auto
@@ -1618,273 +1462,396 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
 - type: vless
-  name: US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  server: 147.45.108.45
-  port: 443
-  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+  name: US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  server: 129.153.71.28
+  port: 28863
+  uuid: 572b2f63-62b5-4e79-a6c8-d2211bf33576
+  udp: true
+  tls: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  sni: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  server: fu.baiproxy.us.ci
+  port: 2087
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  udp: true
+  tls: true
+  servername: fu.baiproxy.us.ci
+  sni: fu.baiproxy.us.ci
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: fu.baiproxy.us.ci
+- type: trojan
+  name: US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  server: sclass-c1.catcat321.com
+  port: 20086
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  udp: true
+  tls: true
+  servername: hk.catxstar.com
+  sni: hk.catxstar.com
+  skip-cert-verify: false
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  server: angelvpn.angelmh.cv
+  port: 2056
+  uuid: 9e4ef335-b06c-4d3f-934d-cfba5d8e3f38
   flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: absolute-disaster.org
-  sni: absolute-disaster.org
+  servername: aws-dr.udemy.com
+  sni: aws-dr.udemy.com
   skip-cert-verify: false
   client-fingerprint: chrome
   reality-opts:
-    public-key: IuzAWh6UM62Txrnh_No9y5n6wmZecyR1ki8z5xor-0g
-- type: vmess
-  name: US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
-  server: 188.114.96.3
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  cipher: auto
-  alterId: 0
+    public-key: 6_I8zzMhaLX-Jc1Ve_ldSUE_9ZbrjF2Uk2UaASB6VUI
+    short-id: '81'
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  server: 141.193.213.10
+  port: 443
+  uuid: 977b814d-d9e0-4889-bb71-98d6bfb8f462
   udp: true
   tls: true
+  servername: partner.catchplay.com.r3xxe.eu.cc
+  sni: partner.catchplay.com.r3xxe.eu.cc
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /lMnsZUN4/
+    path: /sg-amz
     headers:
-      Host: v2ray1.dozapp.xyz
+      Host: partner.catchplay.com.r3xxe.eu.cc
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  server: 129.153.71.28
+  port: 28863
+  uuid: b3a15df4-c8ad-4e98-b427-7a679aee2b18
+  udp: true
+  tls: true
+  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+  sni: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  server: 212.69.135.70
+  port: 8443
+  uuid: 5ba26499-24f7-4b9a-8a8d-6f9d75d09621
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room05.filesnap.tech
+  sni: uk-room05.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: 7da3ba09a037e956
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  server: 212.69.135.27
+  port: 8443
+  uuid: 857e5668-88b9-45cd-a600-79e55c04d8a8
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room05.filesnap.tech
+  sni: uk-room05.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: 7da3ba09a037e956
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  server: 212.69.135.27
+  port: 8443
+  uuid: 1b8a6692-d057-41f8-a108-7a02daefcfd6
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: uk-room05.filesnap.tech
+  sni: uk-room05.filesnap.tech
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: 7da3ba09a037e956
+- type: vless
+  name: US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  server: 23.95.112.78
+  port: 33607
+  uuid: 52080382-bc5e-4712-81a8-f9da66e3f444
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: hdprogressive.3dvisionlive.com
+  sni: hdprogressive.3dvisionlive.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 940MCE_EbMOUIEpfcjDPXxjBIeWjq--_atMA0IdKwQQ
+    short-id: '262269'
+- type: trojan
+  name: US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
+  server: 208.69.78.33
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: courses.yourultimateprofessionalcareerhub.com
+  sni: courses.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1894,481 +1861,465 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
 - name: 📲 电报信息
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -2391,121 +2342,117 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 芬兰(v2clash.blog 2026-11.4更新)
-  - 瑞典(v2clash.blog 2026-11.4更新)
-  - 意大利(v2clash.blog 2026-11.4更新)
-  - CA加拿大(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - FR法国(v2clash.blog 2026-11.4更新)
-  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - HK香港(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - JP日本(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - JP日本(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - NL荷兰(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - PL波兰(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - RU俄罗斯(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - SG新加坡(v2clash.blog 2026-11.4更新)
-  - TW台湾(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - TW台湾(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.4更新)
-  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.4更新)
+  - 芬兰(v2clash.blog 2026-11.6更新)
+  - 挪威(v2clash.blog 2026-11.6更新)
+  - 瑞典(v2clash.blog 2026-11.6更新)
+  - 土耳其(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - 土耳其(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - 西班牙(v2clash.blog 2026-11.6更新)
+  - 西班牙(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - 意大利(v2clash.blog 2026-11.6更新)
+  - CA加拿大(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - CA加拿大(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - DE德国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - FR法国(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - FR法国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - GB英国(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - GB英国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - HK香港(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - KR韩国(v2clash.blog 2026-11.6更新)
+  - NL荷兰(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - NL荷兰(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(v2clash.blog 2026-11.6更新)
+  - RU俄罗斯(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - SG新加坡(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - TW台湾(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - TW台湾(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (2)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (3)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (4)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (5)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (6)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (7)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (8)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (9)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (10)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (11)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (12)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (13)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (14)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (15)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (16)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (17)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (18)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (19)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (20)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (21)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (22)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (23)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (24)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (25)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (26)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (27)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (28)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (29)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (30)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (31)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (32)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (33)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (34)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (35)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (36)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (37)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (38)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (39)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (40)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (41)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (42)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (43)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (44)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (45)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (46)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (47)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (48)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (49)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (50)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (51)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (52)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (53)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (54)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (55)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (56)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (57)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (58)(v2clash.blog 2026-11.6更新)
+  - US美国(mibei77.com 米贝节点分享) (59)(v2clash.blog 2026-11.6更新)
 rule-providers:
   LocalAreaNetwork:
     type: http
