@@ -1,0 +1,122 @@
+name: 每日更新 MASQUE Clash 配置
+
+on:
+  schedule:
+    # GitHub Actions 的 cron 使用 UTC。北京时间 02:00 = UTC 前一天 18:00
+    - cron: '0 18 * * *'
+  workflow_dispatch:   # 支持在 Actions 页面手动触发测试
+
+permissions:
+  contents: write      # 允许推送到本仓库（需在仓库设置中开启读写权限）
+
+concurrency:
+  group: update-clash
+  cancel-in-progress: false
+
+jobs:
+  update-clash:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装 Playwright 与 Chromium
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: 打开网站、点击按钮并下载 YAML
+        run: |
+          cat > /tmp/gen_clash.py <<'PYEOF'
+          import asyncio, os
+          from playwright.async_api import async_playwright
+
+          TARGET_DIR = "User"                       # 目标目录
+          EXPECT_NAME = "MASQUE-To-Clash-H3.yaml"   # 目标文件名（与网站下载名一致）
+          TMP = "/tmp/masque_download.yaml"         # 临时下载路径
+          MAX_RETRY = 3
+
+          async def try_once(p):
+              browser = await p.chromium.launch(
+                  headless=True,
+                  args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"],
+              )
+              try:
+                  ctx = await browser.new_context(accept_downloads=True)
+                  page = await ctx.new_page()
+                  # 拦截 alert 弹窗，避免失败时阻塞流程
+                  page.on("dialog", lambda d: asyncio.ensure_future(d.dismiss()))
+                  await page.goto("https://m2c.pages.dev/", wait_until="domcontentloaded", timeout=60000)
+                  await page.wait_for_selector("#genBtn", timeout=30000)
+                  async with page.expect_download(timeout=90000) as info:
+                      await page.click("#genBtn")   # 点击「一键生成 Clash 配置文件」
+                  dl = await info.value
+                  name = dl.suggested_filename
+                  await dl.save_as(TMP)
+                  return name
+              finally:
+                  await browser.close()
+
+          async def fetch():
+              async with async_playwright() as p:
+                  for attempt in range(1, MAX_RETRY + 1):
+                      try:
+                          return await try_once(p)
+                      except Exception as e:
+                          print(f"第 {attempt}/{MAX_RETRY} 次尝试失败: {e}")
+                          if attempt == MAX_RETRY:
+                              raise
+                          await asyncio.sleep(10)
+
+          def main():
+              name = asyncio.run(fetch())
+              print(f"下载文件名: {name}")
+
+              # 文件名校验：不一致则跳过，避免误新增其它文件
+              if name != EXPECT_NAME:
+                  print(f"文件名与预期不符（预期 {EXPECT_NAME}），跳过替换，保留原文件")
+                  return
+
+              # 大小校验
+              if not os.path.isfile(TMP) or os.path.getsize(TMP) < 1000:
+                  print("文件为空或过小，保留原文件")
+                  return
+
+              # 内容校验：必须包含 Clash 配置关键字段
+              with open(TMP, "r", encoding="utf-8", errors="replace") as f:
+                  text = f.read()
+              if not all(k in text for k in ("proxies:", "proxy-groups:", "mode:")):
+                  print("内容校验失败（缺少关键字段），保留原文件")
+                  return
+
+              # 覆盖 User 目录下的同名文件
+              os.makedirs(TARGET_DIR, exist_ok=True)
+              dest = os.path.join(TARGET_DIR, EXPECT_NAME)
+              with open(dest, "w", encoding="utf-8", newline="\n") as f:
+                  f.write(text)
+              print(f"已更新: {dest} ({len(text)} 字符)")
+
+          main()
+          PYEOF
+          python /tmp/gen_clash.py
+
+      - name: 有变化才提交并推送
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "User/MASQUE-To-Clash-H3.yaml"
+          if git diff --cached --quiet; then
+            echo "内容与线上一致，无变化，跳过提交"
+          else
+            git commit -m "chore: 每日自动更新 MASQUE Clash 配置 [skip ci]"
+            git push
+            echo "已推送更新到 User/MASQUE-To-Clash-H3.yaml"
+          fi
