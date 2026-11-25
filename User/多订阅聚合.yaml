@@ -185,19 +185,6 @@ proxy-providers: # 【代理订阅提供者】开始，用于从订阅链接动�
     override:
       skip-cert-verify: true
       udp: true
-  ChromeGo_合并:
-    type: http
-    url: https://sub.ikar.eu.org/?template=https%3A%2F%2Fraw.githubusercontent.com%2Fzhuqq2020%2FMihomo-Party-ACL4SSR%2Fmain%2FACL4SSR_Online_Full_AdblockPlus.yaml&url=https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F1%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F2%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F3%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F4%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F5%2Fconfig.yaml,https%3A%2F%2Fwww.gitlabip.xyz%2FAlvin9999%2FPAC%2Frefs%2Fheads%2Fmaster%2Fbackup%2Fimg%2F1%2F2%2Fipp%2Fclash.meta2%2F6%2Fconfig.yaml,https%3A%2F%2Fskr.daozhang.dpdns.org%2Fclash&mihomo=true&udp=true&adgdns=true
-    interval: 3600
-    proxy: DIRECT
-    path: ./providers/ChromeGo_合并.yaml
-    health-check:
-      enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
-    override:
-      skip-cert-verify: true
-      udp: true
   未知_01:
     type: http
     url: https://wpds.qzz.io/suiyuan
@@ -340,10 +327,10 @@ proxies: # 【代理节点列表】开始，这里定义所有具体的单个服
   # 以下是可选的TLS相关字段（仅当 type: https 时可能需要）
   # skip-cert-verify: true
   # sni: proxy.example.com
-- name: 旁路由_252 # 节点名称，可自定义，在客户端列表和代理组中显示。（如等级、地区、线路、编号）
-  type: socks5 # 节点协议类型。选项：ss（Shadowsocks）、vmess（V2Ray）、trojan、http(s)、socks5等
-  server: 192.168.10.252 # 服务器的域名或IP地址
-  port: 7893 # 服务器的连接端口
+# - name: 旁路由_252 # 节点名称，可自定义，在客户端列表和代理组中显示。（如等级、地区、线路、编号）
+  # type: socks5 # 节点协议类型。选项：ss（Shadowsocks）、vmess（V2Ray）、trojan、http(s)、socks5等
+  # server: 192.168.10.252 # 服务器的域名或IP地址
+  # port: 7893 # 服务器的连接端口
   # username: “user123” # 【HTTP代理专用】认证用户名（如果需要）
   # password: “pass123” # 【HTTP代理专用】认证密码（如果需要）
   # 以下是可选的TLS相关字段（仅当 type: https 时可能需要）
@@ -383,7 +370,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -412,7 +398,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -441,7 +426,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -472,7 +456,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -494,7 +477,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - ChromeGo_4
       - ChromeGo_5
       - ChromeGo_6
-      - ChromeGo_合并
     filter: .*
   - name: 📲 电报消息
     type: select
@@ -693,7 +675,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -757,7 +738,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -786,7 +766,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -815,7 +794,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -844,7 +822,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -873,7 +850,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -902,7 +878,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
@@ -928,7 +903,6 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - NoMoreWalls
       - 每日更新
       - ZRF-周润发
-      - ChromeGo_合并
       - 未知_01
       - proxyqueen
       - nodefree
