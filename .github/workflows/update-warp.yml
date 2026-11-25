@@ -1,10 +1,9 @@
 name: 每日更新 warp 配置
     # 从https://m2c.pages.dev/ 自动一键生成yaml文件并替换至 https://github.com/lyqnihao/proxy/User 目录下
-
 on:
   schedule:
-    # GitHub Actions 的 cron 使用 UTC。北京时间 02:00 = UTC 前一天 18:00
-    - cron: '0 18 * * *'
+    # GitHub Actions 的 cron 使用 UTC。每 12 小时一次（UTC 00:00 / 12:00 = 北京时间 08:00 / 20:00）
+    - cron: '0 */12 * * *'
   workflow_dispatch:   # 支持在 Actions 页面手动触发测试
 
 permissions:
@@ -37,12 +36,20 @@ jobs:
       - name: 打开网站、点击按钮并下载 YAML
         run: |
           cat > /tmp/gen_clash.py <<'PYEOF'
-          import asyncio, os
+          import asyncio, os, re
+          from datetime import datetime, timezone, timedelta
           from playwright.async_api import async_playwright
 
           TARGET_DIR = "User"                       # 目标目录
           EXPECT_NAME = "MASQUE-To-Clash-H3.yaml"   # 目标文件名（与网站下载名一致）
           TMP = "/tmp/masque_download.yaml"         # 临时下载路径
+          README = "README.md"                      # 需同步更新日期的 README
+          if not os.path.isfile(README) and os.path.isfile("readme.md"):
+              README = "readme.md"
+          MARKER = "/tmp/commit_msg"                # 有真实更新时写入提交标题
+          OBJECT = "warp"                           # 提交标题中的对象名
+          SOURCE = "https://m2c.pages.dev/"         # 提交标题中的来源网址
+          CN_TZ = timezone(timedelta(hours=8))      # 北京时间（不依赖系统 tzdata）
           MAX_RETRY = 3
 
           async def try_once(p):
@@ -77,6 +84,39 @@ jobs:
                               raise
                           await asyncio.sleep(10)
 
+          def update_readme():
+              """有真实更新时，按内容特征定位 README 中的 MASQUE 订阅行，更新其首列日期（北京时间）"""
+              if not os.path.isfile(README):
+                  print(f"{README} 不存在，跳过日期更新")
+                  return
+              with open(README, "r", encoding="utf-8", newline="") as f:
+                  lines = f.readlines()
+
+              # 逻辑查找：同时含来源网址与目标文件名的表格行，唯一对应 MASQUE 订阅行，不受行号漂移影响
+              idx = next(
+                  (i for i, ln in enumerate(lines)
+                   if ln.lstrip().startswith("|") and SOURCE in ln and EXPECT_NAME in ln),
+                  None,
+              )
+              if idx is None:
+                  print("未定位到 MASQUE 订阅行，跳过日期更新")
+                  return
+              new_line, n = re.subn(
+                  r"(\|\s*)\d{4}-\d{2}-\d{2}(\s*\|)",
+                  lambda m: m.group(1) + datetime.now(CN_TZ).strftime("%Y-%m-%d") + m.group(2),
+                  lines[idx], count=1,
+              )
+              if n == 0:
+                  print(f"第 {idx + 1} 行首列未匹配到日期格式，跳过日期更新")
+                  return
+              if new_line == lines[idx]:
+                  print(f"README 第 {idx + 1} 行日期已是当前日期，无需改动")
+                  return
+              lines[idx] = new_line
+              with open(README, "w", encoding="utf-8", newline="") as f:
+                  f.writelines(lines)
+              print(f"已更新 {README} 第 {idx + 1} 行日期为 {datetime.now(CN_TZ).strftime('%Y-%m-%d')}")
+
           def main():
               name = asyncio.run(fetch())
               print(f"下载文件名: {name}")
@@ -98,26 +138,51 @@ jobs:
                   print("内容校验失败（缺少关键字段），保留原文件")
                   return
 
-              # 覆盖 User 目录下的同名文件
+              # 覆盖 User 目录下的同名文件（内容无变化则不替换）
               os.makedirs(TARGET_DIR, exist_ok=True)
               dest = os.path.join(TARGET_DIR, EXPECT_NAME)
+
+              # ===== 新增判断：与现有文件逐字对比，完全一致则跳过替换，保留原文件 =====
+              if os.path.isfile(dest):
+                  with open(dest, "r", encoding="utf-8", errors="replace") as f:
+                      old_text = f.read()
+                  if old_text == text:
+                      print("内容与现有文件完全一致，跳过替换，保留原文件")
+                      return
+
               with open(dest, "w", encoding="utf-8", newline="\n") as f:
                   f.write(text)
               print(f"已更新: {dest} ({len(text)} 字符)")
+
+              # ===== 有真实更新：同步 README 日期 + 写提交标记与标题 =====
+              update_readme()
+              with open(MARKER, "w", encoding="utf-8") as f:
+                  f.write("1")                       # 标记本轮发生了真实更新
+              stamp = datetime.now(CN_TZ).strftime("%Y-%m-%d %H:%M:%S")
+              title = f"{OBJECT}_{stamp} - Update from {SOURCE}"
+              with open("/tmp/commit_title", "w", encoding="utf-8") as f:
+                  f.write(title)
+              print(f"提交标题: {title}")
 
           main()
           PYEOF
           python /tmp/gen_clash.py
 
-      - name: 有变化才提交并推送
+      - name: 有真实更新才提交并推送
         run: |
+          # 仅当脚本标记了真实更新时才提交，无变化则保留原文件、README 与历史不动
+          if [ ! -f /tmp/commit_msg ]; then
+            echo "本轮无真实内容更新，跳过提交"
+            exit 0
+          fi
+          TITLE=$(cat /tmp/commit_title)
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "User/MASQUE-To-Clash-H3.yaml"
+          git add "User/MASQUE-To-Clash-H3.yaml" "README.md"
           if git diff --cached --quiet; then
-            echo "内容与线上一致，无变化，跳过提交"
+            echo "暂存区无变化，跳过提交"
           else
-            git commit -m "chore: 每日自动更新 MASQUE Clash 配置 [skip ci]"
+            git commit -m "$TITLE"
             git push
-            echo "已推送更新到 User/MASQUE-To-Clash-H3.yaml"
+            echo "已推送更新：$TITLE"
           fi
