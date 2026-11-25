@@ -345,7 +345,8 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🔮 负载均衡 # 子代理组（通常type为load-balance）
       - ♻️ 自动选择 # 子代理组（通常type为url-test或fallback）
       - 🔯 故障转移 # 子代理组（通常type为fallback）
-      - 🔮 ChromeGo # 这是一个具体节点或子组的名称
+      - 🔮 ChromeGo # 这是一个具体节点或子组的名称	  
+      - 🚀 MASQUE # 这是一个具体节点或子组的名称
       - 🇭🇰 香港节点 # 这是一个按地区归类的子代理组
       - 🇨🇳 台湾节点 # 
       - 🇸🇬 狮城节点 # 
@@ -478,6 +479,14 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - ChromeGo_5
       - ChromeGo_6
     filter: .*
+  - name: 🚀 MASQUE
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    tolerance: 300
+    use: # 【使用】指令，用于从指定的proxy-providers（代理提供者）动态拉取节点作为本组成员
+      - edgetunnel-cmliu
+    filter: .*
   - name: 📲 电报消息
     type: select
     url: http://t.me/
@@ -486,6 +495,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
@@ -504,6 +514,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - ♻️ 自动选择
       - 🚀 手动切换
       - 🇨🇳 台湾节点
@@ -517,6 +528,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇸🇬 狮城节点
@@ -531,6 +543,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - 🎥 奈飞节点
       - ♻️ 自动选择
       - 🚀 节点选择
@@ -551,6 +564,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
       - 🔮 负载均衡
       - 🇨🇳 台湾节点
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🚀 手动切换
@@ -566,6 +580,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - ♻️ 自动选择
       - 🚀 节点选择
       - 🇭🇰 香港节点
@@ -589,6 +604,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     type: select
     proxies:
       - DIRECT
+      - 🚀 MASQUE
       - 🔮 ChromeGo
       - 🚀 节点选择
       - 🔮 负载均衡
@@ -709,6 +725,7 @@ proxy-groups: # 【代理组】开始，核心功能：将多个节点/子分组
     proxies:
       - 🔮 负载均衡
       - 🔮 ChromeGo
+      - 🚀 MASQUE
       - DIRECT
       - ♻️ 自动选择
       - 🚀 节点选择
